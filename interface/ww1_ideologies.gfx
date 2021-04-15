@@ -1,0 +1,158 @@
+spriteTypes = {
+	
+	#New ideologies 
+	#Democrats
+	spriteType = {
+		name = "GFX_ideology_libertarianism"
+		texturefile = "gfx/interface/ideologies/anarchist_capitalism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarcho_primitivism"
+		texturefile = "gfx/interface/ideologies/anarcho_primitivism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_autocracy"
+		texturefile = "gfx/interface/ideologies/autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_theocracy"
+		texturefile = "gfx/interface/ideologies/autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_despotism"
+		texturefile = "gfx/interface/ideologies/despotism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_military_dictatorship"
+		texturefile = "gfx/interface/ideologies/military_dictatorship.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_conservatism"
+		texturefile = "gfx/interface/ideologies/conservatism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_socialism"
+		texturefile = "gfx/interface/ideologies/socialism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_agrarianism"
+		texturefile = "gfx/interface/ideologies/agrarianism.dds"
+	}
+	
+	
+	#Autocracy
+	spriteType = {
+		name = "GFX_ideology_AUH_autocracy"
+		texturefile = "gfx/interface/ideologies/AUH_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_GER_autocracy"
+		texturefile = "gfx/interface/ideologies/GER_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_RUS_autocracy"
+		texturefile = "gfx/interface/ideologies/RUS_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_ITA_autocracy"
+		texturefile = "gfx/interface/ideologies/ITA_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_ENG_autocracy"
+		texturefile = "gfx/interface/ideologies/ENG_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_JAP_autocracy"
+		texturefile = "gfx/interface/ideologies/JAP_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_QIN_autocracy"
+		texturefile = "gfx/interface/ideologies/QIN_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_TUR_autocracy"
+		texturefile = "gfx/interface/ideologies/TUR_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_BUL_autocracy"
+		texturefile = "gfx/interface/ideologies/BUL_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_SER_autocracy"
+		texturefile = "gfx/interface/ideologies/SER_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_GRE_autocracy"
+		texturefile = "gfx/interface/ideologies/GRE_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_ROM_autocracy"
+		texturefile = "gfx/interface/ideologies/ROM_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_MNT_autocracy"
+		texturefile = "gfx/interface/ideologies/MNT_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_POR_autocracy"
+		texturefile = "gfx/interface/ideologies/POR_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_SPR_autocracy"
+		texturefile = "gfx/interface/ideologies/SPR_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_LUX_autocracy"
+		texturefile = "gfx/interface/ideologies/LUX_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_BEL_autocracy"
+		texturefile = "gfx/interface/ideologies/BEL_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_HOL_autocracy"
+		texturefile = "gfx/interface/ideologies/HOL_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_BRA_autocracy"
+		texturefile = "gfx/interface/ideologies/BRA_autocracy.dds"
+	}
+		spriteType = {
+		name = "GFX_ideology_SWE_autocracy"
+		texturefile = "gfx/interface/ideologies/SWE_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_NOR_autocracy"
+		texturefile = "gfx/interface/ideologies/NOR_autocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_DEN_autocracy"
+		texturefile = "gfx/interface/ideologies/DEN_autocracy.dds"
+	}
+	
+	#Communism
+	spriteType = {
+		name = "GFX_ideology_ENG_council_communism"
+		texturefile = "gfx/interface/ideologies/fabian_society.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarchist_communism"
+		texturefile = "gfx/interface/ideologies/anarchist_communism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarcho_syndicalism"
+		texturefile = "gfx/interface/ideologies/syndicalism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_stalinism"
+		texturefile = "gfx/interface/ideologies/bolshevism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_leninism"
+		texturefile = "gfx/interface/ideologies/bolshevism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_trotskyism"
+		texturefile = "gfx/interface/ideologies/bolshevism.dds"
+	}
+}

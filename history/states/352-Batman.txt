@@ -1,0 +1,16 @@
+state={
+	id=352
+	name="STATE_352" # Van
+	history={
+		owner=TUR
+		add_core_of=TUR
+		buildings={
+			infrastructure=3
+		}
+	}
+	provinces={ 
+		652 4583 6935 7470	
+	}
+	manpower=214440
+	state_category=rural
+}

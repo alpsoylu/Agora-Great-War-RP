@@ -1,0 +1,250 @@
+﻿capital = 608
+
+#-------------------------------------------------------
+#					GENERIC VALUES
+#-------------------------------------------------------
+set_research_slots = 2
+set_stability = 0.42
+set_war_support = 0.19
+set_convoys = 64
+
+create_country_leader = { 
+	name = "Yuan Shikai" 
+	picture = "gfx/leaders/CHI/CHI_yuan_shikai.dds" 
+	expire = "1935.1.1" 
+	ideology = military_dictatorship 
+	traits = { dictator } 
+}
+
+create_country_leader = {
+	name = "Sun Yat-Sen"
+	picture = "gfx/leaders/CHI/CHI_sun_wen.dds"
+	expire = "1935.1.1"
+	ideology = socialism
+	traits = {}
+}
+
+create_country_leader = { 
+	name = "Zaifeng" 
+	picture = "gfx/leaders/QIN/QIN_zaifeng.dds" 
+	expire = "1935.1.1" 
+	ideology = despotism  
+	traits = { } 
+}
+
+create_corps_commander = {  
+	name = "Zhang Xun" 
+	id=73004 
+	#portrait_path = "gfx/generals/QIN_zhang_xun.tga" 
+	traits = { old_guard  politically_connected} 
+	skill=2	
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {  
+	name = "Duan Qirui" 
+	portrait_path = "gfx/leaders/CHI/CHI_duan_qirui.dds"
+	id=73009 
+	traits = { commando  } 
+	skill=3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+ 
+ #Guangdong
+ create_corps_commander = {      
+	name = "Long Jiguang" 
+	portrait_path = "gfx/leaders/CHI/CHI_long_jiguang.dds"
+	id=73046
+	traits = {}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+ }
+ #Guangxi
+ create_corps_commander = {
+	name = "Lu Rongting"
+	portrait_path = "gfx/leaders/CHI/CHI_lu_rongting.dds"
+	id=73047
+	traits = {
+		trickster
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+ }
+#Guizhou
+create_corps_commander = {
+	name = "Liu Xianshi"
+	portrait_path = "gfx/leaders/CHI/CHI_liu_xianshi.dds"
+	id=73048
+	traits = {
+        trait_cautious
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_field_marshal = {  
+	name = "Yuan Shikai" 
+	id=73069 
+	portrait_path = "gfx/leaders/CHI/CHI_yuan_shikai.dds" 
+	traits = { politically_connected fast_planner inspirational_leader } 
+	skill=3 
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+
+}
+
+#Zhili - SDC
+create_corps_commander = {
+	name = "Feng Guozhang"
+	portrait_path = "gfx/leaders/CHI/CHI_feng_guozhang.dds"
+	traits = {defensive_doctrine}
+	id=73005
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+#Sinkiang
+create_corps_commander = {
+	name = "Yang Zengxin"
+	portrait_path = "gfx/leaders/CHI/CHI_yang_zengxin.dds"
+	id=73049
+	traits = {
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+#XSM
+create_corps_commander = {
+	name = "Ma Qi"
+	portrait_path = "gfx/leaders/CHI/CHI_ma_qi.dds"
+	id=73055
+	traits = {
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+#SDC
+create_corps_commander = {
+	name = "Zhang Huaizhi"
+	portrait_path = "gfx/leaders/CHI/CHI_zhang_huaizhi.dds"
+	id=73051
+	traits = {}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+ 
+######### NAVY LEADERS
+create_navy_leader = {  
+	name = "Sa Zhenbing" 
+	id=73012 
+	#portrait_path = "gfx/admiral/QIN_sa_zhenbing.tga" 
+	traits = { blockade_runner superior_tactician old_guard} 
+	skill=3 
+}
+
+create_navy_leader = {  
+	name = "Cheng Biguang" 
+	id=73015 
+	#portrait_path = "gfx/admiral/QIN_cheng_biguang.tga" 
+	traits = { } 
+	skill=2 
+}
+
+create_navy_leader={  
+	name = "Lin Baoyi" 
+	id=15092 
+	#portrait_path= "gfx/admiral/CHI_lin_baoyi.tga" 
+	traits={   } 
+	skill=2 
+}
+create_navy_leader={  
+	name = "Lin Jianzhang" 
+	id=15093 
+	#portrait_path= "gfx/admiral/CHI_lin_jianzhang.tga" 
+	traits={   } 
+	skill=2 
+}
+create_navy_leader={  
+	name = "Liu Guanxiong" 
+	id=15094 
+	#portrait_path= "gfx/admiral/CHI_liu_guanxiong.tga" 
+	traits={ old_guard  } 
+	skill=2 
+}
+
+
+1910.1.1 = {
+	oob = "QIN_1910"
+
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		
+		#artillery
+		gw_artillery = 1
+		
+		#doctrine
+		bayonet_assault = 1
+		
+		#engineering
+		electrical_engineering = 1
+		mechanical_engineering = 1
+	}
+
+	set_politics = {  
+		ruling_party = neutrality
+		last_election = "1910.1.1"
+		election_frequency=48
+		elections_allowed=no 
+	}
+	set_popularities = {
+		democratic = 32
+		neutrality = 46
+		fascism = 22
+		communism = 0
+	}
+
+	add_ideas = {
+		QIN_idea_low_legitimacy
+		QIN_idea_purchase_restriction
+		QIN_idea_boxer_protocol
+		QIN_idea_beiyang_army
+		QIN_idea_payments_of_indemnities
+		QIN_idea_tongmenghui
+		isolation
+		free_trade
+	}
+}

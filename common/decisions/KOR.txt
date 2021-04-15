@@ -1,0 +1,248 @@
+propaganda_efforts = {
+	KOR_rename_keijyo = {
+		allowed = {
+			original_tag = KOR
+		}
+		available = {
+			owns_state = 800
+			has_full_control_of_state = 800
+			has_country_flag = renamed_to_keijyo_7125 #Game can't read flags that start with numbers
+
+			NOT = {
+				KOR = { is_puppet_of = JAP }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 10
+		visible = {
+			has_full_control_of_state = 800
+			has_country_flag = renamed_to_keijyo_7125
+
+			NOT = {
+				KOR = { is_puppet_of = JAP }
+			}
+		}
+		fire_only_once = no
+		complete_effect = {
+			add_state_core = 800
+			reset_province_name = 7125
+			clr_country_flag = renamed_to_keijyo_7125
+		}
+	}
+	KOR_rename_gyeongseong = {
+		allowed = {
+			original_tag = KOR
+		}
+		available = {
+			owns_state = 800
+			has_full_control_of_state = 800
+			KOR = { is_puppet_of = JAP }
+			NOT = { has_country_flag = renamed_to_keijyo_7125 }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 10
+		visible = {
+			has_full_control_of_state = 800
+			KOR = { is_puppet_of = JAP }
+			NOT = { has_country_flag = renamed_to_keijyo_7125 }
+		}
+		fire_only_once = no
+		complete_effect = {
+			add_state_core = 800
+			set_province_name = { id = 7125 name = KEIJYO_PROV }
+			set_country_flag = renamed_to_keijyo_7125
+		}
+	}
+	KOR_rename_fusan = {
+		allowed = {
+			original_tag = KOR
+		}
+		available = {
+			owns_state = 802
+			has_full_control_of_state = 802
+			has_country_flag = renamed_to_fusan_4056
+
+			NOT = {
+				KOR = { is_puppet_of = JAP }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 10
+		visible = {
+			has_full_control_of_state = 802
+			has_country_flag = renamed_to_fusan_4056
+
+			NOT = {
+				KOR = { is_puppet_of = JAP }
+			}
+		}
+		fire_only_once = no
+		complete_effect = {
+			add_state_core = 802
+			reset_province_name = 4056
+			clr_country_flag = renamed_to_fusan_4056
+		}
+	}
+	KOR_rename_busan = {
+		allowed = {
+			original_tag = KOR
+		}
+		available = {
+			owns_state = 802
+			has_full_control_of_state = 802
+			KOR = { is_puppet_of = JAP }
+			NOT = { has_country_flag = renamed_to_fusan_4056 }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 10
+		visible = {
+			has_full_control_of_state = 802
+			KOR = { is_puppet_of = JAP }
+			NOT = { has_country_flag = renamed_to_fusan_4056 }
+		}
+		fire_only_once = no
+		complete_effect = {
+			add_state_core = 802
+			set_province_name = { id = 4056 name = FUSAN_PROV }
+			set_country_flag = renamed_to_fusan_4056
+		}
+	}
+	KOR_rename_heijyo = {
+		allowed = {
+			original_tag = KOR
+		}
+		available = {
+			owns_state = 799
+			has_full_control_of_state = 799
+			has_country_flag = renamed_to_heijyo_4052
+
+			NOT = {
+				KOR = { is_puppet_of = JAP }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 10
+		visible = {
+			has_full_control_of_state = 799
+			has_country_flag = renamed_to_heijyo_4052
+
+			NOT = {
+				KOR = { is_puppet_of = JAP }
+			}
+		}
+		fire_only_once = no
+		complete_effect = {
+			add_state_core = 799
+			reset_province_name = 4052
+			clr_country_flag = renamed_to_heijyo_4052
+		}
+	}
+	KOR_rename_pyeongyang = {
+		allowed = {
+			original_tag = KOR
+		}
+		available = {
+			owns_state = 799
+			has_full_control_of_state = 799
+			KOR = { is_puppet_of = JAP }
+			NOT = { has_country_flag = renamed_to_heijyo_4052 }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 10
+		visible = {
+			has_full_control_of_state = 799
+			KOR = { is_puppet_of = JAP }
+			NOT = { has_country_flag = renamed_to_heijyo_4052 }
+		}
+		fire_only_once = no
+		complete_effect = {
+			add_state_core = 799
+			set_province_name = { id = 4052 name = HEIJYO_PROV }
+			set_country_flag = renamed_to_heijyo_4052
+		}
+	}
+	KOR_rename_yodong = {
+		allowed = {
+			original_tag = KOR
+		}
+		available = {
+			owns_state = 716
+			has_full_control_of_state = 716
+			NOT = { has_country_flag = renamed_to_gando_716 }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 50
+		visible = {
+			has_full_control_of_state = 716
+			NOT = { has_country_flag = renamed_to_gando_716 }
+		}
+		fire_only_once = no
+		complete_effect = {
+			add_state_core = 716
+			716 = { set_state_name = "Yodong" }
+			set_country_flag = renamed_to_gando_716
+		}
+	}
+	KOR_rename_seogando = {
+		allowed = {
+			original_tag = KOR
+		}
+		available = {
+			owns_state = 328
+			has_full_control_of_state = 328
+			NOT = { has_country_flag = renamed_to_gando_328 }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 50
+		visible = {
+			has_full_control_of_state = 328
+			NOT = { has_country_flag = renamed_to_gando_328 }
+		}
+		fire_only_once = no
+		complete_effect = {
+			add_state_core = 328
+			328 = { set_state_name = "Seogando" }
+			set_country_flag = renamed_to_gando_328
+		}
+	}
+	KOR_rename_bukgando = {
+		allowed = {
+			original_tag = KOR
+		}
+		available = {
+			owns_state = 717
+			has_full_control_of_state = 717
+			NOT = { has_country_flag = renamed_to_gando_717 }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 50
+		visible = {
+			has_full_control_of_state = 717
+			NOT = { has_country_flag = renamed_to_gando_717 }
+		}
+		fire_only_once = no
+		complete_effect = {
+			add_state_core = 717
+			717 = { set_state_name = "Bukgando" }
+			set_country_flag = renamed_to_gando_717
+		}
+	}
+}

@@ -1,0 +1,22 @@
+state={
+	id=355
+	name="STATE_355" # Samsun
+	history={
+		owner=TUR
+		add_core_of=TUR
+		buildings={
+			infrastructure=3
+			6995={ 
+				naval_base=1
+			}
+			11894={ 
+				naval_base=3 
+			}	
+		}
+	}
+	provinces={ 
+		975 3967 6995 11881 11894 
+	}
+	manpower = 360500
+	state_category=rural
+}

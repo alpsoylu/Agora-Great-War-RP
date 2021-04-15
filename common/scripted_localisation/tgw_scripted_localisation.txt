@@ -1,0 +1,66 @@
+defined_text = {
+	name = GetFederalReserveName
+	text = {
+		trigger = {
+			original_tag = USA
+			has_country_leader = { name = "Woodrow Wilson" ruling_only = yes }
+		}
+		localization_key = USA_federal_reserve_new_freedom
+	}
+	text = {
+		trigger = {
+			original_tag = USA
+			NOT = { has_country_leader = { name = "Woodrow Wilson" ruling_only = yes } }
+		}
+		localization_key = USA_federal_reserve_standard
+	}
+}
+defined_text = {
+	name = GetGoldReserveName
+	text = {
+		trigger = {
+			original_tag = USA
+			has_country_leader = { name = "Woodrow Wilson" ruling_only = yes }
+		}
+		localization_key = USA_gold_reserve_new_freedom
+	}
+	text = {
+		trigger = {
+			original_tag = USA
+			NOT = { has_country_leader = { name = "Woodrow Wilson" ruling_only = yes } }
+		}
+		localization_key = USA_gold_reserve_standard
+	}
+}
+defined_text = {
+	name = GetProvisionalGovernmentName
+	text = {
+		trigger = {
+			original_tag = RUS
+			has_global_flag = russian_revolution
+		}
+		localization_key = RUS_provisional_government
+	}
+	text = {
+		trigger = {
+			original_tag = RUS
+			NOT = { has_global_flag = russian_revolution }
+		}
+		localization_key = RUS_octobrist_government
+	}
+}
+defined_text = {
+	name = GetIdeaArmisticeName
+	text = {
+		trigger = {
+			has_global_flag = frankfurt_armistice
+		}
+		localization_key = idea_frankfurt_armistice
+	}
+	text = {
+		trigger = {
+			has_global_flag = compiegne_armistice
+		}
+		localization_key = idea_compiegne_armistice
+	}
+}

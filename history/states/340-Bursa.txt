@@ -1,0 +1,24 @@
+state={
+	id=340
+	name="STATE_340" # Bursa
+	resources={
+		chromium = 18
+	}
+	history={
+		victory_points={ 
+			947 1 
+		}
+		owner=TUR
+		add_core_of=TUR
+		buildings={
+			infrastructure=4
+			industrial_complex=1
+			arms_factory=1
+		}
+	}
+	provinces={ 
+		785 856 947 981 3786 3856 9921 11778 11831 11867
+	}
+	manpower = 1434300
+	state_category=town
+}

@@ -1,0 +1,10 @@
+ENG_protectarate_cyprus = {
+	enable = { tag = ENG }
+
+	icon = GFX_modifiers_conscription_exemptions_granted
+	#EFFECT
+	compliance_growth = -0.1
+	local_non_core_manpower = -0.95
+	local_resources_factor = -0.75
+	resistance_growth = 0.15
+}

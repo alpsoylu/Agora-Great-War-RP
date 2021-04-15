@@ -1,0 +1,141 @@
+﻿capital=800 #Gyeongseong
+oob="KOR_1910"
+
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_naval_oob = "KOR_1910_naval_legacy"
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "KOR_1910_naval_mtg"
+}
+
+set_technology = {
+	#infantry
+	infantry_weapons = 1
+	
+	#support
+	tech_support = 1
+	tech_engineers = 1
+	
+	#artillery
+	gw_artillery = 1
+
+	#navy
+	transport = 1
+
+	#engineering
+	electrical_engineering = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1910.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 6
+	fascism = 0
+	communism = 3
+	neutrality = 91
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Gwangjeho"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Yangmuho"
+		type = light_cruiser_1
+		parent_version = 0
+		obsolete = yes
+	}
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	create_equipment_variant = {
+		name = "Gwangjeho"
+		type = ship_hull_cruiser_1
+		#name_group = KOR_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_light_battery_1
+			mid_2_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Yangmuho"
+		type = ship_hull_cruiser_1
+		#name_group = KOR_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}
+
+set_stability=0.36
+
+create_country_leader={
+	name = "Emperor Sunjong"
+	desc=KOR_emperor_yunghui_DESC
+	picture="gfx/leaders/KOR/KOR_emperor_yunghui.dds"
+	expire="1935.1.1"
+	ideology = despotism
+	traits={ inexperienced_monarch }
+}
+create_country_leader={
+	name = "Yi Dong-hwi"
+	picture="gfx/leaders/KOR/KOR_yi_dong_hwi.dds"
+	expire="1935.1.1"
+	ideology = council_communism
+	traits = { }
+}
+create_country_leader = {
+	name = "Syngman Rhee"
+	picture = "gfx/leaders/KOR/KOR_syngman_rhee.dds"
+	expire = "1935.1.1"
+	ideology = conservatism
+	traits = { anti_communist }
+}
+create_country_leader = {
+	name = "Kim Chwa-chin"
+	picture = "gfx/leaders/KOR/KOR_kim_chwa_chin.dds"
+	expire = "1935.1.1"
+	ideology = military_dictatorship
+	traits = { generallissimo }
+}
+
+create_corps_commander={  name = "Min Shang Ho" traits={ old_guard } skill=2 }
+create_corps_commander={  name = "Shin Phal Gewn" traits={ old_guard } skill=3 }
+create_corps_commander={  name = "Jhang Hwa Sik" traits={ } skill=2 }
+create_corps_commander={  name = "Baek Seong Gi" traits={ } skill=1 }
+create_corps_commander={  name = "Shin Dol Seok" traits={ trait_reckless commando } skill=3 }
+
+create_navy_leader = {  name = "Sin Sun-seong" traits = { } skill=3 }
+

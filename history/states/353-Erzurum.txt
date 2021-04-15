@@ -1,0 +1,16 @@
+state={
+	id=353
+	name="STATE_353" # Erzurum
+	history={
+		owner=TUR
+		add_core_of=TUR
+		buildings={
+			infrastructure=3
+		}
+	}
+	provinces={ 
+		6976 9868 9886 11853
+	}
+	manpower = 645700
+	state_category=rural
+}

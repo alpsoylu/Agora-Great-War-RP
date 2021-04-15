@@ -1,0 +1,220 @@
+﻿capital = 7
+
+set_research_slots = 3
+set_stability = 0.68
+set_war_support = 0.01
+set_convoys = 100
+
+create_country_leader = { 
+	name = "Pieter Jelles Troelstra" 
+	picture="gfx/leaders/HOL/HOL_pieter_jelles_troelstra.dds" 
+	expire="1935.1.1" 
+	ideology = marxism
+	traits = { }
+}
+create_country_leader = { 
+	name = "Theo Heemskerk" 
+	picture="gfx/leaders/HOL/HOL_theo_heemskerk.dds" 
+	expire="1935.1.1" 
+	ideology = conservatism
+	traits = { }
+}
+create_country_leader = { 
+	name = "Wilhelmina" 
+	picture="gfx/leaders/HOL/HOL_wilhelmina.dds" 
+	expire="1935.1.1" 
+	ideology = autocracy 
+	traits={ wilhelmina disdain_for_politicians_1 }
+}
+create_country_leader = { 
+	name = "Gerrit Hendrik Kersten" 
+	picture="gfx/leaders/HOL/HOL_gerrit_hendrik_kersten.dds" 
+	expire="1935.1.1" 
+	ideology = fundamentalism
+	traits = { }
+}
+
+
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_autonomy = {
+		target = INS
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.25
+	}
+	else = {
+		puppet = INS
+	}
+}
+
+create_field_marshal = {
+	name = "Cornelis Snijders"
+	
+	traits = { fast_planner career_officer } 
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Prince Hendrik"
+	
+	traits = { politically_connected trait_cautious media_personality } 
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "François de Bas"
+	
+	traits = { old_guard trait_cautious } 
+	skill = 3
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Kornelis Eland"
+	
+	traits = { old_guard career_officer politically_connected } 
+	skill = 3
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Willem Frederik Pop"
+	
+	traits = { career_officer } 
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Henri Winkelman"
+	portrait_path = "gfx/leaders/HOL/portrait_hol_henri_winkelman.dds" 
+	traits = { } 
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_navy_leader = {  
+	name = "Abraham George Ellis"
+	
+	traits = { gunnery_expert bold old_guard_navy } 
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+create_navy_leader = {  
+	name = "Jan Wentholt"
+	
+	traits = { gentlemanly navy_career_officer superior_tactician } 
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 3
+	coordination_skill = 2
+}
+
+create_navy_leader = {  
+	name = "Jacob Röell"
+	
+	traits = { gentlemanly spotter } 
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+create_navy_leader = {  
+	name = "Jean Jacques Rambonnet"
+	
+	traits = { gentlemanly fleet_protector } 
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+create_navy_leader = {  
+	name = "William Cohen Stuart"
+	
+	traits = { navy_career_officer bold } 
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+1910.1.1 = {
+	oob = "HOL_1910"
+	if = {
+		limit = {
+			has_dlc = "Man the Guns"
+		}
+		set_technology = { bicycle_infantry = 1 }
+	}
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		
+		#support
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		
+		#armored
+		early_armored_car = 1
+		
+		#artillery
+		gw_artillery = 1
+		
+		#doctrine
+		
+		#navy
+		transport = 1
+		
+		#engineering
+		electrical_engineering = 1
+		mechanical_engineering = 1
+	}
+
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1909.6.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 58
+		fascism = 0
+		communism = 14
+		neutrality = 28
+	}
+
+	add_ideas = {
+		HOL_idea_enduring_neutrality
+		HOL_wilhelmina
+		HOL_citizens_centered_economy
+	}
+}

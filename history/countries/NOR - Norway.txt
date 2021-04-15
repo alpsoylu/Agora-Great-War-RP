@@ -1,0 +1,198 @@
+﻿capital = 110
+
+set_fuel_ratio = 0.20
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.1
+set_convoys = 80
+
+create_country_leader = {
+	name = "Jens Bratlie"
+	picture="gfx/leaders/NOR/NOR_jens_bratlie.dds" 
+	expire="1935.1.1" 
+	ideology = conservatism
+	traits={  } 
+}
+create_country_leader = {
+	name = "Haakon VII"
+	picture="gfx/leaders/NOR/NOR_haakon_vii.dds" 
+	expire="1935.1.1" 
+	ideology = autocracy
+	traits={  } 
+}
+
+create_field_marshal = {
+	name = "Haakon VII"
+	id = 1110
+	picture = "NOR_haakon_vii.dds"
+	traits = { politically_connected inspirational_leader }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_field_marshal = {
+	name = "Wilhelm Olssøn"
+	
+	traits = { politically_connected old_guard }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Ole Hansen"
+	
+	traits = { trait_mountaineer old_guard }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Henrik Angell"
+	
+	traits = { winter_specialist }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Birger Fredrik Sinding-Larsen"
+	
+	traits = { winter_specialist }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Johan Christopher Ræder"
+	
+	traits = { trait_engineer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_navy_leader = {
+	name = "Alfred Berglund"
+	
+	traits = { old_guard_navy craven }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Christian Sparre"
+	
+	traits = { navy_media_personality gentlemanly }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Karl Friedrich Griffin Dawes"
+	
+	traits = { navy_media_personality gunnery_expert gentlemanly }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+1910.1.1 = {
+	set_politics = {
+	    ruling_party = democratic
+	    last_election = "1909.10.25"
+	    election_frequency = 36
+	    elections_allowed = yes
+	}
+	set_popularities = {
+	    democratic = 64
+	    fascism = 0
+	    communism = 4
+	    neutrality = 32
+	}
+
+	add_ideas = {
+		#NOR_unionsopplosningen for scandinavian patch
+		NOR_haakon_vii
+		NOR_trade_neutrality
+		#NOR_unprepared_government
+		#NOR_poorly_funded_army
+	}
+	oob = "NOR_1910"
+
+	set_technology = {
+		#infantry
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		
+		#support
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		
+		#armored
+		
+		#artillery
+		gw_artillery = 1
+		howitzer1 = 1
+		
+		#doctrine
+		
+		#navy
+		transport = 1
+		
+		#engineering
+		electrical_engineering = 1
+		radio = 1
+		mechanical_engineering = 1
+	}
+
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_torpedo = 1
+		basic_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		mtg_transport = 1
+	}
+	set_naval_oob = "NOR_1910_naval_mtg"
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		transport = 1
+	}
+	set_naval_oob = "NOR_1910_naval_legacy"
+}
