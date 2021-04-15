@@ -3,7 +3,9 @@
 set_fuel_ratio = 0.20
 set_research_slots = 3
 set_stability = 0.85
-
+add_ideas = {
+RP_optimizasyon
+}
 create_country_leader = { 
 	name = "Federal Council" 
 	desc = "POLITICS_FEDERAL_COUNCIL_DESC" 

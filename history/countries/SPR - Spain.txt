@@ -1,5 +1,5 @@
 ﻿capital = 41
-
+set_cosmetic_tag = SPR_kingdom
 set_research_slots = 3
 set_stability = 0.52
 set_convoys = 150

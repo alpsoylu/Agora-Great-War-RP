@@ -40,5 +40,24 @@ ideas = {
 			production_speed_buildings_factor = 0.15
 			}
 		}
+
+		RP_parl_mon = {
+
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				is_ai = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.1
+			political_power_factor = -0.4
+			}
+		}
 	}
 }

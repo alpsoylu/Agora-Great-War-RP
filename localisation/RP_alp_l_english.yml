@@ -17,7 +17,7 @@
  
  spr_event.1:0 "Spanish 1910 Elections"
  spr_event.1.t:0 "Spanish 1910 Elections"
- spr_event.1.d:0 "The Spanish people just voted for the seats in the parliement and their prime minister."
+ spr_event.1.desc:0 "The Spanish people just voted for the seats in the parliement and their prime minister."
  spr_event.1.a:0 "Liberals won the elections!"
  spr_event.1.b:0 "Conservatists won the elections!"
  
@@ -48,3 +48,16 @@
  
  SPR_parliementary_monarchy:0 "Parliementary Monarchy"
  SPR_down_with_the_king:0 "Down with the King"
+ 
+ SPR_power_to_the_conservatists:0 "Power to the Conservatists"
+ SPR_right_to_rule:0 "The Right to Rule"
+ RP_parl_mon:0 "Parliementary Monarchy"
+ 
+ SPR_bourbon_long:0 "House of Bourbon"
+ SPR_bourbon:0 "House of Bourbon"
+ 
+ 
+ 
+ 
+ 
+ SPR_POWDERKEG_DESC:0 "Spain is in fire since the 1898 American Spanish war.Spain has lost its empire and is going bankrupt.We have to fix this political and economic situation!"

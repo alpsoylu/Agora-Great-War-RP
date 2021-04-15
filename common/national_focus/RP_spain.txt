@@ -248,6 +248,7 @@ focus_tree = {
 		focus = SPR_down_with_the_king
 		}
 		completion_reward = {
+		add_ideas = RP_parl_mon
 		}
 		ai_will_do = {
 		factor = 0 
@@ -278,12 +279,13 @@ focus_tree = {
 	ideology = socialism
 	traits={  } 
 }
+add_stability = -0.15
 		}
 		ai_will_do = {
 		factor = 5
 		}
 		relative_position_id = SPR_liberals_wins
-		x = -4
+		x = -3
 		y = 1
 
 	}
@@ -319,6 +321,64 @@ focus_tree = {
 		}
 		relative_position_id = SPR_elections
 		x = 5
+		y = 1
+
+	}
+	
+	focus = {
+		id = SPR_power_to_the_conservatists
+		icon = GFX_focus_spa_unify_the_nationalist_front
+		cost = 5,00
+		prerequisite = {
+		focus = SPR_conservatists_wins
+		}
+		available = {
+		}
+		mutually_exclusive = {
+		focus = SPR_right_to_rule
+		}
+		completion_reward = {
+		retire_ideology_leader = neutrality
+		create_country_leader={ 
+	name = "Antonio Maura" 
+	picture="gfx/leaders/SPR/maura.dds" 
+	expire="1935.1.1" 
+	ideology = socialism
+	traits={  } 
+}
+		}
+		ai_will_do = {
+		factor = 0 
+		}
+		relative_position_id = SPR_conservatists_wins
+		x = -1
+		y = 1
+
+	}
+	focus = {
+		id = SPR_right_to_rule
+		icon = GFX_focus_spr_maintain_the_republic
+		cost = 5,00
+		prerequisite = {
+		focus = SPR_conservatists_wins
+		}
+		available = {
+		}
+		mutually_exclusive = {
+		focus = SPR_power_to_the_conservatists
+		}
+		completion_reward = {
+set_party_name = { 
+    ideology = neutrality
+    long_name = SPR_bourbon
+    name = SPR_bourbon_long
+}
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_conservatists_wins
+		x = 3
 		y = 1
 
 	}
@@ -371,6 +431,7 @@ focus_tree = {
 		focus = SPR_join_the_central_powers
 		}
 		completion_reward = {
+		add_stability = 0.20
 		}
 		relative_position_id = SPR_crisis_in_europe
 		x = 0
@@ -398,6 +459,8 @@ focus_tree = {
 		focus = SPR_join_the_central_powers
 		}
 		completion_reward = {
+		remove_ideas = neutrality_idea
+		FRA = { country_event = { id = generic.2 } }
 		}
 		relative_position_id = SPR_crisis_in_europe
 		x = -2
@@ -425,6 +488,8 @@ focus_tree = {
 		focus = SPR_join_the_entente
 		}
 		completion_reward = {
+		remove_ideas = neutrality_idea
+		GER = { country_event = { id = generic.2 } }
 		}
 		relative_position_id = SPR_crisis_in_europe
 		x = 2

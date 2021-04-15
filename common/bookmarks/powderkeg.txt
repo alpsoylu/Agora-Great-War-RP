@@ -305,6 +305,21 @@ bookmarks = {
 			}
 		}
 
+		"SPR"={
+			minor = yes
+			history = "SPR_POWDERKEG_DESC"
+			ideology = democratic
+			ideas = {
+				neutrality_idea
+				ww1_Scramble_for_Africa
+			}
+			focuses = {
+				SPR_parliementary_monarchy
+				SPR_down_with_the_king
+				SPR_right_to_rule
+			}
+		}
+
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
