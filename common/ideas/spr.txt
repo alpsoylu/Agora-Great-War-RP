@@ -1,0 +1,44 @@
+ideas = {
+	
+		country = {
+
+		RP_agricultur_idea = {
+
+
+			picture = ottoman_zanatkar
+
+			allowed = {
+				is_ai = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			consumer_goods_factor = -0.05
+			stability_factor = 0.15
+			}
+		}
+
+		RP_heavy_idea = {
+
+
+			picture = generic_local_self_management
+
+			allowed = {
+				is_ai = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			consumer_goods_factor = -0.15
+			stability_factor = -0.15
+			production_speed_buildings_factor = 0.15
+			}
+		}
+	}
+}

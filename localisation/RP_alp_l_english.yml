@@ -4,3 +4,47 @@
  ENG_protectarate_cyprus:0 "Protectarate of Cyprus"
  RP_optimizasyon:0 "Neutral Country"
  
+ 
+ SPR_elections:0 "Elections"
+ SPR_elections_desc:0 "Election time has come!We will select our prime minister in this elections."
+ SPR_liberals_wins:0 "Liberals win!"
+ SPR_liberals_wins_desc:0 "Liberal Fusionist Party (PLF) has won the elections."
+ SPR_conservatists_wins:0 "Conservatists win!"
+ SPR_conservatists_wins_desc:0 "Conservative Party (PLC) has won the elections."
+ 
+ spr_liberal_flag:0 "§YLiberals have won the elections§!"
+ spr_cons_flag:0 "§YLiberals have won the elections§!"
+ 
+ spr_event.1:0 "Spanish 1910 Elections"
+ spr_event.1.t:0 "Spanish 1910 Elections"
+ spr_event.1.d:0 "The Spanish people just voted for the seats in the parliement and their prime minister."
+ spr_event.1.a:0 "Liberals won the elections!"
+ spr_event.1.b:0 "Conservatists won the elections!"
+ 
+ 
+ SPR_crisis_in_europe:0 "Crisis in Europe"
+ SPR_crisis_in_europe_desc:0 "We should pick our role in the Great War"
+ 
+ SPR_neutral_foreign_policy:0 "Neutral Foreign Policy"
+ SPR_neutral_foreign_policy_desc:0 "There are no winners in these kind of wars.We should stay out of it!"
+ SPR_join_the_central_powers:0 "Join the Central Powers"
+ SPR_join_the_central_powers_desc:0 "We have to side with the Central Powers to win this war.They will be the winners of the Great War!"
+ SPR_join_the_entente:0 "Join the Entente"
+ SPR_join_the_entente_desc:0 "We have to side with the Entente to win this war.They will be the winners of the Great War!"
+ 
+ SPR_industrial_sit:0 "Industrial Situation"
+ 
+ SPR_heavy_industry:0 "Heavy Industry"
+ SPR_agricultural_industry:0 "Agricultural Industry"
+ 
+ 
+ 
+ RP_agricultur_idea:0 "Agricultural Economy"
+ RP_heavy_idea:0 "Heavy Industrial Economy"
+ SPR_improve_railways:0 "Improve the Railways"
+ 
+ SPR_focus_on_war_economy:0 "Focus on Military Industry"
+ SPR_focus_on_civ_industry:0 "Focus on Civilian Industry"
+ 
+ SPR_parliementary_monarchy:0 "Parliementary Monarchy"
+ SPR_down_with_the_king:0 "Down with the King"

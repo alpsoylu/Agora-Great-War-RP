@@ -1,0 +1,35 @@
+﻿###########################
+# Spain Events
+###########################
+
+add_namespace = spr_event
+
+	
+	
+	
+	
+#ELECTIONS
+country_event = {
+	id = spr_event.1
+	title = spr_event.1.t
+	desc = spr_event.1.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	#LIBERALS
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.1.a
+		set_country_flag = spr_cons_flag
+	}
+	
+	#CONS
+	option = {
+	ai_chance = {base = 5}
+		name = spr_event.1.b
+		set_country_flag = spr_cons_flag
+	}
+	
+	}
+	
+	

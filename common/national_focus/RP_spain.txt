@@ -1,0 +1,437 @@
+focus_tree = {
+	id = SPR_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SPR
+		}
+	}
+	continuous_focus_position = { x = 0 y = 2000 }
+	default = no
+	
+	focus = {
+		id = SPR_elections
+		icon = GFX_focus_generic_voting
+		cost = 10,00
+		completion_reward = {
+		SPR = { country_event = { id = spr_event.1 hours = 6 } }
+		}
+		x = 15
+		y = 0
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	focus = {
+		id = SPR_industrial_sit
+		icon = GFX_focus_generic_industry_2
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_conservatists_wins
+		focus = SPR_liberals_wins
+		}
+		completion_reward = {
+		41 = {
+		add_building_construction = {
+    type = industrial_complex
+    level = 2
+    instant_build = yes
+}
+}
+		}
+		relative_position_id = SPR_elections
+		x = 0
+		y = 2
+
+	}
+	focus = {
+		id = SPR_heavy_industry
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_industrial_sit
+		}
+		mutually_exclusive = {
+		focus = SPR_agricultural_industry
+		}
+		completion_reward = {
+		add_ideas = RP_heavy_idea
+		}
+		relative_position_id = SPR_industrial_sit
+		x = 1
+		y = 1
+
+	}
+	focus = {
+		id = SPR_agricultural_industry
+		icon = GFX_focus_generic_concessions
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_industrial_sit
+		}
+		mutually_exclusive = {
+		focus = SPR_heavy_industry
+		}
+		completion_reward = {
+		add_ideas = RP_agricultur_idea
+		}
+		relative_position_id = SPR_industrial_sit
+		x = -1
+		y = 1
+
+	}
+	focus = {
+		id = SPR_improve_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_agricultural_industry
+		focus = SPR_heavy_industry
+		}
+		completion_reward = {
+		every_owned_state = {
+		add_building_construction = {
+    type = infrastructure
+    level = 2
+    instant_build = yes
+}
+		}
+		}
+		relative_position_id = SPR_industrial_sit
+		x = 0
+		y = 2
+
+	}
+	
+	
+	
+	focus = {
+		id = SPR_focus_on_war_economy
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_improve_railways
+		}
+		mutually_exclusive = {
+		focus = SPR_focus_on_civ_industry
+		}
+		completion_reward = {
+		random_owned_state = {
+		add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+	}
+	}
+		random_owned_state = {
+		add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+	}
+	}
+		random_owned_state = {
+		add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+	}
+	}
+		random_owned_state = {
+		add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+	}
+	}
+		}
+		relative_position_id = SPR_industrial_sit
+		x = 1
+		y = 3
+
+	}
+	focus = {
+		id = SPR_focus_on_civ_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_improve_railways
+		}
+		mutually_exclusive = {
+		focus = SPR_focus_on_war_economy
+		}
+		completion_reward = {
+		random_owned_state = {
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+	}
+	}
+		random_owned_state = {
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+	}
+	}
+		random_owned_state = {
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+	}
+	}
+		random_owned_state = {
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+	}
+	}
+		}
+		relative_position_id = SPR_industrial_sit
+		x = -1
+		y = 3
+
+	}
+	
+	
+	
+	
+	
+	#LIBERAL BRANCH
+	focus = {
+		id = SPR_liberals_wins
+		icon = GFX_liberals
+		cost = 1,00
+		prerequisite = {
+		focus = SPR_elections
+		}
+		available = {
+		has_country_flag = spr_liberal_flag
+		}
+		mutually_exclusive = {
+		focus = SPR_conservatists_wins
+		}
+		completion_reward = {
+		set_politics = {
+	ruling_party = democratic
+        elections_allowed = no
+        last_election = "1935.12.17"
+        election_frequency = 48
+	}
+		}
+		relative_position_id = SPR_elections
+		x = -5
+		y = 1
+
+	}
+	focus = {
+		id = SPR_parliementary_monarchy
+		icon = GFX_focus_revolution 
+		cost = 5,00
+		prerequisite = {
+		focus = SPR_liberals_wins
+		}
+		available = {
+		}
+		mutually_exclusive = {
+		focus = SPR_down_with_the_king
+		}
+		completion_reward = {
+		}
+		ai_will_do = {
+		factor = 0 
+		}
+		relative_position_id = SPR_liberals_wins
+		x = 1
+		y = 1
+
+	}
+	focus = {
+		id = SPR_down_with_the_king
+		icon = GFX_goal_stabilize_democracy
+		cost = 5,00
+		prerequisite = {
+		focus = SPR_liberals_wins
+		}
+		available = {
+		}
+		mutually_exclusive = {
+		focus = SPR_parliementary_monarchy
+		}
+		completion_reward = {
+		retire_ideology_leader = democratic
+		create_country_leader={ 
+	name = "José Canalejas y Méndez" 
+	picture="gfx/leaders/SPR/jose.dds" 
+	expire="1935.1.1" 
+	ideology = socialism
+	traits={  } 
+}
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_liberals_wins
+		x = -4
+		y = 1
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	#CONS BRANCH 
+	focus = {
+		id = SPR_conservatists_wins
+		icon = GFX_cons
+		cost = 1,00
+		prerequisite = {
+		focus = SPR_elections
+		}
+		available = {
+		has_country_flag = spr_cons_flag
+		}
+		mutually_exclusive = {
+		focus = SPR_liberals_wins
+		}
+		completion_reward = {
+		set_politics = {
+	ruling_party = neutrality
+        elections_allowed = no
+        last_election = "1935.12.17"
+        election_frequency = 48
+	}
+		}
+		relative_position_id = SPR_elections
+		x = 5
+		y = 1
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	#WAAAAAR!
+	focus = {
+		id = SPR_crisis_in_europe
+		icon = GFX_focus_split_helmet
+		cost = 10,00
+		available = {
+		GER = {
+		OR = {
+		has_war_with = FRA
+		has_war_with = RUS
+		has_war_with = ENG
+		}
+		}
+		}
+		completion_reward = {
+		}
+		x = 27
+		y = 0
+
+	}
+	focus = {
+		id = SPR_neutral_foreign_policy
+		icon = GFX_focus_eagle
+		cost = 10,00
+		available = {
+		GER = {
+		OR = {
+		has_war_with = FRA
+		has_war_with = RUS
+		has_war_with = ENG
+		}
+		}
+		}
+		prerequisite = {
+		focus = SPR_crisis_in_europe
+		}
+		mutually_exclusive = {
+		focus = SPR_join_the_entente
+		focus = SPR_join_the_central_powers
+		}
+		completion_reward = {
+		}
+		relative_position_id = SPR_crisis_in_europe
+		x = 0
+		y = 1
+
+	}
+	focus = {
+		id = SPR_join_the_entente
+		icon = GFX_focus_consolidate_entente
+		cost = 10,00
+		available = {
+		GER = {
+		OR = {
+		has_war_with = FRA
+		has_war_with = RUS
+		has_war_with = ENG
+		}
+		}
+		}
+		prerequisite = {
+		focus = SPR_crisis_in_europe
+		}
+		mutually_exclusive = {
+		focus = SPR_neutral_foreign_policy
+		focus = SPR_join_the_central_powers
+		}
+		completion_reward = {
+		}
+		relative_position_id = SPR_crisis_in_europe
+		x = -2
+		y = 1
+
+	}
+	focus = {
+		id = SPR_join_the_central_powers
+		icon = GFX_focus_ger_weltpolitik
+		cost = 10,00
+		available = {
+		GER = {
+		OR = {
+		has_war_with = FRA
+		has_war_with = RUS
+		has_war_with = ENG
+		}
+		}
+		}
+		prerequisite = {
+		focus = SPR_crisis_in_europe
+		}
+		mutually_exclusive = {
+		focus = SPR_neutral_foreign_policy
+		focus = SPR_join_the_entente
+		}
+		completion_reward = {
+		}
+		relative_position_id = SPR_crisis_in_europe
+		x = 2
+		y = 1
+
+	}
+	
+	
+	
+}
