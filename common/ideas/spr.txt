@@ -8,7 +8,8 @@ ideas = {
 			picture = ottoman_zanatkar
 
 			allowed = {
-				is_ai = no
+				
+				tag = SPR
 			}
 
 			allowed_civil_war = {
@@ -16,7 +17,7 @@ ideas = {
 			}
 
 			modifier = {
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = 0.15
 			stability_factor = 0.15
 			}
 		}
@@ -27,7 +28,8 @@ ideas = {
 			picture = generic_local_self_management
 
 			allowed = {
-				is_ai = no
+				
+				tag = SPR
 			}
 
 			allowed_civil_war = {
@@ -47,7 +49,8 @@ ideas = {
 			picture = FRA_matignon_agreements
 
 			allowed = {
-				is_ai = no
+				
+				tag = SPR
 			}
 
 			allowed_civil_war = {
@@ -57,6 +60,195 @@ ideas = {
 			modifier = {
 			stability_factor = 0.1
 			political_power_factor = -0.4
+			}
+		}
+
+		RP_power_church = {
+
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.15
+			consumer_goods_factor = 0.15
+			}
+		}
+
+		RP_power_church_low = {
+
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.15
+			consumer_goods_factor = -0.15
+			}
+		}
+
+		RP_closed_parliement = {
+
+
+			picture = generic_intel_bonus
+
+			allowed = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.1
+			political_power_factor = 0.25
+			}
+		}
+
+		RP_long_live_king_alfonso = {
+
+
+			picture = Spa_embrace_the_spanish_destiny
+
+			allowed = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.15
+			political_power_factor = 0.15
+			}
+		}
+
+		RP_legacy_of_american_spanish_war = {
+
+
+			picture = SPR_nationalist_remnants
+
+			allowed = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.25
+			war_support_factor = -0.25
+			experience_gain_navy_factor = -0.25
+			}
+		}
+		
+		RP_legacy_of_american_spanish_war2 = {
+
+
+			picture = SPR_nationalist_remnants
+
+			allowed = {
+				
+				tag = SPR
+			}
+			on_remove = {
+		add_ideas = RP_legacy_of_american_spanish_war_good
+	}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.35
+			war_support_factor = -0.35
+			experience_gain_navy_factor = -0.5
+			}
+		}
+		
+		RP_legacy_of_american_spanish_war_will = {
+
+
+			picture = SPR_nationalist_remnants
+
+			allowed = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.15
+			war_support_factor = -0.10
+			army_morale = 10
+			experience_gain_navy_factor = -0.25
+			}
+		}
+		
+		RP_spanish_army = {
+
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			war_support_factor = 0.10
+			army_attack_factor = 0.10
+			army_defence_factor = 0.05
+			army_speed_factor = 0.05
+			}
+		}
+		
+		RP_for_democracy = {
+
+
+			picture = generic_disjointed_gov
+
+			allowed = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			political_power_factor = 0.25
+			stability_factor = 0ş05
 			}
 		}
 	}

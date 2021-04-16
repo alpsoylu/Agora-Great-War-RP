@@ -11,6 +11,24 @@
  SPR_liberals_wins_desc:0 "Liberal Fusionist Party (PLF) has won the elections."
  SPR_conservatists_wins:0 "Conservatists win!"
  SPR_conservatists_wins_desc:0 "Conservative Party (PLC) has won the elections."
+ SPR_gain_the_trust_of_the_king:0 "Gain the Trust of the King"
+ SPR_long_live_king_alfonso:0 "Long Live the King"
+ SPR_bourbon_pact:0 "The Bourbon Pact"
+ SPR_deal_for_gibraltar:0 "Deal for Gibraltar"
+ SPR_spanish_army:0 "Spanish Army"
+ RP_spanish_army:0 "Spanish Army"
+ SPR_increase_power_of_parliement:0 "Increase the Power of the Parliement"
+ SPR_lower_power_church:0 "Lower the Power of the Church"
+ RP_power_church_low:0 "Power of the Church Decreased"
+ SPR_establish_the_republic:0 "Establish the Republic"
+ 
+ 
+ 
+ SPR_democracy_deal_for_gibraltar:0 "Deal for Gibraltar"
+ 
+ SPR_willpower_tt:0 "§WThis will §Yremove§! the effects of the legacy of the §OAmerican-Spanish war§! §CPARTIALLY§!.But it will take no time.If you are in a war,this is the best choice.§!"
+ SPR_learn_tt:0 "§WThis will §Yremove§! the effects of the legacy of the §OAmerican-Spanish war§! §CFULLY§!.But it will take time and it will be §Rpainfull§!.If you are not going to go to the war soon or you will stay neutral,this is the best choice.§!"
+ SPR_republic_tt:0 "§YWe will establish a Spanish Republic!§!"
  
  spr_liberal_flag:0 "§YLiberals have won the elections§!"
  spr_cons_flag:0 "§YLiberals have won the elections§!"
@@ -20,6 +38,62 @@
  spr_event.1.desc:0 "The Spanish people just voted for the seats in the parliement and their prime minister."
  spr_event.1.a:0 "Liberals won the elections!"
  spr_event.1.b:0 "Conservatists won the elections!"
+ 
+ 
+ spr_event.4:0 "[FRA.GetName] rejects the Bourbon Pact"
+ spr_event.4.t:0 "[FRA.GetName] rejects the Bourbon Pact"
+ spr_event.4.desc:0 "[FRA.GetAdjective] goverment rejects our offer to sign a non aggresion pact along with a guarantee of independence."
+ spr_event.4.a:0 "No!"
+ 
+ spr_event.2:0 "[SPR.GetName] wants to sign a Bourbon Pact"
+ spr_event.2.t:0 "[SPR.GetName] wants to sign a Bourbon Pact"
+ spr_event.2.desc:0 "[SPR.GetAdjective] goverment offered us to sign a non aggresion pact along with a guarantee of independence."
+ spr_event.2.a:0 "We accept!"
+ spr_event.2.b:0 "We reject!"
+ 
+ 
+ RP_legacy_of_american_spanish_war_will:0 "Willpower over Technology"
+ RP_legacy_of_american_spanish_war2:0 "Learning from our Mistakes"
+ RP_legacy_of_american_spanish_war_good:0 "Legacy of American-Spanish War"
+ 
+ SPR_willpower_over_technology:0 "Willpower over Technology"
+ SPR_learn_from_our_mistakes:0 "Learn from our Mistakes"
+ SPR_democracy_willpower_over_technology:0 "Willpower over Technology"
+ SPR_democracy_learn_from_our_mistakes:0 "Learn from our Mistakes"
+ 
+ spr_event.3:0 "[FRA.GetName] agrees the Bourbon Pact"
+ spr_event.3.t:0 "[FRA.GetName] agrees the Bourbon Pact"
+ spr_event.3.desc:0 "[FRA.GetAdjective] goverment agrees to sign a non aggresion pact along with a guarantee of independence."
+ spr_event.3.a:0 "YES!"
+ 
+ SPR_liberalism:0 "Liberalism"
+ SPR_radicalism:0 "Radicalism"
+ SPR_liberalism_cons:0 "Autarky"
+ SPR_radicalism_cons:0 "Radicalism"
+ 
+ 
+ 
+ 
+ 
+ #GIBRALTAR#
+ spr_event.5:0 "[SPR.GetName] wants to make a deal for Gibraltar"
+ spr_event.5.t:0 "[SPR.GetName] wants to make a deal for Gibraltar"
+ spr_event.5.desc:0 "[SPR.GetAdjective] goverment offered us to sign a non aggresion pact for the control of Gibraltar."
+ spr_event.5.a:0 "We accept!"
+ spr_event.5.b:0 "We reject!"
+ 
+ 
+ spr_event.6:0 "[ENG.GetName] agrees our deal for Gibraltar"
+ spr_event.6.t:0 "[ENG.GetName] agrees our deal for Gibraltar"
+ spr_event.6.desc:0 "[ENG.GetAdjective] goverment agrees to sign a non aggresion pact for the control of Gibraltar."
+ spr_event.6.a:0 "NO!"
+ 
+ 
+ spr_event.7:0 "[ENG.GetName] rejects our deal for Gibraltar"
+ spr_event.7.t:0 "[ENG.GetName] rejects our deal for Gibraltar"
+ spr_event.7.desc:0 "[ENG.GetAdjective] goverment rejects our offer to sign a non aggresion pact for the control of Gibraltar."
+ spr_event.7.a:0 "YES!"
+ #GIBRALTAR#
  
  
  SPR_crisis_in_europe:0 "Crisis in Europe"
@@ -52,10 +126,25 @@
  SPR_power_to_the_conservatists:0 "Power to the Conservatists"
  SPR_right_to_rule:0 "The Right to Rule"
  RP_parl_mon:0 "Parliementary Monarchy"
+ RP_long_live_king_alfonso:0 "Long Live King Alfonso VIII"
+ RP_legacy_of_american_spanish_war:0 "Legacy of the American-Spanish War"
+ SPR_king_and_parliement:0 "The King and the Parliement"
+ SPR_king_parliement:0 "The King and the Parliement"
+ SPR_for_democracy:0 "For Democracy!"
+ RP_for_democracy:0 "For Democracy"
+ SPR_establish_secularism:0 "Establish Secularism"
  
  SPR_bourbon_long:0 "House of Bourbon"
  SPR_bourbon:0 "House of Bourbon"
  
+ SPR_kingdom:0 "Kingdom of Spain"
+ SPR_kingdom_DEF:0 "the Kingdom of Spain"
+ 
+ 
+ SPR_close_the_parliement:0 "Close the Parliement"
+ SPR_increase_the_power_of_church:0 "Increase the Power of the Church"
+ RP_power_church:0 "Power of the Church Increased"
+ RP_closed_parliement:0 "Closed Parliement"
  
  
  

@@ -208,11 +208,13 @@ political_actions = {
 
 		available = {
 			has_war_with = TUR
+			original_tag = ENG
 		}
 		
 		cost = 0
 
 		visible = {
+		original_tag = ENG
 		}
 
 		complete_effect = {

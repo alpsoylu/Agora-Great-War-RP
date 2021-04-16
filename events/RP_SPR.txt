@@ -16,11 +16,12 @@ country_event = {
 	picture = GFX_report_event_fascist_speech
 	
 	is_trigspred_only = yes
+	fire_only_once = yes
 	#LIBERALS
 	option = {
 	ai_chance = {base = 10}
 		name = spr_event.1.a
-		set_country_flag = spr_cons_flag
+		set_country_flag = spr_liberal_flag
 	}
 	
 	#CONS
@@ -28,6 +29,166 @@ country_event = {
 	ai_chance = {base = 5}
 		name = spr_event.1.b
 		set_country_flag = spr_cons_flag
+	}
+	
+	}	
+	
+
+#SPR WANTS TO SIGN NAP AND GUARANTEE(BOURBON PACT)
+country_event = {
+	id = spr_event.2
+	title = spr_event.2.t
+	desc = spr_event.2.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	#YES
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.2.a
+		SPR = { country_event = { id = spr_event.3 hours = 6 } }
+		diplomatic_relation = {
+    country = SPR
+    relation = guarantee
+    active = yes
+}
+		diplomatic_relation = {
+    country = SPR
+    relation = non_aggresion_pact
+    active = yes
+}
+	}
+	
+	#NO
+	option = {
+	ai_chance = {base = 5}
+		name = spr_event.2.b
+		SPR = { country_event = { id = spr_event.4 hours = 6 } }
+	}
+	
+	}
+	
+
+#FRA AGREES
+country_event = {
+	id = spr_event.3
+	title = spr_event.3.t
+	desc = spr_event.3.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	#DELIGHTFULL
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.3.a
+	}
+	
+	}
+	
+
+#FRA AGREES
+country_event = {
+	id = spr_event.4
+	title = spr_event.4.t
+	desc = spr_event.4.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	#DELIGHTFULL
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.4.a
+	}
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+#SPR WANTS GIBRALTA
+country_event = {
+	id = spr_event.5 #event spr_event.5 SPR
+	title = spr_event.5.t
+	desc = spr_event.5.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	#YES
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.5.a
+		SPR = { country_event = { id = spr_event.6 hours = 6 } }
+		diplomatic_relation = {
+    country = SPR
+    relation = non_aggression_pact
+    active = yes
+}
+SPR = {
+transfer_state = 118
+}
+ENG = {
+remove_state_core = 118
+}
+	}
+	
+	#NO
+	option = {
+	ai_chance = {base = 5}
+		name = spr_event.5.b
+		SPR = { country_event = { id = spr_event.7 hours = 6 } }
+	}
+	
+	}
+	
+
+#ENG AGREES
+country_event = {
+	id = spr_event.6
+	title = spr_event.6.t
+	desc = spr_event.6.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	#DELIGHTFULL
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.6.a
+	}
+	
+	}
+	
+
+#ENG REJECTS
+country_event = {
+	id = spr_event.7
+	title = spr_event.7.t
+	desc = spr_event.7.desc
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	#DELIGHTFULL
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.7.a
 	}
 	
 	}

@@ -203,6 +203,22 @@ focus_tree = {
 		y = 3
 
 	}
+	focus = {
+		id = SPR_spanish_army
+		icon = GFX_Army_March
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_focus_on_war_economy
+		focus = SPR_focus_on_civ_industry
+		}
+		completion_reward = {
+		add_ideas = RP_spanish_army
+		}
+		relative_position_id = SPR_improve_railways
+		x = 0
+		y = 2
+
+	}
 	
 	
 	
@@ -238,7 +254,7 @@ focus_tree = {
 	focus = {
 		id = SPR_parliementary_monarchy
 		icon = GFX_focus_revolution 
-		cost = 5,00
+		cost = 10,00
 		prerequisite = {
 		focus = SPR_liberals_wins
 		}
@@ -259,9 +275,101 @@ focus_tree = {
 
 	}
 	focus = {
+		id = SPR_increase_power_of_parliement
+		icon = GFX_sign_parliement
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_parliementary_monarchy
+		}
+		available = {
+		}
+		completion_reward = {
+		retire_ideology_leader = democratic
+		create_country_leader={ 
+	name = "José Canalejas y Méndez" 
+	picture="gfx/leaders/SPR/jose.dds" 
+	expire="1935.1.1" 
+	ideology = socialism
+	traits={  } 
+}
+		}
+		ai_will_do = {
+		factor = 0 
+		}
+		relative_position_id = SPR_parliementary_monarchy
+		x = 0
+		y = 1
+
+	}
+	focus = {
+		id = SPR_king_parliement
+		icon = GFX_focus_generic_home_defense
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_increase_power_of_parliement
+		}
+		available = {
+		}
+		completion_reward = {
+		add_political_power = 150
+		}
+		ai_will_do = {
+		factor = 0 
+		}
+		relative_position_id = SPR_increase_power_of_parliement
+		x = 0
+		y = 1
+
+	}
+	focus = {
+		id = SPR_lower_power_church
+		icon = GFX_goal_focus_church
+		cost = 5,00
+		prerequisite = {
+		focus = SPR_parliementary_monarchy
+		focus = SPR_down_with_the_king
+		}
+		available = {
+		}
+		completion_reward = {
+		add_ideas = RP_power_church_low
+		}
+		ai_will_do = {
+		factor = 0 
+		}
+		relative_position_id = SPR_liberals_wins
+		x = -1
+		y = 2
+
+	}
+	focus = {
+		id = SPR_for_democracy
+		icon = GFX_goal_generic_demand_territory
+		cost = 5,00
+		prerequisite = {
+		focus = SPR_lower_power_church
+		}
+		prerequisite = {
+		focus = SPR_establish_the_republic
+		focus = SPR_increase_power_of_parliement
+		}
+		available = {
+		}
+		completion_reward = {
+		add_ideas = RP_power_church_low
+		}
+		ai_will_do = {
+		factor = 0 
+		}
+		relative_position_id = SPR_lower_power_church
+		x = 0
+		y = 1
+
+	}
+	focus = {
 		id = SPR_down_with_the_king
 		icon = GFX_goal_stabilize_democracy
-		cost = 5,00
+		cost = 10,00
 		prerequisite = {
 		focus = SPR_liberals_wins
 		}
@@ -282,12 +390,201 @@ focus_tree = {
 add_stability = -0.15
 		}
 		ai_will_do = {
-		factor = 5
+		factor = 0
 		}
 		relative_position_id = SPR_liberals_wins
 		x = -3
 		y = 1
 
+	}
+	focus = {
+		id = SPR_establish_the_republic
+		icon = GFX_focus_eagle
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_down_with_the_king
+		}
+		available = {
+		}
+		completion_reward = {
+		drop_cosmetic_tag = yes
+		custom_effect_tooltip = SPR_republic_tt
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_down_with_the_king
+		x = 0
+		y = 1
+
+	}
+	focus = {
+		id = SPR_establish_secularism
+		icon = GFX_anti_christ
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_establish_the_republic
+		}
+		prerequisite = {
+		focus = SPR_lower_power_church
+		}
+		available = {
+		}
+		completion_reward = {
+		add_stability = -0.05
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_establish_the_republic
+		x = 0
+		y = 1
+
+	}
+	
+	
+	
+	focus = {
+		id = SPR_democracy_deal_for_gibraltar
+		icon = GFX_focus_spa_save_the_alcazar
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_for_democracy
+		}
+		prerequisite = {
+		focus = SPR_establish_secularism
+		focus = SPR_king_parliement
+		}
+		available = {
+		}
+		completion_reward = {
+		ENG = { country_event = { id = spr_event.5 } }
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_for_democracy
+		x = 0
+		y = 1
+	
+	}
+	focus = {
+		id = SPR_democracy_learn_from_our_mistakes
+		icon = GFX_focus_spr_no_pasaran
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_democracy_deal_for_gibraltar
+		}
+		available = {
+		}
+		mutually_exclusive = {
+		focus = SPR_democracy_willpower_over_technology
+		}
+		completion_reward = {
+		custom_effect_tooltip = SPR_learn_tt
+		hidden_effect = {
+		remove_ideas = RP_legacy_of_american_spanish_war
+		add_timed_idea = {
+    idea = RP_legacy_of_american_spanish_war2
+    days = 90
+		}
+		}
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_democracy_deal_for_gibraltar
+		x = -2
+		y = 1
+	
+	}
+	focus = {
+		id = SPR_democracy_willpower_over_technology
+		icon = GFX_focus_spr_crush_the_revolution
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_democracy_deal_for_gibraltar
+		}
+		available = {
+		}
+		mutually_exclusive = {
+		focus = SPR_democracy_learn_from_our_mistakes
+		}
+		completion_reward = {
+		custom_effect_tooltip = SPR_willpower_tt
+		hidden_effect = {
+		remove_ideas = RP_legacy_of_american_spanish_war
+		add_ideas = RP_legacy_of_american_spanish_war_will
+		}
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_democracy_deal_for_gibraltar
+		x = 2
+		y = 1
+	
+	}
+	focus = {
+		id = SPR_radicalism
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_democracy_learn_from_our_mistakes
+		focus = SPR_democracy_willpower_over_technology
+		}
+		available = {
+		has_completed_focus = SPR_down_with_the_king
+		}
+		mutually_exclusive = {
+		focus = SPR_liberalism
+		}
+		completion_reward = {
+		set_politics = {
+	ruling_party = communism
+        elections_allowed = no
+        last_election = "1935.12.17"
+        election_frequency = 48
+	}
+	add_popularity = {
+    ideology = communism
+    popularity = 0.4
+}
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_democracy_deal_for_gibraltar
+		x = 2
+		y = 2
+	
+	}
+	focus = {
+		id = SPR_liberalism
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_democracy_learn_from_our_mistakes
+		focus = SPR_democracy_willpower_over_technology
+		}
+		available = {
+		}
+		mutually_exclusive = {
+		focus = SPR_radicalism
+		}
+		completion_reward = {
+		add_popularity = {
+    ideology = democratic
+    popularity = 0.4
+}
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_democracy_deal_for_gibraltar
+		x = -2
+		y = 2
+	
 	}
 	
 	
@@ -338,12 +635,13 @@ add_stability = -0.15
 		focus = SPR_right_to_rule
 		}
 		completion_reward = {
+		add_stability = 0.05
 		retire_ideology_leader = neutrality
 		create_country_leader={ 
 	name = "Antonio Maura" 
 	picture="gfx/leaders/SPR/maura.dds" 
 	expire="1935.1.1" 
-	ideology = socialism
+	ideology = despotism
 	traits={  } 
 }
 		}
@@ -368,6 +666,8 @@ add_stability = -0.15
 		focus = SPR_power_to_the_conservatists
 		}
 		completion_reward = {
+		add_stability = -0.05
+		drop_cosmetic_tag = yes
 set_party_name = { 
     ideology = neutrality
     long_name = SPR_bourbon
@@ -381,6 +681,279 @@ set_party_name = {
 		x = 3
 		y = 1
 
+	}
+	focus = {
+		id = SPR_close_the_parliement
+		icon = GFX_goal_destroy_meclis
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_right_to_rule
+		}
+		available = {
+		}
+		completion_reward = {
+		add_ideas = RP_closed_parliement
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_right_to_rule
+		x = 0
+		y = 1
+
+	}
+	focus = {
+		id = SPR_bourbon_pact
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_close_the_parliement
+		}
+		available = {
+		}
+		completion_reward = {
+		FRA = { country_event = { id = spr_event.2 } }
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_close_the_parliement
+		x = 0
+		y = 1
+
+	}
+	focus = {
+		id = SPR_gain_the_trust_of_the_king
+		icon = GFX_alfonso
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_power_to_the_conservatists
+		}
+		available = {
+		}
+		completion_reward = {
+		add_political_power = 120
+		add_stability = 0.05
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_power_to_the_conservatists
+		x = 0
+		y = 1
+	
+	}
+	focus = {
+		id = SPR_king_and_parliement
+		icon = GFX_focus_generic_home_defense
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_gain_the_trust_of_the_king
+		}
+		available = {
+		}
+		completion_reward = {
+		add_political_power = 150
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_gain_the_trust_of_the_king
+		x = 0
+		y = 1
+	
+	}
+	focus = {
+		id = SPR_long_live_king_alfonso
+		icon = GFX_alfonso2
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_gain_the_trust_of_the_king
+		focus = SPR_close_the_parliement
+		}
+		prerequisite = {
+		focus = SPR_increase_the_power_of_church
+		}
+		available = {
+		}
+		completion_reward = {
+		add_ideas = RP_long_live_king_alfonso
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_increase_the_power_of_church
+		x = 0
+		y = 1
+	
+	}
+	focus = {
+		id = SPR_deal_for_gibraltar
+		icon = GFX_focus_spa_save_the_alcazar
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_long_live_king_alfonso
+		}
+		prerequisite = {
+		focus = SPR_bourbon_pact
+		focus = SPR_king_and_parliement
+		}
+		available = {
+		}
+		completion_reward = {
+		ENG = { country_event = { id = spr_event.5 } }
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_long_live_king_alfonso
+		x = 0
+		y = 1
+	
+	}
+	focus = {
+		id = SPR_learn_from_our_mistakes
+		icon = GFX_focus_spr_no_pasaran
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_deal_for_gibraltar
+		}
+		available = {
+		}
+		mutually_exclusive = {
+		focus = SPR_willpower_over_technology
+		}
+		completion_reward = {
+		custom_effect_tooltip = SPR_learn_tt
+		hidden_effect = {
+		remove_ideas = RP_legacy_of_american_spanish_war
+		add_timed_idea = {
+    idea = RP_legacy_of_american_spanish_war2
+    days = 90
+		}
+		}
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_deal_for_gibraltar
+		x = -2
+		y = 1
+	
+	}
+	focus = {
+		id = SPR_willpower_over_technology
+		icon = GFX_focus_spr_crush_the_revolution
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_deal_for_gibraltar
+		}
+		available = {
+		}
+		mutually_exclusive = {
+		focus = SPR_learn_from_our_mistakes
+		}
+		completion_reward = {
+		custom_effect_tooltip = SPR_willpower_tt
+		hidden_effect = {
+		remove_ideas = RP_legacy_of_american_spanish_war
+		add_ideas = RP_legacy_of_american_spanish_war_will
+		}
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_deal_for_gibraltar
+		x = 2
+		y = 1
+	
+	}
+	focus = {
+		id = SPR_increase_the_power_of_church
+		icon = GFX_goal_focus_church
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_power_to_the_conservatists
+		focus = SPR_right_to_rule
+		}
+		available = {
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+		add_ideas = RP_power_church
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_conservatists_wins
+		x = 1
+		y = 2
+
+	}
+	
+	
+	
+	focus = {
+		id = SPR_radicalism_cons
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_learn_from_our_mistakes
+		focus = SPR_willpower_over_technology
+		}
+		available = {
+		has_completed_focus = SPR_right_to_rule
+		}
+		mutually_exclusive = {
+		focus = SPR_liberalism_cons
+		}
+		completion_reward = {
+		set_politics = {
+	ruling_party = fascism
+        elections_allowed = no
+        last_election = "1935.12.17"
+        election_frequency = 48
+	}
+	add_popularity = {
+    ideology = fascism
+    popularity = 0.4
+}
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_deal_for_gibraltar
+		x = 2
+		y = 2
+	
+	}
+	focus = {
+		id = SPR_liberalism_cons
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_learn_from_our_mistakes
+		focus = SPR_willpower_over_technology
+		}
+		available = {
+		}
+		mutually_exclusive = {
+		focus = SPR_radicalism_cons
+		}
+		completion_reward = {
+		add_popularity = {
+    ideology = neutrality
+    popularity = 0.4
+}
+		}
+		ai_will_do = {
+		factor = 5
+		}
+		relative_position_id = SPR_deal_for_gibraltar
+		x = -2
+		y = 2
+	
 	}
 	
 	

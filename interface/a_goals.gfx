@@ -261,6 +261,22 @@ SpriteType = {
 	name = "GFX_cons"
 	texturefile = "gfx/interface/goals/newicons/cons.dds"			
 	}
+SpriteType = {
+	name = "GFX_alfonso"
+	texturefile = "gfx/interface/goals/newicons/alfonso.dds"			
+	}
+SpriteType = {
+	name = "GFX_alfonso2"
+	texturefile = "gfx/interface/goals/newicons/alfonso2.dds"			
+	}
+SpriteType = {
+	name = "GFX_Army_March"
+	texturefile = "gfx/interface/goals/TUR/Army_March.dds"			
+	}
+SpriteType = {
+	name = "GFX_anti_christ"
+	texturefile = "gfx/interface/goals/newicons/anti_christ.dds"			
+	}
 
 	
 }

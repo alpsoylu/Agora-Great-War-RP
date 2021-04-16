@@ -113,6 +113,7 @@ traits={ blockade_runner  } skill=2 }
 		neutrality_idea
 		ww1_Scramble_for_Africa
 		limited_conscription
+		RP_legacy_of_american_spanish_war
 	}
 
 }

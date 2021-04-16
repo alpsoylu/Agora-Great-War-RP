@@ -312,11 +312,12 @@ bookmarks = {
 			ideas = {
 				neutrality_idea
 				ww1_Scramble_for_Africa
+				RP_legacy_of_american_spanish_war
 			}
 			focuses = {
-				SPR_parliementary_monarchy
-				SPR_down_with_the_king
+				SPR_liberals_wins
 				SPR_right_to_rule
+				SPR_conservatists_wins
 			}
 		}
 
