@@ -69,7 +69,9 @@
  SPR_liberalism:0 "Liberalism"
  SPR_radicalism:0 "Radicalism"
  SPR_liberalism_cons:0 "Autarky"
- SPR_radicalism_cons:0 "Radicalism"
+ SPR_radicalism_cons:0 "Radical Nationalism"
+ 
+ POR_crush_republicans:0 "Crush the Republicans"
  
  
  
@@ -125,6 +127,9 @@
  
  SPR_power_to_the_conservatists:0 "Power to the Conservatists"
  SPR_right_to_rule:0 "The Right to Rule"
+ SPR_right_to_rule_desc:0 ""
+ POR_side_with_republicans:0 "Side with the Republicans"
+ POR_side_with_monarchists:0 "Side with the Monarchists"
  RP_parl_mon:0 "Parliementary Monarchy"
  RP_long_live_king_alfonso:0 "Long Live King Alfonso VIII"
  RP_legacy_of_american_spanish_war:0 "Legacy of the American-Spanish War"
@@ -146,7 +151,142 @@
  RP_power_church:0 "Power of the Church Increased"
  RP_closed_parliement:0 "Closed Parliement"
  
+ RP_never_surrender:0 "NEVER SURRENDER!"
+ 
+ POR_absoloute_monarchy:0 "Absoloute Monarchy"
+ POR_parliementary_monarchy:0 "Parliementary Monarchy"
+ 
+ POR_sharing_power:0 "Sharing Power"
+ POR_republicanism:0 "Republicanism"
+ POR_full_democracy:0 "Full Democracy"
+ POR_increase_power_church:0 "Increase the Power of the Catholic Church"
+ POR_embrace_secularism:0 "Embrace Secularism"
+ POR_close_radical_parties:0 "Close Radical Parties"
+ 
+ 
+ RP_rebel_crushed:0 "Rebellion Crushed!"
+ 
+ RP_legacy_revolution:0 "Legacy of the 1910 Revolution"
+ 
+ SPR_catolonian_resistance:0 "Catalan Resistance"
+ POR_liberal_democracy:0 "Liberal Democracy"
+ POR_authotorian_democracy:0 "Authatorian Democracy"
+ RP_liberal_democracy:0 "Liberal Democracy"
+ RP_auth_democracy:0 "Authatorian Democracy"
+ 
+ POR_workers_unite:0 "Workers of Portugal,Unite!"
+ POR_socialism_is_peace:0 "Socialism is Peace"
+ POR_socialism_is_war:0 "Socialism is War"
+ POR_nationalize_factories:0 "Nationalize Factories"
+ POR_decrease_working_times:0 "Decrease Working Times"
+ POR_iberian_union:0 "Iberian Union"
+ POR_attack_spain:0 "Attack Spain"
+ 
+ por_event.1:0 "[POR.GetName] wants to unite"
+ por_event.1.t:0 "[POR.GetName] wants to unite"
+ por_event.1.d:0 "[POR.GetName] wants to unite as an Iberian Union"
+ por_event.1.a:0 "We shall unite with our Iberian Brothers"
+ por_event.1.b:0 "No.Spain shall always be independent"
+ 
+ por_event.2:0 "Spain Accepts the Iberian Union"
+ por_event.2.t:0 "Spain Accepts the Iberian Union"
+ por_event.2.d:0 "Spain Accepts the Iberian Union"
+ por_event.2.a:0 "For Iberia"
+ 
+ por_event.3:0 "Spain rejects the Iberian Union"
+ por_event.3.t:0 "Spain rejects the Iberian Union"
+ por_event.3.d:0 "Spain rejects the Iberian Union"
+ por_event.3.a:0 "We will crush them"
+ 
+ 
+ 
+ por_event.5:0 "[POR.GetName] wants to unite"
+ por_event.5.t:0 "[POR.GetName] wants to unite"
+ por_event.5.d:0 "[POR.GetName] wants to unite as an Porto-Brazilian Union"
+ por_event.5.a:0 "We shall unite with our Portugese Brothers"
+ por_event.5.b:0 "No.Brazil shall always be independent"
+ 
+ por_event.6:0 "Brazil Accepts the Porto-Brazilian Union"
+ por_event.6.t:0 "Brazil Accepts the Porto-Brazilian Union"
+ por_event.6.d:0 "Brazil Accepts the Porto-Brazilian Union"
+ por_event.6.a:0 "For Greater Portugal...and brazil"
+ 
+ por_event.7:0 "Brazil rejects the Porto-Brazilian Union"
+ por_event.7.t:0 "Brazil rejects the Porto-Brazilian Union"
+ por_event.7.d:0 "Brazil rejects the Porto-Brazilian Union"
+ por_event.7.a:0 "We will crush them"
+ 
+ por_event.4:0 "A wedding is organized between Portugese and Brazilian royal families"
+ por_event.4.t:0 "A wedding is organized between Portugese and Brazilian royal families"
+ por_event.4.d:0 "A wedding is organized between Portugese and Brazilian royal families.This will strenghten relations between two countries."
+ por_event.4.a:0 "Delightfull."
+ 
+ 
+ IBR_union:0 "Iberian Union"
+ IBR_union_DEF:0 "Iberian Union"
+ IBR_union_ADJ:0 "Iberian"
+ RP_spread_rev:0 "Spread the Revolution"
+ POR_spread_revolution:0 "Spread the Revolution"
+ POR_spread_marxism:0 "Spread Marxism"
+ POR_communist_manifesto:0 "Communist Manifesto"
+ 
+ 
+ POR_investments_from_france:0 "Investments from [FRA.GetName]"
+ POR_investments_from_england:0 "Investments from [ENG.GetName]"
+ POR_investments_from_russia:0 "Investments from [RUS.GetName]"
+ POR_closer_relations_with_entente:0 "Closer Relations with the [FRA.GetFactionName]"
+ POR_join_entente_1:0 "Join the [FRA.GetFactionName]"
+ POR_neutral_foreign_policy1:0 "Neutral Foreign Policy"
+ POR_neutral_foreign_policy2:0 "Neutral Foreign Policy"
+ POR_allign_with_red_russia:0 "Allign with [SOV.GetName]"
+ POR_our_own_way:0 "Our Own Way"
+ POR_exile_republicans:0 "Exile the Republicans"
+ POR_closer_entente:0 "Closer Relitions with [FRA.GetFactionName]"
+ POR_closer_central:0 "Closer Relitions with [GER.GetFactionName]"
+ POR_german_investors:0 "[GER.GetAdjective] Investors"
+ POR_french_investors:0 "[FRA.GetAdjective] Investors"
+ POR_organize_brazil_wedding:0 "Organize a royal wedding"
+ POR_closer_ties_between_families:0 "Closer ties between Royal Families"
+ 
+ 
+ POR_integrate_brazilian_military:0 "Integrate Brazilian Military"
+ POR_integrate_brazilian_politics:0 "Integrate Brazilian Politics"
+ POR_integrate_brazilian_economy:0 "Integrate Brazilian Economy"
+ POR_power_of_porto_brazilian_empire:0 "Porto-Brazilian Empire"
+ RP_porto_brazilian_empire:0 "Porto-Brazilian Empire"
+ 
+ POR_suggest_a_union_with_brazil:0 "Suggest a union between Brazil and us"
+ 
+ 
+ 
+ POR_neutral_foreign_policy3:0 "Neutral Foreign Policy"
+ POR_join_entente_2:0 "Join the [FRA.GetFactionName]"
+ POR_join_central_2:0 "Join the [GER.GetFactionName]"
+ BRA_abc_conferance:0 "ABC Conferance"
+ BRA_abc_conferance_desc:0 "Argentine Brazil Chile Conferance"
+ 
+ 
+ 
+ POR_com_Faction:0 "Lisbon Socialist Pact"
+ POR_central_investment_tt:0 "We will gain §Y1 civilian and 1 military factories§! for every member of the §YCentral Powers§!"
+ POR_entente_investment_tt:0 "We will gain §Y1 civilian and 1 military factories§! for every member of the §YEntente§!"
+ 
  
  
  
  SPR_POWDERKEG_DESC:0 "Spain is in fire since the 1898 American Spanish war.Spain has lost its empire and is going bankrupt.We have to fix this political and economic situation!"
+ POR_POWDERKEG_DESC:0 "Portugal is ruled by a monarch.But the republicans are opposing this.A revolution is coming."
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ POR_victory_in_the_rebellion:0 "Victory in the Rebellion"
+ POR_revolution_succeeds:0 "Revolution Succeeds"
+ POR_prepare_for_1911_elections:0 "Prepare for 1911 Elections"
+ POR_republicans_win:0 "PRP Victory"
+ POR_communist_win:0 "PSP Victory"

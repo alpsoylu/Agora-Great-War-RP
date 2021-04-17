@@ -10,13 +10,16 @@ add_namespace = spr_event
 	
 #ELECTIONS
 country_event = {
-	id = spr_event.1
+	id = spr_event.1 #Event spr_event.1 SPR
 	title = spr_event.1.t
 	desc = spr_event.1.desc
 	picture = GFX_report_event_fascist_speech
 	
 	is_trigspred_only = yes
 	fire_only_once = yes
+	trigger = {
+	always = no
+	}
 	#LIBERALS
 	option = {
 	ai_chance = {base = 10}
@@ -43,6 +46,9 @@ country_event = {
 	
 	is_trigspred_only = yes
 	fire_only_once = yes
+	trigger = {
+	always = no
+	}
 	#YES
 	option = {
 	ai_chance = {base = 10}
@@ -79,6 +85,9 @@ country_event = {
 	
 	is_trigspred_only = yes
 	fire_only_once = yes
+	trigger = {
+	always = no
+	}
 	#DELIGHTFULL
 	option = {
 	ai_chance = {base = 10}
@@ -97,6 +106,9 @@ country_event = {
 	
 	is_trigspred_only = yes
 	fire_only_once = yes
+	trigger = {
+	always = no
+	}
 	#DELIGHTFULL
 	option = {
 	ai_chance = {base = 10}
@@ -121,7 +133,7 @@ country_event = {
 	
 	
 
-#SPR WANTS GIBRALTA
+#SPR WANTS GIBRALTAR
 country_event = {
 	id = spr_event.5 #event spr_event.5 SPR
 	title = spr_event.5.t
@@ -130,6 +142,9 @@ country_event = {
 	
 	is_trigspred_only = yes
 	fire_only_once = yes
+	trigger = {
+	always = no
+	}
 	#YES
 	option = {
 	ai_chance = {base = 10}
@@ -167,6 +182,9 @@ country_event = {
 	
 	is_trigspred_only = yes
 	fire_only_once = yes
+	trigger = {
+	always = no
+	}
 	#DELIGHTFULL
 	option = {
 	ai_chance = {base = 10}
@@ -185,6 +203,9 @@ country_event = {
 	
 	is_trigspred_only = yes
 	fire_only_once = yes
+	trigger = {
+	always = no
+	}
 	#DELIGHTFULL
 	option = {
 	ai_chance = {base = 10}

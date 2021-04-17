@@ -49,8 +49,10 @@ ideas = {
 			picture = FRA_matignon_agreements
 
 			allowed = {
-				
+			OR = {
+				tag = POR
 				tag = SPR
+				}
 			}
 
 			allowed_civil_war = {
@@ -69,8 +71,10 @@ ideas = {
 			picture = FRA_scw_intervention_nationalists_focus
 
 			allowed = {
-				
+				OR = {
 				tag = SPR
+				tag = POR
+				}
 			}
 
 			allowed_civil_war = {
@@ -83,14 +87,38 @@ ideas = {
 			}
 		}
 
+		RP_spread_rev = {
+
+
+			picture = ottoman_dkzb
+
+			allowed = {
+				OR = {
+				tag = SPR
+				tag = POR
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			war_support_factor = 0.1
+			justify_war_goal_time = -0.5
+			}
+		}
+
 		RP_power_church_low = {
 
 
 			picture = FRA_scw_intervention_nationalists_focus
 
 			allowed = {
-				
+				OR = {
 				tag = SPR
+				tag = POR
+				}
 			}
 
 			allowed_civil_war = {
@@ -158,9 +186,9 @@ ideas = {
 			}
 
 			modifier = {
-			stability_factor = -0.25
-			war_support_factor = -0.25
-			experience_gain_navy_factor = -0.25
+			stability_factor = -0.35
+			war_support_factor = -0.35
+			experience_gain_navy_factor = -0.50
 			}
 		}
 		
@@ -182,9 +210,9 @@ ideas = {
 			}
 
 			modifier = {
-			stability_factor = -0.35
-			war_support_factor = -0.35
-			experience_gain_navy_factor = -0.5
+			stability_factor = -0.45
+			war_support_factor = -0.45
+			experience_gain_navy_factor = -0.75
 			}
 		}
 		
@@ -203,10 +231,10 @@ ideas = {
 			}
 
 			modifier = {
-			stability_factor = -0.15
-			war_support_factor = -0.10
-			army_morale = 10
-			experience_gain_navy_factor = -0.25
+			stability_factor = -0.20
+			war_support_factor = -0.15
+			army_morale = 15
+			experience_gain_navy_factor = -0.30
 			}
 		}
 		
@@ -249,6 +277,143 @@ ideas = {
 			modifier = {
 			political_power_factor = 0.25
 			stability_factor = 0ş05
+			}
+		}
+		
+		RP_catolonian_resistance = {
+
+
+			picture = generic_disjointed_gov
+
+			allowed = {
+				
+				tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.15
+			}
+		}
+		#POR#POR#POR#
+		RP_never_surrender = {
+
+
+			picture = generic_disjointed_gov
+
+			allowed = {
+				is_in_civil_war = yes
+				tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			max_surrender_limit_offset = 0.7
+			stability_factor = 0.5
+			war_support_factor = 0.5
+			}
+		}
+		
+		RP_rebel_crushed = {
+
+
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.05
+			}
+		}
+		
+		RP_legacy_revolution = {
+
+
+			picture = generic_king_handled
+
+			allowed = {
+				tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.05
+			}
+		}
+		
+		RP_liberal_democracy = {
+
+
+			picture = AST_idea_Workers_Education_Association
+
+			allowed = {
+				tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.05
+			political_power_factor = -0.05
+			}
+		}
+		
+		RP_auth_democracy = {
+
+
+			picture = NOR_general_strike
+
+			allowed = {
+				tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = -0.05
+			political_power_factor = 0.05
+			}
+		}
+		
+		RP_porto_brazilian_empire = {
+
+
+			picture = por_the_fifth_empire
+
+			allowed = {
+				tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.10
+			political_power_factor = 0.15
+			war_support_factor = 0.05
+			justify_war_goal_time = -0.4
 			}
 		}
 	}

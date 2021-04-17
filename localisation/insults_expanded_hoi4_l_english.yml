@@ -2,27 +2,27 @@
  # GUIs:
  OPEN_INSULT_EXPANDED_DIPLO_ACTIONS_TT: "§GClick§! to show other diplomatic actions."
  
- SEND_INSULT_DIPLO_ACTION_TITLE: "Mektup gonder"
- SEND_INSULT_DIPLO_ACTION_TT: "Ulkeler ile diplomatik iliski kurmak icin yolayın §Y[This.GetNameWithFlag]§!. [This.GetSendInsultConditionsTooltip]"
+ SEND_INSULT_DIPLO_ACTION_TITLE: "Send Letter"
+ SEND_INSULT_DIPLO_ACTION_TT: "Send to make diplomatic relations between countries. §Y[This.GetNameWithFlag]§!. [This.GetSendInsultConditionsTooltip]"
  
- INSULT_EXPANDED_POPUP_SENDER_TITLE: "Mektup Gonder"
- INSULT_EXPANDED_POPUP_SENDER_SHORT_DESC: "§Y[?selected_country_to_insult.GetNameWithFlag]§!, Telgraf cekıyorsunuz"
- INSULT_EXPANDED_POPUP_SENDER_DESC: "§Y[?selected_country_to_insult.GetNameWithFlag]§!, baskanıyla ıletısım kuruyorsunuz"
+ INSULT_EXPANDED_POPUP_SENDER_TITLE: "Send Letter"
+ INSULT_EXPANDED_POPUP_SENDER_SHORT_DESC: "You are sending a telegraph to §Y[?selected_country_to_insult.GetNameWithFlag]§!"
+ INSULT_EXPANDED_POPUP_SENDER_DESC: "You are communicating with the leader of §Y[?selected_country_to_insult.GetNameWithFlag]§!"
  INSULT_EXPANDED_POPUP_SENDER_ENTRY: "§H[This.GetRandomizedInsultEntry]§!"
  INSULT_EXPANDED_POPUP_SENDER_CUSTOM_ENTRY: "§H[This.GetInsultTypedText]§!"
  RANDOMIZE_INSULT_BUTTON_TT: "§GClick§! to select another random insult. \n§GRight-click§! to open or close the list of all valid insults that you could randomize."
  
  SEND_INSULT_BUTTON_TT: "§Y[This.GetNameWithFlag]§! sends the selected insult to §Y[?selected_country_to_insult.GetNameWithFlag]§!. [This.GetSendInsultButtonConditionsTooltip]"
  
- INSULT_EXPANDED_POPUP_RECEIVER_TITLE: "Bır mektubunuz var"
- INSULT_EXPANDED_POPUP_RECEIVER_SHORT_DESC: "§Y[This.GetNameWithFlag]§! Hukumetınden sıze telgraf var"
+ INSULT_EXPANDED_POPUP_RECEIVER_TITLE: "You have a letter"
+ INSULT_EXPANDED_POPUP_RECEIVER_SHORT_DESC: "§Y[This.GetNameWithFlag]§! Goverment sends you a telegraph"
  INSULT_EXPANDED_POPUP_RECEIVER_ENTRY: "§H[This.GetReceivedInsultEntry]§!"
  INSULT_EXPANDED_POPUP_RECEIVER_CUSTOM_ENTRY: "§H[This.GetInsultTypedReceivedText]§!"
- INSULT_EXPANDED_POPUP_RECEIVER_DESC: "Telgraf"
+ INSULT_EXPANDED_POPUP_RECEIVER_DESC: "Telegraph"
  
  RECEIVED_INSULT_OK_BUTTON_TT: "§Y[This.GetNameWithFlag]§! insulted us."
  
- INSULT_BACK: "Gerı donus"
+ INSULT_BACK: "Back"
  INSULT_BACK_TT: "Send an insult back. [This.GetSendInsultConditionsTooltip]"
  
  ROOT_COULD_INSULT_TARGET_NORMALLY_TOO: "We are able to send an insult to this country"

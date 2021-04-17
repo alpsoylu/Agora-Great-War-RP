@@ -22,18 +22,16 @@ country_event = {
 	}
 }
 country_event = {
-	id = ww1_portugal.2
+	id = ww1_portugal.2 #event ww1_portugal.2 POR
 	title = ww1_portugal.2.t
 	desc = ww1_portugal.2.d
 	picture = GFX_report_event_gathering_protest
-
+	is_triggered_only = no
 	fire_only_once = yes
 	trigger = {
 		original_tag = POR
 		has_government = neutrality
 		date > 1910.10.5
-		NOT = { has_country_flag = portuguese_kingdom }
-		NOT = { has_country_flag = portuguese_republic }
 	}
 	mean_time_to_happen = {
 		days = 0
@@ -57,8 +55,137 @@ country_event = {
 				neutrality = 35
 			}	
 		}
-		remove_ideas = POR_unstable_monarchy
+		POR = {
+			start_civil_war = {
+				ruling_party = democratic
+				ideology = neutrality
+				size = 0.25
+				states = { 180 }
+			}
+			
+			
+			add_ideas = RP_never_surrender
+			complete_national_focus = POR_side_with_republicans
+			remove_ideas = POR_unstable_monarchy
+			division = { 
+		name = "1o Batalhão de Infantaria"
+		location = 6924 
+		division_template = "Batalhao de Infantaria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.2
+	}
+			division = { 
+		name = "1o Batalhão de Infantaria"
+		location = 889 
+		division_template = "Batalhao de Infantaria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.2
+	}
+			division = { 
+		name = "1o Batalhão de Infantaria"
+		location = 845
+		division_template = "Batalhao de Infantaria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.2
+	}
+		}
 		news_event = { id = ww1_portugal.3 }
+		random_other_country = {
+			limit = {
+				original_tag = POR
+				has_government = neutrality
+			}
+			add_ideas = POR_unstable_monarchy
+			hidden_effect = {
+			create_country_leader = { 
+	name = "Manuel II" 
+	desc=POR_manuel_ii_DESC 
+	picture="gfx/leaders/POR/POR_manuel_ii.dds" 
+	expire="1935.1.1" 
+	ideology=autocracy  
+	traits={ patriota } 
+}
+			}
+			complete_national_focus = POR_side_with_monarchists
+			drop_cosmetic_tag = yes
+			hidden_effect = {
+			division_template = {
+				name = "Guarda"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+				}
+			}
+			112 = {
+				create_unit = {
+					division = "name = \"I Guarda\" division_template = \"Guarda\" start_experience_factor = 0.1" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"II Guarda\" division_template = \"Guarda\" start_experience_factor = 0.1" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"III Guarda\" division_template = \"Guarda\" start_experience_factor = 0.1" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"IV Guarda\" division_template = \"Guarda\" start_experience_factor = 0.1" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"V Guarda\" division_template = \"Guarda\" start_experience_factor = 0.1" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"VI Guarda\" division_template = \"Guarda\" start_experience_factor = 0.1" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"VII Guarda\" division_template = \"Guarda\" start_experience_factor = 0.1" 
+					owner = POR
+				}
+			}
+		}
+		
+			hidden_effect = {
+				create_country_leader = {
+					name = "Teófilo Braga"
+					picture = "gfx/leaders/POR/POR_teofilo_braga.dds" 
+					expire = "1935.1.1"
+					ideology = liberalism 
+					traits = {} 
+				}
+				division_template = {
+					name = "Milícia Republicana"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+					}
+				}
+				180 = {
+					create_unit = {
+						division = "name = \"I Brigada\" division_template = \"Milícia Republicana\" start_experience_factor = 0.1" 
+						owner = POR
+					}
+					create_unit = {
+						division = "name = \"II Brigada\" division_template = \"Milícia Republicana\" start_experience_factor = 0.1" 
+						owner = POR
+					}
+					create_unit = {
+						division = "name = \"III Brigada\" division_template = \"Milícia Republicana\" start_experience_factor = 0.1" 
+						owner = POR
+					}
+					create_unit = {
+						division = "name = \"IV Brigada\" division_template = \"Milícia Republicana\" start_experience_factor = 0.1" 
+						owner = POR
+					}
+				}
+			}
+			
+		}
 		ai_chance = { factor = 35 }
 	}
 	option = {
@@ -68,16 +195,35 @@ country_event = {
 			start_civil_war = {
 				ruling_party = neutrality
 				ideology = democratic
-				size = 0.5
-				states = { 180 181 }
+				size = 0.70
+				states = { 180 }
 			}
+			
+			
+			add_ideas = RP_never_surrender
+			complete_national_focus = POR_side_with_monarchists
 		}
 		remove_ideas = POR_unstable_monarchy
 		random_other_country = {
 			limit = {
 				original_tag = POR
 				has_government = democratic
-			}		
+			}
+			division = { 
+		name = "1o Batalhão de Infantaria"
+		location = 889 
+		division_template = "Batalhao de Infantaria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.2
+	}
+			division = { 
+		name = "1o Batalhão de Infantaria"
+		location = 845
+		division_template = "Batalhao de Infantaria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.2
+	}
+			complete_national_focus = POR_side_with_republicans
 			set_cosmetic_tag = POR_REP
 			hidden_effect = {
 				create_country_leader = {

@@ -257,6 +257,12 @@ SpriteType = {
 	name = "GFX_liberals"
 	texturefile = "gfx/interface/goals/newicons/liberal.dds"			
 	}
+	#DYN MODIFIER
+	spriteType = {
+		name = "GFX_modifiers_catalan_resistance"
+		textureFile = "gfx/interface/state_modifiers/catalan_resistance.dds"
+	}
+	#DYN END
 SpriteType = {
 	name = "GFX_cons"
 	texturefile = "gfx/interface/goals/newicons/cons.dds"			
@@ -276,6 +282,42 @@ SpriteType = {
 SpriteType = {
 	name = "GFX_anti_christ"
 	texturefile = "gfx/interface/goals/newicons/anti_christ.dds"			
+	}
+SpriteType = {
+	name = "GFX_por_republic"
+	texturefile = "gfx/interface/goals/newicons/por_republic.dds"			
+	}
+SpriteType = {
+	name = "GFX_por_monarchy"
+	texturefile = "gfx/interface/goals/newicons/por_monarchy.dds"			
+	}
+SpriteType = {
+	name = "GFX_prp"
+	texturefile = "gfx/interface/goals/newicons/prp.dds"			
+	}
+SpriteType = {
+	name = "GFX_psp"
+	texturefile = "gfx/interface/goals/newicons/psp.dds"			
+	}
+SpriteType = {
+	name = "GFX_por_monarch"
+	texturefile = "gfx/interface/goals/newicons/por_monarch.dds"			
+	}
+SpriteType = {
+	name = "GFX_Communist_Discourse"
+	texturefile = "gfx/interface/goals/newicons/Communist_Discourse.dds"			
+	}
+SpriteType = {
+	name = "GFX_comisar"
+	texturefile = "gfx/interface/goals/newicons/comisar.dds"			
+	}
+SpriteType = {
+	name = "GFX_Communist_Pride"
+	texturefile = "gfx/interface/goals/newicons/Communist_Pride.dds"			
+	}
+SpriteType = {
+	name = "GFX_demir_yumruk"
+	texturefile = "gfx/interface/goals/newicons/demir_yumruk.dds"			
 	}
 
 	

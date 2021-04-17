@@ -555,3 +555,11 @@ SPR_kingdom = {
 	color = rgb { 256 128 0 }
 	color_ui = rgb { 256 255 122 }
 }
+IBR_union = {
+	color = rgb { 0 145 40 }
+	color_ui = rgb { 0 145 40 }
+}
+KPB_kingdom_portugal_and_brazil = {
+	color = rgb { 0  80  152 }
+	color_ui = rgb { 220  105  70 }
+}

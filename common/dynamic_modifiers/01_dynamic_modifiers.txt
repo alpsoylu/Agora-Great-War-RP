@@ -8,3 +8,14 @@ ENG_protectarate_cyprus = {
 	local_resources_factor = -0.75
 	resistance_growth = 0.15
 }
+
+SPR_catolonian_resistance = {
+	enable = { tag = SPR }
+
+	icon = GFX_modifiers_catalan_resistance
+	#EFFECT
+	compliance_growth = -0.25
+	local_non_core_manpower = -0.30
+	local_resources_factor = -0.39
+	resistance_growth = 0.25
+}

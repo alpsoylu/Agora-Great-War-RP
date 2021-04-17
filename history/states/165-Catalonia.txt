@@ -11,7 +11,6 @@ state={
 		victory_points={ 9764 15 }
 		owner = SPR
 		add_core_of = CAT
-		add_core_of = SPR
 		buildings={
 			infrastructure=6
 			industrial_complex=1

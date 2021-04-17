@@ -2,14 +2,14 @@
 guiTypes = {
 	containerWindowType = {
 		name = "nat_ideas_container"
-		position = { x = 537 y = 36 }
+		position = { x = 590 y = 35 }
 		
 		
 		
 		buttonType ={
 			name ="nat_ideas_open_button"
 			spriteType = "GFX_nat_ideas_open_button"
-			position = { x=50 y=0 }
+			position = { x=0 y=0 }
 			clicksound = click_close
 			oversound = ui_menu_over
 			pdx_tooltip = "NATIDEAS_TOOLTIP"

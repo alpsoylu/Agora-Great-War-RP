@@ -73,6 +73,21 @@ create_navy_leader={  name = "Miranda Godoy" id=86049
 #portrait_path="gfx/admiral/SPR_miranda_y_godoy.tga" 
 traits={ blockade_runner  } skill=2 }
 
+
+
+165 = {
+	add_dynamic_modifier = { modifier = SPR_catolonian_resistance }
+}
+
+165 = {
+	start_resistance = yes
+	set_compliance = 0
+	set_resistance = 55
+	set_garrison_strength = 1.0
+}
+
+
+
 1910.1.1 = {
 	oob = "SPR_1910"
 

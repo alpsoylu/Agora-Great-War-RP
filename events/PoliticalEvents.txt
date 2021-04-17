@@ -820,6 +820,8 @@ country_event = {
 		NOT = { has_idea = reign_of_terror }
 		is_puppet = no
 		NOT = { has_country_flag = dont_trigger_political_event }
+		NOT = { original_tag = POR }
+		NOT = { original_tag = SPR }
 	}
 
 	mean_time_to_happen = {

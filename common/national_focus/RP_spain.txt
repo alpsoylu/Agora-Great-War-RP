@@ -15,7 +15,7 @@ focus_tree = {
 		icon = GFX_focus_generic_voting
 		cost = 10,00
 		completion_reward = {
-		SPR = { country_event = { id = spr_event.1 hours = 6 } }
+		SPR = { country_event = { id = spr_event.1 } }
 		}
 		x = 15
 		y = 0
@@ -356,7 +356,10 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-		add_ideas = RP_power_church_low
+		add_popularity = {
+    ideology = democratic
+    popularity = 0.25
+}
 		}
 		ai_will_do = {
 		factor = 0 
@@ -540,6 +543,14 @@ add_stability = -0.15
 		focus = SPR_liberalism
 		}
 		completion_reward = {
+		retire_ideology_leader = communism
+		create_country_leader={ 
+	name = "Benito Pérez Galdós" 
+	picture="gfx/leaders/SPR/benito.dds" 
+	expire="1935.1.1" 
+	ideology = marxism
+	traits={  } 
+}
 		set_politics = {
 	ruling_party = communism
         elections_allowed = no
@@ -1005,6 +1016,7 @@ set_party_name = {
 		}
 		completion_reward = {
 		add_stability = 0.20
+		set_rule = {can_join_factions = no}
 		}
 		relative_position_id = SPR_crisis_in_europe
 		x = 0

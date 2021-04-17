@@ -1,0 +1,1480 @@
+focus_tree = {
+	id = POR_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = POR
+		}
+	}
+	continuous_focus_position = { x = 0 y = 3000 }
+	default = no
+	
+	#CUMHURIYET
+	focus = {
+		id = POR_side_with_republicans
+		icon = GFX_por_republic
+		cost = 10,00
+		available = {
+		always = no
+		}
+		mutually_exclusive = {
+		focus = POR_side_with_monarchists
+		}
+		completion_reward = {
+		create_country_leader = {
+	name = "Teófilo Braga"
+	picture = "gfx/leaders/POR/POR_teofilo_braga.dds" 
+	expire = "1935.1.1"
+	ideology = liberalism 
+	traits = {} 
+}
+		}
+		x = 13
+		y = 0
+
+	}
+	
+	focus = {
+		id = POR_revolution_succeeds
+		icon = GFX_por_republic
+		cost = 5,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_side_with_republicans
+		}
+		completion_reward = {
+		add_ideas = RP_legacy_revolution
+		
+		}
+		relative_position_id = POR_side_with_republicans
+		x = 0
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_prepare_for_1911_elections
+		icon = GFX_focus_generic_voting
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_revolution_succeeds
+		}
+		completion_reward = {
+		}
+		relative_position_id = POR_revolution_succeeds
+		x = 0
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_republicans_win
+		icon = GFX_prp
+		cost = 10,00
+		ai_chance = {
+		factor = 10
+		}
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_prepare_for_1911_elections
+		}
+		mutually_exclusive = {
+		focus = POR_communist_win
+		}
+		completion_reward = {
+		hidden_effect = {
+		create_country_leader = {
+	name = "Teófilo Braga"
+	picture = "gfx/leaders/POR/POR_teofilo_braga.dds" 
+	expire = "1935.1.1"
+	ideology = liberalism 
+	traits = {} 
+}
+		}
+		set_politics = {
+	ruling_party = democratic
+        elections_allowed = yes
+        last_election = "1935.12.17"
+        election_frequency = 36
+}
+		}
+		relative_position_id = POR_prepare_for_1911_elections
+		x = 1
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_closer_relations_with_entente
+		icon = GFX_focus_ger_oppose_hitler
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_republicans_win
+		}
+		completion_reward = {
+		every_country = {
+		limit = {is_in_faction_with = FRA}
+		add_opinion_modifier = { target = PREV modifier = huge_increase }
+		}
+		}
+		relative_position_id = POR_republicans_win
+		x = 1
+		y = 2
+
+	}
+	
+	focus = {
+		id = POR_investments_from_france
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_closer_relations_with_entente
+		}
+		completion_reward = {
+		random_owned_state = {
+		limit = { is_core_of = POR }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+		random_owned_state = {
+		limit = { is_core_of = POR }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+}
+}
+		}
+		relative_position_id = POR_closer_relations_with_entente
+		x = -2
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_investments_from_england
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10,00
+		available = {
+		ENG = {
+		is_in_faction_with = FRA
+		}
+		}
+		prerequisite = {
+		focus = POR_closer_relations_with_entente
+		}
+		completion_reward = {
+		random_owned_state = {
+		limit = { is_core_of = POR }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+		random_owned_state = {
+		limit = { is_core_of = POR }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+}
+}
+		}
+		relative_position_id = POR_closer_relations_with_entente
+		x = 0
+		y = 1
+
+	}
+	focus = {
+		id = POR_investments_from_russia
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10,00
+		available = {
+		RUS = {
+		is_in_faction_with = FRA
+		}
+		}
+		prerequisite = {
+		focus = POR_closer_relations_with_entente
+		}
+		completion_reward = {
+		random_owned_state = {
+		limit = { is_core_of = POR }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+		random_owned_state = {
+		limit = { is_core_of = POR }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+}
+}
+		}
+		relative_position_id = POR_closer_relations_with_entente
+		x = 2
+		y = 1
+
+	}
+	
+	
+	focus = {
+		id = POR_join_entente_1
+		icon = GFX_focus_consolidate_entente
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_investments_from_england
+		}
+		prerequisite = {
+		focus = POR_investments_from_france
+		}
+		prerequisite = {
+		focus = POR_investments_from_russia
+		}
+		mutually_exclusive = {
+		focus = POR_neutral_foreign_policy1
+		}
+		completion_reward = {
+		POR = {
+		if = {
+		limit = {FRA = { is_faction_leader = yes }}
+		FRA = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {ENG = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		ENG = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {RUS = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		RUS = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {USA = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		USA = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {JAP = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		JAP = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {TUR = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		TUR = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {AUH = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		AUH = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {GER = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		GER = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {ITA = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		ITA = { country_event = { id = generic.2 } }
+		}
+		}
+		}
+		relative_position_id = POR_closer_relations_with_entente
+		x = -1
+		y = 2
+
+	}
+	
+	
+	focus = {
+		id = POR_neutral_foreign_policy1
+		icon = GFX_focus_eagle
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_investments_from_england
+		}
+		prerequisite = {
+		focus = POR_investments_from_france
+		}
+		prerequisite = {
+		focus = POR_investments_from_russia
+		}
+		mutually_exclusive = {
+		focus = POR_join_entente_1
+		}
+		completion_reward = {
+		add_stability = 0.20
+		set_rule = {can_join_factions = no}
+		}
+		relative_position_id = POR_closer_relations_with_entente
+		x = 1
+		y = 2
+
+	}
+	
+	
+	focus = {
+		id = POR_embrace_secularism
+		icon = GFX_goal_focus_church
+		cost = 10,00
+		available = {
+		}
+		mutually_exclusive = {
+		focus = POR_increase_power_church
+		}
+		prerequisite = {
+		focus = POR_communist_win
+		focus = POR_republicans_win
+		}
+		completion_reward = {
+		add_ideas = RP_power_church_low
+		}
+		relative_position_id = POR_communist_win
+		x = 0
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_increase_power_church
+		icon = GFX_goal_focus_church
+		cost = 10,00
+		available = {
+		}
+		mutually_exclusive = {
+		focus = POR_embrace_secularism
+		}
+		prerequisite = {
+		focus = POR_communist_win
+		focus = POR_republicans_win
+		}
+		completion_reward = {
+		add_ideas = RP_power_church
+		}
+		relative_position_id = POR_republicans_win
+		x = -1
+		y = 1
+
+	}
+	focus = {
+		id = POR_liberal_democracy
+		icon = GFX_goal_stabilize_democracy
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_republicans_win
+		focus = POR_parliementary_monarchy
+		}
+		mutually_exclusive = {
+		focus = POR_authotorian_democracy
+		}
+		completion_reward = {
+		add_ideas = RP_liberal_democracy
+		hidden_effect = {
+		set_politics = {
+	ruling_party = democratic
+        elections_allowed = yes
+        last_election = "1935.12.17"
+        election_frequency = 36
+}
+		}
+		}
+		relative_position_id = POR_republicans_win
+		x = 4
+		y = 1
+
+	}
+	
+	
+	focus = {
+		id = POR_authotorian_democracy 
+		icon = GFX_hoi4tgw_knifeintheback
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_authotorian_democracy
+		}
+		mutually_exclusive = {
+		focus = POR_full_democracy
+		focus = POR_sharing_power
+		}
+		completion_reward = {
+		add_ideas = RP_auth_democracy
+		set_politics = {
+	ruling_party = democratic
+        elections_allowed = no
+        last_election = "1935.12.17"
+        election_frequency = 36
+}
+		}
+		relative_position_id = POR_republicans_win
+		x = 6
+		y = 1
+
+	}
+	
+	
+	
+	focus = {
+		id = POR_communist_win
+		icon = GFX_psp
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_prepare_for_1911_elections
+		}
+		mutually_exclusive = {
+		focus = POR_republicans_win
+		}
+		completion_reward = {
+		set_politics = {
+	ruling_party = communism
+        elections_allowed = yes
+        last_election = "1935.12.17"
+        election_frequency = 36
+}
+create_country_leader = {
+	name = "Azedo Gneco"
+	picture = "gfx/leaders/POR/genco.dds" 
+	expire = "1935.1.1"
+	ideology = marxism
+	traits = {} 
+}
+
+		}
+		relative_position_id = POR_prepare_for_1911_elections
+		x = -2
+		y = 1
+
+	}
+	
+	
+	
+	focus = {
+		id = POR_workers_unite
+		icon = GFX_focus_por_workers_of_iberia
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_communist_win
+		}
+		completion_reward = {
+add_stability = 0.05
+add_popularity = {
+ideology = communism
+popularity = 0.25
+}
+		}
+		relative_position_id = POR_communist_win
+		x = -2
+		y = 2
+
+	}
+	
+	focus = {
+		id = POR_socialism_is_war
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_workers_unite
+		}
+		mutually_exclusive = {
+		focus = POR_socialism_is_peace
+		}
+		completion_reward = {
+		add_stability = -0.1
+		add_war_support = 0.1
+		}
+		relative_position_id = POR_workers_unite
+		x = -3
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_attack_spain
+		icon = GFX_focus_focus_fra_intervention_spain #befriend   GFX_focus_intervention_spain_nationalists
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_socialism_is_war
+		}
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = SPR }
+		}
+		relative_position_id = POR_socialism_is_war
+		x = -1
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_spread_revolution
+		icon = GFX_comisar
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_attack_spain
+		}
+		completion_reward = {
+		add_ideas = RP_spread_rev
+		}
+		relative_position_id = POR_attack_spain
+		x = 0
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_iberian_union
+		icon = GFX_focus_intervention_spain_nationalists
+		cost = 1,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_socialism_is_peace
+		}
+		completion_reward = {
+		
+		SPR = {
+		country_event = {
+		id = por_event.1
+		days = 1
+		}
+		}
+		
+		}
+		relative_position_id = POR_socialism_is_peace
+		x = 1
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_spread_marxism
+		icon = GFX_Communist_Pride
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_iberian_union
+		}
+		completion_reward = {
+		add_popularity = {
+		ideology = communism
+		popularity = 0.15
+		}
+		}
+		relative_position_id = POR_iberian_union
+		x = 0
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_communist_manifesto
+		icon = GFX_demir_yumruk
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_decrease_working_times
+		}
+		prerequisite = {
+		focus = POR_spread_marxism
+		focus = POR_spread_revolution
+		}
+		completion_reward = {
+		add_popularity = {
+		ideology = communism
+		popularity = 0.75
+		}
+		add_stability = 0.25
+		}
+		relative_position_id = POR_decrease_working_times
+		x = 0
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_allign_with_red_russia
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10,00
+		available = {
+		SOV = {is_in_faction = yes}
+		}
+		prerequisite = {
+		focus = POR_communist_manifesto
+		}
+		mutually_exclusive = {
+		focus = POR_neutral_foreign_policy2
+		focus = POR_our_own_way
+		}
+		completion_reward = {
+		SOV = { country_event = { id = generic.2 } }
+		}
+		relative_position_id = POR_communist_manifesto
+		x = -2
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_neutral_foreign_policy2
+		icon = GFX_focus_eagle
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_communist_manifesto
+		}
+		mutually_exclusive = {
+		focus = POR_allign_with_red_russia
+		focus = POR_our_own_way
+		}
+		completion_reward = {
+		add_stability = 0.20
+		set_rule = {can_join_factions = no}
+		}
+		relative_position_id = POR_communist_manifesto
+		x = 0
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_our_own_way
+		icon = GFX_focus_por_workers_of_iberia
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_communist_manifesto
+		}
+		mutually_exclusive = {
+		focus = POR_neutral_foreign_policy2
+		focus = POR_allign_with_red_russia
+		}
+		completion_reward = {
+		set_rule = {can_create_factions = yes}
+		create_faction = POR_com_Faction
+		}
+		relative_position_id = POR_communist_manifesto
+		x = 2
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_socialism_is_peace
+		icon = GFX_focus_generic_join_comintern
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_workers_unite
+		}
+		mutually_exclusive = {
+		focus = POR_socialism_is_war
+		}
+		completion_reward = {
+		add_stability = 0.1
+		add_war_support = -0.1
+		}
+		relative_position_id = POR_workers_unite
+		x = 1
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_nationalize_factories
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_socialism_is_peace
+		focus = POR_socialism_is_war
+		}
+		mutually_exclusive = {
+		focus = POR_socialism_is_war
+		}
+		completion_reward = {
+		random_owned_state = {
+		limit = { is_core_of = POR }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+		random_owned_state = {
+		limit = { is_core_of = POR }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+		}
+		relative_position_id = POR_workers_unite
+		x = -1
+		y = 2
+
+	}
+	
+	focus = {
+		id = POR_decrease_working_times
+		icon = GFX_Communist_Discourse
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_socialism_is_peace
+		focus = POR_socialism_is_war
+		}
+		mutually_exclusive = {
+		focus = POR_socialism_is_war
+		}
+		completion_reward = {
+		add_stability = 0.05
+		random_owned_state = {
+		limit = { is_core_of = POR }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+		}
+		relative_position_id = POR_nationalize_factories
+		x = 0
+		y = 1
+
+	}
+	
+	
+	
+	
+	
+	#MONARŞİ
+	focus = {
+		id = POR_side_with_monarchists
+		icon = GFX_por_monarchy
+		cost = 10,00
+		available = {
+		always = no
+		}
+		mutually_exclusive = {
+		focus = POR_side_with_republicans
+		}
+		completion_reward = {
+		}
+		x = 25
+		y = 0
+
+	}
+	
+	focus = {
+		id = POR_victory_in_the_rebellion
+		icon = GFX_por_monarchy
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_side_with_monarchists
+		}
+		completion_reward = {
+		add_ideas = RP_rebel_crushed
+		}
+		relative_position_id = POR_side_with_monarchists
+		x = 0
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_crush_republicans
+		icon = GFX_hoi4tgw_knifeintheback
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_victory_in_the_rebellion
+		}
+		completion_reward = {
+		add_popularity = {
+    ideology = democratic
+    popularity = -0.4
+}
+add_stability = 0.1
+		}
+		relative_position_id = POR_victory_in_the_rebellion
+		x = 0
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_parliementary_monarchy
+		icon = GFX_focus_revolution
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_crush_republicans
+		}
+		mutually_exclusive = {
+		focus = POR_absoloute_monarchy
+		}
+		completion_reward = {
+		add_ideas = RP_parl_mon
+		}
+		relative_position_id = POR_crush_republicans
+		x = -1
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_close_radical_parties
+		icon = GFX_focus_generic_self_management
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_parliementary_monarchy
+		focus = POR_absoloute_monarchy
+		}
+		mutually_exclusive = {
+		focus = POR_exile_republicans
+		}
+		completion_reward = {
+		add_popularity = {
+    ideology = fascism
+    popularity = -0.25
+}
+		add_popularity = {
+    ideology = communism
+    popularity = -0.25
+}
+		add_popularity = {
+    ideology = democratic
+    popularity = -0.15
+}
+		}
+		relative_position_id = POR_parliementary_monarchy
+		x = 0
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_exile_republicans
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_parliementary_monarchy
+		focus = POR_absoloute_monarchy
+		}
+		mutually_exclusive = {
+		focus = POR_close_radical_parties
+		}
+		completion_reward = {
+		add_popularity = {
+    ideology = democratic
+    popularity = -0.5
+}
+add_stability = -0.1
+		}
+		relative_position_id = POR_absoloute_monarchy
+		x = 0
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_closer_entente
+		icon = GFX_focus_focus_fra_ratify_stresa
+		cost = 10,00
+		available = {
+		has_completed_focus = POR_parliementary_monarchy
+		}
+		prerequisite = {
+		focus = POR_close_radical_parties
+		focus = POR_exile_republicans
+		}
+		mutually_exclusive = {
+		focus = POR_closer_central
+		}
+		completion_reward = {
+		every_country = {
+		limit = {is_in_faction_with = FRA}
+		add_opinion_modifier = { target = PREV modifier = huge_increase }
+		}
+		}
+		relative_position_id = POR_close_radical_parties
+		x = -3
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_closer_central
+		icon = GFX_focus_ger_revive_kaiserreich
+		cost = 10,00
+		available = {
+		has_completed_focus = POR_parliementary_monarchy
+		}
+		prerequisite = {
+		focus = POR_close_radical_parties
+		focus = POR_exile_republicans
+		}
+		mutually_exclusive = {
+		focus = POR_closer_entente
+		}
+		completion_reward = {
+		every_country = {
+		limit = {is_in_faction_with = GER}
+		add_opinion_modifier = { target = PREV modifier = huge_increase }
+		}
+		}
+		relative_position_id = POR_close_radical_parties
+		x = -1
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_german_investors
+		icon = GFX_focus_ger_revive_kaiserreich
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_closer_central
+		}
+		completion_reward = {
+		custom_effect_tooltip = POR_central_investment_tt
+		hidden_effect = {
+		random_owned_state = {
+		limit = { is_core_of = POR }
+		add_extra_state_shared_building_slots = GER.num_faction_members
+		add_building_construction = {
+    type = industrial_complex
+    level = GER.num_faction_members
+    instant_build = yes
+}
+}
+		random_owned_state = {
+		limit = { is_core_of = POR }
+		add_extra_state_shared_building_slots = GER.num_faction_members
+		add_building_construction = {
+    type = arms_factory
+    level = GER.num_faction_members
+    instant_build = yes
+}
+}
+	}
+		}
+		relative_position_id = POR_closer_central
+		x = 0
+		y = 1
+
+	}
+	
+	focus = {
+		id = POR_french_investors
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_closer_entente
+		}
+		completion_reward = {
+		custom_effect_tooltip = POR_entente_investment_tt
+		hidden_effect = {
+		random_owned_state = {
+		limit = { is_core_of = POR }
+		add_extra_state_shared_building_slots = FRA.num_faction_members
+		add_building_construction = {
+    type = industrial_complex
+    level = FRA.num_faction_members
+    instant_build = yes
+}
+}
+		random_owned_state = {
+		limit = { is_core_of = POR }
+		add_extra_state_shared_building_slots = FRA.num_faction_members
+		add_building_construction = {
+    type = arms_factory
+    level = FRA.num_faction_members
+    instant_build = yes
+}
+}
+	}
+		}
+		relative_position_id = POR_closer_entente
+		x = 0
+		y = 1
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	focus = {
+		id = POR_join_entente_2
+		icon = GFX_focus_consolidate_entente
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_french_investors
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+		POR = {
+		if = {
+		limit = {FRA = { is_faction_leader = yes }}
+		FRA = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {ENG = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		ENG = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {RUS = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		RUS = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {USA = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		USA = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {JAP = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		JAP = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {TUR = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		TUR = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {AUH = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		AUH = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {GER = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		GER = { country_event = { id = generic.2 } }
+		}
+		}
+		}
+		relative_position_id = POR_french_investors
+		x = -1
+		y = 1
+
+	}
+	
+	
+	focus = {
+		id = POR_neutral_foreign_policy3
+		icon = GFX_focus_eagle
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_german_investors
+		focus = POR_french_investors
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+		add_stability = 0.20
+		set_rule = {can_join_factions = no}
+		}
+		relative_position_id = POR_german_investors
+		x = -1
+		y = 1
+
+	}
+	
+	
+	
+	
+	focus = {
+		id = POR_join_central_2
+		icon = GFX_focus_ger_return_of_the_kaiser
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = POR_german_investors
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+		POR = {
+		if = {
+		limit = {GER = { is_faction_leader = yes }}
+		GER = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {AUH = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		AUH = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {HUN = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		HUN = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {AUS = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		AUS = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {BUL = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		BUL = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {SOV = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		SOV = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {FRA = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		FRA = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {RUS = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		RUS = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {ITA = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		ITA = { country_event = { id = generic.2 } }
+		}
+		}
+		}
+		relative_position_id = POR_german_investors
+		x = 1
+		y = 1
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	focus = {
+		id = POR_absoloute_monarchy
+		icon = GFX_por_monarch
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_crush_republicans
+		}
+		mutually_exclusive = {
+		focus = POR_parliementary_monarchy
+		}
+		completion_reward = {
+		}
+		relative_position_id = POR_crush_republicans
+		x = 2
+		y = 1
+
+	}
+	
+	
+	focus = {
+		id = POR_organize_brazil_wedding
+		icon = GFX_focus_generic_royal_wedding
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_absoloute_monarchy
+		}
+		completion_reward = {
+		BRA = { country_event = { id = por_event.4 } }
+		add_opinion_modifier = { target = BRA modifier = large_increase }
+		}
+		relative_position_id = POR_absoloute_monarchy
+		x = 3
+		y = 1
+
+	}
+	
+	
+	focus = {
+		id = POR_closer_ties_between_families
+		icon = GFX_focus_por_estado_novo
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_organize_brazil_wedding
+		}
+		completion_reward = {
+		add_political_power = 120
+		add_opinion_modifier = { target = BRA modifier = large_increase }
+		}
+		relative_position_id = POR_organize_brazil_wedding
+		x = 0
+		y = 1
+
+	}
+	
+	
+	focus = {
+		id = POR_suggest_a_union_with_brazil
+		icon = GFX_focus_por_the_kingdom_reunited
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_closer_ties_between_families
+		}
+		completion_reward = {
+		BRA = { country_event = { id = por_event.5 } }
+		}
+		relative_position_id = POR_closer_ties_between_families
+		x = 1
+		y = 1
+
+	}
+	
+	
+	focus = {
+		id = POR_integrate_brazilian_economy
+		icon = GFX_focus_por_recover_brazil
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_suggest_a_union_with_brazil
+		}
+		completion_reward = {
+		random_owned_state = {
+		limit = { is_core_of = BRA }
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+    type = industrial_complex
+    level = 2
+    instant_build = yes
+}
+}
+		random_owned_state = {
+		limit = { is_core_of = BRA }
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+    type = industrial_complex
+    level = 2
+    instant_build = yes
+}
+}
+		}
+		relative_position_id = POR_suggest_a_union_with_brazil
+		x = 2
+		y = 1
+
+	}
+	
+	
+	focus = {
+		id = POR_integrate_brazilian_politics
+		icon = GFX_focus_por_recover_brazil
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_suggest_a_union_with_brazil
+		}
+		completion_reward = {
+		add_political_power = 120
+		add_popularity = {
+		ideology = neutrality
+		popularity = 0.25
+		}
+		}
+		relative_position_id = POR_suggest_a_union_with_brazil
+		x = -2
+		y = 1
+
+	}
+	
+	
+	focus = {
+		id = POR_integrate_brazilian_military
+		icon = GFX_focus_por_recover_brazil
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_suggest_a_union_with_brazil
+		}
+		completion_reward = {
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 7000
+    producer = POR
+}
+		}
+		relative_position_id = POR_suggest_a_union_with_brazil
+		x = 0
+		y = 1
+
+	}
+	
+	
+	focus = {
+		id = POR_power_of_porto_brazilian_empire
+		icon = GFX_focus_por_the_fifth_empire
+		cost = 10,00
+		available = {
+		has_civil_war = no
+		}
+		prerequisite = {
+		focus = POR_integrate_brazilian_economy
+		}
+		prerequisite = {
+		focus = POR_integrate_brazilian_military
+		}
+		prerequisite = {
+		focus = POR_integrate_brazilian_politics
+		}
+		completion_reward = {
+		add_ideas = RP_porto_brazilian_empire
+		}
+		relative_position_id = POR_integrate_brazilian_military
+		x = 0
+		y = 1
+
+	}
+	
+}

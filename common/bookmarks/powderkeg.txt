@@ -321,6 +321,21 @@ bookmarks = {
 			}
 		}
 
+		"POR"={
+			minor = yes
+			history = "POR_POWDERKEG_DESC"
+			ideology = neutrality
+			ideas = {
+				ww1_Scramble_for_Africa
+				POR_unstable_monarchy
+			}
+			focuses = {
+				POR_side_with_republicans
+				POR_side_with_monarchists
+				POR_republicans_win
+			}
+		}
+
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
