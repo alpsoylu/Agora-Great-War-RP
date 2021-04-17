@@ -249,6 +249,7 @@ focus_tree = {
 		icon = GFX_focus_consolidate_entente
 		cost = 10,00
 		available = {
+		is_in_faction = no
 		}
 		prerequisite = {
 		focus = POR_investments_from_england
@@ -322,6 +323,7 @@ focus_tree = {
 		icon = GFX_focus_eagle
 		cost = 10,00
 		available = {
+		is_in_faction = no
 		}
 		prerequisite = {
 		focus = POR_investments_from_england
@@ -649,6 +651,7 @@ popularity = 0.25
 		cost = 10,00
 		available = {
 		SOV = {is_in_faction = yes}
+		is_in_faction = no
 		}
 		prerequisite = {
 		focus = POR_communist_manifesto
@@ -671,6 +674,7 @@ popularity = 0.25
 		icon = GFX_focus_eagle
 		cost = 10,00
 		available = {
+		is_in_faction = no
 		}
 		prerequisite = {
 		focus = POR_communist_manifesto
@@ -694,6 +698,7 @@ popularity = 0.25
 		icon = GFX_focus_por_workers_of_iberia
 		cost = 10,00
 		available = {
+		is_in_faction = no
 		}
 		prerequisite = {
 		focus = POR_communist_manifesto
@@ -1097,6 +1102,7 @@ add_stability = -0.1
 		icon = GFX_focus_consolidate_entente
 		cost = 10,00
 		available = {
+		is_in_faction = no
 		}
 		prerequisite = {
 		focus = POR_french_investors
@@ -1158,12 +1164,15 @@ add_stability = -0.1
 		icon = GFX_focus_eagle
 		cost = 10,00
 		available = {
+		is_in_faction = no
 		}
 		prerequisite = {
 		focus = POR_german_investors
 		focus = POR_french_investors
 		}
 		mutually_exclusive = {
+		focus = POR_join_central_2
+		focus = POR_join_entente_2
 		}
 		completion_reward = {
 		add_stability = 0.20
@@ -1183,6 +1192,7 @@ add_stability = -0.1
 		icon = GFX_focus_ger_return_of_the_kaiser
 		cost = 10,00
 		available = {
+		is_in_faction = no
 		}
 		prerequisite = {
 		focus = POR_german_investors
@@ -1476,5 +1486,165 @@ add_stability = -0.1
 		y = 1
 
 	}
+	
+	focus = {
+		id = POR_join_entente_5
+		icon = GFX_focus_consolidate_entente
+		cost = 10,00
+		available = {
+		is_in_faction = no
+		}
+		prerequisite = {
+		focus = POR_power_of_porto_brazilian_empire
+		}
+		mutually_exclusive = {
+		focus = POR_join_central_3
+		focus = POR_neutral_foreign_policy4
+		}
+		completion_reward = {
+		POR = {
+		if = {
+		limit = {FRA = { is_faction_leader = yes }}
+		FRA = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {ENG = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		ENG = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {RUS = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		RUS = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {USA = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		USA = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {JAP = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		JAP = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {TUR = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		TUR = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {AUH = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		AUH = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {GER = { is_faction_leader = yes 
+		is_in_faction_with = FRA }}
+		GER = { country_event = { id = generic.2 } }
+		}
+		}
+		}
+		relative_position_id = POR_power_of_porto_brazilian_empire
+		x = -2
+		y = 1
+
+	}
+	
+	
+	focus = {
+		id = POR_neutral_foreign_policy4
+		icon = GFX_focus_eagle
+		cost = 10,00
+		available = {
+		is_in_faction = no
+		}
+		prerequisite = {
+		focus = POR_power_of_porto_brazilian_empire
+		}
+		mutually_exclusive = {
+		focus = POR_join_central_3
+		focus = POR_join_entente_5
+		}
+		completion_reward = {
+		add_stability = 0.20
+		set_rule = {can_join_factions = no}
+		}
+		relative_position_id = POR_power_of_porto_brazilian_empire
+		x = 0
+		y = 1
+
+	}
+	
+	
+	
+	
+	focus = {
+		id = POR_join_central_3
+		icon = GFX_focus_ger_return_of_the_kaiser
+		cost = 10,00
+		available = {
+		is_in_faction = no
+		}
+		prerequisite = {
+		focus = POR_power_of_porto_brazilian_empire
+		}
+		mutually_exclusive = {
+		focus = POR_neutral_foreign_policy4
+		focus = POR_join_entente_5
+		}
+		completion_reward = {
+		POR = {
+		if = {
+		limit = {GER = { is_faction_leader = yes }}
+		GER = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {AUH = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		AUH = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {HUN = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		HUN = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {AUS = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		AUS = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {BUL = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		BUL = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {SOV = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		SOV = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {FRA = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		FRA = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {RUS = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		RUS = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {ITA = { is_faction_leader = yes 
+		is_in_faction_with = GER }}
+		ITA = { country_event = { id = generic.2 } }
+		}
+		}
+		}
+		relative_position_id = POR_power_of_porto_brazilian_empire
+		x = 2
+		y = 1
+
+	}
+
 	
 }
