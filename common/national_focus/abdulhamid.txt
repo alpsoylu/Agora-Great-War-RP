@@ -155,7 +155,7 @@ add_popularity = {
 
 		completion_reward = {
 create_country_leader = { 
-	name = "Abdlhamid II" 
+	name = "Abdulhamid II" 
 	desc= ""
 	picture="gfx/leaders/TUR/abdulhamid.dds" 
 	expire="1935.1.1" 
