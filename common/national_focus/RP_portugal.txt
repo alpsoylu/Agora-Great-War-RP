@@ -539,7 +539,7 @@ popularity = 0.25
 	
 	focus = {
 		id = POR_attack_spain
-		icon = GFX_focus_focus_fra_intervention_spain #befriend   GFX_focus_intervention_spain_nationalists
+		icon = GFX_focus_focus_fra_intervention_spain
 		cost = 10,00
 		available = {
 		}
@@ -1642,6 +1642,29 @@ add_stability = -0.1
 		}
 		relative_position_id = POR_power_of_porto_brazilian_empire
 		x = 2
+		y = 1
+
+	}
+	
+	
+	
+	focus = {
+		id = POR_conquer_iberia
+		icon = GFX_focus_focus_fra_intervention_spain
+		cost = 10,00
+		available = {
+		SPR = {exists = yes}
+		}
+		prerequisite = {
+		focus = POR_neutral_foreign_policy4
+		focus = POR_join_central_3
+		focus = POR_join_entente_5
+		}
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = SPR }
+		}
+		relative_position_id = POR_neutral_foreign_policy4
+		x = 0
 		y = 1
 
 	}
