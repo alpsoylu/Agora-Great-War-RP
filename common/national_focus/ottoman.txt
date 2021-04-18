@@ -3297,18 +3297,16 @@ focus_tree = {
 	}
 
 	}
+	shared_focus = TUR_abdulhamid
 	focus = {
 	id = TUR_uniteislamundertheonebanner
 	icon = GFX_goal_cihad
 	cost = 10
 	prerequisite = {
-	focus = TUR_executethenationalistpashas
-	}
-	prerequisite = {
-	focus = TUR_protectorofislam
+	focus = TUR_el_muzaffer_daima
 	}
 	x = 39
-	y = 5
+	y = 8
 
 	ai_will_do = {
 	factor = 1

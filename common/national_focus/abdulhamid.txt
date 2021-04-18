@@ -1,0 +1,166 @@
+	
+	
+	shared_focus = {
+		id = TUR_abdulhamid
+		icon = GFX_goal_meclis_elect 
+		prerequisite = { focus = TUR_protectorofislam }
+		prerequisite = { focus = TUR_executethenationalistpashas }
+		mutually_exclusive = { focus =  }
+		x = 0
+		y = 4
+		relative_position_id = TUR_muhammediittihatfirkasi
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_stability = 0.05
+		}
+	}
+	
+	shared_focus = {
+		id = TUR_abdulhamid2 #Destroy the power of Nationalist Pashas
+		icon = GFX_goal_ittihadisttime
+		prerequisite = { focus = TUR_abdulhamid }
+		mutually_exclusive = { focus =  }
+		x = -1
+		y = 1
+		relative_position_id = TUR_abdulhamid
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_popularity = {
+		ideology = fascism
+		popularity = -0.25
+		}
+		add_popularity = {
+		ideology = democratic
+		popularity = -0.25
+		}
+		}
+	}
+	
+	shared_focus = {
+		id = TUR_abdulhamid3 #Reassure Trust to the Empire
+		icon = GFX_goal_reformlar
+		prerequisite = { focus = TUR_abdulhamid }
+		mutually_exclusive = { focus =  }
+		x = 1
+		y = 1
+		relative_position_id = TUR_abdulhamid
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+add_popularity = {
+		ideology = neutrality
+		popularity = 0.25
+		}
+		add_stability = 0.1
+		add_war_support = 0.1
+		}
+	}
+	
+	shared_focus = {
+		id = TUR_el_muzaffer_daima
+		icon = GFX_goal_legacyofmarch
+		prerequisite = { focus = TUR_abdulhamid2 }
+		prerequisite = { focus = TUR_abdulhamid3 }
+		mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = TUR_abdulhamid
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+create_country_leader = { 
+	name = "Abdlhamid II" 
+	desc= ""
+	picture="gfx/leaders/TUR/abdulhamid.dds" 
+	expire="1935.1.1" 
+	ideology= despotism
+	traits={ el_muzaffer } 
+}
+		}
+	}
