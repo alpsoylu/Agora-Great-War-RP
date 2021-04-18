@@ -224,6 +224,16 @@
  por_event.4.d:0 "A wedding is organized between Portugese and Brazilian royal families.This will strenghten relations between two countries."
  por_event.4.a:0 "Delightfull."
  
+ por_event.8:0 "We have cored Catalonia"
+ por_event.8.t:0 "We have cored Catalonia"
+ por_event.8.d:0 "We have cored Catalonia."
+ por_event.8.a:0 "Good."
+ 
+ por_event.9:0 "British Protectarate of Cyprus is dismantled"
+ por_event.9.t:0 "British Protectarate of Cyprus is dismantled"
+ por_event.9.d:0 "British Protectarate of Cyprus is dismantled"
+ por_event.9.a:0 "Good."
+ 
  
  IBR_union:0 "Iberian Union"
  IBR_union_DEF:0 "Iberian Union"

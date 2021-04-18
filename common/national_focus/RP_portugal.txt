@@ -47,7 +47,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_ideas = RP_legacy_revolution
-		
+		remove_ideas = RP_never_surrender
 		}
 		relative_position_id = POR_side_with_republicans
 		x = 0

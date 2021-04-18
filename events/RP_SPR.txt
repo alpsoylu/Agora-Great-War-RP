@@ -18,7 +18,8 @@ country_event = {
 	is_trigspred_only = yes
 	fire_only_once = yes
 	trigger = {
-	always = no
+	original_tag = SPR
+	has_completed_focus = SPR_elections
 	}
 	#LIBERALS
 	option = {
@@ -47,7 +48,8 @@ country_event = {
 	is_trigspred_only = yes
 	fire_only_once = yes
 	trigger = {
-	always = no
+	original_tag = FRA
+	SPR = {has_completed_focus = SPR_bourbon_pact}
 	}
 	#YES
 	option = {
@@ -64,6 +66,7 @@ country_event = {
     relation = non_aggresion_pact
     active = yes
 }
+set_country_flag = FRA_aggree
 	}
 	
 	#NO
@@ -71,6 +74,7 @@ country_event = {
 	ai_chance = {base = 5}
 		name = spr_event.2.b
 		SPR = { country_event = { id = spr_event.4 hours = 6 } }
+		set_country_flag = FRA_reject
 	}
 	
 	}
@@ -86,7 +90,9 @@ country_event = {
 	is_trigspred_only = yes
 	fire_only_once = yes
 	trigger = {
-	always = no
+	original_tag = SPR
+	SPR = {has_completed_focus = SPR_bourbon_pact}
+	FRA = {has_country_flag = FRA_aggree}
 	}
 	#DELIGHTFULL
 	option = {
@@ -107,7 +113,9 @@ country_event = {
 	is_trigspred_only = yes
 	fire_only_once = yes
 	trigger = {
-	always = no
+	original_tag = SPR
+	SPR = {has_completed_focus = SPR_bourbon_pact}
+	FRA = {has_country_flag = FRA_reject}
 	}
 	#DELIGHTFULL
 	option = {
@@ -143,7 +151,11 @@ country_event = {
 	is_trigspred_only = yes
 	fire_only_once = yes
 	trigger = {
-	always = no
+	original_tag = ENG
+	OR = {
+	SPR = {has_completed_focus = SPR_deal_for_gibraltar}
+	SPR = {has_completed_focus = SPR_democracy_deal_for_gibraltar}
+	}
 	}
 	#YES
 	option = {
@@ -160,6 +172,7 @@ transfer_state = 118
 }
 ENG = {
 remove_state_core = 118
+set_country_flag = ENG_accept
 }
 	}
 	
@@ -168,6 +181,7 @@ remove_state_core = 118
 	ai_chance = {base = 5}
 		name = spr_event.5.b
 		SPR = { country_event = { id = spr_event.7 hours = 6 } }
+		set_country_flag = ENG_reject
 	}
 	
 	}
@@ -183,7 +197,12 @@ country_event = {
 	is_trigspred_only = yes
 	fire_only_once = yes
 	trigger = {
-	always = no
+	original_tag = SPR
+	OR = {
+	SPR = {has_completed_focus = SPR_deal_for_gibraltar}
+	SPR = {has_completed_focus = SPR_democracy_deal_for_gibraltar}
+	}
+	ENG = {has_country_flag = ENG_accept}
 	}
 	#DELIGHTFULL
 	option = {
@@ -204,7 +223,12 @@ country_event = {
 	is_trigspred_only = yes
 	fire_only_once = yes
 	trigger = {
-	always = no
+	original_tag = SPR
+	OR = {
+	SPR = {has_completed_focus = SPR_deal_for_gibraltar}
+	SPR = {has_completed_focus = SPR_democracy_deal_for_gibraltar}
+	}
+	ENG = {has_country_flag = ENG_reject}
 	}
 	#DELIGHTFULL
 	option = {

@@ -10,7 +10,7 @@ ENG_protectarate_cyprus = {
 }
 
 SPR_catolonian_resistance = {
-	enable = { tag = SPR }
+	enable = {  }
 
 	icon = GFX_modifiers_catalan_resistance
 	#EFFECT
