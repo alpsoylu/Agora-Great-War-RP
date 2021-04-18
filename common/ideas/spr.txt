@@ -154,7 +154,7 @@ ideas = {
 		RP_long_live_king_alfonso = {
 
 
-			picture = Spa_embrace_the_spanish_destiny
+			picture = SPA_embrace_the_spanish_destiny
 
 			allowed = {
 				
