@@ -1,3 +1,42 @@
 ﻿l_english:
  TUR_sarikamis:0 "Sarıkamış Harekatı"
  RP_sarikamis:0 "Sarıkamış Harekatı"
+ 
+ RP_arab_0:0 ""
+ RP_arab_1:0 ""
+ RP_arab_2:0 ""
+ 
+ decision_category_arabian_rebels:0 "Arabian Rebells"
+ 
+ RP_arab_hejaz1:0 "Increase the Power of Arab Tribes in Hejaz"
+ RP_arab_hejaz2:0 "Increase the Power of Arab Tribes in Hejaz"
+ RP_arab_hejazrevolt:0 "Fire the Arab Revolt in Hejaz"
+ 
+ RP_arab_palestine1:0 "Increase the Power of Arab Tribes in Palestine"
+ RP_arab_palestine2:0 "Increase the Power of Arab Tribes in Palestine"
+ RP_arab_palestinerevolt:0 "Fire the Arab Revolt in Palestine"
+ 
+ RP_arab_asir1:0 "Increase the Power of Arab Tribes in Asir"
+ RP_arab_asir2:0 "Increase the Power of Arab Tribes in Asir"
+ RP_arab_asirrevolt:0 "Fire the Arab Revolt in Asir"
+ 
+ RP_arab_jordan1:0 "Increase the Power of Arab Tribes in Jordan"
+ RP_arab_jordan2:0 "Increase the Power of Arab Tribes in Jordan"
+ RP_arab_jordanrevolt:0 "Fire the Arab Revolt in Jordan"
+ 
+ 
+ 
+ 
+ 
+ 
+ RP_arab_yemen1:0 "Increase the Power of Arab Tribes in Yemen"
+ RP_arab_yemen2:0 "Increase the Power of Arab Tribes in Yemen"
+ RP_arab_yemenrevolt:0 "Fire the Arab Revolt in Yemen"
+ 
+ RP_arab_damascus1:0 "Increase the Power of Arab Tribes in Damascus"
+ RP_arab_damascus2:0 "Increase the Power of Arab Tribes in Damascus"
+ RP_arab_damascusrevolt:0 "Fire the Arab Revolt in Damascus"
+ 
+ RP_arab_lebanon1:0 "Increase the Power of Arab Tribes in Lebanon"
+ RP_arab_lebanon2:0 "Increase the Power of Arab Tribes in Lebanon"
+ RP_arab_lebanonrevolt:0 "Fire the Arab Revolt in Lebanon"

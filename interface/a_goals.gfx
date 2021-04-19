@@ -250,6 +250,23 @@ SpriteType = {
 		name = "GFX_idea_sarikamis"
 		texturefile = "gfx/interface/ideas/TUR/new_sarikamis.dds"
 	}	
+	
+	
+	#ARAB
+	spriteType = {
+		name = "GFX_dec_arab2"
+		texturefile = "gfx/interface/decisions/dec_arab2.dds"
+	}
+	spriteType = {
+		name = "GFX_dec_arab1"
+		texturefile = "gfx/interface/decisions/dec_arab1.dds"
+	}
+	spriteType = {
+		name = "GFX_dec_arab0"
+		texturefile = "gfx/interface/decisions/dec_arab0.dds"
+	}
+	
+	#ARAB
 
 
 

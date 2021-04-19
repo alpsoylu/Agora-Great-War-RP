@@ -4,7 +4,13 @@
 183 = {
 			add_dynamic_modifier = { modifier = ENG_protectarate_cyprus }
 		}
-
+679 = {set_state_flag = RP_arab_0}
+454 = {set_state_flag = RP_arab_0}
+455 = {set_state_flag = RP_arab_0}
+747 = {set_state_flag = RP_arab_0}
+293 = {set_state_flag = RP_arab_0}
+554 = {set_state_flag = RP_arab_0}
+553 = {set_state_flag = RP_arab_0}
 
 set_research_slots = 3
 set_stability = 0.60

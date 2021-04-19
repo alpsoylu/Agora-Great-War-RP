@@ -1,0 +1,680 @@
+decision_category_arabian_rebels = {
+
+	RP_arab_hejaz1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 679}
+		}
+		
+		
+		visible = {
+        679 = {has_state_flag = RP_arab_0}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 679
+		}
+		on_map_mode = map_only
+		cost = 50
+		complete_effect = {
+		679 = {set_state_flag = RP_arab_1}	
+		679 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_hejaz2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 679}
+		}
+		
+		
+
+		visible = {
+        679 = {has_state_flag = RP_arab_1}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 679
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		679 = {set_state_flag = RP_arab_2}	
+		679 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_hejazrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 679}
+		}
+		
+		
+		visible = {
+        679 = {has_state_flag = RP_arab_2}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 679
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		679 = {set_state_flag = RP_arab_3}	
+		679 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 679
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 679 } 
+}
+		}
+		ENG = { add_to_faction = HJZ }
+		TUR = {remove_state_core = 679}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#Palestine#
+	RP_arab_palestine1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 454}
+		}
+		
+		
+		visible = {
+        454 = {has_state_flag = RP_arab_0}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 454
+		}
+		on_map_mode = map_only
+		cost = 50
+		complete_effect = {
+		454 = {set_state_flag = RP_arab_1}	
+		454 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_palestine2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 454}
+		}
+		
+		
+
+		visible = {
+        454 = {has_state_flag = RP_arab_1}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 454
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		454 = {set_state_flag = RP_arab_2}	
+		454 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_palestinerevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 454}
+		}
+		
+		
+		visible = {
+        454 = {has_state_flag = RP_arab_2}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 454
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		454 = {set_state_flag = RP_arab_3}	
+		454 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 454
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 454 } 
+}
+add_state_core = 454
+		}
+		ENG = { add_to_faction = HJZ }
+		TUR = {remove_state_core = 454}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#JORDAN#
+	RP_arab_jordan1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 455}
+		}
+		
+		
+		visible = {
+        455 = {has_state_flag = RP_arab_0}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 455
+		}
+		on_map_mode = map_only
+		cost = 50
+		complete_effect = {
+		455 = {set_state_flag = RP_arab_1}	
+		455 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_jordan2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 455}
+		}
+		
+		
+
+		visible = {
+        455 = {has_state_flag = RP_arab_1}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 455
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		455 = {set_state_flag = RP_arab_2}	
+		455 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_jordanrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 455}
+		}
+		
+		
+		visible = {
+        455 = {has_state_flag = RP_arab_2}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 455
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		455 = {set_state_flag = RP_arab_3}	
+		455 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 455
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 455 } 
+}
+add_state_core = 455
+		}
+		ENG = { add_to_faction = HJZ }
+		TUR = {remove_state_core = 455}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#asir#
+	RP_arab_asir1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 747}
+		}
+		
+		
+		visible = {
+        747 = {has_state_flag = RP_arab_0}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 747
+		}
+		on_map_mode = map_only
+		cost = 50
+		complete_effect = {
+		747 = {set_state_flag = RP_arab_1}	
+		747 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_asir2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 747}
+		}
+		
+		
+
+		visible = {
+        747 = {has_state_flag = RP_arab_1}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 747
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		747 = {set_state_flag = RP_arab_2}	
+		747 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_asirrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 747}
+		}
+		
+		
+		visible = {
+        747 = {has_state_flag = RP_arab_2}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 747
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		747 = {set_state_flag = RP_arab_3}	
+		747 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 747
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 747 } 
+}
+add_state_core = 747
+		}
+		ENG = { add_to_faction = HJZ }
+		TUR = {remove_state_core = 747}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	#yemen#
+	RP_arab_yemen1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 293}
+		}
+		
+		
+		visible = {
+        293 = {has_state_flag = RP_arab_0}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 293
+		}
+		on_map_mode = map_only
+		cost = 50
+		complete_effect = {
+		293 = {set_state_flag = RP_arab_1}	
+		293 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_yemen2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 293}
+		}
+		
+		
+
+		visible = {
+        293 = {has_state_flag = RP_arab_1}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 293
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		293 = {set_state_flag = RP_arab_2}	
+		293 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_yemenrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 293}
+		}
+		
+		
+		visible = {
+        293 = {has_state_flag = RP_arab_2}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 293
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		293 = {set_state_flag = RP_arab_3}	
+		293 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 293
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 293 } 
+}
+add_state_core = 293
+		}
+		ENG = { add_to_faction = HJZ }
+		TUR = {remove_state_core = 293}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	#damascus#
+	RP_arab_damascus1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 554}
+		}
+		
+		
+		visible = {
+        554 = {has_state_flag = RP_arab_0}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 554
+		}
+		on_map_mode = map_only
+		cost = 50
+		complete_effect = {
+		554 = {set_state_flag = RP_arab_1}	
+		554 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_damascus2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 554}
+		}
+		
+		
+
+		visible = {
+        554 = {has_state_flag = RP_arab_1}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 554
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		554 = {set_state_flag = RP_arab_2}	
+		554 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_damascusrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 554}
+		}
+		
+		
+		visible = {
+        554 = {has_state_flag = RP_arab_2}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 554
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		554 = {set_state_flag = RP_arab_3}	
+		554 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 554
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 554 } 
+}
+add_state_core = 554
+		}
+		ENG = { add_to_faction = HJZ }
+		TUR = {remove_state_core = 554}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	#lebanon#
+	RP_arab_lebanon1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 553}
+		}
+		
+		
+		visible = {
+        553 = {has_state_flag = RP_arab_0}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 553
+		}
+		on_map_mode = map_only
+		cost = 50
+		complete_effect = {
+		553 = {set_state_flag = RP_arab_1}	
+		553 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_lebanon2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 553}
+		}
+		
+		
+
+		visible = {
+        553 = {has_state_flag = RP_arab_1}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 553
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		553 = {set_state_flag = RP_arab_2}	
+		553 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_lebanonrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 553}
+		}
+		
+		
+		visible = {
+        553 = {has_state_flag = RP_arab_2}
+		ENG = {has_war_with = TUR}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 553
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		553 = {set_state_flag = RP_arab_3}	
+		553 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 553
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 553 } 
+}
+add_state_core = 553
+		}
+		ENG = { add_to_faction = HJZ }
+		TUR = {remove_state_core = 553}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+}
