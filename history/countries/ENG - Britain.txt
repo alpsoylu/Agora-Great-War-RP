@@ -11,6 +11,9 @@
 293 = {set_state_flag = RP_arab_0}
 554 = {set_state_flag = RP_arab_0}
 553 = {set_state_flag = RP_arab_0}
+675 = {set_state_flag = RP_arab_0}
+804 = {set_state_flag = RP_arab_0}
+291 = {set_state_flag = RP_arab_0}
 
 set_research_slots = 3
 set_stability = 0.60

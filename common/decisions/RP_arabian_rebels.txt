@@ -9,7 +9,7 @@ decision_category_arabian_rebels = {
 		
 		visible = {
         679 = {has_state_flag = RP_arab_0}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -35,7 +35,7 @@ decision_category_arabian_rebels = {
 
 		visible = {
         679 = {has_state_flag = RP_arab_1}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -60,7 +60,7 @@ decision_category_arabian_rebels = {
 		
 		visible = {
         679 = {has_state_flag = RP_arab_2}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -80,7 +80,7 @@ decision_category_arabian_rebels = {
     generator = { 679 } 
 }
 		}
-		ENG = { add_to_faction = HJZ }
+		add_to_faction = HJZ 
 		TUR = {remove_state_core = 679}
 		}
 		ai_will_do = { factor = 1 }
@@ -106,7 +106,7 @@ decision_category_arabian_rebels = {
 		
 		visible = {
         454 = {has_state_flag = RP_arab_0}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -132,7 +132,7 @@ decision_category_arabian_rebels = {
 
 		visible = {
         454 = {has_state_flag = RP_arab_1}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -157,7 +157,7 @@ decision_category_arabian_rebels = {
 		
 		visible = {
         454 = {has_state_flag = RP_arab_2}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -178,7 +178,7 @@ decision_category_arabian_rebels = {
 }
 add_state_core = 454
 		}
-		ENG = { add_to_faction = HJZ }
+		add_to_faction = HJZ 
 		TUR = {remove_state_core = 454}
 		}
 		ai_will_do = { factor = 1 }
@@ -215,7 +215,7 @@ add_state_core = 454
 		
 		visible = {
         455 = {has_state_flag = RP_arab_0}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -241,7 +241,7 @@ add_state_core = 454
 
 		visible = {
         455 = {has_state_flag = RP_arab_1}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -266,7 +266,7 @@ add_state_core = 454
 		
 		visible = {
         455 = {has_state_flag = RP_arab_2}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -287,7 +287,7 @@ add_state_core = 454
 }
 add_state_core = 455
 		}
-		ENG = { add_to_faction = HJZ }
+		add_to_faction = HJZ 
 		TUR = {remove_state_core = 455}
 		}
 		ai_will_do = { factor = 1 }
@@ -312,7 +312,7 @@ add_state_core = 455
 		
 		visible = {
         747 = {has_state_flag = RP_arab_0}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -338,7 +338,7 @@ add_state_core = 455
 
 		visible = {
         747 = {has_state_flag = RP_arab_1}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -363,7 +363,7 @@ add_state_core = 455
 		
 		visible = {
         747 = {has_state_flag = RP_arab_2}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -384,7 +384,7 @@ add_state_core = 455
 }
 add_state_core = 747
 		}
-		ENG = { add_to_faction = HJZ }
+		add_to_faction = HJZ 
 		TUR = {remove_state_core = 747}
 		}
 		ai_will_do = { factor = 1 }
@@ -407,7 +407,7 @@ add_state_core = 747
 		
 		visible = {
         293 = {has_state_flag = RP_arab_0}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -433,7 +433,7 @@ add_state_core = 747
 
 		visible = {
         293 = {has_state_flag = RP_arab_1}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -458,7 +458,7 @@ add_state_core = 747
 		
 		visible = {
         293 = {has_state_flag = RP_arab_2}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -479,7 +479,7 @@ add_state_core = 747
 }
 add_state_core = 293
 		}
-		ENG = { add_to_faction = HJZ }
+		add_to_faction = HJZ 
 		TUR = {remove_state_core = 293}
 		}
 		ai_will_do = { factor = 1 }
@@ -501,7 +501,7 @@ add_state_core = 293
 		
 		visible = {
         554 = {has_state_flag = RP_arab_0}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -527,7 +527,7 @@ add_state_core = 293
 
 		visible = {
         554 = {has_state_flag = RP_arab_1}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -552,7 +552,7 @@ add_state_core = 293
 		
 		visible = {
         554 = {has_state_flag = RP_arab_2}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -573,7 +573,7 @@ add_state_core = 293
 }
 add_state_core = 554
 		}
-		ENG = { add_to_faction = HJZ }
+		add_to_faction = HJZ 
 		TUR = {remove_state_core = 554}
 		}
 		ai_will_do = { factor = 1 }
@@ -595,7 +595,7 @@ add_state_core = 554
 		
 		visible = {
         553 = {has_state_flag = RP_arab_0}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -621,7 +621,7 @@ add_state_core = 554
 
 		visible = {
         553 = {has_state_flag = RP_arab_1}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -646,7 +646,7 @@ add_state_core = 554
 		
 		visible = {
         553 = {has_state_flag = RP_arab_2}
-		ENG = {has_war_with = TUR}
+		has_war_with = TUR
         }
 		
 		
@@ -667,11 +667,314 @@ add_state_core = 554
 }
 add_state_core = 553
 		}
-		ENG = { add_to_faction = HJZ }
+		add_to_faction = HJZ 
 		TUR = {remove_state_core = 553}
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#elhajara#
+	RP_arab_elhajara1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 675}
+		}
+		
+		
+		visible = {
+        675 = {has_state_flag = RP_arab_0}
+		has_war_with = TUR
+        }
+		
+		
+		highlight_state_targets = {
+			state = 675
+		}
+		on_map_mode = map_only
+		cost = 50
+		complete_effect = {
+		675 = {set_state_flag = RP_arab_1}	
+		675 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_elhajara2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 675}
+		}
+		
+		
+
+		visible = {
+        675 = {has_state_flag = RP_arab_1}
+		has_war_with = TUR
+        }
+		
+		
+		highlight_state_targets = {
+			state = 675
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		675 = {set_state_flag = RP_arab_2}	
+		675 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_elhajararevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 675}
+		}
+		
+		
+		visible = {
+        675 = {has_state_flag = RP_arab_2}
+		has_war_with = TUR
+        }
+		
+		
+		highlight_state_targets = {
+			state = 675
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		675 = {set_state_flag = RP_arab_3}	
+		675 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 675
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 675 } 
+}
+add_state_core = 675
+		}
+		add_to_faction = HJZ 
+		TUR = {remove_state_core = 675}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#alhasa#
+	RP_arab_alhasa1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 804}
+		}
+		
+		
+		visible = {
+        804 = {has_state_flag = RP_arab_0}
+		has_war_with = TUR
+        }
+		
+		
+		highlight_state_targets = {
+			state = 804
+		}
+		on_map_mode = map_only
+		cost = 50
+		complete_effect = {
+		804 = {set_state_flag = RP_arab_1}	
+		804 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_alhasa2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 804}
+		}
+		
+		
+
+		visible = {
+        804 = {has_state_flag = RP_arab_1}
+		has_war_with = TUR
+        }
+		
+		
+		highlight_state_targets = {
+			state = 804
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		804 = {set_state_flag = RP_arab_2}	
+		804 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_alhasarevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 804}
+		}
+		
+		
+		visible = {
+        804 = {has_state_flag = RP_arab_2}
+		has_war_with = TUR
+        }
+		
+		
+		highlight_state_targets = {
+			state = 804
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		804 = {set_state_flag = RP_arab_3}	
+		804 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 804
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 804 } 
+}
+add_state_core = 804
+		}
+		add_to_faction = HJZ 
+		TUR = {remove_state_core = 804}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#baghdad#
+	RP_arab_baghdad1 = {
+		icon = GFX_dec_arab0
+		allowed = { 
+		TUR = {controls_state = 291}
+		}
+		
+		
+		visible = {
+        291 = {has_state_flag = RP_arab_0}
+		has_war_with = TUR
+        }
+		
+		
+		highlight_state_targets = {
+			state = 291
+		}
+		on_map_mode = map_only
+		cost = 50
+		complete_effect = {
+		291 = {set_state_flag = RP_arab_1}	
+		291 = {clr_state_flag = RP_arab_0}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_baghdad2 = {
+		icon = GFX_dec_arab1
+		allowed = { 
+		TUR = {controls_state = 291}
+		}
+		
+		
+
+		visible = {
+        291 = {has_state_flag = RP_arab_1}
+		has_war_with = TUR
+        }
+		
+		
+		highlight_state_targets = {
+			state = 291
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		291 = {set_state_flag = RP_arab_2}	
+		291 = {clr_state_flag = RP_arab_1}	
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	RP_arab_baghdadrevolt = {
+		icon = GFX_dec_arab2
+		allowed = { 
+		TUR = {controls_state = 291}
+		}
+		
+		
+		visible = {
+        291 = {has_state_flag = RP_arab_2}
+		has_war_with = TUR
+        }
+		
+		
+		highlight_state_targets = {
+			state = 291
+		}
+		on_map_mode = map_only
+		cost = 100
+		complete_effect = {
+		291 = {set_state_flag = RP_arab_3}	
+		291 = {clr_state_flag = RP_arab_2}	
+		HJZ = {
+		transfer_state = 291
+		declare_war_on = {
+    target = TUR
+    type = take_state_focus
+    generator = { 291 } 
+}
+add_state_core = 291
+		}
+		add_to_faction = HJZ 
+		TUR = {remove_state_core = 291}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
