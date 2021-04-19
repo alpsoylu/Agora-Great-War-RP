@@ -7,16 +7,16 @@ CZE_ONLY = {
 	color_ui = rgb { 78 142 136 }
 }
 VIN_FRA = {
-	color = rgb { 55 129 196 }
-	color_ui = rgb { 55 129 196 }
+	color = rgb { 8  57  199 }
+	color_ui = rgb { 75 147 255 }
 }
 EGY_kingdom = {
 	color = rgb { 188 190 42 }
 	color_ui = rgb { 188 190 42 }
 }
 SAF_CAP = {
-	color = rgb { 168 50 88 }
-	color_ui = rgb { 168 50 88 }
+	color = rgb { 202 56 93 }
+	color_ui = rgb { 256 73 121 }
 }
 CHI_ANC = {
 	color = rgb { 104 128 173 }

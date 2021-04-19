@@ -3271,6 +3271,9 @@ focus_tree = {
 	}
 
 	}
+	
+	
+	
 	focus = {
 	id = TUR_executethenationalistpashas
 	icon = GFX_goal_nationalistsgg
@@ -3302,10 +3305,22 @@ focus_tree = {
 	id = TUR_uniteislamundertheonebanner
 	icon = GFX_goal_cihad
 	cost = 10
+	
+	###prerequisite = {
+	###focus = TUR_executethenationalistpashas
+	###}
+	#prerequisite = {
+	#focus = TUR_protectorofislam
+	#}
+	###x = 36
+	
+	
 	prerequisite = {
 	focus = TUR_el_muzaffer_daima
 	}
 	x = 39
+	
+	
 	y = 8
 
 	ai_will_do = {
@@ -4431,6 +4446,8 @@ focus_tree = {
 		}
 
 	}
+	#SARIKAMIŞ
+	shared_focus = TUR_sarikamis
 	
 	focus = {
 	id = TUR_mustafaenvercemal

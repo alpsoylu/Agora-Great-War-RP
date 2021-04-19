@@ -245,7 +245,11 @@ spriteTypes = {
 	SpriteType = {
 	name = "GFX_ikili_atli"
 	texturefile = "gfx/interface/goals/newicons/ikili/atli.dds"			
-	}			
+	}
+SpriteType = {
+		name = "GFX_idea_sarikamis"
+		texturefile = "gfx/interface/ideas/TUR/new_sarikamis.dds"
+	}	
 
 
 
@@ -318,6 +322,10 @@ SpriteType = {
 SpriteType = {
 	name = "GFX_demir_yumruk"
 	texturefile = "gfx/interface/goals/newicons/demir_yumruk.dds"			
+	}
+SpriteType = {
+	name = "GFX_sarikamis"
+	texturefile = "gfx/interface/goals/newicons/sarikamis.dds"			
 	}
 
 	
