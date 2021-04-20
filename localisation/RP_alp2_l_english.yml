@@ -52,3 +52,15 @@
  RP_arab_baghdad1:0 "Increase the Power of Arab Tribes in Baghdad"
  RP_arab_baghdad2:0 "Increase the Power of Arab Tribes in Baghdad"
  RP_arab_baghdadrevolt:0 "Fire the Arab Revolt in Baghdad"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ eng_event.1:0 "Welcome to Agora Great War RP"
+ eng_event.1.t:0 "Welcome to Agora Great War RP"
+ eng_event.1.d:0 "READ THIS!!!When you are at war with the Ottomans you can trigger Arab Revolts if you click into decisions and go to arabicc states in the map.It will take 250PP to trigger a revolt in one state."
+ eng_event.1.a:0 "Lets begin!"

@@ -4,12 +4,15 @@ decision_category_arabian_rebels = {
 		icon = GFX_dec_arab0
 		allowed = { 
 		TUR = {controls_state = 679}
+		TUR = {owns_state = 679}
 		}
 		
 		
 		visible = {
         679 = {has_state_flag = RP_arab_0}
 		has_war_with = TUR
+		TUR = {controls_state = 679}
+		TUR = {owns_state = 679}
         }
 		
 		
@@ -29,6 +32,7 @@ decision_category_arabian_rebels = {
 		icon = GFX_dec_arab1
 		allowed = { 
 		TUR = {controls_state = 679}
+		TUR = {owns_state = 679}
 		}
 		
 		
@@ -36,6 +40,8 @@ decision_category_arabian_rebels = {
 		visible = {
         679 = {has_state_flag = RP_arab_1}
 		has_war_with = TUR
+		TUR = {controls_state = 679}
+		TUR = {owns_state = 679}
         }
 		
 		
@@ -55,12 +61,15 @@ decision_category_arabian_rebels = {
 		icon = GFX_dec_arab2
 		allowed = { 
 		TUR = {controls_state = 679}
+		TUR = {owns_state = 679}
 		}
 		
 		
 		visible = {
         679 = {has_state_flag = RP_arab_2}
 		has_war_with = TUR
+		TUR = {controls_state = 679}
+		TUR = {owns_state = 679}
         }
 		
 		
@@ -73,7 +82,7 @@ decision_category_arabian_rebels = {
 		679 = {set_state_flag = RP_arab_3}	
 		679 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		transfer_state = 679
+		set_state_controller = 679
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -101,12 +110,15 @@ decision_category_arabian_rebels = {
 		icon = GFX_dec_arab0
 		allowed = { 
 		TUR = {controls_state = 454}
+		TUR = {owns_state = 454}
 		}
 		
 		
 		visible = {
         454 = {has_state_flag = RP_arab_0}
 		has_war_with = TUR
+		TUR = {controls_state = 454}
+		TUR = {owns_state = 454}
         }
 		
 		
@@ -126,6 +138,7 @@ decision_category_arabian_rebels = {
 		icon = GFX_dec_arab1
 		allowed = { 
 		TUR = {controls_state = 454}
+		TUR = {owns_state = 454}
 		}
 		
 		
@@ -133,6 +146,8 @@ decision_category_arabian_rebels = {
 		visible = {
         454 = {has_state_flag = RP_arab_1}
 		has_war_with = TUR
+		TUR = {controls_state = 454}
+		TUR = {owns_state = 454}
         }
 		
 		
@@ -152,12 +167,15 @@ decision_category_arabian_rebels = {
 		icon = GFX_dec_arab2
 		allowed = { 
 		TUR = {controls_state = 454}
+		TUR = {owns_state = 454}
 		}
 		
 		
 		visible = {
         454 = {has_state_flag = RP_arab_2}
 		has_war_with = TUR
+		TUR = {controls_state = 454}
+		TUR = {owns_state = 454}
         }
 		
 		
@@ -170,7 +188,7 @@ decision_category_arabian_rebels = {
 		454 = {set_state_flag = RP_arab_3}	
 		454 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		transfer_state = 454
+		set_state_controller = 454
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -210,12 +228,15 @@ add_state_core = 454
 		icon = GFX_dec_arab0
 		allowed = { 
 		TUR = {controls_state = 455}
+		TUR = {owns_state = 455}
 		}
 		
 		
 		visible = {
         455 = {has_state_flag = RP_arab_0}
 		has_war_with = TUR
+		TUR = {controls_state = 455}
+		TUR = {owns_state = 455}
         }
 		
 		
@@ -235,6 +256,7 @@ add_state_core = 454
 		icon = GFX_dec_arab1
 		allowed = { 
 		TUR = {controls_state = 455}
+		TUR = {owns_state = 455}
 		}
 		
 		
@@ -242,6 +264,8 @@ add_state_core = 454
 		visible = {
         455 = {has_state_flag = RP_arab_1}
 		has_war_with = TUR
+		TUR = {controls_state = 455}
+		TUR = {owns_state = 455}
         }
 		
 		
@@ -261,12 +285,15 @@ add_state_core = 454
 		icon = GFX_dec_arab2
 		allowed = { 
 		TUR = {controls_state = 455}
+		TUR = {owns_state = 455}
 		}
 		
 		
 		visible = {
         455 = {has_state_flag = RP_arab_2}
 		has_war_with = TUR
+		TUR = {controls_state = 455}
+		TUR = {owns_state = 455}
         }
 		
 		
@@ -279,7 +306,7 @@ add_state_core = 454
 		455 = {set_state_flag = RP_arab_3}	
 		455 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		transfer_state = 455
+		set_state_controller = 455
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -307,12 +334,15 @@ add_state_core = 455
 		icon = GFX_dec_arab0
 		allowed = { 
 		TUR = {controls_state = 747}
+		TUR = {owns_state = 747}
 		}
 		
 		
 		visible = {
         747 = {has_state_flag = RP_arab_0}
 		has_war_with = TUR
+		TUR = {controls_state = 747}
+		TUR = {owns_state = 747}
         }
 		
 		
@@ -332,6 +362,7 @@ add_state_core = 455
 		icon = GFX_dec_arab1
 		allowed = { 
 		TUR = {controls_state = 747}
+		TUR = {owns_state = 747}
 		}
 		
 		
@@ -339,6 +370,8 @@ add_state_core = 455
 		visible = {
         747 = {has_state_flag = RP_arab_1}
 		has_war_with = TUR
+		TUR = {controls_state = 747}
+		TUR = {owns_state = 747}
         }
 		
 		
@@ -358,12 +391,15 @@ add_state_core = 455
 		icon = GFX_dec_arab2
 		allowed = { 
 		TUR = {controls_state = 747}
+		TUR = {owns_state = 747}
 		}
 		
 		
 		visible = {
         747 = {has_state_flag = RP_arab_2}
 		has_war_with = TUR
+		TUR = {controls_state = 747}
+		TUR = {owns_state = 747}
         }
 		
 		
@@ -376,7 +412,7 @@ add_state_core = 455
 		747 = {set_state_flag = RP_arab_3}	
 		747 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		transfer_state = 747
+		set_state_controller = 747
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -402,12 +438,15 @@ add_state_core = 747
 		icon = GFX_dec_arab0
 		allowed = { 
 		TUR = {controls_state = 293}
+		TUR = {owns_state = 293}
 		}
 		
 		
 		visible = {
         293 = {has_state_flag = RP_arab_0}
 		has_war_with = TUR
+		TUR = {controls_state = 293}
+		TUR = {owns_state = 293}
         }
 		
 		
@@ -427,6 +466,8 @@ add_state_core = 747
 		icon = GFX_dec_arab1
 		allowed = { 
 		TUR = {controls_state = 293}
+		TUR = {owns_state = 293}
+		
 		}
 		
 		
@@ -434,6 +475,8 @@ add_state_core = 747
 		visible = {
         293 = {has_state_flag = RP_arab_1}
 		has_war_with = TUR
+		TUR = {controls_state = 293}
+		TUR = {owns_state = 293}
         }
 		
 		
@@ -453,12 +496,15 @@ add_state_core = 747
 		icon = GFX_dec_arab2
 		allowed = { 
 		TUR = {controls_state = 293}
+		TUR = {owns_state = 293}
 		}
 		
 		
 		visible = {
         293 = {has_state_flag = RP_arab_2}
 		has_war_with = TUR
+		TUR = {controls_state = 293}
+		TUR = {owns_state = 293}
         }
 		
 		
@@ -471,7 +517,7 @@ add_state_core = 747
 		293 = {set_state_flag = RP_arab_3}	
 		293 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		transfer_state = 293
+		set_state_controller = 293
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -496,12 +542,15 @@ add_state_core = 293
 		icon = GFX_dec_arab0
 		allowed = { 
 		TUR = {controls_state = 554}
+		TUR = {owns_state = 554}
 		}
 		
 		
 		visible = {
         554 = {has_state_flag = RP_arab_0}
 		has_war_with = TUR
+		TUR = {controls_state = 554}
+		TUR = {owns_state = 554}
         }
 		
 		
@@ -521,6 +570,7 @@ add_state_core = 293
 		icon = GFX_dec_arab1
 		allowed = { 
 		TUR = {controls_state = 554}
+		TUR = {owns_state = 554}
 		}
 		
 		
@@ -528,6 +578,8 @@ add_state_core = 293
 		visible = {
         554 = {has_state_flag = RP_arab_1}
 		has_war_with = TUR
+		TUR = {controls_state = 554}
+		TUR = {owns_state = 554}
         }
 		
 		
@@ -547,12 +599,15 @@ add_state_core = 293
 		icon = GFX_dec_arab2
 		allowed = { 
 		TUR = {controls_state = 554}
+		TUR = {owns_state = 554}
 		}
 		
 		
 		visible = {
         554 = {has_state_flag = RP_arab_2}
 		has_war_with = TUR
+		TUR = {controls_state = 554}
+		TUR = {owns_state = 554}
         }
 		
 		
@@ -565,7 +620,7 @@ add_state_core = 293
 		554 = {set_state_flag = RP_arab_3}	
 		554 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		transfer_state = 554
+		set_state_controller = 554
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -590,12 +645,15 @@ add_state_core = 554
 		icon = GFX_dec_arab0
 		allowed = { 
 		TUR = {controls_state = 553}
+		TUR = {owns_state = 553}
 		}
 		
 		
 		visible = {
         553 = {has_state_flag = RP_arab_0}
 		has_war_with = TUR
+		TUR = {controls_state = 553}
+		TUR = {owns_state = 553}
         }
 		
 		
@@ -615,6 +673,7 @@ add_state_core = 554
 		icon = GFX_dec_arab1
 		allowed = { 
 		TUR = {controls_state = 553}
+		TUR = {owns_state = 553}
 		}
 		
 		
@@ -622,6 +681,8 @@ add_state_core = 554
 		visible = {
         553 = {has_state_flag = RP_arab_1}
 		has_war_with = TUR
+		TUR = {controls_state = 553}
+		TUR = {owns_state = 553}
         }
 		
 		
@@ -641,12 +702,15 @@ add_state_core = 554
 		icon = GFX_dec_arab2
 		allowed = { 
 		TUR = {controls_state = 553}
+		TUR = {owns_state = 553}
 		}
 		
 		
 		visible = {
         553 = {has_state_flag = RP_arab_2}
 		has_war_with = TUR
+		TUR = {controls_state = 553}
+		TUR = {owns_state = 553}
         }
 		
 		
@@ -659,7 +723,7 @@ add_state_core = 554
 		553 = {set_state_flag = RP_arab_3}	
 		553 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		transfer_state = 553
+		set_state_controller = 553
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -686,12 +750,15 @@ add_state_core = 553
 		icon = GFX_dec_arab0
 		allowed = { 
 		TUR = {controls_state = 675}
+		TUR = {owns_state = 675}
 		}
 		
 		
 		visible = {
         675 = {has_state_flag = RP_arab_0}
 		has_war_with = TUR
+		TUR = {controls_state = 675}
+		TUR = {owns_state = 675}
         }
 		
 		
@@ -711,6 +778,7 @@ add_state_core = 553
 		icon = GFX_dec_arab1
 		allowed = { 
 		TUR = {controls_state = 675}
+		TUR = {owns_state = 675}
 		}
 		
 		
@@ -718,6 +786,8 @@ add_state_core = 553
 		visible = {
         675 = {has_state_flag = RP_arab_1}
 		has_war_with = TUR
+		TUR = {controls_state = 675}
+		TUR = {owns_state = 675}
         }
 		
 		
@@ -737,12 +807,15 @@ add_state_core = 553
 		icon = GFX_dec_arab2
 		allowed = { 
 		TUR = {controls_state = 675}
+		TUR = {owns_state = 675}
 		}
 		
 		
 		visible = {
         675 = {has_state_flag = RP_arab_2}
 		has_war_with = TUR
+		TUR = {controls_state = 675}
+		TUR = {owns_state = 675}
         }
 		
 		
@@ -755,7 +828,7 @@ add_state_core = 553
 		675 = {set_state_flag = RP_arab_3}	
 		675 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		transfer_state = 675
+		set_state_controller = 675
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -787,12 +860,15 @@ add_state_core = 675
 		icon = GFX_dec_arab0
 		allowed = { 
 		TUR = {controls_state = 804}
+		TUR = {owns_state = 804}
 		}
 		
 		
 		visible = {
         804 = {has_state_flag = RP_arab_0}
 		has_war_with = TUR
+		TUR = {controls_state = 804}
+		TUR = {owns_state = 804}
         }
 		
 		
@@ -812,6 +888,7 @@ add_state_core = 675
 		icon = GFX_dec_arab1
 		allowed = { 
 		TUR = {controls_state = 804}
+		TUR = {owns_state = 804}
 		}
 		
 		
@@ -819,6 +896,8 @@ add_state_core = 675
 		visible = {
         804 = {has_state_flag = RP_arab_1}
 		has_war_with = TUR
+		TUR = {controls_state = 804}
+		TUR = {owns_state = 804}
         }
 		
 		
@@ -838,12 +917,15 @@ add_state_core = 675
 		icon = GFX_dec_arab2
 		allowed = { 
 		TUR = {controls_state = 804}
+		TUR = {owns_state = 804}
 		}
 		
 		
 		visible = {
         804 = {has_state_flag = RP_arab_2}
 		has_war_with = TUR
+		TUR = {controls_state = 804}
+		TUR = {owns_state = 804}
         }
 		
 		
@@ -856,7 +938,7 @@ add_state_core = 675
 		804 = {set_state_flag = RP_arab_3}	
 		804 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		transfer_state = 804
+		set_state_controller = 804
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -884,12 +966,15 @@ add_state_core = 804
 		icon = GFX_dec_arab0
 		allowed = { 
 		TUR = {controls_state = 291}
+		TUR = {owns_state = 291}
 		}
 		
 		
 		visible = {
         291 = {has_state_flag = RP_arab_0}
 		has_war_with = TUR
+		TUR = {controls_state = 291}
+		TUR = {owns_state = 291}
         }
 		
 		
@@ -909,6 +994,7 @@ add_state_core = 804
 		icon = GFX_dec_arab1
 		allowed = { 
 		TUR = {controls_state = 291}
+		TUR = {owns_state = 291}
 		}
 		
 		
@@ -916,6 +1002,8 @@ add_state_core = 804
 		visible = {
         291 = {has_state_flag = RP_arab_1}
 		has_war_with = TUR
+		TUR = {controls_state = 291}
+		TUR = {owns_state = 291}
         }
 		
 		
@@ -935,12 +1023,15 @@ add_state_core = 804
 		icon = GFX_dec_arab2
 		allowed = { 
 		TUR = {controls_state = 291}
+		TUR = {owns_state = 291}
 		}
 		
 		
 		visible = {
         291 = {has_state_flag = RP_arab_2}
 		has_war_with = TUR
+		TUR = {controls_state = 291}
+		TUR = {owns_state = 291}
         }
 		
 		
@@ -953,7 +1044,7 @@ add_state_core = 804
 		291 = {set_state_flag = RP_arab_3}	
 		291 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		transfer_state = 291
+		set_state_controller = 291
 		declare_war_on = {
     target = TUR
     type = take_state_focus

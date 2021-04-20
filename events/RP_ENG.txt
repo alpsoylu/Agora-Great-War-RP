@@ -1,0 +1,26 @@
+﻿###########################
+# England Events
+###########################
+
+add_namespace = eng_event
+
+	
+	
+	
+	
+#ELECTIONS
+country_event = {
+	id = eng_event.1 #Event eng_event.1 ENG
+	title = eng_event.1.t
+	desc = eng_event.1.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigenged_only = yes
+	fire_only_once = yes
+	#LETS BEGIN
+	option = {
+	ai_chance = {base = 10}
+		name = eng_event.1.a
+	}
+	
+	}
