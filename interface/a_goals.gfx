@@ -265,6 +265,10 @@ SpriteType = {
 		name = "GFX_dec_arab0"
 		texturefile = "gfx/interface/decisions/dec_arab0.dds"
 	}
+	spriteType = {
+		name = "GFX_ideology_EGY_autocracy"
+		texturefile = "gfx/interface/ideologies/EGY_autocracy.dds"
+	}
 	
 	#ARAB
 

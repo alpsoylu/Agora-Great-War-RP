@@ -4,4 +4,4 @@ tags={
 	"Fixes"
 }
 name="Agora Great War RP"
-supported_version="1.10.4"
+supported_version="1.10.5"

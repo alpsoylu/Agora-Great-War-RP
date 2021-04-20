@@ -82,7 +82,7 @@ decision_category_arabian_rebels = {
 		679 = {set_state_flag = RP_arab_3}	
 		679 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		set_state_controller = 679
+		transfer_state = 679
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -188,7 +188,7 @@ decision_category_arabian_rebels = {
 		454 = {set_state_flag = RP_arab_3}	
 		454 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		set_state_controller = 454
+		transfer_state = 454
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -306,7 +306,7 @@ add_state_core = 454
 		455 = {set_state_flag = RP_arab_3}	
 		455 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		set_state_controller = 455
+		transfer_state = 455
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -412,7 +412,7 @@ add_state_core = 455
 		747 = {set_state_flag = RP_arab_3}	
 		747 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		set_state_controller = 747
+		transfer_state = 747
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -517,7 +517,7 @@ add_state_core = 747
 		293 = {set_state_flag = RP_arab_3}	
 		293 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		set_state_controller = 293
+		transfer_state = 293
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -620,7 +620,7 @@ add_state_core = 293
 		554 = {set_state_flag = RP_arab_3}	
 		554 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		set_state_controller = 554
+		transfer_state = 554
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -723,7 +723,7 @@ add_state_core = 554
 		553 = {set_state_flag = RP_arab_3}	
 		553 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		set_state_controller = 553
+		transfer_state = 553
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -828,7 +828,7 @@ add_state_core = 553
 		675 = {set_state_flag = RP_arab_3}	
 		675 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		set_state_controller = 675
+		transfer_state = 675
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -938,7 +938,7 @@ add_state_core = 675
 		804 = {set_state_flag = RP_arab_3}	
 		804 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		set_state_controller = 804
+		transfer_state = 804
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -1044,7 +1044,7 @@ add_state_core = 804
 		291 = {set_state_flag = RP_arab_3}	
 		291 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
-		set_state_controller = 291
+		transfer_state = 291
 		declare_war_on = {
     target = TUR
     type = take_state_focus
