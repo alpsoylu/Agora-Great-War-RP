@@ -13,6 +13,7 @@ decision_category_arabian_rebels = {
 		has_war_with = TUR
 		TUR = {controls_state = 679}
 		TUR = {owns_state = 679}
+		
         }
 		
 		
@@ -33,6 +34,7 @@ decision_category_arabian_rebels = {
 		allowed = { 
 		TUR = {controls_state = 679}
 		TUR = {owns_state = 679}
+		
 		}
 		
 		
@@ -62,6 +64,7 @@ decision_category_arabian_rebels = {
 		allowed = { 
 		TUR = {controls_state = 679}
 		TUR = {owns_state = 679}
+		
 		}
 		
 		
@@ -111,6 +114,7 @@ decision_category_arabian_rebels = {
 		allowed = { 
 		TUR = {controls_state = 454}
 		TUR = {owns_state = 454}
+		
 		}
 		
 		
@@ -139,6 +143,7 @@ decision_category_arabian_rebels = {
 		allowed = { 
 		TUR = {controls_state = 454}
 		TUR = {owns_state = 454}
+		
 		}
 		
 		
@@ -168,6 +173,7 @@ decision_category_arabian_rebels = {
 		allowed = { 
 		TUR = {controls_state = 454}
 		TUR = {owns_state = 454}
+		
 		}
 		
 		
@@ -229,6 +235,7 @@ add_state_core = 454
 		allowed = { 
 		TUR = {controls_state = 455}
 		TUR = {owns_state = 455}
+		
 		}
 		
 		
@@ -237,6 +244,7 @@ add_state_core = 454
 		has_war_with = TUR
 		TUR = {controls_state = 455}
 		TUR = {owns_state = 455}
+		
         }
 		
 		
@@ -257,6 +265,7 @@ add_state_core = 454
 		allowed = { 
 		TUR = {controls_state = 455}
 		TUR = {owns_state = 455}
+		
 		}
 		
 		
@@ -286,6 +295,7 @@ add_state_core = 454
 		allowed = { 
 		TUR = {controls_state = 455}
 		TUR = {owns_state = 455}
+
 		}
 		
 		
@@ -335,6 +345,7 @@ add_state_core = 455
 		allowed = { 
 		TUR = {controls_state = 747}
 		TUR = {owns_state = 747}
+		
 		}
 		
 		
@@ -363,6 +374,7 @@ add_state_core = 455
 		allowed = { 
 		TUR = {controls_state = 747}
 		TUR = {owns_state = 747}
+		
 		}
 		
 		
@@ -392,6 +404,7 @@ add_state_core = 455
 		allowed = { 
 		TUR = {controls_state = 747}
 		TUR = {owns_state = 747}
+		
 		}
 		
 		
@@ -439,6 +452,7 @@ add_state_core = 747
 		allowed = { 
 		TUR = {controls_state = 293}
 		TUR = {owns_state = 293}
+		
 		}
 		
 		
@@ -497,6 +511,7 @@ add_state_core = 747
 		allowed = { 
 		TUR = {controls_state = 293}
 		TUR = {owns_state = 293}
+		
 		}
 		
 		
@@ -543,6 +558,7 @@ add_state_core = 293
 		allowed = { 
 		TUR = {controls_state = 554}
 		TUR = {owns_state = 554}
+		
 		}
 		
 		
@@ -571,6 +587,7 @@ add_state_core = 293
 		allowed = { 
 		TUR = {controls_state = 554}
 		TUR = {owns_state = 554}
+		
 		}
 		
 		
@@ -600,6 +617,7 @@ add_state_core = 293
 		allowed = { 
 		TUR = {controls_state = 554}
 		TUR = {owns_state = 554}
+		
 		}
 		
 		
@@ -646,6 +664,7 @@ add_state_core = 554
 		allowed = { 
 		TUR = {controls_state = 553}
 		TUR = {owns_state = 553}
+		
 		}
 		
 		
@@ -674,6 +693,7 @@ add_state_core = 554
 		allowed = { 
 		TUR = {controls_state = 553}
 		TUR = {owns_state = 553}
+		
 		}
 		
 		
@@ -703,6 +723,7 @@ add_state_core = 554
 		allowed = { 
 		TUR = {controls_state = 553}
 		TUR = {owns_state = 553}
+		
 		}
 		
 		
@@ -751,6 +772,7 @@ add_state_core = 553
 		allowed = { 
 		TUR = {controls_state = 675}
 		TUR = {owns_state = 675}
+		
 		}
 		
 		
@@ -779,6 +801,7 @@ add_state_core = 553
 		allowed = { 
 		TUR = {controls_state = 675}
 		TUR = {owns_state = 675}
+		
 		}
 		
 		
@@ -808,6 +831,7 @@ add_state_core = 553
 		allowed = { 
 		TUR = {controls_state = 675}
 		TUR = {owns_state = 675}
+		
 		}
 		
 		
@@ -861,6 +885,8 @@ add_state_core = 675
 		allowed = { 
 		TUR = {controls_state = 804}
 		TUR = {owns_state = 804}
+		
+		
 		}
 		
 		
@@ -889,6 +915,7 @@ add_state_core = 675
 		allowed = { 
 		TUR = {controls_state = 804}
 		TUR = {owns_state = 804}
+		
 		}
 		
 		
@@ -918,6 +945,7 @@ add_state_core = 675
 		allowed = { 
 		TUR = {controls_state = 804}
 		TUR = {owns_state = 804}
+		
 		}
 		
 		
@@ -967,6 +995,7 @@ add_state_core = 804
 		allowed = { 
 		TUR = {controls_state = 291}
 		TUR = {owns_state = 291}
+		
 		}
 		
 		
@@ -995,6 +1024,7 @@ add_state_core = 804
 		allowed = { 
 		TUR = {controls_state = 291}
 		TUR = {owns_state = 291}
+		
 		}
 		
 		
@@ -1024,6 +1054,7 @@ add_state_core = 804
 		allowed = { 
 		TUR = {controls_state = 291}
 		TUR = {owns_state = 291}
+		
 		}
 		
 		

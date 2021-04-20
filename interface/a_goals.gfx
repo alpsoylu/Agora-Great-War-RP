@@ -266,8 +266,8 @@ SpriteType = {
 		texturefile = "gfx/interface/decisions/dec_arab0.dds"
 	}
 	spriteType = {
-		name = "GFX_ideology_EGY_autocracy"
-		texturefile = "gfx/interface/ideologies/EGY_autocracy.dds"
+		name = "GFX_ideology_EGY_neutrality"
+		texturefile = "gfx/interface/ideologies/EGY_neutrality.dds"
 	}
 	
 	#ARAB
@@ -347,6 +347,11 @@ SpriteType = {
 SpriteType = {
 	name = "GFX_sarikamis"
 	texturefile = "gfx/interface/goals/newicons/sarikamis.dds"			
+	}
+	
+	spriteType = {
+		name = "GFX_decision_cat_picture_arab_rebel"
+		texturefile = "gfx/interface/decisions/arab_rebel.dds"
 	}
 
 	
