@@ -1,0 +1,105 @@
+﻿###########################
+# FREBCG Events
+###########################
+
+add_namespace = fra_event
+
+	
+	
+	
+	
+#ELECTIONS
+country_event = {
+	id = fra_event.1 #event fra_event.1 FRA
+	title = fra_event.1.t
+	desc = fra_event.1.d
+	picture = GFX_report_event_generic_ruins
+	
+	is_trigfraed_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = FRA
+	date > 1910.8.3
+	}
+	#FUCK THE FARMERS
+	option = {
+	ai_chance = {base = 10}
+		name = fra_event.1.a
+		add_timed_idea = {
+    idea = RP_champagne_riot
+    days = 300
+}
+	}
+	#SIDE WITH FARMERS
+	option = {
+	ai_chance = {base = 10}
+		name = fra_event.1.b
+		add_timed_idea = {
+    idea = RP_apchampagne_riot
+    days = 200
+}
+add_popularity = {
+ideology = communism
+popularity = 0.20
+}
+	}
+	
+	}
+	
+	
+	
+	news_event = {
+	id = fra_event.2 #event fra_event.2 FRA
+	title = fra_event.2.t
+	desc = fra_event.2.d
+	picture = GFX_news_event_canada_treaty
+
+	major = yes
+
+	is_triggered_only = no
+	fire_only_once = no
+	trigger = {
+	FRA = {has_completed_focus = FRA_postpone_1910_elections}
+	}
+	
+	fire_only_once = yes
+
+	
+	option = { #Ok
+		name = fra_event.2.a # 
+	}
+}
+
+
+
+
+
+
+
+#ELECTIONS
+country_event = {
+	id = fra_event.3 #event fra_event.3 FRA
+	title = fra_event.3.t
+	desc = fra_event.3.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_trigfraed_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = FRA
+	has_completed_focus = FRA_1910_election
+	}
+	#DEMOCRATIC
+	option = {
+	ai_chance = {base = 10}
+		name = fra_event.3.a
+		set_country_flag = FRA_prrr
+	}
+	#COMMUNIST
+	option = {
+	ai_chance = {base = 10}
+		name = fra_event.3.b
+		set_country_flag = FRA_sfio
+	}
+	
+	}

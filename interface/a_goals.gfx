@@ -349,6 +349,20 @@ SpriteType = {
 	texturefile = "gfx/interface/goals/newicons/sarikamis.dds"			
 	}
 	
+	#FRA
+SpriteType = {
+	name = "GFX_vivelafrance"
+	texturefile = "gfx/interface/goals/newicons/vivelafrance.dds"			
+	}
+SpriteType = {
+	name = "GFX_srr"
+	texturefile = "gfx/interface/goals/newicons/srr.dds"			
+	}
+SpriteType = {
+	name = "GFX_sfio"
+	texturefile = "gfx/interface/goals/newicons/sfio.dds"			
+	}
+	
 	spriteType = {
 		name = "GFX_decision_cat_picture_arab_rebel"
 		texturefile = "gfx/interface/decisions/arab_rebel.dds"

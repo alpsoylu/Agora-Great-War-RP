@@ -58,6 +58,12 @@
  
  
  
+ RP_champagne_riot:0 "Champagne Riots"
+ RP_apchampagne_riot:0 "Appeasing the Champagne Riots"
+ 
+ 
+ 
+ 
  
  
  
@@ -66,3 +72,31 @@
  eng_event.1.t:0 "Welcome to Agora Great War RP"
  eng_event.1.d:0 "READ THIS!!!When you are at war with the Ottomans you can trigger Arab Revolts if you click into decisions and go to arabicc states in the map.It will take 250PP to trigger a revolt in one state."
  eng_event.1.a:0 "Lets begin!"
+ 
+ fra_event.1:0 "French Grape Growers Riot!"
+ fra_event.1.t:0 "French Grape Growers Riot!"
+ fra_event.1.d:0 "French Grape Growers in Champagne rioted against the Champagne houses."
+ fra_event.1.a:0 "Dont listen to the farmers"
+ fra_event.1.b:0 "Appease the Farmers"
+ 
+ fra_event.2:0 "French Elections are Postponed!"
+ fra_event.2.t:0 "French Elections are Postponed!"
+ fra_event.2.d:0 "French 1910 Legisletive Elections were supposed to happen this year.But the French Goverment decided to postpone this election due to global crisis and tensions with Germany about Morocco."
+ fra_event.2.a:0 "Ok."
+ 
+ fra_event.3:0 "French 1910 Legisletive Elections"
+ fra_event.3.t:0 "French 1910 Legisletive Elections"
+ fra_event.3.d:0 "Last election in France was in 1906.But now it is election time.We have to chose our leaders correctly because a storm is coming in Europe.Who should we pick?"
+ fra_event.3.a:0 "PRRRS (Liberals)"
+ fra_event.3.b:0 "SFIO (Socialists)"
+ 
+ 
+ 
+ FRA_sfio:0 "SFIO has won the elections"
+ FRA_prrr:0 "PRRRS has won the elections"
+ 
+ 
+ FRA_postpone_1910_elections:0 "Postpone the Elections"
+ FRA_1910_election:0 "1910 Legisletive Elections"
+ FRA_briand_victory:0 "PRRRS wins"
+ FRA_sfio_victory:0 "SFIO wins"
