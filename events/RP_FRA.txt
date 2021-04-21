@@ -2,7 +2,7 @@
 # FREBCG Events
 ###########################
 
-add_namespace = fra_event
+#add_namespace = fra_event
 
 	
 	
