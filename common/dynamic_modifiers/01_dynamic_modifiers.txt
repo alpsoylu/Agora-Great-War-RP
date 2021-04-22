@@ -15,7 +15,18 @@ SPR_catolonian_resistance = {
 	icon = GFX_modifiers_catalan_resistance
 	#EFFECT
 	compliance_growth = -0.25
-	local_non_core_manpower = -0.30
-	local_resources_factor = -0.39
+	local_non_core_manpower = -0.3
+	local_resources_factor = -0.4
 	resistance_growth = 0.25
+}
+
+TUR_hincak_tasnak = {
+	enable = {  }
+
+	icon = GFX_modifiers_hincak
+	#EFFECT
+	compliance_growth = -0.45
+	local_non_core_manpower = -0.30
+	local_resources_factor = -0.4
+	resistance_growth = 0.4
 }

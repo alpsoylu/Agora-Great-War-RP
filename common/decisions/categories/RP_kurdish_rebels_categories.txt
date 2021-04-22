@@ -1,0 +1,24 @@
+decision_category_kurdish_rebels = {
+	icon = decision_category_generic_propaganda
+	picture = GFX_decision_cat_picture_arab_rebel
+	allowed = {
+	OR = {
+	tag = FRA
+	tag = ENG
+	}
+	}
+	priority = 190
+	visible = {
+	}
+}
+
+decision_category_armenian_exile = {
+	icon = decision_category_generic_propaganda
+	picture = GFX_decision_cat_picture_arab_rebel
+	allowed = {
+	tag = TUR
+	}
+	priority = 190
+	visible = {
+	}
+}

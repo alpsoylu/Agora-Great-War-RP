@@ -5,6 +5,25 @@
  RP_arab_0:0 ""
  RP_arab_1:0 ""
  RP_arab_2:0 ""
+ RP_kur_0:0 ""
+ RP_kur_1:0 ""
+ RP_kur_2:0 ""
+ 
+ 
+ 
+ RP_kur_hakkari1:0 "Propaganda for Kurdish Nationalism"
+ RP_kur_hakkari2:0 "Provoke Kurdish Identity"
+ RP_kur_hakkari3:0 "Fire Kurdish Revolt"
+ 
+ 
+ 
+ RP_arm_trabzon:0 "Send Armenians of Trabzon"
+ RP_arm_erzurum:0 "Send Armenians of Erzurum"
+ RP_arm_bitlis:0 "Send Armenians of Bitlis"
+ RP_arm_van:0 "Send Armenians of Van"
+ 
+ 
+ TUR_hincak_tasnak:0 "Armenian Revolutionary Federation (Hınçak)"
  
  decision_category_arabian_rebels:0 "Arabian Rebells"
  decision_category_arabian_rebels_desc:0 "We have send the Lawrence of Arabia to the Ottoman land to deal with the Sherif of Mekke and trigger an Arabic Revolt which will weaken our enemy,[TUR.GetName]."

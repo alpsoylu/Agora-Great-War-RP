@@ -3,7 +3,7 @@ state={
 	name="STATE_826" # Bitlis
 	history={
 		owner = TUR
-		add_core_of = TUR		
+		add_core_of = ARM	
 		buildings = {
 			infrastructure = 3
 		}

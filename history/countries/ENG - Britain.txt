@@ -4,6 +4,44 @@
 183 = {
 			add_dynamic_modifier = { modifier = ENG_protectarate_cyprus }
 		}
+		#ARM
+354 = {
+			add_dynamic_modifier = { modifier = TUR_hincak_tasnak }
+		}
+353 = {
+			add_dynamic_modifier = { modifier = TUR_hincak_tasnak }
+		}
+352 = {
+			add_dynamic_modifier = { modifier = TUR_hincak_tasnak }
+		}
+826 = {
+			add_dynamic_modifier = { modifier = TUR_hincak_tasnak }
+		}
+354 = {
+	start_resistance = yes
+	set_compliance = 10
+	set_resistance = 35
+	set_garrison_strength = 1.0
+}
+353 = {
+	start_resistance = yes
+	set_compliance = 10
+	set_resistance = 35
+	set_garrison_strength = 1.0
+}
+352 = {
+	start_resistance = yes
+	set_compliance = 10
+	set_resistance = 35
+	set_garrison_strength = 1.0
+}
+826 = {
+	start_resistance = yes
+	set_compliance = 10
+	set_resistance = 35
+	set_garrison_strength = 1.0
+}
+#
 679 = {set_state_flag = RP_arab_0}
 454 = {set_state_flag = RP_arab_0}
 455 = {set_state_flag = RP_arab_0}
@@ -14,6 +52,9 @@
 675 = {set_state_flag = RP_arab_0}
 804 = {set_state_flag = RP_arab_0}
 291 = {set_state_flag = RP_arab_0}
+
+#KUR
+828 = {set_state_flag = RP_kur_0}
 
 set_research_slots = 3
 set_stability = 0.60
