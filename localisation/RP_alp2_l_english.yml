@@ -112,6 +112,18 @@
  
  
  
+ fra_event.4:0 "Ottoman Goverment exiled Armenians"
+ fra_event.4.t:0 "Ottoman Goverment exiled Armenians"
+ fra_event.4.d:0 "Tensions between Armenian and Ottoman civilians were rising in the last couple of months.Ottoman Goverment has agreed to send the Armenians of Anatolia to Southern Anatolia and Syria.Many Armenians have died because of the circumstances."
+ fra_event.4.a:0 "Ok"
+ 
+ fra_event.5:0 "Ottoman Goverment exiled Armenians"
+ fra_event.5.t:0 "Ottoman Goverment exiled Armenians"
+ fra_event.5.d:0 "Tensions between Armenian and Ottoman civilians were rising in the last couple of months.Ottoman Goverment has agreed to send the Armenians of Anatolia to Southern Anatolia and Syria.Many Armenians have died because of the circumstances."
+ fra_event.5.a:0 "Ok"
+ 
+ 
+ 
  FRA_sfio:0 "SFIO has won the elections"
  FRA_prrr:0 "PRRRS has won the elections"
  

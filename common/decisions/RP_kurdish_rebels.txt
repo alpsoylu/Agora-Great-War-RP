@@ -21,7 +21,7 @@ decision_category_armenian_exile = {
 		fire_only_once = yes
 		
 		visible = {
-		has_war_with = RUS
+		has_war = yes
 		TUR = {controls_state = 354}
 		TUR = {controls_state = 829}
 		tag = TUR
@@ -56,7 +56,7 @@ decision_category_armenian_exile = {
 		fire_only_once = yes
 		
 		visible = {
-		has_war_with = RUS
+		has_war = yes
 		TUR = {controls_state = 353}
 		TUR = {controls_state = 344}
 		tag = TUR
@@ -91,7 +91,7 @@ decision_category_armenian_exile = {
 		fire_only_once = yes
 		
 		visible = {
-		has_war_with = RUS
+		has_war = yes
 		TUR = {controls_state = 826}
 		TUR = {controls_state = 677}
 		tag = TUR
@@ -126,7 +126,7 @@ decision_category_armenian_exile = {
 		fire_only_once = yes
 		
 		visible = {
-		has_war_with = RUS
+		has_war = yes
 		TUR = {controls_state = 352}
 		TUR = {controls_state = 680}
 		tag = TUR
