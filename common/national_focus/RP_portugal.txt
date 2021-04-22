@@ -576,7 +576,7 @@ popularity = 0.25
 	focus = {
 		id = POR_iberian_union
 		icon = GFX_focus_intervention_spain_nationalists
-		cost = 1,00
+		cost = 10,00
 		available = {
 		}
 		prerequisite = {
@@ -1566,8 +1566,8 @@ add_stability = -0.1
 		focus = POR_join_entente_5
 		}
 		completion_reward = {
-		add_stability = 0.20
-		set_rule = {can_join_factions = no}
+		set_rule = {can_create_factions = yes}
+		create_faction = POR_BRA_Faction
 		}
 		relative_position_id = POR_power_of_porto_brazilian_empire
 		x = 0

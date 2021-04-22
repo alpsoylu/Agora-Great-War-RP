@@ -24,6 +24,7 @@
  
  
  TUR_hincak_tasnak:0 "Armenian Revolutionary Federation (Hınçak)"
+ POR_BRA_Faction:0 "Porto-Brazilian Alliance"
  
  decision_category_arabian_rebels:0 "Arabian Rebells"
  decision_category_arabian_rebels_desc:0 "We have send the Lawrence of Arabia to the Ottoman land to deal with the Sherif of Mekke and trigger an Arabic Revolt which will weaken our enemy,[TUR.GetName]."

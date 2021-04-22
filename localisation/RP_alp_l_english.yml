@@ -245,6 +245,10 @@
  IBR_union:0 "Iberian Union"
  IBR_union_DEF:0 "Iberian Union"
  IBR_union_ADJ:0 "Iberian"
+ 
+ IBR_union_communism:0 "Iberian Socialist Union"
+ IBR_union_communism_DEF:0 "Iberian Socialist Union"
+ IBR_union_communism_ADJ:0 "Iberian"
  RP_spread_rev:0 "Spread the Revolution"
  POR_spread_revolution:0 "Spread the Revolution"
  POR_spread_marxism:0 "Spread Marxism"
@@ -276,7 +280,7 @@
  RP_porto_brazilian_empire:0 "Porto-Brazilian Empire"
  
  POR_join_entente_5:0 "Join Entente"
- POR_neutral_foreign_policy4:0 "Neutral Foreign Policy"
+ POR_neutral_foreign_policy4:0 "[POR.GetName] Leads the Way"
  POR_join_central_3:0 "Join Central Powers"
  
  POR_suggest_a_union_with_brazil:0 "Suggest a union between Brazil and us"
