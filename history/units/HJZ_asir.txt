@@ -2,7 +2,8 @@
 ###################################################################
 
 division_template = {
-	name = "Arabian Rebellion Division"
+	name = "Asir Rebellion Division"
+	is_locked = yes
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -13,11 +14,12 @@ division_template = {
 
 ###################################################################
 
+
 units = {
 	division= { 
-			name = "Hejaz Rebellion"
+			name = "Asir Rebellion"
 			location = 8073 
-			division_template="Arabian Rebellion Division"
+			division_template="Asir Rebellion Division"
 			start_experience_factor=0.1
 		}
 }

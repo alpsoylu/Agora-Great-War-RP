@@ -22,6 +22,28 @@ ideas = {
 			}
 		}
 
+		RP_hejaz_rebellion = {
+
+
+			picture = hejaz_rebel_idea
+
+			allowed = {
+				has_war_with = TUR
+				tag = HEJ
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			consumer_goods_factor = -0.25
+			war_support_factor = 0.15
+			army_attack_factor = 0.15
+			army_leader_start_attack_level = 1
+			}
+		}
+
 		RP_heavy_idea = {
 
 

@@ -86,13 +86,50 @@ decision_category_arabian_rebels = {
 		679 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
 		transfer_state = 679
+		#division = { 
+		#name = "Hejaz Arabianaaa Revolt"
+		#location = 12758
+		#division_template = "Arabian Rebellion Division"
+		#start_experience_factor = 0.3
+	#}
+	hidden_effect = {
+	load_oob = HJZ_1910
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	679 = {
+	create_unit = {
+    division = "name = \"Hejaz Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
+	
+	
 		declare_war_on = {
     target = TUR
     type = take_state_focus
     generator = { 679 } 
 }
 		}
-		add_to_faction = HJZ 
+		ENG = {add_to_faction = HJZ}
 		TUR = {remove_state_core = 679}
 		}
 		ai_will_do = { factor = 1 }
@@ -195,6 +232,31 @@ decision_category_arabian_rebels = {
 		454 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
 		transfer_state = 454
+		
+		
+		hidden_effect = {
+	load_oob = HJZ_pal
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+
+
+		
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -202,7 +264,7 @@ decision_category_arabian_rebels = {
 }
 add_state_core = 454
 		}
-		add_to_faction = HJZ 
+		ENG = {add_to_faction = HJZ} 
 		TUR = {remove_state_core = 454}
 		}
 		ai_will_do = { factor = 1 }
@@ -317,6 +379,37 @@ add_state_core = 454
 		455 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
 		transfer_state = 455
+		
+		hidden_effect = {
+	load_oob = HJZ_jor
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	455 = {
+	create_unit = {
+    division = "name = \"Jordan Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
+		
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -324,7 +417,7 @@ add_state_core = 454
 }
 add_state_core = 455
 		}
-		add_to_faction = HJZ 
+		ENG = {add_to_faction = HJZ} 
 		TUR = {remove_state_core = 455}
 		}
 		ai_will_do = { factor = 1 }
@@ -426,6 +519,37 @@ add_state_core = 455
 		747 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
 		transfer_state = 747
+		
+		hidden_effect = {
+	load_oob = HJZ_asir
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	455 = {
+	create_unit = {
+    division = "name = \"Asir Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
+		
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -433,7 +557,7 @@ add_state_core = 455
 }
 add_state_core = 747
 		}
-		add_to_faction = HJZ 
+		ENG = {add_to_faction = HJZ} 
 		TUR = {remove_state_core = 747}
 		}
 		ai_will_do = { factor = 1 }
@@ -533,6 +657,35 @@ add_state_core = 747
 		293 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
 		transfer_state = 293
+		hidden_effect = {
+	load_oob = HJZ_yemen
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	293 = {
+	create_unit = {
+    division = "name = \"Yemen Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -540,7 +693,7 @@ add_state_core = 747
 }
 add_state_core = 293
 		}
-		add_to_faction = HJZ 
+		ENG = {add_to_faction = HJZ} 
 		TUR = {remove_state_core = 293}
 		}
 		ai_will_do = { factor = 1 }
@@ -639,6 +792,37 @@ add_state_core = 293
 		554 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
 		transfer_state = 554
+		
+		hidden_effect = {
+	load_oob = HJZ_damascus
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	554 = {
+	create_unit = {
+    division = "name = \"Damascus Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
+
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -646,7 +830,7 @@ add_state_core = 293
 }
 add_state_core = 554
 		}
-		add_to_faction = HJZ 
+		ENG = {add_to_faction = HJZ} 
 		TUR = {remove_state_core = 554}
 		}
 		ai_will_do = { factor = 1 }
@@ -745,6 +929,36 @@ add_state_core = 554
 		553 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
 		transfer_state = 553
+		
+		hidden_effect = {
+	load_oob = HJZ_leb
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	553 = {
+	create_unit = {
+    division = "name = \"Lebanon Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -752,7 +966,7 @@ add_state_core = 554
 }
 add_state_core = 553
 		}
-		add_to_faction = HJZ 
+		ENG = {add_to_faction = HJZ} 
 		TUR = {remove_state_core = 553}
 		}
 		ai_will_do = { factor = 1 }
@@ -853,6 +1067,35 @@ add_state_core = 553
 		675 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
 		transfer_state = 675
+		hidden_effect = {
+	load_oob = HJZ_hajara
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	675 = {
+	create_unit = {
+    division = "name = \"Al-Hajara Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -860,7 +1103,7 @@ add_state_core = 553
 }
 add_state_core = 675
 		}
-		add_to_faction = HJZ 
+		ENG = {add_to_faction = HJZ} 
 		TUR = {remove_state_core = 675}
 		}
 		ai_will_do = { factor = 1 }
@@ -967,6 +1210,35 @@ add_state_core = 675
 		804 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
 		transfer_state = 804
+		hidden_effect = {
+	load_oob = HJZ_hasa
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	804 = {
+	create_unit = {
+    division = "name = \"Al-Hasa Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -974,7 +1246,7 @@ add_state_core = 675
 }
 add_state_core = 804
 		}
-		add_to_faction = HJZ 
+		ENG = {add_to_faction = HJZ} 
 		TUR = {remove_state_core = 804}
 		}
 		ai_will_do = { factor = 1 }
@@ -1076,6 +1348,35 @@ add_state_core = 804
 		291 = {clr_state_flag = RP_arab_2}	
 		HJZ = {
 		transfer_state = 291
+		hidden_effect = {
+	load_oob = HJZ_baghdad
+	add_ideas = RP_hejaz_rebellion
+	delete_unit_template_and_units = {
+    division_template = "Piyade Fırkası"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Süvari Tugayı"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Piyade Tümeni"
+    disband = yes
+}
+	delete_unit_template_and_units = {
+    division_template = "Mühendis Alayı"
+    disband = yes
+}
+}
+	291 = {
+	create_unit = {
+    division = "name = \"Baghdad Arabian Revolt\" 
+	division_template = \"Arabian Rebellion Division\" 
+	start_experience_factor = 0.5 
+	start_equipment_factor = 0.75"
+    owner = HJZ
+}
+}
 		declare_war_on = {
     target = TUR
     type = take_state_focus
@@ -1083,7 +1384,7 @@ add_state_core = 804
 }
 add_state_core = 291
 		}
-		add_to_faction = HJZ 
+		ENG = {add_to_faction = HJZ} 
 		TUR = {remove_state_core = 291}
 		}
 		ai_will_do = { factor = 1 }

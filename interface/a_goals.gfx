@@ -1,5 +1,16 @@
 spriteTypes = {	
 
+spriteType = {
+		name = "GFX_decision_cat_picture_arab_rebel"
+		texturefile = "gfx/interface/decisions/arab_rebel.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_arm_exile"
+		texturefile = "gfx/event_pictures/news_event_arm_exile.dds"
+	}
+
+
+
 	SpriteType = {
 	name = "GFX_focus_nukleer"
 	texturefile = "gfx/interface/goals/newicons/focus_nukleer.dds"			
@@ -249,6 +260,10 @@ spriteTypes = {
 SpriteType = {
 		name = "GFX_idea_sarikamis"
 		texturefile = "gfx/interface/ideas/TUR/new_sarikamis.dds"
+	}
+SpriteType = {
+		name = "GFX_idea_hejaz_rebel_idea"
+		texturefile = "gfx/interface/goals/newicons/hejaz_rebel_idea.dds"
 	}	
 	
 	
@@ -362,15 +377,11 @@ SpriteType = {
 	name = "GFX_sfio"
 	texturefile = "gfx/interface/goals/newicons/sfio.dds"			
 	}
-	
-	spriteType = {
-		name = "GFX_decision_cat_picture_arab_rebel"
-		texturefile = "gfx/interface/decisions/arab_rebel.dds"
+SpriteType = {
+	name = "GFX_iberia"
+	texturefile = "gfx/interface/goals/newicons/iberia.dds"			
 	}
-	spriteType = {
-		name = "GFX_news_event_arm_exile"
-		texturefile = "gfx/event_pictures/news_event_arm_exile.dds"
-	}
+
 
 	
 }

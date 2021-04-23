@@ -575,7 +575,7 @@ popularity = 0.25
 	
 	focus = {
 		id = POR_iberian_union
-		icon = GFX_focus_intervention_spain_nationalists
+		icon = GFX_iberia
 		cost = 10,00
 		available = {
 		}
@@ -1650,7 +1650,7 @@ add_stability = -0.1
 	
 	focus = {
 		id = POR_conquer_iberia
-		icon = GFX_focus_focus_fra_intervention_spain
+		icon = GFX_iberia
 		cost = 10,00
 		available = {
 		SPR = {exists = yes}

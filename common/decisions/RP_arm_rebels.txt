@@ -10,7 +10,7 @@
 
 
 
-decision_category_armenian_exile = {
+#decision_category_armenian_exile = {
 
 	RP_arm_trabzon = {
 		icon = GFX_decarm
