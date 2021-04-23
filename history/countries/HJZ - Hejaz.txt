@@ -14,32 +14,46 @@ set_convoys = 100
 create_country_leader={ name = "Ali Haydar" desc=HJZ_ali_haydar_DESC picture="gfx/leaders/HJZ_ali_haydar.dds" expire="1935.1.1" ideology=despotism  traits={  } }
 create_country_leader={ name = "Hussein bin Ali" desc=HJZ_hussein_bin_ali_DESC picture="gfx/leaders/HJZ_hussein_bin_ali.dds" expire="1935.1.1" ideology=despotism  traits={  } }
 create_corps_commander = {
-	name = "Nasir"
+	name = "Husein bin ali"
+	portrait_path="gfx/leaders/HJZ/huseyin.dds"
 	traits = { } 
-	skill = 1
-	attack_skill = 1
+	skill = 3
+	attack_skill = 4
 	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
 }
 create_corps_commander = {  
-	name = "Ali"
+	name = "Faisal I"
+	portrait_path="gfx/leaders/HJZ/faisal.dds"
 	traits = { } 
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = {  
-	name = "Auda"
-	traits = { } 
-	skill = 1
+	skill = 2
 	attack_skill = 2
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 2
 }
+create_corps_commander = {
+	name = "Thomas Edward Lawrence"
+	portrait_path="gfx/leaders/HJZ/lawrence.dds"
+	traits = { } 
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {  
+	name = "Edmund Allenby"
+	portrait_path="gfx/leaders/HJZ/allenby.dds"
+	traits = { } 
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
 
 
 set_politics = {
