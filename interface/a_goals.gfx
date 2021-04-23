@@ -271,26 +271,6 @@ SpriteType = {
 	}
 	
 	#ARAB
-	
-	
-	#KUR
-	spriteType = {
-		name = "GFX_dec_kur2"
-		texturefile = "gfx/interface/decisions/deckur2.dds"
-	}
-	spriteType = {
-		name = "GFX_dec_kur1"
-		texturefile = "gfx/interface/decisions/deckur1.dds"
-	}
-	spriteType = {
-		name = "GFX_dec_kur0"
-		texturefile = "gfx/interface/decisions/deckur0.dds"
-	}
-	spriteType = {
-		name = "GFX_decarm"
-		texturefile = "gfx/interface/decisions/decarm.dds"
-	}
-	#KUR
 
 
 
@@ -306,10 +286,6 @@ SpriteType = {
 	spriteType = {
 		name = "GFX_modifiers_catalan_resistance"
 		textureFile = "gfx/interface/state_modifiers/catalan_resistance.dds"
-	}
-	spriteType = {
-		name = "GFX_modifiers_hincak"
-		textureFile = "gfx/interface/state_modifiers/hincak.dds"
 	}
 	#DYN END
 SpriteType = {
