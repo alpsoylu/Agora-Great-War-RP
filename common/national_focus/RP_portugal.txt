@@ -1338,7 +1338,7 @@ add_stability = -0.1
 	
 	focus = {
 		id = POR_closer_ties_between_families
-		icon = GFX_focus_por_estado_novo
+		icon = GFX_focus_por_the_kingdom_reunited
 		cost = 10,00
 		available = {
 		has_civil_war = no
@@ -1359,7 +1359,7 @@ add_stability = -0.1
 	
 	focus = {
 		id = POR_suggest_a_union_with_brazil
-		icon = GFX_focus_por_the_kingdom_reunited
+		icon = GFX_brbrazil
 		cost = 10,00
 		available = {
 		has_civil_war = no

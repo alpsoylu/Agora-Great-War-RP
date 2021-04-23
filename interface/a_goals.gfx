@@ -381,6 +381,10 @@ SpriteType = {
 	name = "GFX_iberia"
 	texturefile = "gfx/interface/goals/newicons/iberia.dds"			
 	}
+SpriteType = {
+	name = "GFX_brbrazil"
+	texturefile = "gfx/interface/goals/newicons/brbrazil.dds"			
+	}
 
 
 	
