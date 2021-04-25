@@ -8,14 +8,3 @@ decision_category_arabian_rebels = {
 	visible = {
 	}
 }
-
-#decision_category_tur_tgw = {
-	icon = military_operation
-	picture = GFX_decision_cat_picture_mudros
-	allowed = {
-	tag = TUR
-	}
-	priority = 90
-	visible = {
-	}
-}
