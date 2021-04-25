@@ -3,6 +3,11 @@ spriteTypes = {
 spriteType = {
 		name = "GFX_decision_cat_picture_arab_rebel"
 		texturefile = "gfx/interface/decisions/arab_rebel.dds"
+	}	
+
+spriteType = {
+		name = "GFX_decision_cat_picture_mudros"
+		texturefile = "gfx/interface/decisions/mudros.dds"
 	}
 	spriteType = {
 		name = "GFX_news_event_arm_exile"

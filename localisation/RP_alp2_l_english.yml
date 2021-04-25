@@ -139,6 +139,12 @@
  
  
  
+ decision_category_tur_tgw:0 "The Great War"
+ decision_category_tur_tgw_desc:0 "If we sign an Armistice with the Entente we can secure peace after years of war."
+ RP_sign_armistice_tur:0 "Sign the Armistice of Mudros."
+ 
+ 
+ 
  
  
  
