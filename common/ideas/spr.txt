@@ -7,7 +7,7 @@ ideas = {
 
 			picture = ottoman_zanatkar
 
-			allowed = {
+			available = {
 				
 				tag = SPR
 			}
@@ -27,7 +27,7 @@ ideas = {
 
 			picture = hejaz_rebel_idea
 
-			allowed = {
+			available = {
 				has_war_with = TUR
 				tag = HEJ
 			}
@@ -44,12 +44,50 @@ ideas = {
 			}
 		}
 
+		RP_agora_justify_major = {
+
+
+			picture = agora_kural_idea
+
+			available = {
+				date < 1915.1.1
+				is_major = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			justify_war_goal_time = 100
+			}
+		}
+
+		RP_agora_justify_minor = {
+
+
+			picture = agora_kural_idea
+
+			available = {
+				date < 1910.1.1
+				is_major = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			justify_war_goal_time = 100
+			}
+		}
+
 		RP_heavy_idea = {
 
 
 			picture = generic_local_self_management
 
-			allowed = {
+			available = {
 				
 				tag = SPR
 			}
@@ -70,7 +108,7 @@ ideas = {
 
 			picture = FRA_matignon_agreements
 
-			allowed = {
+			available = {
 			OR = {
 				tag = POR
 				tag = SPR
@@ -92,7 +130,7 @@ ideas = {
 
 			picture = FRA_scw_intervention_nationalists_focus
 
-			allowed = {
+			available = {
 				OR = {
 				tag = SPR
 				tag = POR
@@ -114,7 +152,7 @@ ideas = {
 
 			picture = ottoman_dkzb
 
-			allowed = {
+			available = {
 				OR = {
 				tag = SPR
 				tag = POR
@@ -136,7 +174,7 @@ ideas = {
 
 			picture = FRA_scw_intervention_nationalists_focus
 
-			allowed = {
+			available = {
 				OR = {
 				tag = SPR
 				tag = POR
@@ -158,7 +196,7 @@ ideas = {
 
 			picture = generic_intel_bonus
 
-			allowed = {
+			available = {
 				
 				tag = SPR
 			}
@@ -178,7 +216,7 @@ ideas = {
 
 			picture = SPA_embrace_the_spanish_destiny
 
-			allowed = {
+			available = {
 				
 				tag = SPR
 			}
@@ -198,7 +236,7 @@ ideas = {
 
 			picture = SPR_nationalist_remnants
 
-			allowed = {
+			available = {
 				
 				tag = SPR
 			}
@@ -219,7 +257,7 @@ ideas = {
 
 			picture = SPR_nationalist_remnants
 
-			allowed = {
+			available = {
 				
 				tag = SPR
 			}
@@ -243,7 +281,7 @@ ideas = {
 
 			picture = SPR_nationalist_remnants
 
-			allowed = {
+			available = {
 				
 				tag = SPR
 			}
@@ -265,7 +303,7 @@ ideas = {
 
 			picture = generic_manpower_bonus
 
-			allowed = {
+			available = {
 				
 				tag = SPR
 			}
@@ -287,7 +325,7 @@ ideas = {
 
 			picture = generic_disjointed_gov
 
-			allowed = {
+			available = {
 				
 				tag = SPR
 			}
@@ -307,7 +345,7 @@ ideas = {
 
 			picture = generic_disjointed_gov
 
-			allowed = {
+			available = {
 				
 				tag = SPR
 			}
@@ -326,7 +364,7 @@ ideas = {
 
 			picture = generic_disjointed_gov
 
-			allowed = {
+			available = {
 				is_in_civil_war = yes
 				tag = POR
 			}
@@ -347,7 +385,7 @@ ideas = {
 
 			picture = tfv_can_conscription_crisis
 
-			allowed = {
+			available = {
 				tag = POR
 			}
 
@@ -366,7 +404,7 @@ ideas = {
 
 			picture = generic_king_handled
 
-			allowed = {
+			available = {
 				tag = POR
 			}
 
@@ -385,7 +423,7 @@ ideas = {
 
 			picture = AST_idea_Workers_Education_Association
 
-			allowed = {
+			available = {
 				tag = POR
 			}
 
@@ -404,7 +442,7 @@ ideas = {
 
 			picture = NOR_general_strike
 
-			allowed = {
+			available = {
 				tag = POR
 			}
 
@@ -423,7 +461,7 @@ ideas = {
 
 			picture = por_the_fifth_empire
 
-			allowed = {
+			available = {
 				tag = POR
 			}
 

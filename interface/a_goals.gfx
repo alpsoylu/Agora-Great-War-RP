@@ -264,6 +264,10 @@ SpriteType = {
 SpriteType = {
 		name = "GFX_idea_hejaz_rebel_idea"
 		texturefile = "gfx/interface/goals/newicons/hejaz_rebel_idea.dds"
+	}
+SpriteType = {
+		name = "GFX_idea_agora_kural_idea"
+		texturefile = "gfx/interface/goals/newicons/agora_kural_idea.dds"
 	}	
 	
 	
