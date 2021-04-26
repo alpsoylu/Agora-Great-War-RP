@@ -2,6 +2,17 @@ on_actions = {
 	on_startup = {
 		effect = {
 			ENG = { country_event = { id = eng_event.1 } }
+			all_country = {
+			add_ideas = RP_agora_justify_major
+			add_ideas = RP_agora_justify_major_control
+			}
+			every_country = {
+			add_ideas = RP_agora_justify_major
+			add_ideas = RP_agora_justify_major_control
+			}
+			USA= {
+			add_ideas = RP_agora_america_faction
+			}
 		}
 	}
 }
