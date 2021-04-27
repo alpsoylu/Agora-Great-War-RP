@@ -250,6 +250,18 @@ spriteType = {
 	texturefile = "gfx/interface/goals/newicons/mon_deal_with_jap.dds"			
 	}					
 	SpriteType = {
+	name = "GFX_big_germany"
+	texturefile = "gfx/interface/goals/newicons/big_germany.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_big_ottoman1"
+	texturefile = "gfx/interface/goals/newicons/big_ottoman1.dds"			
+	}						
+	SpriteType = {
+	name = "GFX_big_ottoman2"
+	texturefile = "gfx/interface/goals/newicons/big_ottoman2.dds"			
+	}										
+	SpriteType = {
 	name = "GFX_ikili_cengiz"
 	texturefile = "gfx/interface/goals/newicons/ikili/cengiz.dds"			
 	}						

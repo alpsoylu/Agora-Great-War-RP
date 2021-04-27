@@ -43,7 +43,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_place_under_the_sun
-		icon = GFX_focus_ger_return_of_the_kaiser
+		icon = GFX_big_germany
 		cost = 10
 		x = 35
 		y = 0
