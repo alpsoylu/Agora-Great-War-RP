@@ -260,7 +260,23 @@ spriteType = {
 	SpriteType = {
 	name = "GFX_big_ottoman2"
 	texturefile = "gfx/interface/goals/newicons/big_ottoman2.dds"			
-	}										
+	}						
+	SpriteType = {
+	name = "GFX_por_rus"
+	texturefile = "gfx/interface/goals/newicons/por_rus.dds"			
+	}							
+	SpriteType = {
+	name = "GFX_por_eng"
+	texturefile = "gfx/interface/goals/newicons/por_eng.dds"			
+	}
+	SpriteType = {
+	name = "GFX_por_fra"
+	texturefile = "gfx/interface/goals/newicons/por_fra.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_por_bra"
+	texturefile = "gfx/interface/goals/newicons/por_bra.dds"			
+	}									
 	SpriteType = {
 	name = "GFX_ikili_cengiz"
 	texturefile = "gfx/interface/goals/newicons/ikili/cengiz.dds"			

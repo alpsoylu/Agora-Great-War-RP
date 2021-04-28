@@ -135,7 +135,7 @@ focus_tree = {
 	
 	focus = {
 		id = POR_investments_from_france
-		icon = GFX_focus_chi_reach_out_to_france
+		icon = GFX_por_fra
 		cost = 10,00
 		available = {
 		}
@@ -170,7 +170,7 @@ focus_tree = {
 	
 	focus = {
 		id = POR_investments_from_england
-		icon = GFX_focus_chi_british_cooperation
+		icon = GFX_por_eng
 		cost = 10,00
 		available = {
 		ENG = {
@@ -207,7 +207,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POR_investments_from_russia
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_por_rus
 		cost = 10,00
 		available = {
 		RUS = {
@@ -1359,7 +1359,7 @@ add_stability = -0.1
 	
 	focus = {
 		id = POR_suggest_a_union_with_brazil
-		icon = GFX_brbrazil
+		icon = GFX_por_bra#GFX_brbrazil
 		cost = 10,00
 		available = {
 		has_civil_war = no
@@ -1379,7 +1379,7 @@ add_stability = -0.1
 	
 	focus = {
 		id = POR_integrate_brazilian_economy
-		icon = GFX_focus_por_recover_brazil
+		icon = GFX_brbrazil
 		cost = 10,00
 		available = {
 		has_civil_war = no
@@ -1416,7 +1416,7 @@ add_stability = -0.1
 	
 	focus = {
 		id = POR_integrate_brazilian_politics
-		icon = GFX_focus_por_recover_brazil
+		icon = GFX_brbrazil
 		cost = 10,00
 		available = {
 		has_civil_war = no
@@ -1440,7 +1440,7 @@ add_stability = -0.1
 	
 	focus = {
 		id = POR_integrate_brazilian_military
-		icon = GFX_focus_por_recover_brazil
+		icon = GFX_brbrazil
 		cost = 10,00
 		available = {
 		has_civil_war = no
