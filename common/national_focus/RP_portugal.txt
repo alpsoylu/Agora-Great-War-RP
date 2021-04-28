@@ -1013,7 +1013,7 @@ add_stability = -0.1
 	
 	focus = {
 		id = POR_german_investors
-		icon = GFX_focus_ger_revive_kaiserreich
+		icon = GFX_focus_deal_with_german_empire
 		cost = 10,00
 		available = {
 		}
@@ -1108,6 +1108,8 @@ add_stability = -0.1
 		focus = POR_french_investors
 		}
 		mutually_exclusive = {
+		focus = POR_neutral_foreign_policy3
+		focus = POR_join_central_2
 		}
 		completion_reward = {
 		POR = {
@@ -1198,6 +1200,8 @@ add_stability = -0.1
 		focus = POR_german_investors
 		}
 		mutually_exclusive = {
+		focus = POR_neutral_foreign_policy3
+		focus = POR_join_entente_2
 		}
 		completion_reward = {
 		POR = {
