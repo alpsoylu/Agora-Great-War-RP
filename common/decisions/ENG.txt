@@ -194,45 +194,6 @@ political_actions = {
 
 	}
 
-	ENG_annex_cyprus = {
-
-		icon = GFX_decision_generic_break_treaty
-
-		allowed = {
-			original_tag = ENG
-			controls_state = 183
-			TUR = {
-			owns_state = 183
-			}
-		}
-
-		available = {
-			has_war_with = TUR
-			original_tag = ENG
-		}
-		
-		cost = 0
-
-		visible = {
-		original_tag = ENG
-		}
-
-		complete_effect = {
-		183 = {
-			remove_dynamic_modifier = { modifier = ENG_protectarate_cyprus }
-		}
-		}
-
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				date > 1914.01.01
-				add = 100
-			}
-		}
-
-	}
-
 	ENG_invoke_the_alliance_of_1373 = {
 
 		icon = generic_prepare_civil_war
