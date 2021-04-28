@@ -2584,7 +2584,7 @@ focus_tree = {
 	}
 	focus = {
 	id = TUR_destroythemeclisimebusan
-	icon = GFX_goal_destroy_meclis
+	icon = GFX_ikili_cengiz
 	cost = 10
 	prerequisite = {
 	focus = TUR_supporttheyldzteskilatofficers
@@ -2606,7 +2606,7 @@ focus_tree = {
 	}
 	focus = {
 	id = TUR_reassertcaliphlaws
-	icon = GFX_goal_powersultan
+	icon = GFX_ikili_atli
 	cost = 10
 	prerequisite = {
 	focus = TUR_supporttheyldzteskilatofficers
