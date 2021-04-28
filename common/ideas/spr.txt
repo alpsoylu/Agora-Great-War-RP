@@ -210,8 +210,8 @@ ideas = {
 			}
 
 			modifier = {
-			stability_factor = -0.35
-			war_support_factor = -0.35
+			stability_factor = -0.25
+			war_support_factor = -0.25
 			experience_gain_navy_factor = -0.50
 			}
 		}
@@ -234,8 +234,8 @@ ideas = {
 			}
 
 			modifier = {
-			stability_factor = -0.45
-			war_support_factor = -0.45
+			stability_factor = -0.35
+			war_support_factor = -0.35
 			experience_gain_navy_factor = -0.75
 			}
 		}
@@ -255,8 +255,8 @@ ideas = {
 			}
 
 			modifier = {
-			stability_factor = -0.20
-			war_support_factor = -0.15
+			stability_factor = -0.10
+			war_support_factor = -0.05
 			army_morale = 15
 			experience_gain_navy_factor = -0.30
 			}
