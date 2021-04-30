@@ -1,7 +1,7 @@
 focus_tree = {
 	id = RP_france_focus
 	default = no
-	country = { factor=0 modifier = { add = 0 tag = FRA } }
+	country = { factor=0 modifier = { add = 40 tag = FRA } }
 	
 	
 	focus = {
@@ -60,6 +60,7 @@ focus_tree = {
 		ideology = democratic
 		popularity = 0.15
 		}
+		#set_cosmetic_tg = FRA_start
 		hidden_effect = {
 		set_politics = {
 	ruling_party = democratic
@@ -67,6 +68,7 @@ focus_tree = {
         last_election = "1935.12.17"
         election_frequency = 48
 }
+set_cosmetic_tg = FRA_start
 	}
 	create_country_leader = {
 	name = "Aristide Briand" 
@@ -114,11 +116,19 @@ focus_tree = {
         last_election = "1935.12.17"
         election_frequency = 48
 }
+hidden_effect = {
+set_cosmetic_tg = FRA_start
+}
 		}
 		prerequisite = { focus = FRA_1910_election }
 		x = 2
 		y = 1
 		relative_position_id = FRA_1910_election
 	}
+	
+	
+	shared_focus = GEN_FRA_aviation_effort
+	shared_focus = GEN_FRA_naval_effort
+	shared_focus = GEN_army_effort
 	
 }

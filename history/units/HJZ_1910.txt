@@ -16,7 +16,7 @@ division_template = {
 units = {
 	division= { 
 			name = "Hejaz Rebellion"
-			location = 8073 
+			location = 12758
 			division_template="Arabian Rebellion Division"
 			start_experience_factor=0.1
 		}

@@ -14,6 +14,9 @@ focus_tree = {
 		id = SPR_elections
 		icon = GFX_focus_generic_voting
 		cost = 10,00
+		ai_will_do = {
+		factor = 20
+		}
 		completion_reward = {
 		SPR = { country_event = { id = spr_event.1 } }
 		}
@@ -267,7 +270,7 @@ focus_tree = {
 		add_ideas = RP_parl_mon
 		}
 		ai_will_do = {
-		factor = 0 
+		factor = 1
 		}
 		relative_position_id = SPR_liberals_wins
 		x = 1
@@ -294,7 +297,7 @@ focus_tree = {
 }
 		}
 		ai_will_do = {
-		factor = 0 
+		factor = 1
 		}
 		relative_position_id = SPR_parliementary_monarchy
 		x = 0
@@ -314,7 +317,7 @@ focus_tree = {
 		add_political_power = 150
 		}
 		ai_will_do = {
-		factor = 0 
+		factor = 1
 		}
 		relative_position_id = SPR_increase_power_of_parliement
 		x = 0
@@ -335,7 +338,7 @@ focus_tree = {
 		add_ideas = RP_power_church_low
 		}
 		ai_will_do = {
-		factor = 0 
+		factor = 1
 		}
 		relative_position_id = SPR_liberals_wins
 		x = -1
@@ -362,7 +365,7 @@ focus_tree = {
 }
 		}
 		ai_will_do = {
-		factor = 0 
+		factor = 1
 		}
 		relative_position_id = SPR_lower_power_church
 		x = 0
@@ -657,7 +660,7 @@ add_stability = -0.15
 }
 		}
 		ai_will_do = {
-		factor = 0 
+		factor = 1
 		}
 		relative_position_id = SPR_conservatists_wins
 		x = -1
@@ -990,8 +993,8 @@ set_party_name = {
 		}
 		completion_reward = {
 		}
-		x = 27
-		y = 0
+		x = 15
+		y = 8
 
 	}
 	focus = {
@@ -2982,6 +2985,7 @@ set_party_name = {
 		y = 9
 	}
 	
-	
+
+	shared_focus = GEN_army_effort
 	
 }
