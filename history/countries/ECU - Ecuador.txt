@@ -3,26 +3,21 @@
 set_stability = 0.3
 set_convoys = 20
 set_country_flag = monroe_doctrine
-add_ideas = {
-RP_optimizasyon
-}
-#create_country_leader={ name = "Alfredo Baquerizo Moreno" desc=ECU_alfredo_baquerizo_moreno_DESC picture="gfx/leaders/ECU_alfredo_baquerizo_moreno.dds" expire="1935.1.1" ideology=liberalism traits={  } }
-#create_country_leader={ name = "José Luis Tamayo" desc=ECU_jose_luis_tamayo_DESC picture="gfx/leaders/ECU_jose_luis_tamayo.dds" expire="1935.1.1" ideology=liberalism traits={  } }
 
 create_country_leader={ 
     name = "Leónidas Plaza" 
 	picture="gfx/leaders/ECU/ECU_leonidas_plaza_gutierrez.dds" 
 	expire="1935.1.1" 
-	ideology=moderatism 
-	traits={  } 
+	ideology = authoritarian_democracy 
+	traits = { trait_authoritarian_democracy }
 }
 
 create_country_leader={ 
     name = "Eloy Alfaro" 
 	picture="gfx/leaders/ECU/ECU_eloy_alfaro.dds" 
 	expire="1935.1.1" 
-	ideology=liberalism 
-	traits={ old_fighter } 
+	ideology = social_liberalism 
+	traits={ old_fighter trait_social_liberalism } 
 }
 
 create_field_marshal={  
@@ -44,6 +39,7 @@ create_field_marshal={
 create_corps_commander = {
 	name = "Leónidas Plaza"
 	portrait_path = "gfx/leaders/ECU/ECU_leonidas_plaza_gutierrez_general.dds"
+	id=27005
 	traits = {
 		politically_connected
 		media_personality
@@ -57,6 +53,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Flavio Alfaro"
 	portrait_path = "gfx/leaders/ECU/ECU_flavio_alfaro.dds"
+	id=27003
 	traits = {
 		politically_connected
 		career_officer
@@ -66,6 +63,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Pedro Jacinto Montero"
 	portrait_path = "gfx/leaders/ECU/ECU_pedro_jacinto_montero.dds"
+	id=27004
 	traits = {
 		trait_reckless
 		politically_connected

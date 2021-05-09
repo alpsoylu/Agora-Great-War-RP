@@ -3,7 +3,7 @@ state={
 	name="STATE_4"
 	manpower = 2595983
 	state_category=large_city
-	provinces={ 653 704 3700 3718 6690 6739 9527 9646 9648 9661 9679 11630 11666 }
+	provinces={ 653 704 3718 6690 6739 9527 9646 9648 9679 11666 }
 	resources={
 		steel=6
 	}

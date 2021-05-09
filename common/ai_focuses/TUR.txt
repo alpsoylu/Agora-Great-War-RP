@@ -1,32 +1,3 @@
-ai_historical_focus_list_TUR = {
-	ai_national_focuses = {
-		TUR_firsterkaniharbiyereforms
-		TUR_uniformreform
-		TUR_britishoilagreements
-		TUR_frenchnavaladvisors
-		TUR_vickercontracts
-		TUR_thelegacyofmarch31
-		TUR_takeaside
-		TUR_getreadyfortheincomingstorm
-		TUR_rationsforarmy
-		TUR_invitegermanmilitaryadvisors
-		TUR_buildserezline
-		TUR_warforbalkans
-		TUR_kuwaitandqatarproblem
-		TUR_germanequipmentagreements 
-		TUR_supporttheharbiyeliofficers
-		TUR_killthetraitors
-		TUR_destroythesultanspowers
-		TUR_hrriyetmusavatuhuvet
-		TUR_1910meclismebuselections
-		TUR_ttihadveterrakifrkas
-		TUR_cultofyoungturks
-		TUR_threepashamanagement
-		TUR_envercemaltalat
-		TUR_rehabilitationofaustrohungarianrelationship
-	}
-}
-
 ai_focus_defense_TUR = {
 	research = {
 		defensive = 5.0

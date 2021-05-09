@@ -425,10 +425,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_industrial_complex_factor = 0.1
-				CAN = {
-					trade_cost_for_target_factor = 0.5
-				}
+				trade_cost_for_target_factor = 0.5
 			}	
 		}
 		CAN_american_defensive_war = {
@@ -522,7 +519,7 @@ ideas = {
 				can_force_government = no
 				can_send_volunteers = no
 				can_declare_war_on_same_ideology = yes
-				can_declare_war = no
+				can_not_declare_war = no
 				can_decline_call_to_war = no
 			}
 		}
@@ -545,7 +542,7 @@ ideas = {
 		}
 		CAN_broken_economy = {
 		
-			picture = usa_great_depression_3
+			picture = CAN_broken_economy
 			
 			allowed = {
 				always = no
@@ -882,7 +879,7 @@ ideas = {
 		
 		CAN_the_mounties = {
 		
-			focus = FRA_army_of_aggression_focus
+			picture = FRA_army_of_aggression_focus
 		
 			allowed = {
 				always = no
@@ -947,6 +944,20 @@ ideas = {
 			allowed = {
 				original_tag = CAN
 			}
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 500
+					OR = {
+						has_completed_focus = CAN_kingdom_own
+            			has_game_rule = {
+            			    rule = CAN_ai_behavior
+            			    option = MONARCHIST
+           			    }
+						has_country_flag = CAN_AI_RANDOM_MONARCHIST
+					}
+				}
+			}
 			traits = {monarchist_media_mogul}
 		}
 	}
@@ -957,6 +968,7 @@ ideas = {
 			allowed = {
 				original_tag = CAN
 			}		
+			ledger = army
 			research_bonus = {
 				land_doctrine = 0.07
 			}	
@@ -1019,6 +1031,7 @@ ideas = {
 			allowed = {
 				original_tag = CAN
 			}
+			ledger = army
 			traits = { army_infantry_1 }
 			
 			ai_will_do = {
@@ -1030,6 +1043,7 @@ ideas = {
 			allowed = {
 				original_tag = CAN
 			}
+			ledger = army
 			traits = { army_logistics_2 }
 			
 			ai_will_do = {
@@ -1041,6 +1055,7 @@ ideas = {
 			allowed = {
 				original_tag = CAN
 			}
+			ledger = army
 			traits = { army_regrouping_2 }
 			
 			ai_will_do = {

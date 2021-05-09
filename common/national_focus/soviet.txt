@@ -11,7 +11,7 @@ focus_tree = {
 		y = 0	
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
+		
 		available = {
 			OR = {
 				GER = { has_war_with = RUS }
@@ -30,19 +30,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			hidden_effect = {
-				if = {
-					limit = { 
-						OR = {
-							RUS = { owns_state = 806 } 
-							GEO = { owns_state = 806 } 
-							ARM = { owns_state = 806 } 
-						}
-						TUR = { has_war_with = RUS }
-					}
-					TUR = { transfer_state = 806 add_state_core = 806 }
-					RUS = { remove_state_core = 806 }
-					GEO = { remove_state_core = 806 }
-				}
 				every_country = {
 					limit = {
 						is_in_faction_with = RUS
@@ -71,7 +58,43 @@ focus_tree = {
 			diplomatic_relation = {
 				country = GER
 				relation = non_aggression_pact
-			}			
+			}
+			if = {
+				limit = {
+					TUR = {
+						is_in_faction_with = GER
+					}	
+				}
+				TUR = {
+					country_event =ww1_ottoman.112
+				}
+			}	
+			hidden_effect = {
+				if = {
+					limit = {
+						GEO = {
+							OR = {
+								has_cosmetic_tag = GEO_TSCN_commissariat
+								has_cosmetic_tag = GEO_TSCN
+							}
+							is_in_faction_with = RUS
+						}
+					}
+					RUS = {
+						end_puppet = GEO
+					}
+					GEO = {
+						leave_faction = yes
+					}
+					every_country = {
+						limit = {
+							has_war_with = GEO
+							is_in_faction_with = GER
+						}
+						white_peace = GEO
+					}
+				}
+			}
         }
 		ai_will_do = {
 			factor = 100
@@ -83,8 +106,8 @@ focus_tree = {
 		cost = 5
 		x = 4
 		y = 0
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 		bypass = {
 			NOT = {
@@ -106,8 +129,8 @@ focus_tree = {
 		x = 32
 		y = 0
 		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -134,8 +157,8 @@ focus_tree = {
 		cost = 5
 		x = 15
 		y = 0
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -222,8 +245,8 @@ focus_tree = {
 		}
 		x = 3
 		y = 1
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 		available = {
 			has_government = communism
@@ -279,13 +302,14 @@ focus_tree = {
 	focus = {
 		id = SOV_decree_on_food_dictatorship
 		icon = GFX_focus_hol_abandon_the_gold_standard
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SOV_decree_on_land
 		}
 		x = 5
 		y = 1
 		completion_reward = {
+			add_ideas = tot_economic_mobilisation
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 25000
@@ -317,8 +341,8 @@ focus_tree = {
 		}
 		x = 5
 		y = 2
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 		bypass = {
 			has_idea = SOV_idea_weak_peasant_support
@@ -571,6 +595,7 @@ focus_tree = {
 			custom_effect_tooltip = SOV_red_army_tt
 			remove_ideas = SOV_idea_red_guard
 			add_ideas = SOV_idea_red_army
+			add_ideas = service_by_requirement
 		}
 		ai_will_do = {
 			factor = 1
@@ -634,6 +659,7 @@ focus_tree = {
 		x = 10
 		y = 3
 		completion_reward = {
+			add_war_support = 0.05
 			remove_ideas = SOV_idea_revolutionary_commanders
 		}
 		ai_will_do = {
@@ -650,6 +676,7 @@ focus_tree = {
 		x = 10
 		y = 5
 		completion_reward = {
+			add_political_power = 100
 			custom_effect_tooltip = SOV_political_commissars_tt
 		}
 		ai_will_do = {
@@ -669,7 +696,21 @@ focus_tree = {
 		x = 11
 		y = 4
 		available = {
-			has_government = communism
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = SOV_military_all_education
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = SOV_military_all_education
+				bonus = 1.0
+				uses = 1
+				category = support_tech
+				category = infantry_tech
+			}
 		}
 	}
 	focus = {
@@ -872,7 +913,10 @@ focus_tree = {
 		}
 		x = 19
 		y = 2
-
+		completion_reward = {
+			navy_experience = 25
+			add_stability = 0.05
+		}
 	}
 	focus = {
 		id = SOV_navy_innovation
@@ -886,7 +930,14 @@ focus_tree = {
 		}
 		x = 21
 		y = 2
-
+		completion_reward = {
+			add_tech_bonus = {
+				name = SOV_navy_innovation
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine
+			}
+		}
 	}
 	focus = {
 		id = SOV_marine_expeditionary_division
@@ -1033,6 +1084,14 @@ focus_tree = {
 			if = {
 				limit = { TMS = { exists = yes } }
 				TMS = { add_timed_idea = { idea = SOV_idea_influence_of_revolution days = 360 } }
+			}
+			if = {
+				limit = { TAJ = { exists = yes } }
+				TAJ = { add_timed_idea = { idea = SOV_idea_influence_of_revolution days = 360 } }
+			}
+			if = {
+				limit = { UZB = { exists = yes } }
+				UZB = { add_timed_idea = { idea = SOV_idea_influence_of_revolution days = 360 } }
 			}
 		}
 		ai_will_do = {
@@ -1231,50 +1290,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_world_revolution
-		icon = GFX_focus_eng_liberate_the_home_of_marx
-		cost = 10
-		prerequisite = {
-			focus = SOV_revolution_in_poland
-			focus = RUS_revolution_in_finland
-		}
-		mutually_exclusive = {
-			focus = SOV_socialism_in_one_country
-		}
-		x = 24
-		y = 5
-		available = {
-			OR = {
-				NOT = {
-					has_country_leader = {
-						name = "Vladimir Lenin"
-						ruling_only = yes
-					}
-				}
-				NOT = {
-					has_country_leader = {
-						name = "Leon Trotsky"
-						ruling_only = yes
-					}
-				}
-			}
-		}
-		completion_reward = {
-			add_named_threat = {
-				threat = 5
-				name = SOV_world_revolution
-			}
-			add_ideas = SOV_idea_world_revolution
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 100
-				has_war_with = GER
-			}
-		}
-	}
-	focus = {
 		id = SOV_soviet_republics
 		icon = GFX_goal_support_communism
 		cost = 10
@@ -1324,7 +1339,6 @@ focus_tree = {
 					load_oob = "TRM_1918"
 					add_state_core = 409
 					add_state_core = 408
-					add_state_core = 657
 					add_state_core = 560
 					add_state_core = 561
 					set_popularities = {
@@ -1355,42 +1369,30 @@ focus_tree = {
 		}
 		x = 26
 		y = 4
+		bypass = {
+			is_in_faction = yes
+			is_faction_leader = no
+		}
 		completion_reward = {
 			if = {
 				limit = { is_in_faction = no has_government = communism }
-				create_faction = comintern
+				create_faction = Comintern
 			}
 			if = {
 				limit = { is_in_faction = no NOT = { has_government = communism } }
-				create_faction = socintern
+				create_faction = Socintern
 			}
 			if = {
-				limit = { has_government = communism }
-				set_faction_name = comintern
+				limit = { is_faction_leader = yes has_government = communism }
+				set_faction_name = Comintern
 			}
 			if = {
-				limit = { NOT = { has_government = communism } }
-				set_faction_name = socintern
+				limit = { is_faction_leader = yes NOT = { has_government = communism } }
+				set_faction_name = Socintern
 			}
 		}
 		ai_will_do = {
 			factor = 1
-		}
-	}
-	focus = {
-		id = SOV_socialism_in_one_country
-		icon = GFX_focus_ger_strike_at_the_source
-		cost = 10
-		prerequisite = {
-			focus = SOV_comintern
-		}
-		mutually_exclusive = {
-			focus = SOV_world_revolution
-		}
-		x = 26
-		y = 5
-		completion_reward = {
-			add_ideas = SOV_idea_socialism_in_one_country
 		}
 	}
 	focus = {
@@ -1438,13 +1440,14 @@ focus_tree = {
 		}
 		x = 29
 		y = 1
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 		available = {
 			has_government = communism
 		}
 		completion_reward = {
+			add_political_power = 100
 			add_ideas = SOV_idea_cheka
 		}
 		ai_will_do = {
@@ -1463,14 +1466,14 @@ focus_tree = {
 		}
 		x = 31
 		y = 1
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 		available = {
 			has_government = communism
 		}
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.15
 			remove_ideas = SOV_idea_unrecognized_government
 			set_party_name = { 
 				ideology = communism
@@ -1495,6 +1498,8 @@ focus_tree = {
 		x = 30
 		y = 2
 		completion_reward = {
+			add_stability = -0.1
+			add_war_support = 0.1
 			unlock_decision_category_tooltip = SOV_red_terror_category
 		}
 		ai_will_do = {
@@ -1534,8 +1539,8 @@ focus_tree = {
 		}
 		x = 31
 		y = 3
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 		available = {
 			has_government = communism
@@ -1613,8 +1618,8 @@ focus_tree = {
 		}
 		x = 30
 		y = 5
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 		available = {
 		}
@@ -1657,8 +1662,8 @@ focus_tree = {
 		}
 		x = 35
 		y = 1
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 		available = {
 			
@@ -1744,6 +1749,7 @@ focus_tree = {
 		x = 36
 		y = 2
 		completion_reward = {
+			add_political_power = 150
 			country_event = { id = ww1_soviet.23 }
 		}
 	}
@@ -1851,7 +1857,8 @@ focus_tree = {
 		x = 35
 		y = 5
 		completion_reward = {
-			
+			add_political_power = 120
+			add_stability = 0.1
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -1975,8 +1982,8 @@ focus_tree = {
 				set_province_name = { id = 	3529 name = LEVGRAD_PROV }
 				set_province_name = { id = 	6474 name = LEVINSK_PROV }
 				hidden_effect = {
-					217 = { set_state_name = "Levgrad" }
-					227 = { set_state_name = "Levinsk" }
+					217 = { set_state_name = LEVGRAD_STATE }
+					227 = { set_state_name = LEVINSK_STATE }
 				}
 			}
 			if = {
@@ -1989,9 +1996,9 @@ focus_tree = {
 				set_province_name = { id = 	3529 name = STALINGRAD_PROV }
 				set_province_name = { id = 	6474 name = STALINO_PROV }
 				hidden_effect = {
-					217 = { set_state_name = "Stalingrad" }
-					227 = { set_state_name = "Stalino" }
-					742 = { set_state_name = "Stalinabad" }
+					217 = { set_state_name = STALINDGRAD_STATE }
+					227 = { set_state_name = STALINO_STATE }
+					742 = { set_state_name = STALINABAD_STATE }
 				}
 			}
 			if = {
@@ -2003,7 +2010,7 @@ focus_tree = {
 				}
 				set_province_name = { id = 	3529 name = VOLGOGRAD_PROV }
 				hidden_effect = {
-					217 = { set_state_name = "Volgograd" }
+					217 = { set_state_name = VOLGOGRAD_STATE }
 				}
 			}
 			set_province_name = { id = 3151 name = LENINGRAD_PROV }
@@ -2011,12 +2018,12 @@ focus_tree = {
 			set_province_name = { id = 1821 name = SVERDLOVSK_PROV }
 			set_province_name = { id = 6245 name = KALININ_PROV }
 			hidden_effect = {
-				195 = { set_state_name = "Leningrad" }
-				228 = { set_state_name = "Voroshilovgrad" }
-				653 = { set_state_name = "Sverdlovsk" }
-				400 = { set_state_name = "Kirov" }
-				247 = { set_state_name = "Kalinin" }
-				401 = { set_state_name = "Engels" }
+				195 = { set_state_name = LENINGRAD_STATE }
+				228 = { set_state_name = VOROSHILOVGRAD_STATE }
+				653 = { set_state_name = SVERDLOVSK_STATE }
+				400 = { set_state_name = KIROV_STATE }
+				247 = { set_state_name = KALININ_STATE }
+				401 = { set_state_name = ENGELS_STATE }
 			}
 			add_ideas = SOV_idea_cult_of_personality
 		}
@@ -2032,6 +2039,7 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			add_political_power = 100
+			add_popularity = { ideology = neutrality popularity = -1.0 }
 			hidden_effect = {
 				set_party_name = { 
 					ideology = neutrality 
@@ -2094,19 +2102,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOV_overseas_front
-		icon = GFX_focus_ger_great_red_menace
-		cost = 10
-		prerequisite = {
-			focus = SOV_world_revolution
-		}
-		x = 24
-		y = 6
-		completion_reward = {
-			custom_effect_tooltip = SOV_overseas_front_tt
-		}
-	}
-	focus = {
 		id = SOV_congress_of_peoples_deputies
 		icon = GFX_goal_generic_national_unity
 		cost = 10
@@ -2119,7 +2114,8 @@ focus_tree = {
 		x = 37
 		y = 5
 		completion_reward = {
-			add_stability = 0.1
+			add_political_power = 120
+			add_war_support = 0.10
 		}
 	}
 	focus = {

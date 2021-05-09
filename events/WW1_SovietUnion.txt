@@ -92,7 +92,12 @@ country_event = {
 	
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+	trigger = {
+        SOV = { 
+			has_government = communism 
+		    has_war_with = RUS
+		}
+	}
 	option = {
 		name = ww1_soviet.4.a
 		set_global_flag = nicholas_ii_is_dead
@@ -146,13 +151,6 @@ news_event = {
 		name = ww1_soviet.5.a
 		trigger = { original_tag = RUS }
 		add_war_support = -0.1
-		create_country_leader = {
-			name = "Kirill I"
-			picture = "gfx/leaders/RUS/RUS_grand_duke_kirill.dds"
-			expire = "1935.1.1"
-			ideology = despotism
-			traits = {}
-		}
 		ai_chance = { factor = 100 }
 	}
 }
@@ -224,8 +222,10 @@ country_event = {
 				name = "Nicholas II"
 				picture = "gfx/leaders/RUS_nicholas_romanov.dds"
 				expire = "1935.1.1"
-				ideology = despotism
-				traits = {}
+				ideology = autocracy
+				traits = {
+					trait_autocracy
+				}
 			}
 		}
 		news_event = { id = ww1_soviet.8 }
@@ -432,7 +432,7 @@ country_event = {
 		start_civil_war = {
 			ideology = neutrality
 			size = 0.2
-			states = { 244 208 209 263 }
+			states = { 209 263 }
 		}
 		hidden_effect = {
 			random_other_country = {
@@ -444,10 +444,12 @@ country_event = {
 					name = "People's Council"
 					picture = "gfx/leaders/SOV/SOV_provisional_goverment.tga"
 					expire = "1935.1.1"
-					ideology = centrism
-					traits = { }
+					ideology = authoritarian_democracy
+					traits = {
+						trait_authoritarian_democracy
+					}
 				}
-				add_ideas = { id = SOV_idea_kronstadt }
+				add_ideas = SOV_idea_kronstadt
 			}
 		}
 		set_global_flag = kronstadt_rebellion
@@ -574,11 +576,9 @@ country_event = {
 		remove_ideas = { SOV_idea_influence_of_revolution }
 		add_war_support = 0.25
 		transfer_state = 784 #Вильно
-		if = {
-			limit = { owns_state = 96 LIT = { exists = yes } }
-			LIT = { transfer_state = 96 }
-			96 = { remove_core_of = POL }
-		}
+		transfer_state = 97 
+		transfer_state = 773 
+		transfer_state = 766 
 		add_state_core = 784
 		add_state_core = 95
 		add_state_core = 94
@@ -652,13 +652,11 @@ country_event = {
 		random_country = {
 			limit = {
 				controls_state = 808
-				controls_state = 93
 				NOT = { has_war_with = POL }
 				NOT = { is_in_faction_with = SOV }
 			}
 			POL = { 
 				transfer_state = 808
-				transfer_state = 93
 			}
 		}
 		SOV = { 
@@ -806,8 +804,8 @@ country_event = {
 			transfer_state = 93
 			transfer_state = 94
 			transfer_state = 95
-			transfer_state = 96
 			transfer_state = 97
+			transfer_state = 773
 			transfer_state = 808
 		}		
 		ai_chance = { factor = 100 }
@@ -851,8 +849,8 @@ country_event = {
 			name = "Leon Trotsky"
 			picture = "gfx/leaders/SOV/SOV_leon_trotsky.dds"
 			expire = "1935.1.1"
-			ideology = trotskyism
-			traits = { permanent_revolutionary }
+			ideology = vanguardism
+			traits = { permanent_revolutionary trait_vanguardism}
 		}
 		add_popularity = {
 			ideology = communism
@@ -866,8 +864,8 @@ country_event = {
 			name = "Nikolai Bukharin"
 			picture = "gfx/leaders/SOV/SOV_nikolai_bukharin.dds"
 			expire = "1935.1.1"
-			ideology = council_communism
-			traits = { socialite_connections }
+			ideology = market_socialism
+			traits = { socialite_connections trait_market_socialism }
 		}
 		add_stability = 0.05
 		ai_chance = { factor = 50 }
@@ -902,8 +900,10 @@ country_event = {
 			name = "People's Council"
 			picture = "gfx/leaders/SOV/SOV_provisional_goverment.tga"
 			expire = "1935.1.1"
-			ideology = centrism
-			traits = { }
+			ideology = authoritarian_democracy
+			traits = {
+				trait_authoritarian_democracy
+			}
 		}
 		news_event = ww1_soviet.25
 		ai_chance = { factor = 100 }
@@ -977,7 +977,7 @@ country_event = {
 		start_civil_war = {
 			ideology = neutrality
 			size = 0.4
-			states = { 244 208 209 263 }
+			states = { 209 263 }
 		}
 		hidden_effect = {
 			random_other_country = {
@@ -989,10 +989,12 @@ country_event = {
 					name = "People's Council"
 					picture = "gfx/leaders/SOV/SOV_provisional_goverment.tga"
 					expire = "1935.1.1"
-					ideology = centrism
-					traits = { }
+					ideology = authoritarian_democracy
+					traits = {
+						trait_authoritarian_democracy
+					}
 				}
-				add_ideas = { id = SOV_idea_kronstadt }
+				add_ideas = SOV_idea_kronstadt
 			}
 		}
 		news_event = ww1_soviet.25
@@ -1022,9 +1024,9 @@ country_event = {
 			modifier = {
 				factor = 10
 				NOT = {
-					tag = LAT
+					tag = LTR
 					tag = LIT
-					tag = EST
+					tag = ESR
 					tag = POL
 					tag = FIN
 				}				
@@ -1042,11 +1044,11 @@ country_event = {
 		ai_chance = {
 			factor = 0
 			modifier = {
-				factor = 10
+				add = 10
 				OR = {
-					tag = LAT
+					tag = LTR
 					tag = LIT
-					tag = EST
+					tag = ESR
 					tag = POL
 					tag = FIN
 				}
@@ -1149,8 +1151,10 @@ country_event = {
 				name = "Joseph Stalin"
 				picture = "gfx/leaders/SOV/SOV_joseph_stalin.dds"
 				expire = "1936.1.1"
-				ideology = stalinism
-				traits = { dictator }
+				ideology = vanguardism
+				traits = {
+					trait_vanguardism
+				}
 			}
 		}
 		if = {
@@ -1161,8 +1165,8 @@ country_event = {
 				name = "Leon Trotsky"
 				picture = "gfx/leaders/SOV/SOV_leon_trotsky.dds"
 				expire = "1936.1.1"
-				ideology = trotskyism
-				traits = { triumphant_revolutionary }
+				ideology = vanguardism
+				traits = { triumphant_revolutionary trait_vanguardism }
 			}
 		}
 		if = {
@@ -1173,8 +1177,8 @@ country_event = {
 				name = "Nikolai Bukharin"
 				picture = "gfx/leaders/SOV/SOV_nikolai_bukharin.dds"
 				expire = "1935.1.1"
-				ideology = council_communism
-				traits = { socialite_connections }
+				ideology = market_socialism
+				traits = { socialite_connections trait_market_socialism }
 			}
 		}
 		ai_chance = {
@@ -1195,7 +1199,15 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = ww1_soviet.31.a			
+		name = ww1_soviet.31.a
+		every_state = {
+			limit = { is_core_of = RUS is_fully_controlled_by = SOV }
+			SOV = { transfer_state = PREV }
+		}
+		every_state = {
+			limit = { is_core_of = SOV is_fully_controlled_by = RUS }
+			RUS = { transfer_state = PREV }
+		}
 		every_country = {
 		    limit = {
 				is_in_faction_with = RUS

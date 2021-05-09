@@ -6,9 +6,19 @@ country_event = {
 	id = color.1
 	
 	trigger = {
-		tag = ROOT
 		is_puppet_of = SOV
-		NOT = { has_country_flag = color_soviet_puppet }
+		NOT = { 
+			has_cosmetic_tag = SOV_puppet 
+			tag = POL
+			tag = GER
+			tag = FRA
+			tag = ITA
+			has_cosmetic_tag = ITA_socialism
+			has_cosmetic_tag = SRI
+			has_cosmetic_tag = GEO_TSCN_commissariat
+			has_cosmetic_tag = GEO_TSCN
+		}
+		is_major = no
 	}	
 	mean_time_to_happen = {
 		days = 0
@@ -17,10 +27,7 @@ country_event = {
 	hidden = yes
 
 	immediate = {
-		ROOT = {
-			set_cosmetic_tag = SOV_puppet
-			set_country_flag = color_soviet_puppet
-		}
+		set_cosmetic_tag = SOV_puppet
 	}
 }
 
@@ -30,9 +37,8 @@ country_event = {
 	id = color.2
 	
 	trigger = {
-		tag = ROOT
-		ROOT = { NOT = { is_puppet_of = SOV } }
-		has_country_flag = color_soviet_puppet
+		NOT = { is_puppet_of = SOV }
+		has_cosmetic_tag = SOV_puppet
 	}	
 	mean_time_to_happen = {
 		days = 0
@@ -42,43 +48,30 @@ country_event = {
 
 	immediate = {
 		drop_cosmetic_tag = yes
-		clr_country_flag = color_soviet_puppet
 	}
 }
-
-# Democratic Italy
+# Absolutsit Russia
 ####################
 country_event = {
-	id = color.4
+	id = color.3
 	
 	trigger = {
-		tag = ITA
-		has_government = democratic
-		NOT = { has_country_flag = color_democratic_italy }
-	}	
-	mean_time_to_happen = {
-		days = 0
-	}
-
-	hidden = yes
-
-	immediate = {
-		ITA = {
-			set_cosmetic_tag = ITA_democratic
-			set_country_flag = color_democratic_italy
+		original_tag = RUS
+		has_cosmetic_tag = RUS_absolutism
+		NOT = {
+			has_country_leader = {
+				name = "Nicholas II"
+				ruling_only = yes
+			}
+			has_country_leader = {
+				name = "Mikhail II"
+				ruling_only = yes
+			}
+			has_country_leader = {
+				name = "Tessa Violetovna I"
+				ruling_only = yes
+			}
 		}
-	}
-}
-
-# Democratic Italy
-####################
-country_event = {
-	id = color.5
-	
-	trigger = {
-		tag = ITA
-		NOT = { has_government = democratic }
-		has_country_flag = color_democratic_italy
 	}	
 	mean_time_to_happen = {
 		days = 0
@@ -88,19 +81,17 @@ country_event = {
 
 	immediate = {
 		drop_cosmetic_tag = yes
-		clr_country_flag = color_democratic_italy
 	}
 }
-
 # Communist Germany
 ####################
 country_event = {
 	id = color.6
 	
 	trigger = {
-		tag = GER
+		original_tag = GER
 		has_government = communism
-		NOT = { has_country_flag = color_communist_germany }
+		NOT = { has_cosmetic_tag = GER_socialism }
 	}	
 	mean_time_to_happen = {
 		days = 0
@@ -109,10 +100,7 @@ country_event = {
 	hidden = yes
 
 	immediate = {
-		GER = {
-			set_cosmetic_tag = GER_communism
-			set_country_flag = color_communist_germany
-		}
+		set_cosmetic_tag = GER_socialism
 	}
 }
 
@@ -122,9 +110,9 @@ country_event = {
 	id = color.7
 	
 	trigger = {
-		tag = GER
+		original_tag = GER
 		NOT = { has_government = communism }
-		has_country_flag = color_communist_germany
+		has_cosmetic_tag = GER_socialism
 	}	
 	mean_time_to_happen = {
 		days = 0
@@ -133,10 +121,7 @@ country_event = {
 	hidden = yes
 
 	immediate = {
-		GER = {
-			drop_cosmetic_tag = yes
-			clr_country_flag = color_communist_germany
-		}
+		drop_cosmetic_tag = yes
 	}
 }
 
@@ -146,10 +131,12 @@ country_event = {
 	id = color.8
 	
 	trigger = {
-		tag = FRA
+		original_tag = FRA
 		has_government = communism
-		NOT = { has_global_flag = french_commune }
-		NOT = { has_country_flag = color_communist_france }
+		NOT = { 
+		    has_cosmetic_tag = FRA_socialism 
+			has_cosmetic_tag = NFA 
+		}
 	}	
 	mean_time_to_happen = {
 		days = 0
@@ -158,10 +145,7 @@ country_event = {
 	hidden = yes
 
 	immediate = {
-		FRA = {
-			set_cosmetic_tag = FRA_communism
-			set_country_flag = color_communist_france
-		}
+		set_cosmetic_tag = FRA_socialism
 	}
 }
 
@@ -171,9 +155,9 @@ country_event = {
 	id = color.9
 	
 	trigger = {
-		tag = FRA
+		original_tag = FRA
 		NOT = { has_government = communism }
-		has_country_flag = color_communist_france
+		has_cosmetic_tag = FRA_socialism
 	}	
 	mean_time_to_happen = {
 		days = 0
@@ -182,10 +166,7 @@ country_event = {
 	hidden = yes
 
 	immediate = {
-		FRA = {
-			drop_cosmetic_tag = yes
-			clr_country_flag = color_communist_france
-		}
+		drop_cosmetic_tag = yes
 	}
 }
 
@@ -195,22 +176,36 @@ country_event = {
 	id = color.10
 	
 	trigger = {
-		tag = ROM
+		original_tag = ROM
 		MOL = { exists = yes }
-		NOT = { owns_state = 79 }
-		NOT = { has_country_flag = wallachia }
+		NOT = {
+		    any_state = {
+				is_core_of = MOL
+				NOT = { state = 80 }
+                is_owned_by = ROM
+            } 
+		}
+        NOT = {
+            AND = {		
+                TRA = { exists = no }
+				any_state = {
+					is_core_of = TRA
+					NOT = { state = 80 }
+                    is_owned_by = ROM
+                }
+            }
+        }
+        NOT = { has_cosmetic_tag = WAL }		
+        has_civil_war = no
 	}	
 	mean_time_to_happen = {
-		days = 1
+		days = 0
 	}
 
 	hidden = yes
 
 	immediate = {
-		ROM = {
-			set_cosmetic_tag = WAL
-			set_country_flag = wallachia
-		}
+		set_cosmetic_tag = WAL
 	}
 }
 # Wallachia drop
@@ -219,20 +214,123 @@ country_event = {
 	id = color.11
 	
 	trigger = {
-		tag = ROM
-		has_country_flag = wallachia
-		owns_state = 79
+		original_tag = ROM
+		has_cosmetic_tag = WAL
+		OR = {
+		    any_state = {
+				is_core_of = MOL
+				NOT = { state = 80 }
+                is_owned_by = ROM
+            }
+			AND = {
+				TRA = { exists = no }
+				any_state = {
+					is_core_of = TRA
+					NOT = { state = 80 }
+                    is_owned_by = ROM
+                }
+			}
+        }			
 	}	
 	mean_time_to_happen = {
-		days = 1
+		days = 0
 	}
 
 	hidden = yes
 
 	immediate = {
-		ROM = {
-			drop_cosmetic_tag = yes
-			clr_country_flag = wallachia
+		drop_cosmetic_tag = yes
+	}
+}
+# Communist Italy
+####################
+country_event = {
+	id = color.12
+	
+	trigger = {
+		original_tag = ITA
+		has_government = communism
+		NOT = {
+		    has_cosmetic_tag = ITA_socialism
+			has_cosmetic_tag = SRI 
+			has_cosmetic_tag = ROI 
+			has_cosmetic_tag = ITS 
+			has_cosmetic_tag = ITS_bourbon
 		}
+	}	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	hidden = yes
+
+	immediate = {
+		set_cosmetic_tag = ITA_socialism
+	}
+}
+
+# Communist Italy
+####################
+country_event = {
+	id = color.13
+	
+	trigger = {
+		original_tag = ITA
+		NOT = { has_government = communism }
+		has_cosmetic_tag = ITA_socialism
+	}	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	hidden = yes
+
+	immediate = {
+		drop_cosmetic_tag = yes
+	}
+}
+
+# Fascist France
+####################
+country_event = {
+	id = color.14
+	
+	trigger = {
+		original_tag = FRA
+		has_government = fascism
+		NOT = {
+		    has_cosmetic_tag = FRA_proto_fascism 
+			has_cosmetic_tag = NFA 
+		}
+	}	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	hidden = yes
+
+	immediate = {
+		set_cosmetic_tag = FRA_proto_fascism
+	}
+}
+
+# Fascist France
+####################
+country_event = {
+	id = color.15
+	
+	trigger = {
+		original_tag = FRA
+		NOT = { has_government = fascism }
+		has_cosmetic_tag = FRA_proto_fascism
+	}	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	hidden = yes
+
+	immediate = {
+		drop_cosmetic_tag = yes
 	}
 }

@@ -10,6 +10,20 @@ ideas = {
 			removal_cost = -1					
 			modifier = { #it was only used for Yugo, because only Serbs were officiers, so it was harder to find them
 				max_planning = 0.1
+				ai_focus_defense_factor = 0.2
+			}
+		}
+		anti_german_military = {
+			picture = generic_morale_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = fascism }
+			}
+			removal_cost=-1
+			modifier = {
+				drift_defence_factor = 0.05
 			}
 		}
 		SER_idea_tractor = {
@@ -22,19 +36,6 @@ ideas = {
 			removal_cost = -1					
 			modifier = {
 				consumer_goods_factor = -0.05
-			}
-		}
-		SER_persecution_of_turks = {
-			picture = prc_low_popular_support3
-			allowed = {
-				always = no
-			}			
-			allowed_civil_war = {
-			}	
-			removal_cost = -1					
-			modifier = {
-				stability_factor = -0.1
-				industrial_capacity_factory = -0.05
 			}
 		}
 		SER_idea_russian_advisors = {
@@ -262,7 +263,8 @@ ideas = {
 	
 	theorist = {
 		SER_jovan_jovanovic_pizon = { 
-			allowed = { original_tag = SER } 
+			allowed = { original_tag = SER }
+			ledger = army			
 			traits = { military_theorist } 
 			ai_will_do = { factor = 1 } 
 		}
@@ -296,26 +298,31 @@ ideas = {
 		SER_zivojin_misic = { 
 			allowed = { original_tag = SER } 
 			traits = { army_regrouping_1 } 
+			ledger = army
 			ai_will_do = { factor = 1 } 
 		}
 		SER_mihailo_rasic = { 
 			allowed = { original_tag = SER } 
 			traits = { army_infantry_1 } 
+			ledger = army
 			ai_will_do = { factor = 1 } 
 		}
 		SER_milos_vasic = { 
 			allowed = { original_tag = SER } 
 			traits = { army_cavalry_1 } 
+			ledger = army
 			ai_will_do = { factor = 1 } 
 		}
 		SER_petar_pesic = { 
 			allowed = { original_tag = SER } 
 			traits = { army_artillery_1 } 
+			ledger = army
 			ai_will_do = { factor = 1 } 
 		}
 		SER_stevan_hadzic = { 
 			allowed = { original_tag = SER } 
-			traits = { army_logistics_1 } 
+			traits = { army_logistics_1 }
+			ledger = army			
 			ai_will_do = { factor = 1 } 
 		}
 	}

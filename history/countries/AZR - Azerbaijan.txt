@@ -1,4 +1,4 @@
-﻿capital = 46
+﻿capital = 229
 
 set_research_slots = 2
 set_technology = {
@@ -25,36 +25,42 @@ set_technology = {
 		mechanical_engineering = 1
 }
 set_politics={
-	ruling_party = neutrality
+	ruling_party = democratic
 	elections_allowed = no
+	last_election = "1909.4.14"
+	election_frequency = 60
 }	
 set_popularities = {
-	fascism = 20
-	communism = 16
-	democratic = 10
-	neutrality = 54
+	fascism = 28
+	communism = 18
+	democratic = 46
+	neutrality = 8
 }
 create_country_leader = {
 	name = "Mammad Amin Rasulzadeh"
-	desc = "AZR_mammad_rasulzadeh_desc"
 	picture="gfx/leaders/AZR/AZR_mammad_rasulzadeh.dds"
 	expire = "1935.1.1"
-	ideology = centrism
-	traits = {	}
+	ideology = authoritarian_democracy
+	traits = { trait_authoritarian_democracy }    
 }
 create_country_leader = {
 	name = "Mammad Amin Rasulzadeh"
-	desc = "AZR_mammad_rasulzadeh_desc"
 	picture="gfx/leaders/AZR/AZR_mammad_rasulzadeh.dds"
 	expire = "1935.1.1"
-	ideology = socialism
-	traits = {	}
+	ideology = classical_liberalism
+	traits = { trait_classical_liberalism } 
 }
 create_country_leader = {
 	name = "Stepan Shaumianv"
 	picture="gfx/leaders/AZR/AZR_stepan_shaumianv.dds"
 	expire = "1935.1.1"
-	ideology = leninism
-	traits = {	}
+	ideology = vanguardism
+	traits = { trait_vanguardism }
 }
-
+create_country_leader = {
+	name = "Gara Bey Garabeyov"
+	picture="gfx/leaders/AZR/AZR_gara_bey_garabeyov.dds"
+	expire = "1935.1.1"
+	ideology = fundamentalism
+	traits = { trait_fundamentalism }
+}

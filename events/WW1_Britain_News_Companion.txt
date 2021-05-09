@@ -147,14 +147,26 @@ news_event = {
 	trigger = {
 		ENG = {
 			has_country_leader = { name = "George V" ruling_only = yes }
+			is_subject = no
 		}
-		NOT = { has_global_flag = george_v_royal_prerogative }
 	}
 	fire_only_once = yes
 	option = {
 		name = eng_news.10.a
 		ai_chance = { factor = 100 }
-		hidden_effect = { set_global_flag = george_v_royal_prerogative }
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+			}
+			hidden_effect = {
+			    play_song = "SE_eng_george_v"
+			    set_country_flag = se_eng_george_v
+			}
+		}
 	}
 }
 #Anarchists seize London
@@ -165,17 +177,12 @@ news_event = {
 	picture = GFX_news_event_english_anarchists
 
 	major = yes
-	trigger = {
-		ENG = {
-			has_country_leader = { name = "London Commune" ruling_only = yes }
-		}
-		NOT = { has_global_flag = anarchists_in_london }
-	}
-	fire_only_once = yes
+	is_triggered_only = yes
+
 	option = {
 		name = eng_news.11.a
 		ai_chance = { factor = 100 }
-		hidden_effect = { set_global_flag = anarchists_in_london }
+		
 	}
 }
 #Kitchener restores order
@@ -186,16 +193,24 @@ news_event = {
 	picture = GFX_news_event_kitchener_2
 
 	major = yes
-	trigger = {
-		ENG = {
-			has_country_leader = { name = "Herbert Kitchener" ruling_only = yes }
-		}
-		NOT = { has_global_flag = kitchener_restores_order }
-	}
+	is_triggered_only = yes
+
 	option = {
 		name = eng_news.12.a
 		ai_chance = { factor = 100 }
-		hidden_effect = { set_global_flag = kitchener_restores_order }
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+			}
+			hidden_effect = {
+			    play_song = "SE_eng_kitchener"
+			    set_country_flag = se_eng_kitchener
+			}
+		}
 	}
 }
 #Kenya Crisis
@@ -223,6 +238,19 @@ news_event = {
 	is_triggered_only = yes
 	option = {
 		name = eng_news.14.a
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+			}
+			hidden_effect = {
+			    play_song = "SE_eng_republic"
+			    set_country_flag = SE_eng_republic
+			}
+		}
 		ai_chance = { factor = 100 }
 	}
 }
@@ -316,14 +344,12 @@ news_event = {
 	title = eng_news.21.t
 	desc = eng_news.21.d
 	picture = GFX_news_event_sidney_street
-
+	fire_only_once = yes
 	major = yes
 	trigger = {
 		date > 1911.01.03
-		NOT = { has_global_flag = sidney_street }
 		ENG = { NOT = { has_government = communism } }
 	}
-	immediate = { hidden_effect = { set_global_flag = sidney_street } }
 	option = {
 		name = eng_news.21.a
 		trigger = { 
@@ -368,5 +394,103 @@ news_event = {
 		name = eng_news.21.c
 		trigger = { OR = { original_tag = RUS original_tag = SOV original_tag = LAT } }
 		ai_chance = { factor = 100 }
+	}
+}
+#The Belgian Crisis
+news_event = {
+	id = eng_news.22
+	title = eng_news.22.t
+	desc = eng_news.22.d
+	picture = GFX_news_event_021
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = eng_news.22.a
+		trigger = { original_tag = ENG }
+	}
+	option = {
+		name = eng_news.22.b
+		trigger = { NOT = { original_tag = ENG original_tag = BEL } }
+	}
+	option = {
+		name = eng_news.22.c
+		trigger = { original_tag = BEL }
+	}
+
+}
+#Imperial Federation
+news_event = {
+	id = eng_news.23
+	title = eng_news.23.t
+	desc = eng_news.23.d
+	picture = GFX_news_event_021
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = eng_news.23.a
+		trigger = { original_tag = ENG }
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+			}
+			hidden_effect = {
+			    play_song = "SE_eng_imperial_federation"
+			    set_country_flag = se_eng_imperial_federation
+			}
+		}
+	}
+	option = {
+		name = eng_news.23.b
+		trigger = { NOT = { original_tag = ENG } }
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+			}
+			hidden_effect = {
+			    play_song = "SE_eng_imperial_federation"
+			    set_country_flag = se_eng_imperial_federation
+			}
+		}
+	}
+}
+#America falls
+news_event = {
+	id = eng_news.24
+	title = eng_news.24.t
+	desc = eng_news.24.d
+	#picture =
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = eng_news.24.a
+		trigger = {
+			OR = {
+				original_tag = ENG
+				is_subject_of = ENG
+			}
+		}
+	}
+	option = {
+		name = eng_news.24.b
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = ENG
+					is_subject_of = ENG
+				}
+			}
+		}
 	}
 }

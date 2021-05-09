@@ -3,7 +3,7 @@ country_event = {
 	title = ww1_nepal.1.t
 	desc = ww1_nepal.1.d
 	id = ww1_nepal.1
-	picture = ww1_nepal_1
+	picture = report_event_royal_parade
 	
 	fire_only_once = yes
 	mean_time_to_happen = { days = 1 }
@@ -11,6 +11,7 @@ country_event = {
 		tag = NEP
 		has_government = neutrality
 		NOT = { has_country_flag = prithvi_dead }
+		has_country_leader = { name = "Prithvi Bir Bikram Shah" ruling_only = yes }
 		date > 1913.10.9
 	}
 	option = {
@@ -20,8 +21,10 @@ country_event = {
 			name = "Tribhuvana Bir Bikram Shah"
 			picture = "gfx/leaders/NEP/NEP_tribhuvan_bir_bikram.dds"
 			expire = "1935.1.1"
-			ideology = despotism
-			traits = {}
+			ideology = autocracy
+			traits = {
+				trait_autocracy
+			}
 		}
 		set_country_flag = prithvi_dead
 		ai_chance = { factor = 100 }

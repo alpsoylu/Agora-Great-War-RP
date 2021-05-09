@@ -16,7 +16,17 @@ ideas = {
 					factor = 50
 					has_completed_focus = HOL_radical_reform
 					NOT = { has_completed_focus = HOL_denounce_the_old_world }
-					NOT = { has_idea_with_trait = democratic_reformer }
+					NOT = { has_idea_with_trait = communist_revolutionary }
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = HOL_AI_RANDOM_SYNDICALIST
+						has_game_rule = {
+							rule = HOL_ai_behavior
+							option = SYNDICALIST
+						}
+					}
 				}
 			} 
 		}
@@ -36,11 +46,21 @@ ideas = {
 			cost = 50
 			ai_will_do = { 
 				factor = 1
-				modifier = { 
+				modifier = {
 					factor = 50
 					has_completed_focus = HOL_radical_reform
 					NOT = { has_completed_focus = HOL_empower_parlament }
 					NOT = { has_idea_with_trait = democratic_reformer }
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = HOL_AI_RANDOM_DEMOCRATIC_ALTERNATE
+						has_game_rule = {
+							rule = HOL_ai_behavior
+							option = DEMOCRATIC_ALTERNATE
+						}
+					}
 				}
 			} 
 		}
@@ -207,24 +227,28 @@ ideas = {
 		HOL_cornelis_snijders = { 
 			allowed = { tag = HOL }
 			picture = generic_army_europe_4		
+			ledger = army
 			traits = { army_entrenchment_2 } 
 			ai_will_do = { factor = 1 } 
 		}
 		HOL_p_forbes_wels = { 
 			allowed = { tag = HOL } 
 			picture = generic_army_europe_3
+			ledger = army
 			traits = { army_logistics_1 }
 			ai_will_do = { factor = 1 } 
 		}
 		HOL_jean_rambonnet = { 
 			allowed = { tag = HOL } 
 			picture = generic_navy_europe_2
+			ledger = navy
 			traits = { navy_anti_submarine_1 } 
 			ai_will_do = { factor = 1 } 
 		}
 		HOL_tan_malaka = { 
 			allowed = { tag = HOL } 
 			picture = generic_army_europe_5
+			ledger = army
 			traits = { army_regrouping_3 } 
 			ai_will_do = { factor = 1 } 
 		}

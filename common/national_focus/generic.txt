@@ -53,6 +53,8 @@ focus_tree = {
 		}
 		completion_reward = { 
 			add_timed_idea = { idea = nationalism days = 360 } 
+			custom_effect_tooltip = available_political_advisor
+			custom_effect_tooltip = fascist_demagogue
 		}
 		ai_will_do = {
 			factor = 10
@@ -67,7 +69,7 @@ focus_tree = {
 	focus = {
 		id = internationalism_focus
 		prerequisite = { focus = collectivist_ethos }
-		icon = GFX_goal_support_communism
+		icon = GFX_goal_support_socialism
 		x = 2
 		y = 2
 		cost = 10
@@ -76,6 +78,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_timed_idea = { idea = internationalism days = 360 } 
+			custom_effect_tooltip = available_political_advisor
+			custom_effect_tooltip = communist_revolutionary
 		}
 		ai_will_do = { 
 			factor = 10
@@ -224,6 +228,8 @@ focus_tree = {
 		}
 		completion_reward = { 
 			add_timed_idea = { idea = democratic_influence days = 360 }
+			custom_effect_tooltip = available_political_advisor
+			custom_effect_tooltip = democratic_reformer
 		}
 
 		cost = 10
@@ -575,7 +581,7 @@ focus_tree = {
 	focus = {
 		id = join_cp
 		prerequisite = { focus = embargo_entente }
-		icon = GFX_goal_centralpowers
+		icon = GFX_focus_central_powers
 
 	 	available = {
 	 		is_subject = no
@@ -629,7 +635,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 		}
-		completion_reward = { 
+		completion_reward = {
 			if = { 
 				limit = { 
 					NOT = { has_idea = neutrality_idea }
@@ -645,6 +651,10 @@ focus_tree = {
 
 		ai_will_do = { 
 			factor = 10
+			modifier = {
+				factor = 0 
+				has_war = yes
+			}
 		}
 
 		mutually_exclusive = { focus = ww1_takeposition }
@@ -1303,7 +1313,13 @@ focus_tree = {
 		cost = 10
 		x = 22
 		y = 0
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+		    factor = 10
+			modifier = {
+				factor = 0
+				num_of_civilian_factories < 15
+			}
+		}
 	}
 
 
@@ -1578,7 +1594,6 @@ focus_tree = {
 				category = medium_air
 			}
 		}
-		ai_will_do = { factor = 1 }
 		cost = 10
 		x = 21
 		y = 8
@@ -1853,7 +1868,6 @@ focus_tree = {
 		id = ww1_dockyard_effort_1
 		prerequisite = { focus = infrastructure_effort }
 		prerequisite = { focus = naval_effort }
-		available = {  }
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 32
 		y = 2
@@ -2166,7 +2180,6 @@ focus_tree = {
 		id = ww1_dockyard_effort_2
 		prerequisite = { focus = infrastructure_effort_2 }
 		prerequisite = { focus = ww1_dockyard_effort_1 }
-		available = {  }
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 32
 		y = 4
@@ -2483,7 +2496,6 @@ focus_tree = {
 		id = ww1_dockyard_effort_3
 		prerequisite = { focus = ww1_infrastructure_effort_3 }
 		prerequisite = { focus = ww1_dockyard_effort_2 }
-		available = {  }
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 32
 		y = 6
@@ -2675,7 +2687,6 @@ focus_tree = {
 	focus = {
 		id = extra_tech_slot_2
 		prerequisite = { focus = ww1_infrastructure_effort_4 }
-		available = {  }
 		icon = GFX_focus_research
 		available = { num_of_factories > 50 }
 		completion_reward = { add_research_slot = 1 }
@@ -2722,7 +2733,7 @@ focus_tree = {
 	focus = {
 		id = ww1_newnavalcanons_1
 		prerequisite = { focus = naval_effort }
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_hoi4tgw_navalcanons
 		completion_reward = {
 			navy_experience = 10
 			add_tech_bonus = {

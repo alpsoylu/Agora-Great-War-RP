@@ -3,6 +3,7 @@
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
+	camelry = 1
 }
 set_convoys = 1
 
@@ -21,11 +22,9 @@ set_popularities = {
 	neutrality = 100
 }
 create_country_leader = { 
-	name = "Abdullah bin Jassim"
+	name = "Abdullah bin Jassim Al Thani"
 	picture = "gfx/leaders/QAT/QAT_abdullah_jassim.dds" 
 	expire = "1935.1.1" 
 	ideology = despotism
-	traits = {  } 
+	traits = { trait_despotism }  
 }
-
-add_ideas = {}

@@ -1,20 +1,25 @@
+
 state={
 	id=229
 	name="STATE_229"
-	manpower = 2881049
-	state_category=large_town
-	provinces={ 1467 1536 1539 1610 4458 4473 4477 4545 4605 4614 6763 7495 7661 9715 11645 11674 11704 12309 12434 }
 	resources={
-		oil=72
+		oil=72.000
 	}
 	history={
-		victory_points={ 7661 1 }
-		owner=RUS
-		add_core_of=RUS
+		victory_points = {
+			7661 5
+		}
+		owner = RUS
 		add_core_of = AZR
 		add_claim_by = PER
-		buildings={
-			infrastructure=4
-			}
+		buildings = {
+			infrastructure = 4
 		}
 	}
+	provinces={
+		1536 4458 4473 4477 4545 4614 7495 7661 10838 12434 
+	}
+	manpower=1000000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

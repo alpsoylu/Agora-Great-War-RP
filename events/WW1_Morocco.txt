@@ -33,9 +33,9 @@ country_event = {
 				communism = 2
 			}
 		}
-		remove_ideas = MOR_idea_french_intervention
+		remove_ideas = FRA_idea_moroccan_intervention
 		news_event = ww1_morocco.5
-		FRA = { country_event = { id = ww1_morocco.3 days = 2 } end_puppet = MOR }
+		FRA = { country_event = { id = ww1_morocco.3 days = 2 } }
 		ai_chance = { factor = 0 }
     }
 }
@@ -53,7 +53,7 @@ country_event = {
 			transfer_troops = no
 		}
 		hidden_effect = {
-			SPR = { transfer_state = 290 }
+			SPR = { transfer_state = 290 transfer_state = 807}
 		}
 		news_event = ww1_morocco.4
 		activate_mission_tooltip = GER_misison_agadir_crisis
@@ -76,7 +76,7 @@ country_event = {
 		add_state_claim = 290
 		add_state_claim = 461
 		add_state_claim = 462
-		add_state_claim = 810
+		add_state_claim = 807
 		add_named_threat = { threat = 3 name = "ww1_morocco.3.t" }
 		ai_chance = { factor = 100 }
 	}
@@ -154,10 +154,20 @@ country_event = {
 		FRA = {
 			add_state_claim = 815
 			add_state_claim = 814
+			transfer_state = 769
 		}
 		GER = {
 			transfer_state = 815 
 			transfer_state = 814
+		}
+		hidden_effect = {
+			CMR = {
+		    	add_state_core = 814
+           		add_state_core = 815		
+			}
+			CAR = {
+				add_state_core = 769		
+			}	
 		}
 		if = {
 			limit = { CMR = { exists = yes } }
@@ -204,8 +214,9 @@ country_event = {
     option = {
 		name = ww1_morocco.9.a
 		news_event = ww1_morocco.13
-		GER = { transfer_state = 810 }
-		FRA = { add_state_claim = 810 }
+		MOR = { transfer_state = 461 }
+		GER = { puppet = MOR }
+		FRA = { add_state_claim = 461 }
 		add_war_support = 0.10
 		ai_chance = {
 			factor = 80 
@@ -248,7 +259,12 @@ country_event = {
     option = {
 		name = ww1_morocco.10.a		
 		set_global_flag = agadir_crisis_ends
-		GER = { transfer_state = 813 }
+		effect_tooltip = {
+			GER = {
+				transfer_state = 815 
+				transfer_state = 814				
+			}
+		}	
 		ai_chance = { factor = 100 }
 	}
 }

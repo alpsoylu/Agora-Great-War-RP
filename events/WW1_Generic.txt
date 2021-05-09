@@ -594,6 +594,34 @@ news_event = {
 	option = {
 		name = ww1_generic.13.a
 		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				original_tag = ENG
+			}
+			create_country_leader = {
+				name = "Herbert George Wells" 
+				picture = "gfx/leaders/ENG/ENG_herbert_george_wells.dds" 
+				expire = "1935.1.1" 
+				ideology = socialism
+				traits = { ENG_war_of_the_worlds trait_socialism } 
+			}
+			set_party_name = { 
+			    ideology = democratic
+			    long_name = ENG_anti_martian_league_party_long
+			    name = ENG_anti_martian_league_party
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+			}
+			play_song = "SE_war_of_the_worlds"
+            set_country_flag = SE_war_of_the_worlds
+		}
 	}
 }
 
@@ -603,18 +631,18 @@ news_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		date > 1913.1.1
-		date < 1914.1.1
+		date > 1914.1.1
+		date < 1916.1.1
 		is_historical_focus_on = no
-		all_country = { has_war = no }
+		has_global_flag = kis_war
 	}
 	mean_time_to_happen = {
-		days = 60
+		days = 100
 	}
 	
 	immediate = {
 		random_list = {
-			10000 = { }
+			999 = { }
 			1 = {
 				news_event = { id = ww1_generic.13 }
 			}
@@ -1063,7 +1091,7 @@ country_event = {
 	picture = GFX_report_event_canadian_soldiers
 	
 	trigger = {
-		casualties > 250000
+		casualties > 900000
 		has_global_flag = kis_war
 		NOT = { has_country_flag = random_army_event }
 		NOT = { has_country_flag = fraternization_event }
@@ -1085,4 +1113,136 @@ country_event = {
 		add_war_support = -0.05
 		ai_chance = { factor = 10 }
 	}
+}
+
+# GREAT WAR LOSER REMOVES ARMISTICE IDEA
+##################
+country_event = {
+	title = ww1_generic.27.t
+	desc = ww1_generic.27.d
+	id = ww1_generic.27
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+
+	option = { name = ww1_generic.27.a }
+}
+
+# GREAT WAR LOSER REMOVES ARMY RESTRICATION IDEA
+##################
+country_event = {
+	title = ww1_generic.28.t
+	desc = ww1_generic.28.d
+	id = ww1_generic.28
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+
+	option = { name = ww1_generic.28.a }
+}
+
+# GREAT WAR LOSER ASK TO REMOVE RESTRICTION IDEA
+##################
+country_event = {
+	title = ww1_generic.29.t
+	desc = ww1_generic.29.d
+	id = ww1_generic.29
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ww1_generic.29.a
+		FROM = { 
+			set_country_flag = remove_restrictions_idea 
+			country_event = ww1_generic.30
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				threat < 0.10
+			}
+		}
+	}
+	option = {
+		name = ww1_generic.29.b
+		add_political_power = -25
+		FROM = { country_event = ww1_generic.31 }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				threat > 0.10
+			}
+		}
+	}
+}
+
+country_event = {
+	title = ww1_generic.30.t
+	desc = ww1_generic.30.d
+	id = ww1_generic.30
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+
+	option = { name = ww1_generic.30.a }
+}
+country_event = {
+	title = ww1_generic.31.t
+	desc = ww1_generic.31.d
+	id = ww1_generic.31
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+
+	option = { name = ww1_generic.31.a }
+}
+# RESTRICTIONS REFUSED
+########################
+country_event = {
+	title = ww1_generic.32.t
+	desc = ww1_generic.32.d
+	id = ww1_generic.32
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ww1_generic.29.a #ignore
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				threat < 0.10
+			}
+		}
+	}
+	option = {
+		name = ww1_generic.32.b #wargoal
+		add_political_power = -120
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+		}
+		FROM = { country_event = ww1_generic.33 }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				threat > 0.5
+			}
+		}
+	}
+}
+country_event = {
+	title = ww1_generic.33.t
+	desc = ww1_generic.33.d
+	id = ww1_generic.33
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+
+	option = { name = ww1_generic.33.a }
 }

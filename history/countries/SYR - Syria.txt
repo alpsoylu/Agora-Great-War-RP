@@ -1,9 +1,9 @@
 ﻿capital=554
-oob="SYR_1910"
 
 	set_technology = {
 		#infantry
 		infantry_weapons = 1
+		camelry = 1
 		tech_mountaineers = 1
 		
 		#support
@@ -22,4 +22,5 @@ set_popularities = {
     communism = 0
     neutrality = 100
 }
-set_stability=0.75
+set_stability = 0.75
+

@@ -17,8 +17,8 @@ create_country_leader = {
 	name = "Ruaraidh Erskine" 
 	picture = "gfx/leaders/SCO/SCO_marr.dds" 
 	expire = "1935.1.1" 
-	ideology = liberalism
-	traits = {  } 
+	ideology = classical_liberalism
+	 
 }
 	#Techs
 	set_technology = {

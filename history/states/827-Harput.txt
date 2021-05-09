@@ -1,16 +1,20 @@
 state={
 	id=827
-	name="STATE_827" # Harput
+	name="STATE_827" 
 	history={
-		owner = TUR
-		add_core_of = TUR		
+		owner = DAR
+		add_core_of = DAR
+		victory_points = {
+			10739 1
+		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
+			industrial_complex = 1
 		}
 	}
 	provinces={
-		876 7620 9860 9954 11797 
+		1960 5060 8052 10739
 	}
-	manpower=575200
+	manpower=900000
 	state_category=rural
 }

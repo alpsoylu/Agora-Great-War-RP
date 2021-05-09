@@ -335,12 +335,6 @@ spriteTypes = {
 	####Lee-Enfield Licence
 	SpriteType = {
 	name = "GFX_goal_CAN_british_rifle_lease"
-	texturefile = "gfx/interface/goals/focus_CAN_british_rife_lease.dds"
-	}
-	
-	####Lee-Enfield Licence
-	SpriteType = {
-	name = "GFX_goal_CAN_british_rifle_lease"
 	texturefile = "gfx/interface/goals/focus_CAN_british_rifle_lease.dds"
 	}
 	
@@ -371,7 +365,7 @@ spriteTypes = {
 	####A Carribean Protectorate
 	SpriteType = {
 	name = "GFX_goal_CAN_carribean_confederation"
-	texturefile = "gfx/interface/goals/focus_CAN_carribean_confederation.dds"
+	texturefile = "gfx/interface/goals/focus_CAN_carribean_federation.dds"
 	}
 	
 	####Reintegrate Columbia
@@ -409,4 +403,10 @@ spriteTypes = {
 	name = "GFX_goal_CAN_pilots"
 	texturefile = "gfx/interface/goals/focus_CAN_pilots.dds"
 	}
-}
+	###For the Empire
+	SpriteType = {
+	name = "GFX_focus_CAN_for_the_empire"
+	texturefile = "gfx/interface/goals/focus_CAN_for_the_empire.dds"
+	}
+}	
+	

@@ -312,15 +312,6 @@ ideas = {
 				weekly_manpower = -1000
 			}
 		}
-		SOV_idea_socialism_in_one_country = {
-			picture = generic_pp_unity_bonus
-			allowed = { tag = SOV }
-			removal_cost = -1
-			modifier = {
-				justify_war_goal_time = 0.75
-				enemy_justify_war_goal_time = 0.75
-			}
-		}
 		SOV_idea_influence_of_revolution = {
 			picture = ger_the_great_red_menace
 			removal_cost = -1
@@ -414,9 +405,8 @@ ideas = {
 		SOV_idea_kronstadt = {
 			picture = chi_war_of_resistance3
 			allowed = { tag = SOV }
-			allowed_civil_war = { original_tag = SOV }
 			removal_cost = -1
-			available = { has_war = no }
+			available = { has_civil_war = yes }
 			modifier = {
 				ai_get_ally_desire_factor = -1000
 				ai_join_ally_desire_factor = -100
@@ -524,14 +514,6 @@ ideas = {
 			}
 			traits = { popular_figurehead }
 		}
-		konstantin_rodzaevsky = {
-			allowed = { tag = SOV }
-			available = {
-				RUS = { exists = no }
-			}	
-			traits = { fascist_demagogue }
-			ai_will_do = { factor = 0 }
-		}
 	}	
 	army_chief = {
 	
@@ -540,7 +522,6 @@ ideas = {
 				original_tag = SOV
 			}
 			available = {
-				NOT = { has_country_flag = purge_1_group_b }
 				hidden_trigger = {
 					NOT = { 
 						any_other_country = {
@@ -562,10 +543,6 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = {
-				NOT = { has_country_flag = purge_1_group_a }
-			}
-			# PURGED
 			traits = { army_chief_defensive_2 }
 			
 			ai_will_do = {
@@ -577,11 +554,8 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = {
-				NOT = { has_country_flag = purge_1_group_a }
-			}
 
-			# PURGED
+			
 			traits = { army_chief_maneuver_2 }
 			
 			ai_will_do = {
@@ -597,8 +571,6 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = {
-			}
 			traits = { navy_chief_reform_2 }
 			
 			ai_will_do = {
@@ -609,9 +581,6 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = {
-			}		
-			# PURGED
 			traits = { navy_chief_naval_aviation_1 }
 			
 			ai_will_do = {
@@ -623,10 +592,6 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = {
-				NOT = { has_country_flag = purge_1_group_a }
-			}
-			# PURGED
 			traits = { navy_chief_commerce_raiding_1 }		
 			ai_will_do = {
 				factor = 1
@@ -636,9 +601,6 @@ ideas = {
 		nikolay_kuznetsov = {					
 			allowed = {
 				original_tag = SOV
-			}
-			available = {
-				NOT = { has_country_flag = purge_2_group_b }
 			}
 			
 			# Not Purged, but eventually demoted
@@ -654,9 +616,6 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 
-			}
-			available = {
-				NOT = { has_country_flag = purge_1_group_b }
 			}
 			
 			traits = { navy_chief_decisive_battle_2 }
@@ -676,13 +635,7 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = {
-				NOT = { has_country_flag = purge_2_group_a }
-			}
-			
 
-			
-			# Not Purged, but imprisoned
 			traits = { air_chief_reform_3 }
 			
 			ai_will_do = {
@@ -694,10 +647,7 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 
-			}
-			available = {
-				NOT = { has_country_flag = purge_2_group_b }
-			}					
+			}				
 			traits = { air_chief_ground_support_2 }
 			
 			ai_will_do = {
@@ -710,12 +660,9 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 
-			}
-			available = {
-				NOT = { has_country_flag = purge_2_group_a }
-			}			
+			}		
 			
-			# PURGED
+			
 			traits = { air_chief_safety_2 } # Could also have reform
 			
 			ai_will_do = {
@@ -728,11 +675,8 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 
-			}
-			available = {
-				NOT = { has_country_flag = purge_2_group_a }
-			}						
-			# PURGED
+			}					
+			
 			traits = { air_chief_all_weather_2 }
 			
 			ai_will_do = {
@@ -749,6 +693,7 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
+			ledger = army
 			traits = { army_infantry_2 }
 			ai_will_do = {
 				factor = 1
@@ -761,22 +706,8 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = {
-				NOT = { has_country_flag = counter_purge }
-				custom_trigger_tooltip = {
-					tooltip = SOV_konev_civil_war
-					NOT = { 
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 408
-						}
-					}
-				}
-			}
-			
+			ledger = army
 
-			
 			traits = { army_concealment_2 }
 			# Almost certainly a psychopath
 			
@@ -789,10 +720,8 @@ ideas = {
 			
 			allowed = {
 				original_tag = SOV
-
 			}
 			available = {
-				NOT = { has_country_flag = purge_2_group_b }
 				hidden_trigger = {
 					NOT = { 
 						any_other_country = {
@@ -803,7 +732,8 @@ ideas = {
 					}
 				}
 			}
-			
+
+			ledger = army
 
 			
 			traits = { army_regrouping_2 }
@@ -827,10 +757,7 @@ ideas = {
 					}
 				}
 			}
-			available = {
-				NOT = { has_country_flag = purge_1_group_b }
-			}
-			# Not purged, but tried and tortured, then released
+			ledger = army
 			traits = { army_armored_3 }
 			
 			ai_will_do = {
@@ -844,11 +771,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = {
-				NOT = { has_country_flag = counter_purge }
-			}
-			
-
+			ledger = air
 			
 			traits = { air_airborne_1 }
 			
@@ -863,13 +786,8 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = {
-				NOT = { has_country_flag = purge_2_group_b }
-			}
+			ledger = air
 			
-
-			
-			# Purged, but post-war
 			traits = { air_close_air_support_2 }
 			
 			ai_will_do = {
@@ -883,11 +801,7 @@ ideas = {
 				original_tag = SOV
 
 			}
-			available = {
-				NOT = { has_country_flag = counter_purge }
-			}
-			
-
+			ledger = air
 			
 			traits = { air_air_combat_training_2 }
 			
@@ -903,7 +817,6 @@ ideas = {
 
 			}
 			available = {
-				NOT = { has_country_flag = purge_1_group_b }
 				hidden_trigger = {
 					NOT = { 
 						any_other_country = {
@@ -914,8 +827,8 @@ ideas = {
 					}
 				}
 			}
-			
 
+			ledger = navy
 			
 			traits = { navy_submarine_2 }
 			
@@ -931,7 +844,6 @@ ideas = {
 
 			}
 			available = {
-				NOT = { has_country_flag = purge_2_group_a }
 				hidden_trigger = {
 					NOT = { 
 						any_other_country = {
@@ -943,9 +855,8 @@ ideas = {
 				}
 			}
 			
+			ledger = navy
 
-			
-			# Not purged, but arrested and released
 			traits = { navy_capital_ship_2 }
 			
 			ai_will_do = {
@@ -957,10 +868,8 @@ ideas = {
 			
 			allowed = {
 				original_tag = SOV
-
 			}
 			available = {
-				NOT = { has_country_flag = counter_purge }
 				hidden_trigger = {
 					NOT = { 
 						any_other_country = {
@@ -971,6 +880,8 @@ ideas = {
 					}
 				}
 			}
+
+			ledger = navy
 			
 
 			
@@ -1217,8 +1128,7 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = {
-			}
+			ledger = army
 			
 			cost = 150
 			
@@ -1235,8 +1145,7 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = {
-			}		
+			ledger = navy		
 			cost = 250
 			
 			research_bonus = {
@@ -1252,8 +1161,7 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = {
-			}
+			ledger = army
 			picture = mikhail_tukhachevsky
 			cost = 250
 			name = mikhail_tukhachevsky
@@ -1261,15 +1169,14 @@ ideas = {
 				cat_mass_assault = 0.10
 			}
 			
-			# PURGED
+			
 			traits = { mass_assault_expert }
 		}
 		vladimir_tributs = {		
 			allowed = {
 				original_tag = SOV
 			}		
-			available = {
-			}		
+			ledger = navy		
 			cost = 250
 			
 			research_bonus = {
@@ -1282,8 +1189,7 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = {
-			}
+			ledger = air
 			
 			cost = 250
 			
@@ -1297,8 +1203,7 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-			available = {
-			}
+			ledger = air
 
 			
 			research_bonus = {

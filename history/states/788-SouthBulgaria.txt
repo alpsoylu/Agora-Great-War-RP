@@ -1,18 +1,14 @@
 state={
 	id=788
 	name="STATE_788"
-	manpower=400000
+	manpower=155000
 	state_category=rural
-	provinces={ 9818 6857 11813 893 878 }
-	resources={
-		}
+	provinces={ 6857 9818 }
 	history={
-		victory_points={ 878 1 }
 		owner = TUR
 		add_core_of = BUL
-		add_core_of = TUR
 		buildings={
-			infrastructure=4
+			infrastructure = 3
 		}
 	}
 }

@@ -3,31 +3,28 @@
 set_fuel_ratio = 0.20
 set_research_slots = 3
 set_stability = 0.85
-add_ideas = {
-RP_optimizasyon
-}
+
 create_country_leader = { 
 	name = "Federal Council" 
-	desc = "POLITICS_FEDERAL_COUNCIL_DESC" 
 	picture = "Portrait_Switzerland_Federal_council.dds" 
 	expire = "1935.1.1" 
-	ideology = conservatism
-	traits = { }
+	ideology = classical_liberalism
+	
 }
 #Switzerland has a leader now when Germany puppets them in HRE path :)
 create_country_leader = { 
 	name = "Ulrich Wille" 
-	picture = "SWI_wille.dds" 
+	picture = "SWI_wille.dds"
 	expire = "1935.1.1" 
 	ideology = oligarchism
-	traits = { }
+	traits={ trait_oligarchism }   
 }
 create_country_leader = { 
 	name = "Ulrich Wille" 
-	picture = "SWI_wille.dds" 
+	picture = "SWI_wille.dds"
 	expire = "1935.1.1" 
-	ideology = military_dictatorship
-	traits = { }
+	ideology = stratocracy
+	traits={ trait_stratocracy }   
 }
 
 create_field_marshal={  

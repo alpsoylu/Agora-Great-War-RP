@@ -161,7 +161,6 @@ country_event = {
 					add_state_core = 759
 				}
 				BUL = { remove_state_core = 759 add_state_claim = 759 }
-				BUL = { remove_state_core = 106 add_state_claim = 106 }
 			}
 			if = {
 				limit = {
@@ -175,6 +174,19 @@ country_event = {
 					add_state_core = 106
 				}
 				BUL = { remove_state_core = 106 add_state_claim = 106 }				
+			}
+			if = {
+				limit = {
+					BUL = { owns_state = 203 }
+					SER = {
+						has_war_with = BUL
+					}
+				}
+				SER = {
+					transfer_state = 203
+					add_state_core = 203
+				}
+				BUL = { remove_state_core = 203 add_state_claim = 203 }
 			}
 			# Греческая Македония
 			if = {
@@ -239,25 +251,47 @@ country_event = {
 				}
 				TUR = {
 					transfer_state = 756 
-					add_state_core = 756
 				}
 				BUL = { remove_state_core = 756 }
 			}
-			
-			# Мир
+			if = {
+				limit = {
+					BUL = { owns_state = 200 }
+					TUR = {
+						has_war_with = BUL
+					}
+				}
+				TUR = {
+					transfer_state = 200 
+				}
+				BUL = { remove_state_core = 200 }
+			}
 			every_country = {
 				limit = {
-					has_war_with = BUL
-					has_country_flag = join_antibulgarian_league
+					has_war_with = SER
+					OR = {
+						is_in_faction_with = BUL
+						tag = BUL
+					}
 				}
-				white_peace = BUL
+				every_country = {
+					limit = {
+						has_war_with = BUL
+						OR = {
+							has_country_flag = join_antibulgarian_league
+							is_in_faction_with = SER
+							tag = SER
+						}
+					}
+					white_peace = PREV
+					set_truce = {
+						target = PREV
+						days = 365
+					}
+				}
 				remove_opinion_modifier = { 
 					target = TUR 
 					modifier = HOI4TGW_Opinion_hostile_relations_post_balkan_war 
-				}
-				set_truce = {
-					target = BUL
-					days = 365
 				}
 			}
 			if = {
@@ -286,7 +320,7 @@ country_event = {
 			}
 			BUL = {
 				add_ai_strategy = {
-					type = friend
+					type = befriend
 					id = GER
 					value = 100
 				}
@@ -351,19 +385,6 @@ country_event = {
 					BUL = {
 						has_war_with = SER
 					}
-					SER = { owns_state = 759 }
-				}
-				BUL = {
-					transfer_state = 759 
-					add_state_core = 759
-				}
-				SER = { remove_state_core = 759 add_state_claim = 759 }					
-			}
-			if = {
-				limit = {
-					BUL = {
-						has_war_with = SER
-					}
 					SER = { owns_state = 106 }
 				}
 				BUL = {
@@ -371,6 +392,19 @@ country_event = {
 					add_state_core = 106
 				}
 				SER = { remove_state_core = 106 add_state_claim = 106 }					
+			}
+			if = {
+				limit = {
+					BUL = {
+						has_war_with = SER
+					}
+					SER = { owns_state = 203 }
+				}
+				BUL = {
+					transfer_state = 203
+					add_state_core = 203
+				}
+				SER = { remove_state_core = 203 add_state_claim = 203 }					
 			}
 			if = {
 				limit = {
@@ -383,6 +417,38 @@ country_event = {
 					transfer_state = 731 
 					add_state_core = 731
 				}				
+			}
+			if = {
+				limit = {
+					BUL = {
+						has_war_with = GRE
+					}
+					GRE = {
+						owns_state = 345
+					}
+				}
+				BUL = {
+					transfer_state = 345
+					add_state_core = 345
+				}
+				GRE = {
+					remove_state_core = 345
+					add_state_claim = 345
+				}
+			}
+			if = {
+				limit = {
+					BUL = {
+						has_war_with = TUR
+					}
+					TUR = {
+						owns_state = 341
+					}
+				}
+				BUL = {
+					transfer_state = 341
+					add_state_core = 341
+				}
 			}
 			if = {
 				limit = {
@@ -423,6 +489,18 @@ country_event = {
 			if = {
 				limit = {
 					BUL = {
+						has_war_with = ROM
+					}
+					ROM = { owns_state = 846 }
+				}
+				BUL = {
+					transfer_state = 846
+					add_state_core = 846
+				}			
+			}
+			if = {
+				limit = {
+					BUL = {
 						has_war_with = SER
 					}
 					SER = { owns_state = 821 }
@@ -437,16 +515,31 @@ country_event = {
 			every_country = {
 				limit = {
 					has_war_with = BUL
-					has_country_flag = join_antibulgarian_league
+					OR = {
+						OR = {
+							has_country_flag = join_antibulgarian_league
+							is_in_faction_with = SER
+						}
+						tag = SER
+					}
 				}
-				white_peace = BUL
+				every_country = {
+					limit = {
+						has_war_with = SER
+						OR = {
+							is_in_faction_with = BUL
+							tag = BUL
+						}
+					}
+					white_peace = PREV
+					set_truce = {
+						target = PREV
+						days = 365
+					}
+				}
 				remove_opinion_modifier = { 
 					target = TUR 
 					modifier = HOI4TGW_Opinion_hostile_relations_post_balkan_war 
-				}
-				set_truce = {
-					target = BUL
-					days = 365
 				}
 			}
 			if = {
@@ -463,7 +556,7 @@ country_event = {
 			}
 			SER = {
 				add_ai_strategy = {
-					type = friend
+					type = befriend
 					id = RUS
 					value = 100
 				}
@@ -503,12 +596,20 @@ country_event = {
 		name = ww1_secondbalkan.5.a
 		set_global_flag = kis_secondbalkan_war
 		set_global_flag = kis_secondbalkanwar_victory
-		SER = { 
-			transfer_state = 759 
-			add_state_core = 759
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 759
+					state = 203
+					state = 106
+				}
+			}
+			SER = {
+				transfer_state = PREV 
+			}
 		}
-		BUL = { remove_state_core = 759 add_state_claim = 759 }
-		ai_chance = { factor = 10 }
+		
+		ai_chance = { factor = 0 }
 	}
 	option = {
 		name = ww1_secondbalkan.5.b
@@ -520,14 +621,14 @@ country_event = {
 				target = BUL
 				type = take_claimed_state
 				generator = {
-					759
+					106
 				}
 			}
 		}
 		BUL = {
 			if = {
 				limit = { is_in_faction = no }
-				create_faction = "greater_builgaria"
+				create_faction = greater_builgaria
 			}
 			set_country_flag = kis_secondbalkanwar_start
 		}
@@ -1210,6 +1311,19 @@ news_event = {
 	
 	option = {
 		name = ww1_secondbalkan.104.a
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+			}
+			hidden_effect = {
+				set_country_flag = SE_bul_bw2_winner
+				play_song = "SE_bul_bw2_winner"
+			}	
+		}
 	}
 }
 

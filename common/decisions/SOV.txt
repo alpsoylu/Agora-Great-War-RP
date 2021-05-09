@@ -32,11 +32,10 @@ foreign_politics = {
 				OR = {
 					surrender_progress > 0.5
 					POL = {
-						controls_state = 96
 						controls_state = 808
+						controls_state = 773
 						controls_state = 97
 						controls_state = 95
-						controls_state = 96
 						controls_state = 93
 					}
 				}
@@ -63,12 +62,12 @@ foreign_politics = {
 		allowed = {
 			original_tag = SOV
 		}
-		available =
-			controls_state = 525
-			controls_state = 527
-			controls_state = 800
-			controls_state = 801
-			controls_state = 802
+		available = {
+			has_full_control_of_state = 525
+			has_full_control_of_state = 527
+			has_full_control_of_state = 800
+			has_full_control_of_state = 801
+			has_full_control_of_state = 802
 			NOT = { country_exists = KOR }
 		}
 		ai_will_do = {
@@ -76,11 +75,14 @@ foreign_politics = {
 		}
 		cost = 0
 		visible = {
-			controls_state = 525
-			controls_state = 527
-			controls_state = 800
-			controls_state = 801
-			controls_state = 802
+			OR = {
+				controls_state = 525
+				controls_state = 527
+				controls_state = 800
+				controls_state = 801
+				controls_state = 802
+				has_war_with = JAP
+			}
 			NOT = { country_exists = KOR }
 		}
 		fire_only_once = no
@@ -104,7 +106,7 @@ crisis = {
 			OR = {
 				has_war_with = GER
 				has_completed_focus = SOV_decree_on_peace
-				has_global_flag = kis_player_decided_ger_surrend
+				has_global_flag = GER_capitulation
 			}
 		}		
 		activation = {
@@ -150,13 +152,41 @@ crisis = {
 	}
 }
 SOV_decision_soviet_republics = {
+	SOV_kirghiz_assr = {
+		icon = generic_ignite_civil_war
+		available = {
+			has_completed_focus = SOV_soviet_republics
+			any_state = {
+				is_core_of = KAZ
+				NOT = {is_core_of = SOV}
+ 			    is_fully_controlled_by = SOV
+    		}	
+		}
+		cost = 20
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		days_remove = 15
+		remove_effect  = {
+			every_state = {
+				limit = {
+					is_core_of = KAZ
+					NOT = {is_core_of = SOV}
+				}
+				SOV = {
+ 			        add_state_core = PREV
+				}
+    		}
+		}
+	}
 	SOV_soviet_belarus = {
 		icon = generic_ignite_civil_war
 		available = {
 			has_completed_focus = SOV_soviet_republics
 			country_exists = BLR
 			controls_state = 207
-			is_puppet = no
+			is_subject = no
 		}
 		target_trigger = {
 			FROM = {
@@ -217,7 +247,7 @@ SOV_decision_soviet_republics = {
 		available = {
 			has_completed_focus = SOV_soviet_republics
 			country_exists = UKR
-			is_puppet = no
+			is_subject = no
 		}
 		target_trigger = {
 			FROM = {
@@ -232,7 +262,7 @@ SOV_decision_soviet_republics = {
 				UKR = {
 					OR = {
 						is_in_faction_with = GER
-						is_puppet_of = GER
+						is_subject_of = GER
 					}
 				}
 			}
@@ -283,70 +313,15 @@ SOV_decision_soviet_republics = {
 			}
 		}
 	}
-	SOV_soviet_alash = {
-		icon = generic_ignite_civil_war
-		available = {
-			has_completed_focus = SOV_soviet_republics
-			country_exists = KAZ
-			is_puppet = no
-		}
-		target_trigger = {
-			FROM = {
-				tag = KAZ
-			}
-		}
-		cost = 25
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			if = {
-				limit = {
-					NOT = { KAZ = {	has_government = communism } }
-					NOT = { KAZ = { is_in_faction_with = SOV } }
-					KAZ = { has_civil_war = no }
-				}
-				KAZ = {
-					start_civil_war = { 
-						ideology = communism 
-						size = 0.3 
-						states = { 402 404 } 
-					}
-				}
-				random_country = {
-					limit= {
-						original_tag = KAZ
-						has_government = communism
-					}
-					SOV = {
-						puppet = PREV
-					}
-					declare_war_on = {
-						target = KAZ
-						type = civil_war
-					}
-				}
-			}
-			if = {
-				limit = {
-					OR = {
-						KAZ = { has_government = communism }
-						KAZ = { is_in_faction_with = SOV }
-					}
-				}
-				SOV = {
-					puppet = KAZ
-				}
-			}
-		}
-	}
 	SOV_soviet_turkestan = {
 		icon = generic_ignite_civil_war
 		available = {
 			has_completed_focus = SOV_soviet_republics
-			country_exists = TMS
-			is_puppet = no
+			is_subject = no
+			TMS = {
+				exists = yes		
+                has_capitulated = no
+			}
 		}
 		target_trigger = {
 			FROM = {
@@ -355,7 +330,7 @@ SOV_decision_soviet_republics = {
 		}
 		cost = 25
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -367,8 +342,13 @@ SOV_decision_soviet_republics = {
 				TMS = {
 					start_civil_war = { 
 						ideology = communism 
-						size = 0.3 
+						size = 0.7
+						states = { 
+     					    585 589
+    					}
+						capital = 585
 					}
+					country_event = {id = ww1_turkestan.1}
 				}
 				random_country = {
 					limit= {
@@ -377,10 +357,10 @@ SOV_decision_soviet_republics = {
 					}
 					SOV = {
 						puppet = PREV
-					}
-					declare_war_on = {
-						target = TMS
-						type = civil_war
+						declare_war_on = {
+							target = TMS
+							type = civil_war
+						}
 					}
 				}
 			}
@@ -406,7 +386,7 @@ SOV_decision_soviet_republics = {
 				GEO = { has_government = communism }
 				GEO = { is_in_faction_with = SOV }
 			}
-			is_puppet = no
+			is_subject = no
 		}
 		target_trigger = {
 			FROM = {
@@ -441,7 +421,7 @@ SOV_decision_soviet_republics = {
 				ARM = { has_government = communism }
 				ARM = { is_in_faction_with = SOV }
 			}
-			is_puppet = no
+			is_subject = no
 		}
 		target_trigger = {
 			FROM = {
@@ -476,7 +456,7 @@ SOV_decision_soviet_republics = {
 				AZR = { has_government = communism }
 				AZR = { is_in_faction_with = SOV }
 			}
-			is_puppet = no
+			is_subject = no
 		}
 		target_trigger = {
 			FROM = {
@@ -512,7 +492,7 @@ SOV_decision_soviet_republics = {
 				MOU = { has_government = communism }
 				MOU = { is_in_faction_with = SOV }
 			}
-			is_puppet = no
+			is_subject = no
 		}
 		target_trigger = {
 			FROM = {
@@ -537,20 +517,144 @@ SOV_decision_soviet_republics = {
 			}
 		}
 	}
+	SOV_soviet_khorezm = {
+		icon = generic_ignite_civil_war
+		available = {
+			has_completed_focus = SOV_soviet_republics
+			country_exists = TAJ
+			
+			is_subject = no
+			OR = {
+				controls_state = 587
+				controls_state = 584
+				controls_state = 585
+			}	
+		}
+		target_trigger = {
+			FROM = {
+				tag = TAJ
+			}
+		}
+		cost = 25
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					TAJ = {is_subject = no has_war = no exists = yes}
+					
+				}
+			    TAJ = {country_event = { id = generic.20 days = 1}}
+			}
+			if = {
+				limit = {
+					TAJ = {exists = yes OR = {is_subject = yes has_war = yes} NOT={is_subject_of = SOV}}
+				}
+				SOV = {
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = TAJ
+					}
+				}
+			}
+		}
+	}
+	SOV_soviet_bukhara = {
+		icon = generic_ignite_civil_war
+		available = {
+			has_completed_focus = SOV_soviet_republics
+			is_subject = no
+			OR = {
+				controls_state = 732
+				controls_state = 584
+				controls_state = 585
+			}
+			UZB = {
+				exists = yes		
+                has_capitulated = no
+
+			}
+		}
+		target_trigger = {
+			FROM = {
+				tag = UZB
+			}
+		}
+		cost = 25
+		ai_will_do = {
+			factor = 150
+		}
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					UZB = { NOT = { has_government = communism is_in_faction_with = SOV } }
+				}
+				if = {
+					limit = {
+						TMS = {
+							is_faction_leader = yes
+							has_war_with = SOV
+						}
+					}
+					TMS = {
+						add_to_faction = UZB	
+					}
+				}		
+				UZB = {
+					set_capital = 742
+					start_civil_war = { 
+						ideology = communism 
+						size = 0.6
+						states = { 
+     					    405
+    					}
+						capital = 405
+					}
+				}
+				random_country = {
+					limit = {
+						original_tag = UZB
+						has_government = communism
+					}
+					SOV = {
+						puppet = PREV
+						declare_war_on = {
+							target = UZB
+							type = civil_war
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						UZB = { has_government = communism }
+						UZB = { is_in_faction_with = SOV }
+					}
+				}
+				SOV = {
+					puppet = UZB
+				}
+			}
+		}
+	}
 	SOV_soviet_latvia = {
 		icon = generic_ignite_civil_war
 		available = {
 			has_completed_focus = SOV_soviet_republics
-			country_exists = LAT
+			country_exists = LTR
 			OR = {
-				LAT = { has_government = communism }
-				LAT = { is_in_faction_with = SOV }
+				LTR = { has_government = communism }
+				LTR = { is_in_faction_with = SOV }
 			}
-			is_puppet = no
+			is_subject = no
 		}
 		target_trigger = {
 			FROM = {
-				tag = LAT
+				tag = LTR
 			}
 		}
 		cost = 25
@@ -558,10 +662,10 @@ SOV_decision_soviet_republics = {
 			factor = 100
 			modifier = {
 				factor = 0
-				LAT = {
+				LTR = {
 					OR = {
 						is_in_faction_with = GER
-						is_puppet_of = GER
+						is_subject_of = GER
 					}
 				}
 			}
@@ -571,12 +675,12 @@ SOV_decision_soviet_republics = {
 			if = {
 				limit = {
 					OR = {
-						LAT = { has_government = communism }
-						LAT = { is_in_faction_with = SOV }
+						LTR = { has_government = communism }
+						LTR = { is_in_faction_with = SOV }
 					}
 				}
 				SOV = {
-					puppet = LAT
+					puppet = LTR
 				}
 			}
 		}
@@ -590,7 +694,7 @@ SOV_decision_soviet_republics = {
 				LIT = { has_government = communism }
 				LIT = { is_in_faction_with = SOV }
 			}
-			is_puppet = no
+			is_subject = no
 		}
 		target_trigger = {
 			FROM = {
@@ -605,7 +709,7 @@ SOV_decision_soviet_republics = {
 				LIT = {
 					OR = {
 						is_in_faction_with = GER
-						is_puppet_of = GER
+						is_subject_of = GER
 					}
 				}
 			}
@@ -629,16 +733,16 @@ SOV_decision_soviet_republics = {
 		icon = generic_ignite_civil_war
 		available = {
 			has_completed_focus = SOV_soviet_republics
-			country_exists = EST
+			country_exists = ESR
 			OR = {
-				EST = { has_government = communism }
-				EST = { is_in_faction_with = SOV }
+				ESR = { has_government = communism }
+				ESR = { is_in_faction_with = SOV }
 			}
-			is_puppet = no
+			is_subject = no
 		}
 		target_trigger = {
 			FROM = {
-				tag = EST
+				tag = ESR
 			}
 		}
 		cost = 25
@@ -646,10 +750,10 @@ SOV_decision_soviet_republics = {
 			factor = 100
 			modifier = {
 				factor = 0
-				EST = {
+				ESR = {
 					OR = {
 						is_in_faction_with = GER
-						is_puppet_of = GER
+						is_subject_of = GER
 					}
 				}
 			}
@@ -659,157 +763,12 @@ SOV_decision_soviet_republics = {
 			if = {
 				limit = {
 					OR = {
-						EST = { has_government = communism }
-						EST = { is_in_faction_with = SOV }
+						ESR = { has_government = communism }
+						ESR = { is_in_faction_with = SOV }
 					}
 				}
 				SOV = {
-					puppet = EST
-				}
-			}
-		}
-	}
-	SOV_soviet_USA = {
-		icon = generic_ignite_civil_war
-		available = {
-			has_completed_focus = SOV_overseas_front
-			country_exists = USA
-			USA = { communism > 0.15 has_civil_war = no }
-			NOT = { USA = {	has_government = communism } }
-			NOT = { USA = { is_in_faction_with = SOV } }
-			is_puppet = no
-		}
-		cost = 75
-		ai_will_do = {
-			factor = 100
-		}
-		target_trigger = {
-			FROM = {
-				tag = USA
-			}
-		}
-		fire_only_once = yes
-		complete_effect = {
-			USA = {
-				start_civil_war = { 
-					ideology = communism 
-					size = 0.25 
-				}
-			}
-		}
-	}
-	SOV_soviet_england = {
-		icon = generic_ignite_civil_war
-		available = {
-			has_completed_focus = SOV_overseas_front
-			country_exists = ENG
-			ENG = { communism > 0.15 has_civil_war = no }
-			NOT = { ENG = {	has_government = communism } }
-			NOT = { ENG = { is_in_faction_with = SOV } }
-			is_puppet = no
-		}
-		cost = 75
-		ai_will_do = {
-			factor = 100
-		}
-		target_trigger = {
-			FROM = {
-				tag = ENG
-			}
-		}
-		fire_only_once = yes
-		complete_effect = {
-			ENG = {
-				start_civil_war = { 
-					ideology = communism 
-					size = 0.25 
-				}
-			}
-		}
-	}
-	SOV_soviet_france = {
-		icon = generic_ignite_civil_war
-		available = {
-			has_completed_focus = SOV_overseas_front
-			country_exists = FRA
-			FRA = { communism > 0.15 has_civil_war = no }
-			NOT = { FRA = {	has_government = communism } }
-			NOT = { FRA = { is_in_faction_with = SOV } }
-			is_puppet = no
-		}
-		cost = 75
-		ai_will_do = {
-			factor = 100
-		}
-		target_trigger = {
-			FROM = {
-				tag = FRA
-			}
-		}
-		fire_only_once = yes
-		complete_effect = {
-			FRA = {
-				start_civil_war = { 
-					ideology = communism 
-					size = 0.25 
-				}
-			}
-		}
-	}
-	SOV_soviet_italy = {
-		icon = generic_ignite_civil_war
-		available = {
-			has_completed_focus = SOV_overseas_front
-			country_exists = ITA
-			ITA = { communism > 0.15 has_civil_war = no }
-			NOT = { ITA = {	has_government = communism } }
-			NOT = { ITA = { is_in_faction_with = SOV } }
-			is_puppet = no
-		}
-		cost = 75
-		ai_will_do = {
-			factor = 100
-		}
-		target_trigger = {
-			FROM = {
-				tag = ITA
-			}
-		}
-		fire_only_once = yes
-		complete_effect = {
-			ITA = {
-				start_civil_war = { 
-					ideology = communism 
-					size = 0.25 
-				}
-			}
-		}
-	}
-	SOV_soviet_germany = {
-		icon = generic_ignite_civil_war
-		available = {
-			has_completed_focus = SOV_overseas_front
-			country_exists = GER
-			GER = { communism > 0.15 has_civil_war = no }
-			NOT = { GER = {	has_government = communism } }
-			NOT = { GER = { is_in_faction_with = SOV } }
-			is_puppet = no
-		}
-		cost = 50
-		ai_will_do = {
-			factor = 100
-		}
-		target_trigger = {
-			FROM = {
-				tag = GER
-			}
-		}
-		fire_only_once = yes
-		complete_effect = {
-			GER = {
-				start_civil_war = { 
-					ideology = communism 
-					size = 0.25 
+					puppet = ESR
 				}
 			}
 		}
@@ -1031,10 +990,16 @@ SOV_red_terror_category = {
 				add_building_construction = { type = industrial_complex level = 1 instant_build = yes } 
 			}
 			RUS = {
-				remove_building = {
-					type = industrial_complex
-					level = 1
-				}
+				random_owned_state = {
+					limit = {
+						industrial_complex > 0
+						is_in_home_area = yes 
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+			    }
 			}
 		}
 		ai_will_do = {

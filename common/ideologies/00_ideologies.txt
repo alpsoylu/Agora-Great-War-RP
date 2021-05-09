@@ -5,10 +5,12 @@ ideologies = {
 		types = {
 			
 			conservatism = {
-			}		
-			liberalism = {
-			}	
-			socialism = {
+			}
+			social_liberalism = {
+			}
+			classical_liberalism = {
+			}
+			socialism = { #social democracy
 			}
 			agrarianism = {
 			}
@@ -26,14 +28,14 @@ ideologies = {
 			"FACTION_NAME_DEMOCRATIC_6"
 		}
 		
-		color = { 43 63 185 }
+		color = { 46 88 158 }
 		
 		rules = {
 			can_create_collaboration_government = no
 			can_declare_war_on_same_ideology = no
 			can_force_government = yes
 			can_send_volunteers = no
-			can_puppet = no
+			can_puppet = yes
 			can_lower_tension = yes
 			can_only_justify_war_on_threat_country = yes
 			can_guarantee_other_ideologies = yes
@@ -62,26 +64,23 @@ ideologies = {
 	}
 
 
-	communism = {
+	communism = { # socialism
 		
 		types = {		
 			marxism = {
-			}			
-			leninism = {
-			}			
-			stalinism = {
-			    can_be_randomly_selected = no
 			}
-			trotskyism = {
-				can_be_randomly_selected = no
-			}			
-			anti_revisionism = {
-				can_be_randomly_selected = no
-			}			
+            vanguardism = {
+			}
+            reformist_socialism = {
+            }
+			agrarian_socialism = {
+            }
+			market_socialism = {
+            }
 			anarchist_communism = {
 			}
-			council_communism = {
-			}
+			syndicalism = {
+			}	
 			anarcho_syndicalism = {
 			}
 			religious_communism = {
@@ -97,9 +96,9 @@ ideologies = {
 			"FACTION_NAME_COMMUNIST_5"
 		}
 		
-		color = { 153 20 20 }
+		color = { 139 0 0 }
 		
-		war_impact_on_world_tension = 0.75		#Commie less threatening
+		war_impact_on_world_tension = 1		#Commie more threatening
 		faction_impact_on_world_tension = 0.5
 		
 		ai_communist = yes # uses the commie AI behaviour
@@ -132,12 +131,14 @@ ideologies = {
 		types = {	
 			nazism = {
 				can_be_randomly_selected = no
-			}	
+			}
+			gen_nazism = {
+			}
 			fascism_ideology = {
 			}		
 			national_syndicalism = {
 			}
-			military_dictatorship = {
+			stratocracy = {
 			}
 			fundamentalism = {
 			}
@@ -157,9 +158,9 @@ ideologies = {
 			"FACTION_NAME_FASCIST_5"
 		}
 		
-		color = { 58 31 2 }
+		color = { 35 35 35 }
 		
-		war_impact_on_world_tension = 1.0
+		war_impact_on_world_tension = 0.5
 		faction_impact_on_world_tension = 1.0
 		
 		rules = {
@@ -190,19 +191,14 @@ ideologies = {
 			despotism = {
 			}			
 			oligarchism = {
-			}		
-			centrism = {
 			}			
 			autocracy = {
 			}	
-			moderatism = {			
+			authoritarian_democracy = {			
 			}
 			anarcho_primitivism = {	
 				can_be_randomly_selected = no		
 			}
-			#anarchism = {
-			#	can_be_randomly_selected = no
-			#}
 			theocracy = {
 				can_be_randomly_selected = no
 			}
@@ -216,7 +212,7 @@ ideologies = {
 			"FACTION_NAME_NONALIGNED_5"
 		}
 		
-		color = { 79 79 79 }
+		color = { 100 100 100 }
 		
 		
 		war_impact_on_world_tension = 0.5		#provoke great war!

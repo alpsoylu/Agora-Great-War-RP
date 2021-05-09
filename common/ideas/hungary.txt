@@ -92,28 +92,6 @@ ideas = {
 			}
 		}
 
-		HUN_hungarian_monarchy_fascism = {			
-
-			allowed_civil_war = {
-				has_government = fascism
-			}
-
-			available = {
-				OR = {
-					has_government = fascism
-					AND = {
-						has_government = neutrality
-						NOT = { has_completed_focus = HUN_renounce_the_treaty_of_trianon }
-					}
-				}
-			}
-			
-			modifier = {
-				fascism_drift = 0.034
-				stability_factor = 0.1
-			}
-		}
-
 		HUN_his_majestys_government = {
 
 			picture = HUN_hungarian_monarchy_democratic
@@ -476,8 +454,8 @@ ideas = {
 				original_tag = HUN
 			}
 			
+			ledger = army
 
-			
 			traits = { army_regrouping_2 }
 			
 			ai_will_do = {
@@ -492,6 +470,8 @@ ideas = {
 			allowed = {
 				original_tag = HUN
 			}
+
+			ledger = air
 			
 			traits = { air_air_combat_training_2 }
 			
@@ -507,6 +487,8 @@ ideas = {
 			allowed = {
 				original_tag = HUN
 			}
+
+			ledger = army
 			
 			traits = { army_cavalry_2 }
 			
@@ -524,6 +506,8 @@ ideas = {
 			allowed = {
 				original_tag = HUN
 			}
+
+			ledger = army
 			
 			research_bonus = {
 				land_doctrine = 0.07
