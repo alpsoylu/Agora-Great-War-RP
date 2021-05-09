@@ -2754,7 +2754,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Referendum_Monarchy
-		icon = GFX_goal_parlementogg
+		icon = GFX_focus_destroy_parliament
 		cost = 10
 		prerequisite = {
 			focus = ENG_Meet_Lenin
@@ -3055,7 +3055,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Fight_Turk
-		icon = GFX_goal_centralpowers
+		icon = GFX_focus_central_powers
 		cost = 10
 		prerequisite = {
 			focus = ENG_Remember_Kruger
@@ -3497,7 +3497,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Dardanelles_campaign
-		icon = GFX_goal_The_Big_Push
+		icon = GFX_focus_the_big_push
 		cost = 5
 		prerequisite = {
 			focus = ENG_secure_suez

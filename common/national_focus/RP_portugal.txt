@@ -350,7 +350,7 @@ focus_tree = {
 	
 	focus = {
 		id = POR_embrace_secularism
-		icon = GFX_goal_focus_church
+		icon = GFX_focus_catholic_church
 		cost = 10,00
 		available = {
 		}
@@ -372,7 +372,7 @@ focus_tree = {
 	
 	focus = {
 		id = POR_increase_power_church
-		icon = GFX_goal_focus_church
+		icon = GFX_focus_catholic_church
 		cost = 10,00
 		available = {
 		}
@@ -393,7 +393,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POR_liberal_democracy
-		icon = GFX_goal_stabilize_democracy
+		icon = GFX_focus_stabilize_democracy
 		cost = 10,00
 		available = {
 		has_civil_war = no

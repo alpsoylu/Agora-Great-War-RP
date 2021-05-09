@@ -206,22 +206,6 @@ focus_tree = {
 		y = 3
 
 	}
-	focus = {
-		id = SPR_spanish_army
-		icon = GFX_Army_March
-		cost = 10,00
-		prerequisite = {
-		focus = SPR_focus_on_war_economy
-		focus = SPR_focus_on_civ_industry
-		}
-		completion_reward = {
-		add_ideas = RP_spanish_army
-		}
-		relative_position_id = SPR_improve_railways
-		x = 0
-		y = 2
-
-	}
 	
 	
 	
@@ -326,7 +310,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_lower_power_church
-		icon = GFX_goal_focus_church
+		icon = GFX_focus_catholic_church
 		cost = 5,00
 		prerequisite = {
 		focus = SPR_parliementary_monarchy
@@ -374,7 +358,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPR_down_with_the_king
-		icon = GFX_goal_stabilize_democracy
+		icon = GFX_focus_stabilize_democracy
 		cost = 10,00
 		prerequisite = {
 		focus = SPR_liberals_wins
@@ -698,7 +682,7 @@ set_party_name = {
 	}
 	focus = {
 		id = SPR_close_the_parliement
-		icon = GFX_goal_destroy_meclis
+		icon = GFX_focus_destroy_meclis
 		cost = 10,00
 		prerequisite = {
 		focus = SPR_right_to_rule
@@ -884,7 +868,7 @@ set_party_name = {
 	}
 	focus = {
 		id = SPR_increase_the_power_of_church
-		icon = GFX_goal_focus_church
+		icon = GFX_focus_catholic_church
 		cost = 10,00
 		prerequisite = {
 		focus = SPR_power_to_the_conservatists
