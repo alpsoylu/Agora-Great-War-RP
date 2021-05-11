@@ -1,3 +1,9 @@
+version="1.0"
+tags={
+	"Fixes"
+}
+name="Agora TGW"
+supported_version="1.10.5"
 replace_path="history/states"
 replace_path="history/countries"
 replace_path="history/units"
@@ -14,9 +20,3 @@ replace_path="common/units/names_ships"
 replace_path="common/technology_sharing"
 replace_path="map/strategicregions"
 replace_path="gfx/loadingscreens"
-version="1.0"
-tags={
-	"Fixes"
-}
-name="Agora Great War RP"
-supported_version="1.10.5"
