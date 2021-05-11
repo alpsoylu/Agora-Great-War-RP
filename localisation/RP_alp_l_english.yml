@@ -1,7 +1,13 @@
 ﻿l_english:
- ENG_annex_cyprus:0 "Annex Cyprus"
- ENG_annex_cyprus_desc:0 "Since 1878 Cyprus is our protectarate.But we have to annex the island to gain full control."
- ENG_protectarate_cyprus:0 "Protectarate of Cyprus"
+ TUR_FOCUS_RULE:0 "Ottoman Focus Tree"
+ RULE_GROUP_RP:0 "GREAT WAR RP RULES."
+ TUR_NEW_TREE:0 "New Ottoman Focus Tree"
+ TUR_NEW_TREE_TEXT:0 "New Ottoman Focus Tree"
+ TUR_NEW_TREE_DESC:0 "This is the new reworked Ottoman Tree in the Great War Redux.It was released in 8 May 2021"
+ 
+ TUR_OLD_TREE:0 "Old Ottoman Focus Tree"
+ TUR_OLD_TREE_TEXT:0 "Old Ottoman Focus Tree"
+ TUR_OLD_TREE_DESC:0 "This is the old Ottoman Tree in the Great War Redux.The new one was released in 8 May 2021"
  RP_optimizasyon:0 "Neutral Country"
  
  
