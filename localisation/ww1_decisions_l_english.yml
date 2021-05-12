@@ -299,6 +299,7 @@
  SOV_soviet_armenia:0 "Soviet Armenia"
  SOV_soviet_georgia:0 "Soviet Georgia"
  SOV_soviet_turkestan:0 "Soviet Turkestan"
+ SOV_mongol_peoples_republic:0 "Mongolian People's Republic"
  SOV_kirghiz_assr:0 "Kirghiz ASSR"
  SOV_soviet_khorezm:0 "Soviet Khorezm"
  SOV_soviet_bukhara:0 "Soviet Bukhara"
@@ -351,6 +352,7 @@
  ITA_sue_for_peace_AUH:0 "Offer Surrender Terms to Austria"
  ITA_seize_fiume:0 "Seize Fiume"
  ITA_seize_fiume_desc:0 "Treaty of Rapallo was failure. We should seize Fiume into our country."
+ ITA_FRA_intervene_in_civil_war:0 "Intervention in Italian Civil War"
  
 
  GRE_sue_for_peace_TUR:0 "Offer Surrender Terms to Turkey"
@@ -845,7 +847,7 @@
  renamed_to_saishu_1177:0 "Jeju is renamed to Saishū"
  KOR_rename_koshu:0 "Rename Kōshū to Gwangju"
  KOR_rename_gwangju:0 "Rename Gwangju to Kōshū"
- renamed_to_koshu_7939:0 "Gwangju is renamed to Kōshū"
+ renamed_to_koshu_10110:0 "Gwangju is renamed to Kōshū"
  KOR_rename_seishin:0 "Rename Seishin to Cheongjin"
  KOR_rename_cheongjin:0 "Rename Cheongjin to Seishin"
  renamed_to_seishin_898:0 "Cheongjin is renamed to Seishin"
@@ -885,7 +887,7 @@
  JAP_rename_chuncheon:0 "Rename Chuncheon to Shunsen"
  JAP_rename_daejeon:0 "Rename Daejeon to Taiden"
  JAP_rename_markus_island:0 "Rename Markus Island to Minamitorishima"
- JAP_sue_for_peace_KOR:0 "Offer Conditional Peace Terms to Korea"
+ JAP_sue_for_peace_KOR:0 "Conditional Peace for Korean War of Independence"
  JAP_sue_for_peace_FNG:0 "Offer Conditional Peace Terms to China"
  
  HUN_sue_for_peace_ROM:0 "Offer Surrender Terms to Romania"

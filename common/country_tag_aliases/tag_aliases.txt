@@ -122,12 +122,16 @@ KMT = {
 	has_country_flag = CHI_kuomintang_flag
 }
 CSR = {
-	original_tag = PRC
+	original_tag = JXC
 	has_country_flag = CHI_soviet_republic_flag
 }
 PRG = {
 	original_tag = PER
 	has_country_flag = PER_gendarmerie_flag
+}
+WHN = {
+	original_tag = GDC
+	has_country_flag = CHI_left_kuomintang_flag
 }
 
 # operative operation target
