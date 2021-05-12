@@ -1,5 +1,5 @@
 
-TUR_focus_rule = {
+#TUR_focus_rule = {
 	name = "TUR_FOCUS_RULE"
 	group = "RULE_GROUP_RP"
 	default = {
