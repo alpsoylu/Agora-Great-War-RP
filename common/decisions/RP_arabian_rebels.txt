@@ -832,6 +832,12 @@ add_state_core = 554
 		}
 		ENG = {add_to_faction = HJZ} 
 		TUR = {remove_state_core = 554}
+		TUR = {
+		set_province_controller = 7140
+		set_province_controller = 1072
+		set_province_controller = 1056
+		set_province_controller = 12442
+		}
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -927,6 +933,7 @@ add_state_core = 554
 		complete_effect = {
 		553 = {set_state_flag = RP_arab_3}	
 		553 = {clr_state_flag = RP_arab_2}	
+		
 		HJZ = {
 		transfer_state = 553
 		
@@ -968,6 +975,11 @@ add_state_core = 553
 		}
 		ENG = {add_to_faction = HJZ} 
 		TUR = {remove_state_core = 553}
+		TUR = {
+		set_province_controller = 12029
+		set_province_controller = 1088
+		set_province_controller = 10087
+		}
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -1386,6 +1398,11 @@ add_state_core = 291
 		}
 		ENG = {add_to_faction = HJZ} 
 		TUR = {remove_state_core = 291}
+		TUR = {
+		set_province_controller = 12413
+		set_province_controller = 12372
+		set_province_controller = 3795
+		}
 		}
 		ai_will_do = { factor = 1 }
 	}
