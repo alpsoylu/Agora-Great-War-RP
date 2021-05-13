@@ -3,12 +3,13 @@
 	shared_focus = {
 		id = TUR_abdulhamid
 		icon = GFX_goal_meclis_elect 
-		prerequisite = { focus = TUR_protectorofislam }
-		prerequisite = { focus = TUR_executethenationalistpashas }
+		prerequisite = { focus = TUR_traditionalist_society }
+		prerequisite = { focus = TUR_prepare_for_jihad }
+		prerequisite = { focus = TUR_build_more_mosques }
 		mutually_exclusive = { focus =  }
-		x = 0
-		y = 4
-		relative_position_id = TUR_muhammediittihatfirkasi
+		x = -1
+		y = 1
+		relative_position_id = TUR_traditionalist_society
 
 		cost = 10
 
@@ -123,13 +124,14 @@ add_popularity = {
 	
 	shared_focus = {
 		id = TUR_el_muzaffer_daima
-		icon = GFX_goal_legacyofmarch
-		prerequisite = { focus = TUR_abdulhamid2 }
-		prerequisite = { focus = TUR_abdulhamid3 }
+		icon = GFX_focus_legacy_of_march
+		prerequisite = { focus = TUR_traditionalist_society }
+		prerequisite = { focus = TUR_prepare_for_jihad }
+		prerequisite = { focus = TUR_build_more_mosques }
 		mutually_exclusive = { focus =  }
-		x = 0
-		y = 2
-		relative_position_id = TUR_abdulhamid
+		x = -1
+		y = 1
+		relative_position_id = TUR_traditionalist_society
 
 		cost = 10
 

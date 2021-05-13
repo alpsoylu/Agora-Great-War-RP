@@ -4286,21 +4286,20 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
+	
+	
+	shared_focus = TUR_el_muzaffer_daima
+	
+	
 	focus = {
 		id = TUR_strike_first
 		icon = GFX_focus_mex_triumph_over_the_cristeros
 		cost = 10
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = TUR_prepare_for_jihad
 		prerequisite = {
-			focus = TUR_prepare_for_jihad
-		}
-		prerequisite = {
-			focus = TUR_traditionalist_society
-		}
-		prerequisite = {
-			focus = TUR_build_more_mosques
+			focus = TUR_el_muzaffer_daima
 		}
 		bypass = {
 			any_country = {
