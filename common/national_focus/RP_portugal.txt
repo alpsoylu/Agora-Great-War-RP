@@ -66,6 +66,7 @@ focus_tree = {
 		focus = POR_revolution_succeeds
 		}
 		completion_reward = {
+		remove_ideas = RP_never_surrender
 		}
 		relative_position_id = POR_revolution_succeeds
 		x = 0
@@ -846,6 +847,7 @@ popularity = 0.25
 		}
 		completion_reward = {
 		add_ideas = RP_rebel_crushed
+		remove_ideas = RP_rebel_crushed
 		}
 		relative_position_id = POR_side_with_monarchists
 		x = 0
@@ -864,6 +866,7 @@ popularity = 0.25
 		focus = POR_victory_in_the_rebellion
 		}
 		completion_reward = {
+		remove_ideas = RP_rebel_crushed
 		add_popularity = {
     ideology = democratic
     popularity = -0.4
