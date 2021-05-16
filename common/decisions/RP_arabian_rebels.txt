@@ -1421,3 +1421,75 @@ add_state_core = 291
 	
 	
 }
+
+
+political_actions = {
+
+	RP_SPR_core_france = {
+		icon = GFX_decision_category_eng_appeal_to_imperial_loyalists
+		allowed = { 
+		tag = SPR
+		}
+		
+		
+		available = {
+        controls_state = 16
+        controls_state = 14
+        controls_state = 18
+        controls_state = 19
+        controls_state = 22
+		owns_state = 16
+        owns_state = 14
+        owns_state = 18
+        owns_state = 19
+        owns_state = 22
+		has_completed_focus = SPR_bourbon_union
+        }
+		visible = {
+		has_completed_focus = SPR_bourbon_union
+		}
+		
+
+		cost = 100
+		complete_effect = {
+		every_state = {
+		limit = {is_core_of = FRA}
+		add_core_of = SPR
+		}
+		}
+		ai_will_do = { factor = 100 }
+	}
+
+	RP_SPR_core_portugal = {
+		icon = GFX_decision_category_eng_appeal_to_imperial_loyalists
+		allowed = { 
+		tag = SPR
+		}
+		
+		
+		available = {
+        controls_state = 112
+        controls_state = 181
+        controls_state = 179
+        controls_state = 180
+		owns_state = 112
+        owns_state = 181
+        owns_state = 179
+        owns_state = 180
+		has_completed_focus = SPR_focus1
+        }
+		visible = {
+		has_completed_focus = SPR_focus1
+		}
+		
+
+		cost = 100
+		complete_effect = {
+		every_state = {
+		limit = {is_core_of = POR}
+		add_core_of = SPR
+		}
+		}
+		ai_will_do = { factor = 100 }
+	}
+}

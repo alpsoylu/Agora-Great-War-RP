@@ -238,4 +238,86 @@ country_event = {
 	
 	}
 	
+
+#ASK FRANCE FOR KING ALFONSO TO BE KING
+country_event = {
+	id = spr_event.8 #event spr_event.8 SPR
+	title = spr_event.8.t
+	desc = spr_event.8.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = FRA
+	SPR = {has_completed_focus = SPR_one_king_two_nations}
+	}
+	#YES
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.8.a
+		SPR = { country_event = { id = spr_event.9 } }
+		create_country_leader={ 
+	name = "Alfonso XIII" 
+	picture="gfx/leaders/SPR/SPR_alfonso_xiii.dds" 
+	expire="1935.1.1" 
+	ideology=autocracy 
+	traits={ } 
+}
+set_country_flag = SPR_FRA_accept
+	}
+	#NO
+	option = {
+	ai_chance = {base = 0}
+		name = spr_event.8.b
+		SPR = { country_event = { id = spr_event.10 } }
+		set_country_flag = SPR_FRA_reject
+	}
+	
+	}
+
+#FRA REJECT
+country_event = {
+	id = spr_event.9
+	title = spr_event.9.t
+	desc = spr_event.9.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = SPR
+	SPR = {has_completed_focus = SPR_one_king_two_nations}
+	has_country_flag = SPR_FRA_accept
+	}
+	#YES
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.9.a
+	}
+	
+	}
+
+#FRA REJECT
+country_event = {
+	id = spr_event.10 
+	title = spr_event.10.t
+	desc = spr_event.10.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_trigspred_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = SPR
+	SPR = {has_completed_focus = SPR_one_king_two_nations}
+	has_country_flag = SPR_FRA_reject
+	}
+	#YES
+	option = {
+	ai_chance = {base = 10}
+		name = spr_event.10.a
+	}
+	
+	}
+	
 	

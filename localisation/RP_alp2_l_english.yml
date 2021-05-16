@@ -2,6 +2,53 @@
  TUR_sarikamis:0 "Sarıkamış Harekatı"
  RP_sarikamis:0 "Sarıkamış Harekatı"
  
+ 
+ 
+ SPR_democracy_befriend_england:0 "Befriend [ENG.GetName]"
+ SPR_befriend_england:0 "Befriend [ENG.GetName]"
+ RP_SPR_core_france:0 "Integrate France"
+ RP_SPR_core_portugal:0 "Integrate Portugal"
+ SPR_britain_investment_tt:0 "We will gain §Y1 civilian§! and §Y1 military factory§! for each faction member of [ENG.GetName]"
+ SPR_GER_investment_tt:0 "We will gain §Y1 civilian§! and §Y1 military factory§! for each faction member of [GER.GetName]"
+ SPR_investments_from_britain:0 "Investments from [ENG.GetName]"
+ SPR_improve_relations_with_britain:0 "Improve Relations with [ENG.GetName]"
+ SPR_naval_aggrement_with_uk:0 "Naval Co-operation with [ENG.GetName]"
+ SPR_join_uk:0 "Join [ENG.GetName]"
+ SPR_attack_morocco:0 "Attack [MOR.GetName]"
+ SPR_attack_france:0 "Attack [FRA.GetName]"
+ SPR_attack_portugal:0 "Attack [POR.GetName]"
+ SPR_military_aggrement_with_uk:0 "Military Agreement with [ENG.GetName]"
+ RP_ottoman_balance:0 ""
+ SPR_buy_ships:0 "Buy Ships from [GER.GetName]"
+ SPR_buy_guns:0 "Buy Guns from [GER.GetName]"
+ SPR_investments_from_germany:0 "Investments from [GER.GetName]"
+ SPR_improve_relations_with_germany:0 "Improve Relations with [GER.GetName]"
+ SPR_germany_military_parade:0 "Military Parade with [GER.GetName]"
+ SPR_attack_por_ger:0 "Attack [POR.GetName]"
+ SPR_attack_france_ger:0 "Attack [FRA.GetName]"
+ SPR_attack_italy:0 "Attack [ITA.GetName]"
+ SPR_create_heavy_ship:0 "This focus will create 2 Heavy Ships in Valencia"
+ 
+ 
+ 
+ 
+ 
+ SPR_improve_relations_with_france:0 "Improve Relations with [FRA.GetName]"
+ SPR_offer_alliance_france:0 "Alliance with [FRA.GetName]"
+ SPR_focus1:0 "Legacy of the Spanish Empire"
+ SPR_focus2:0 "Devolop Spanish Industry"
+ SPR_spanish_army:0 "Spanish Army"
+ SPR_spanish_navy:0 "Spanish Navy"
+ SPR_one_king_two_nations:0 "One King Two Nations"
+ SPR_bourbon_union:0 "Bourbon Union"
+ 
+ 
+ FRA_has_gone_bourbonist:0 "[FRA.GetName] has selected Fransisco Javier of the House of Bourbon as their king"
+ 
+ 
+ 
+ SPR_france_alliance_tt:0 "§WIf France is a faction leader we will request to join that faction.§!\n§YIf they are in a faction but not the leader you can't select this focus.§!\n§WIf they aren't in a faction you will create a faction and invite them.§!"
+ 
  RP_arab_0:0 ""
  RP_arab_1:0 ""
  RP_arab_2:0 ""
@@ -146,6 +193,22 @@
  fra_event.5.t:0 "Ottoman Goverment exiled Armenians"
  fra_event.5.d:0 "Tensions between Armenian and Ottoman civilians were rising in the last couple of months.Ottoman Goverment has agreed to send the Armenians of Anatolia to Southern Anatolia and Syria.Many Armenians have died because of the circumstances."
  fra_event.5.a:0 "Ok"
+ 
+ spr_event.8:0 "Spain suggested that king Alfonso XIII shall rule both of our countries"
+ spr_event.8.t:0 "Spain suggested that king Alfonso XIII shall rule both of our countries"
+ spr_event.8.d:0 "Spain suggested that since both of our nations are ruled by the House of Bourbon,King Alfonso shall rule both countries.This will strenghten ties between our nations.One King Two Nations!Should we Accept?"
+ spr_event.8.a:0 "Accept it!"
+ spr_event.8.b:0 "Reject it!"
+ 
+ spr_event.9:0 "France accepts!"
+ spr_event.9.t:0 "France accepts!"
+ spr_event.9.d:0 "France has accepted!Now both of our countries will be ruled by King Alfonso XIII.Long live the King!"
+ spr_event.9.a:0 "Delightfull!"
+ 
+ spr_event.10:0 "France rejects!"
+ spr_event.10.t:0 "France rejects!"
+ spr_event.10.d:0 "France has rejected our offer for King Alfonso XIII to rule both of our countries."
+ spr_event.10.a:0 "Ok."
  
  
  

@@ -20,7 +20,7 @@
  SPR_conservatists_wins_desc:0 "Conservative Party (PLC) has won the elections."
  SPR_gain_the_trust_of_the_king:0 "Gain the Trust of the King"
  SPR_long_live_king_alfonso:0 "Long Live the King"
- SPR_bourbon_pact:0 "The Bourbon Pact"
+ SPR_bourbon_pact:0 "The Franco-Spanish Pact"
  SPR_deal_for_gibraltar:0 "Deal for Gibraltar"
  SPR_spanish_army:0 "Spanish Army"
  RP_spanish_army:0 "Spanish Army"
@@ -47,13 +47,13 @@
  spr_event.1.b:0 "Conservatists won the elections!"
  
  
- spr_event.4:0 "[FRA.GetName] rejects the Bourbon Pact"
- spr_event.4.t:0 "[FRA.GetName] rejects the Bourbon Pact"
+ spr_event.4:0 "[FRA.GetName] rejects the Franco-Spanish Pact"
+ spr_event.4.t:0 "[FRA.GetName] rejects the Franco-Spanish Pact"
  spr_event.4.desc:0 "[FRA.GetAdjective] goverment rejects our offer to sign a non aggresion pact along with a guarantee of independence."
  spr_event.4.a:0 "No!"
  
- spr_event.2:0 "[SPR.GetName] wants to sign a Bourbon Pact"
- spr_event.2.t:0 "[SPR.GetName] wants to sign a Bourbon Pact"
+ spr_event.2:0 "[SPR.GetName] wants to sign Franco-Spanish Pact"
+ spr_event.2.t:0 "[SPR.GetName] wants to sign Franco-Spanish Pact"
  spr_event.2.desc:0 "[SPR.GetAdjective] goverment offered us to sign a non aggresion pact along with a guarantee of independence."
  spr_event.2.a:0 "We accept!"
  spr_event.2.b:0 "We reject!"
@@ -68,8 +68,8 @@
  SPR_democracy_willpower_over_technology:0 "Willpower over Technology"
  SPR_democracy_learn_from_our_mistakes:0 "Learn from our Mistakes"
  
- spr_event.3:0 "[FRA.GetName] agrees the Bourbon Pact"
- spr_event.3.t:0 "[FRA.GetName] agrees the Bourbon Pact"
+ spr_event.3:0 "[FRA.GetName] agrees the Franco-Spanish Pact"
+ spr_event.3.t:0 "[FRA.GetName] agrees the Franco-Spanish Pact"
  spr_event.3.desc:0 "[FRA.GetAdjective] goverment agrees to sign a non aggresion pact along with a guarantee of independence."
  spr_event.3.a:0 "YES!"
  

@@ -417,6 +417,14 @@ SpriteType = {
 	name = "GFX_brbrazil"
 	texturefile = "gfx/interface/goals/newicons/brbrazil.dds"			
 	}
+SpriteType = {
+	name = "GFX_spr_fra1"
+	texturefile = "gfx/interface/goals/newicons/spr_fra1.dds"			
+	}
+SpriteType = {
+	name = "GFX_spr_fra2"
+	texturefile = "gfx/interface/goals/newicons/spr_fra2.dds"			
+	}
 
 
 	
