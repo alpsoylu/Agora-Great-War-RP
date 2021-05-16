@@ -893,112 +893,7 @@ set_party_name = {
 	
 	
 	#WAAAAAR!
-	focus = {
-		id = SPR_crisis_in_europe
-		icon = GFX_focus_split_helmet
-		cost = 10,00
-		available = {
-		GER = {
-		OR = {
-		has_war_with = FRA
-		has_war_with = RUS
-		has_war_with = ENG
-		}
-		}
-		}
-		completion_reward = {
-		}
-		x = 105
-		y = 8
-
-	}
-	focus = {
-		id = SPR_neutral_foreign_policy
-		icon = GFX_focus_eagle
-		cost = 10,00
-		available = {
-		GER = {
-		OR = {
-		has_war_with = FRA
-		has_war_with = RUS
-		has_war_with = ENG
-		}
-		}
-		}
-		prerequisite = {
-		focus = SPR_crisis_in_europe
-		}
-		mutually_exclusive = {
-		focus = SPR_join_the_entente
-		focus = SPR_join_the_central_powers
-		}
-		completion_reward = {
-		add_stability = 0.20
-		set_rule = {can_join_factions = no}
-		}
-		relative_position_id = SPR_crisis_in_europe
-		x = 0
-		y = 1
-
-	}
-	focus = {
-		id = SPR_join_the_entente
-		icon = GFX_focus_consolidate_entente
-		cost = 10,00
-		available = {
-		GER = {
-		OR = {
-		has_war_with = FRA
-		has_war_with = RUS
-		has_war_with = ENG
-		}
-		}
-		}
-		prerequisite = {
-		focus = SPR_crisis_in_europe
-		}
-		mutually_exclusive = {
-		focus = SPR_neutral_foreign_policy
-		focus = SPR_join_the_central_powers
-		}
-		completion_reward = {
-		remove_ideas = neutrality_idea
-		FRA = { country_event = { id = generic.2 } }
-		}
-		relative_position_id = SPR_crisis_in_europe
-		x = -2
-		y = 1
-
-	}
-	focus = {
-		id = SPR_join_the_central_powers
-		icon = GFX_focus_ger_weltpolitik
-		cost = 10,00
-		available = {
-		GER = {
-		OR = {
-		has_war_with = FRA
-		has_war_with = RUS
-		has_war_with = ENG
-		}
-		}
-		}
-		prerequisite = {
-		focus = SPR_crisis_in_europe
-		}
-		mutually_exclusive = {
-		focus = SPR_neutral_foreign_policy
-		focus = SPR_join_the_entente
-		}
-		completion_reward = {
-		remove_ideas = neutrality_idea
-		GER = { country_event = { id = generic.2 } }
-		}
-		relative_position_id = SPR_crisis_in_europe
-		x = 2
-		y = 1
-
-	}
+	
 	
 	
 	
@@ -1029,7 +924,7 @@ set_party_name = {
 		add_opinion_modifier = { target = SPR modifier = huge_increase }
 		}
 		}
-		x = 20
+		x = 22
 		y = 8
 
 	}
@@ -1280,7 +1175,7 @@ set_party_name = {
 		add_opinion_modifier = { target = SPR modifier = huge_increase }
 		}
 		}
-		x = 13
+		x = 15
 		y = 8
 
 	}
@@ -1327,7 +1222,7 @@ set_party_name = {
 	
 	focus = {
 		id = SPR_naval_aggrement_with_uk
-		icon = GFX_focus_eng_the_sun_never_sets
+		icon = GFX_goal_CAN_fleet_doctrine
 		cost = 10,00
 		available = {
 		}
@@ -1503,7 +1398,7 @@ set_party_name = {
 		add_opinion_modifier = { target = SPR modifier = huge_increase }
 		}
 		}
-		x = 6
+		x = 8
 		y = 8
 
 	}
@@ -1669,7 +1564,7 @@ every_country = {
 		
 		}
 		prerequisite = {
-		focus = SPR_military_aggrement_with_uk
+		focus = SPR_germany_military_parade
 		}
 		mutually_exclusive = {
 		focus = 
@@ -1679,7 +1574,7 @@ every_country = {
 		}
 		x = -2
 		y = 1
-		relative_position_id = SPR_military_aggrement_with_uk
+		relative_position_id = SPR_germany_military_parade
 
 	}
 	
@@ -1691,7 +1586,7 @@ every_country = {
 		
 		}
 		prerequisite = {
-		focus = SPR_military_aggrement_with_uk
+		focus = SPR_germany_military_parade
 		}
 		mutually_exclusive = {
 		focus = 
@@ -1701,7 +1596,7 @@ every_country = {
 		}
 		x = 0
 		y = 1
-		relative_position_id = SPR_military_aggrement_with_uk
+		relative_position_id = SPR_germany_military_parade
 
 	}
 	
@@ -1713,7 +1608,7 @@ every_country = {
 		
 		}
 		prerequisite = {
-		focus = SPR_military_aggrement_with_uk
+		focus = SPR_germany_military_parade
 		}
 		mutually_exclusive = {
 		focus = 
@@ -1723,7 +1618,7 @@ every_country = {
 		}
 		x = 2
 		y = 1
-		relative_position_id = SPR_military_aggrement_with_uk
+		relative_position_id = SPR_germany_military_parade
 
 	}
 	
