@@ -425,6 +425,22 @@ SpriteType = {
 	name = "GFX_spr_fra2"
 	texturefile = "gfx/interface/goals/newicons/spr_fra2.dds"			
 	}
+SpriteType = {
+	name = "GFX_fra_anti_german"
+	texturefile = "gfx/interface/goals/newicons/fra_anti_german.dds"			
+	}
+SpriteType = {
+	name = "GFX_protect_morocco"
+	texturefile = "gfx/interface/goals/newicons/protect_morocco.dds"			
+	}
+SpriteType = {
+	name = "GFX_fra_cons"
+	texturefile = "gfx/interface/goals/newicons/fra_cons.dds"			
+	}
+SpriteType = {
+	name = "GFX_maurras"
+	texturefile = "gfx/interface/goals/newicons/maurras.dds"			
+	}
 
 
 	

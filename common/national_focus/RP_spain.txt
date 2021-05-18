@@ -911,6 +911,12 @@ set_party_name = {
 		available = {
 		has_completed_focus = SPR_bourbon_pact
 		has_global_flag = FRA_has_gone_bourbonist
+		NOT = {
+		OR = {
+		has_completed_focus = SPR_improve_relations_with_britain
+		has_completed_focus = SPR_improve_relations_with_germany
+		}
+		}
 		}
 		prerequisite = {
 		focus = 
@@ -1162,6 +1168,12 @@ set_party_name = {
 		has_completed_focus = SPR_befriend_england
 		has_completed_focus = SPR_democracy_befriend_england
 		}
+		NOT = {
+		OR = {
+		has_completed_focus = SPR_improve_relations_with_germany
+		has_completed_focus = SPR_improve_relations_with_france
+		}
+		}
 		}
 		prerequisite = {
 		focus = 
@@ -1384,6 +1396,12 @@ set_party_name = {
 		OR = {
 		has_completed_focus = SPR_deal_for_gibraltar
 		has_completed_focus = SPR_democracy_deal_for_gibraltar
+		}
+		NOT = {
+		OR = {
+		has_completed_focus = SPR_improve_relations_with_france
+		has_completed_focus = SPR_improve_relations_with_britain
+		}
 		}
 		}
 		prerequisite = {

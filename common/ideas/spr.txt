@@ -460,6 +460,24 @@ ideas = {
 			}
 		}
 		
+		RP_FRA_support_monarchism = {
+
+
+			picture = generic_intel_bonus
+
+			available = {
+				tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			neutrality_drift = 0.05
+			}
+		}
+		
 		
 	}
 }

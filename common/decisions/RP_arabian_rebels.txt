@@ -1492,4 +1492,48 @@ political_actions = {
 		}
 		ai_will_do = { factor = 100 }
 	}
+	
+	RP_FRA_create_syrian_mandate = {
+		icon = GFX_decision_category_intervention_overseas
+		allowed = { 
+		tag = FRA
+		}
+		
+		
+		available = {
+        controls_state = 553
+		controls_state = 554
+		controls_state = 677
+		controls_state = 680
+        }
+		visible = {
+		#has_completed_focus = FRA_claim_syria
+		}
+		
+
+		cost = 0
+		complete_effect = {
+		SYR = {
+		add_state_core = 553
+		transfer_state = 553
+		
+		add_state_core = 554
+		transfer_state = 554
+		
+		add_state_core = 677
+		transfer_state = 677
+		
+		add_state_core = 680
+		transfer_state = 680
+		set_cosmetic_tag = SYR_mandate
+		}
+		FRA = {
+		set_autonomy = {
+		target = SYR
+		autonomy_state = autonomy_tgwr_protectorate
+		}
+		}
+		}
+		ai_will_do = { factor = 100 }
+	}
 }

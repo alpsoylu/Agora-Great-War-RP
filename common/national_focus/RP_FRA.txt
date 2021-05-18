@@ -1,27 +1,15 @@
 focus_tree = {
 	id = RP_france_focus
 	default = no
-	country = { factor=0 modifier = { add = 0 tag = FRA } }
+	country = { factor=0 modifier = { add = 20 tag = FRA} }
+
+	
+
 	
 	
-	focus = {
-		id = FRA_postpone_1910_elections
-		icon = GFX_elections1
-		completion_reward = {
-		}
-		ai_will_do = { factor = 0 }
-		cost = 10
-		mutually_exclusive = {
-		focus = FRA_1910_election
-		}
-		completion_reward = {
-		}
-		x = 20
-		y = 0
-	}
-	
-	
-	
+	shared_focus = GEN_FRA_aviation_effort
+	shared_focus = GEN_FRA_naval_effort
+	shared_focus = GEN_army_effort
 	
 	
 	focus = {
@@ -31,104 +19,21 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 20 }
 		cost = 10
+		allow_branch = {
+        always = no
+        }
+		visible = {
+        always = no
+        }
+        
 		mutually_exclusive = {
 		focus = FRA_postpone_1910_elections
 		}
 		completion_reward = {
 		FRA = { country_event = { id = fra_event.3 } }
 		}
-		x = 10
+		x = 1
 		y = 0
 	}
-	
-	
-	focus = {
-		id = FRA_briand_victory
-		icon = GFX_srr
-		completion_reward = {
-		}
-		ai_will_do = { factor = 20 }
-		cost = 10
-		mutually_exclusive = {
-		focus = FRA_sfio_victory
-		}
-		available = {
-		has_country_flag = FRA_prrr
-		}
-		completion_reward = {
-		add_popularity = {
-		ideology = democratic
-		popularity = 0.15
-		}
-		#set_cosmetic_tg = FRA_start
-		hidden_effect = {
-		set_politics = {
-	ruling_party = democratic
-        elections_allowed = yes
-        last_election = "1935.12.17"
-        election_frequency = 48
-}
-set_cosmetic_tg = FRA_start
-	}
-	create_country_leader = {
-	name = "Aristide Briand" 
-	picture = "gfx/leaders/FRA/briand.dds" 
-	expire = "1935.1.1" 
-	ideology = conservatism
-	traits = {} 
-}
-		}
-		prerequisite = { focus = FRA_1910_election }
-		x = -4
-		y = 1
-		relative_position_id = FRA_1910_election
-	}
-	
-	
-	focus = {
-		id = FRA_sfio_victory
-		icon = GFX_sfio
-		completion_reward = {
-		}
-		ai_will_do = { factor = 20 }
-		cost = 10
-		mutually_exclusive = {
-		focus = FRA_briand_victory
-		}
-		available = {
-		has_country_flag = FRA_sfio
-		}
-		completion_reward = {
-		add_popularity = {
-		ideology = communism
-		popularity = 0.35
-		}
-		create_country_leader = {
-	name = "Jean Jaurès" 
-	picture = "gfx/leaders/FRA/jaures.dds" 
-	expire = "1935.1.1" 
-	ideology = marxism
-	traits = {} 
-}
-		set_politics = {
-	ruling_party = communism
-        elections_allowed = yes
-        last_election = "1935.12.17"
-        election_frequency = 48
-}
-hidden_effect = {
-set_cosmetic_tg = FRA_start
-}
-		}
-		prerequisite = { focus = FRA_1910_election }
-		x = 2
-		y = 1
-		relative_position_id = FRA_1910_election
-	}
-	
-	
-	shared_focus = GEN_FRA_aviation_effort
-	shared_focus = GEN_FRA_naval_effort
-	shared_focus = GEN_army_effort
 	
 }
