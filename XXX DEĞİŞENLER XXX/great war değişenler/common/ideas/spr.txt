@@ -1,5 +1,24 @@
 ideas = {
+		hidden_ideas = {
+		RP_ottoman_balance = {
 
+
+			picture = por_the_fifth_empire
+
+			available = {
+				tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			production_speed_industrial_complex_factor = -0.3
+			production_speed_arms_factory_factor = -0.3
+			}
+		}
+		}
 		country = {
 
 		RP_agricultur_idea = {
@@ -440,5 +459,25 @@ ideas = {
 			justify_war_goal_time = -0.4
 			}
 		}
+		
+		RP_FRA_support_monarchism = {
+
+
+			picture = generic_intel_bonus
+
+			available = {
+				tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			neutrality_drift = 0.05
+			}
+		}
+		
+		
 	}
 }

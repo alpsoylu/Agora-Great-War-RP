@@ -31,9 +31,9 @@ bookmarks = {
 				ww1_Scramble_for_Africa
 			}
 			focuses = {
-				FRA_ww1_triple_alliance
 				FRA_ww1_agadir_crisis
-				FRA_ww1_ready_country
+				FRA_cons_victory
+				FRA_anti_german_policy
 			}
 		}
 		"RUS"={
@@ -271,9 +271,9 @@ bookmarks = {
 				RP_legacy_of_american_spanish_war
 			}
 			focuses = {
-				SPR_liberals_wins
-				SPR_right_to_rule
-				SPR_conservatists_wins
+				SPR_investments_from_britain
+				SPR_attack_portugal
+				SPR_investments_from_germany
 			}
 		}
 

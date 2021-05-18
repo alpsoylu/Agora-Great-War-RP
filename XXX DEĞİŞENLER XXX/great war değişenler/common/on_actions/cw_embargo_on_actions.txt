@@ -1,4 +1,11 @@
 on_actions = {
+on_startup = {
+		effect = {
+			FRA = { set_country_flag = FRA_no_elections }
+			FRA = { country_event = { id = fra_event.3 days = 8 } }
+			FRA = { country_event = { id = fra_event.5 } }
+		}
+	}
 	on_annex = {
 		effect = {
 			every_country = {
@@ -14,4 +21,5 @@ on_actions = {
 			}
 		}
 	}
+	
 }

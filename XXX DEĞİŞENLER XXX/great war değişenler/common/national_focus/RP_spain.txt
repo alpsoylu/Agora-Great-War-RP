@@ -3,11 +3,11 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = -10
+			add = 10
 			tag = SPR
 		}
 	}
-	continuous_focus_position = { x = 0 y = 2000 }
+	continuous_focus_position = { x = 0 y = 3000 }
 	default = no
 	
 	focus = {
@@ -446,15 +446,49 @@ add_stability = -0.15
 		focus = SPR_king_parliement
 		}
 		available = {
+		NOT = {is_in_faction_with = ENG }
 		}
 		completion_reward = {
 		ENG = { country_event = { id = spr_event.5 } }
 		}
 		ai_will_do = {
-		factor = 5
+		factor = 0
 		}
 		relative_position_id = SPR_for_democracy
-		x = 0
+		x = 1
+		y = 1
+	
+	}
+	focus = {
+		id = SPR_democracy_befriend_england
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_for_democracy
+		}
+		prerequisite = {
+		focus = SPR_establish_secularism
+		focus = SPR_king_parliement
+		}
+		mutually_exclusive = {
+		focus = SPR_democracy_deal_for_gibraltar
+		}
+		available = {
+		ENG = { SPR = { NOT = { has_opinion_modifier = cw_embargo_trade} } }
+		SPR = { ENG = { NOT = { has_opinion_modifier = cw_embargo_trade} } }
+		NOT = {ENG = {has_war_with = SPR} }
+		}
+		completion_reward = {
+		add_opinion_modifier = { target = ENG modifier = huge_increase }
+		ENG = {
+		add_opinion_modifier = { target = ENG modifier = huge_increase }
+		}
+		}
+		ai_will_do = {
+		factor = 15
+		}
+		relative_position_id = SPR_for_democracy
+		x = -1
 		y = 1
 	
 	}
@@ -464,6 +498,7 @@ add_stability = -0.15
 		cost = 10,00
 		prerequisite = {
 		focus = SPR_democracy_deal_for_gibraltar
+		focus = SPR_democracy_befriend_england
 		}
 		available = {
 		}
@@ -471,20 +506,17 @@ add_stability = -0.15
 		focus = SPR_democracy_willpower_over_technology
 		}
 		completion_reward = {
-		custom_effect_tooltip = SPR_learn_tt
-		hidden_effect = {
 		remove_ideas = RP_legacy_of_american_spanish_war
 		add_timed_idea = {
     idea = RP_legacy_of_american_spanish_war2
     days = 90
 		}
 		}
-		}
 		ai_will_do = {
 		factor = 5
 		}
 		relative_position_id = SPR_democracy_deal_for_gibraltar
-		x = -2
+		x = -3
 		y = 1
 	
 	}
@@ -494,6 +526,7 @@ add_stability = -0.15
 		cost = 10,00
 		prerequisite = {
 		focus = SPR_democracy_deal_for_gibraltar
+		focus = SPR_democracy_befriend_england
 		}
 		available = {
 		}
@@ -501,87 +534,15 @@ add_stability = -0.15
 		focus = SPR_democracy_learn_from_our_mistakes
 		}
 		completion_reward = {
-		custom_effect_tooltip = SPR_willpower_tt
-		hidden_effect = {
 		remove_ideas = RP_legacy_of_american_spanish_war
 		add_ideas = RP_legacy_of_american_spanish_war_will
 		}
-		}
 		ai_will_do = {
 		factor = 5
 		}
 		relative_position_id = SPR_democracy_deal_for_gibraltar
-		x = 2
+		x = 1
 		y = 1
-	
-	}
-	focus = {
-		id = SPR_radicalism
-		icon = GFX_focus_spr_anarchism_knows_no_borders
-		cost = 10,00
-		prerequisite = {
-		focus = SPR_democracy_learn_from_our_mistakes
-		focus = SPR_democracy_willpower_over_technology
-		}
-		available = {
-		has_completed_focus = SPR_down_with_the_king
-		}
-		mutually_exclusive = {
-		focus = SPR_liberalism
-		}
-		completion_reward = {
-		retire_ideology_leader = communism
-		create_country_leader={ 
-	name = "Benito Pérez Galdós" 
-	picture="gfx/leaders/SPR/benito.dds" 
-	expire="1935.1.1" 
-	ideology = marxism
-	traits={  } 
-}
-		set_politics = {
-	ruling_party = communism
-        elections_allowed = no
-        last_election = "1935.12.17"
-        election_frequency = 48
-	}
-	add_popularity = {
-    ideology = communism
-    popularity = 0.4
-}
-		}
-		ai_will_do = {
-		factor = 5
-		}
-		relative_position_id = SPR_democracy_deal_for_gibraltar
-		x = 2
-		y = 2
-	
-	}
-	focus = {
-		id = SPR_liberalism
-		icon = GFX_goal_generic_national_unity
-		cost = 10,00
-		prerequisite = {
-		focus = SPR_democracy_learn_from_our_mistakes
-		focus = SPR_democracy_willpower_over_technology
-		}
-		available = {
-		}
-		mutually_exclusive = {
-		focus = SPR_radicalism
-		}
-		completion_reward = {
-		add_popularity = {
-    ideology = democratic
-    popularity = 0.4
-}
-		}
-		ai_will_do = {
-		factor = 5
-		}
-		relative_position_id = SPR_democracy_deal_for_gibraltar
-		x = -2
-		y = 2
 	
 	}
 	
@@ -797,6 +758,7 @@ set_party_name = {
 		focus = SPR_king_and_parliement
 		}
 		available = {
+		NOT = {is_in_faction_with = ENG }
 		}
 		completion_reward = {
 		ENG = { country_event = { id = spr_event.5 } }
@@ -805,7 +767,40 @@ set_party_name = {
 		factor = 5
 		}
 		relative_position_id = SPR_long_live_king_alfonso
-		x = 0
+		x = 1
+		y = 1
+	
+	}
+	focus = {
+		id = SPR_befriend_england
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10,00
+		prerequisite = {
+		focus = SPR_long_live_king_alfonso
+		}
+		prerequisite = {
+		focus = SPR_bourbon_pact
+		focus = SPR_king_and_parliement
+		}
+		mutually_exclusive = {
+		focus = SPR_deal_for_gibraltar
+		}
+		available = {
+		ENG = { SPR = { NOT = { has_opinion_modifier = cw_embargo_trade} } }
+		SPR = { ENG = { NOT = { has_opinion_modifier = cw_embargo_trade} } }
+		NOT = {ENG = {has_war_with = SPR} }
+		}
+		completion_reward = {
+		add_opinion_modifier = { target = ENG modifier = huge_increase }
+		ENG = {
+		add_opinion_modifier = { target = ENG modifier = huge_increase }
+		}
+		}
+		ai_will_do = {
+		factor = 15
+		}
+		relative_position_id = SPR_long_live_king_alfonso
+		x = -1
 		y = 1
 	
 	}
@@ -815,6 +810,7 @@ set_party_name = {
 		cost = 10,00
 		prerequisite = {
 		focus = SPR_deal_for_gibraltar
+		focus = SPR_befriend_england
 		}
 		available = {
 		}
@@ -822,20 +818,17 @@ set_party_name = {
 		focus = SPR_willpower_over_technology
 		}
 		completion_reward = {
-		custom_effect_tooltip = SPR_learn_tt
-		hidden_effect = {
 		remove_ideas = RP_legacy_of_american_spanish_war
 		add_timed_idea = {
     idea = RP_legacy_of_american_spanish_war2
     days = 90
 		}
 		}
-		}
 		ai_will_do = {
 		factor = 5
 		}
 		relative_position_id = SPR_deal_for_gibraltar
-		x = -2
+		x = -3
 		y = 1
 	
 	}
@@ -845,6 +838,7 @@ set_party_name = {
 		cost = 10,00
 		prerequisite = {
 		focus = SPR_deal_for_gibraltar
+		focus = SPR_befriend_england
 		}
 		available = {
 		}
@@ -852,17 +846,14 @@ set_party_name = {
 		focus = SPR_learn_from_our_mistakes
 		}
 		completion_reward = {
-		custom_effect_tooltip = SPR_willpower_tt
-		hidden_effect = {
 		remove_ideas = RP_legacy_of_american_spanish_war
 		add_ideas = RP_legacy_of_american_spanish_war_will
-		}
 		}
 		ai_will_do = {
 		factor = 5
 		}
 		relative_position_id = SPR_deal_for_gibraltar
-		x = 2
+		x = 1
 		y = 1
 	
 	}
@@ -892,67 +883,7 @@ set_party_name = {
 	
 	
 	
-	focus = {
-		id = SPR_radicalism_cons
-		icon = GFX_focus_spr_anarchism_knows_no_borders
-		cost = 10,00
-		prerequisite = {
-		focus = SPR_learn_from_our_mistakes
-		focus = SPR_willpower_over_technology
-		}
-		available = {
-		has_completed_focus = SPR_right_to_rule
-		}
-		mutually_exclusive = {
-		focus = SPR_liberalism_cons
-		}
-		completion_reward = {
-		set_politics = {
-	ruling_party = fascism
-        elections_allowed = no
-        last_election = "1935.12.17"
-        election_frequency = 48
-	}
-	add_popularity = {
-    ideology = fascism
-    popularity = 0.4
-}
-		}
-		ai_will_do = {
-		factor = 5
-		}
-		relative_position_id = SPR_deal_for_gibraltar
-		x = 2
-		y = 2
 	
-	}
-	focus = {
-		id = SPR_liberalism_cons
-		icon = GFX_goal_generic_national_unity
-		cost = 10,00
-		prerequisite = {
-		focus = SPR_learn_from_our_mistakes
-		focus = SPR_willpower_over_technology
-		}
-		available = {
-		}
-		mutually_exclusive = {
-		focus = SPR_radicalism_cons
-		}
-		completion_reward = {
-		add_popularity = {
-    ideology = neutrality
-    popularity = 0.4
-}
-		}
-		ai_will_do = {
-		factor = 5
-		}
-		relative_position_id = SPR_deal_for_gibraltar
-		x = -2
-		y = 2
-	
-	}
 	
 	
 	
@@ -962,113 +893,752 @@ set_party_name = {
 	
 	
 	#WAAAAAR!
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#BOURBON 
 	focus = {
-		id = SPR_crisis_in_europe
-		icon = GFX_focus_split_helmet
+		id = SPR_improve_relations_with_france
+		icon = GFX_goal_CAN_france_demands
 		cost = 10,00
 		available = {
-		GER = {
+		has_completed_focus = SPR_bourbon_pact
+		has_global_flag = FRA_has_gone_bourbonist
+		NOT = {
 		OR = {
-		has_war_with = FRA
-		has_war_with = RUS
-		has_war_with = ENG
+		has_completed_focus = SPR_improve_relations_with_britain
+		has_completed_focus = SPR_improve_relations_with_germany
 		}
 		}
+		}
+		prerequisite = {
+		focus = 
+		}
+		mutually_exclusive = {
+		focus = 
 		}
 		completion_reward = {
+		add_opinion_modifier = { target = FRA modifier = huge_increase }
+		FRA = {
+		add_opinion_modifier = { target = SPR modifier = huge_increase }
+		}
+		}
+		x = 22
+		y = 8
+
+	}
+	focus = {
+		id = SPR_offer_alliance_france
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 10,00
+		available = {
+		AND = {
+		has_completed_focus = SPR_bourbon_pact
+		OR = {
+		FRA = {
+		is_faction_leader = yes
+		is_in_faction = no
+		}
+		}
+		}
+		}
+		prerequisite = {
+		focus = SPR_improve_relations_with_france
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		custom_effect_tooltip = SPR_france_alliance_tt
+		hidden_effect = {
+		if = {
+		limit = {FRA = {is_faction_leader = yes}}
+		FRA = { country_event = { id = generic.2 } }
+		}
+		if = {
+		limit = {FRA = {is_in_faction = no}}
+		FRA = { country_event = { id = generic.5 } }
+		
+		}
+		}
+		}
+		relative_position_id = SPR_improve_relations_with_france
+		x = 0
+		y = 1
+
+	}
+	focus = {
+		id = SPR_focus1 #LEGACY OF SPANISH EMPIRE
+		icon = GFX_iberia
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = SPR_offer_alliance_france
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+		remove_ideas = RP_legacy_of_american_spanish_war
+		create_wargoal = { type = annex_everything target = POR }
+		unlock_decision_tooltip = RP_SPR_core_portugal
+		hidden_effect = {
+		remove_ideas = RP_legacy_of_american_spanish_war2
+		remove_ideas = RP_legacy_of_american_spanish_war_will
+		}
+		}
+		relative_position_id = SPR_offer_alliance_france
+		x = -2
+		y = 1
+
+	}
+	focus = {
+		id = SPR_focus2 #DEVOLOP SPANISH INDUSTRY
+		icon = GFX_focus_civil
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = SPR_offer_alliance_france
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+		random_owned_controlled_state = {
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+		random_owned_controlled_state = {
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+		random_owned_controlled_state = {
+		add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+		}
+		relative_position_id = SPR_offer_alliance_france
+		x = 2
+		y = 1
+
+	}
+	
+	focus = {
+		id = SPR_spanish_army
+		icon = GFX_focus_army_is_ready
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = SPR_focus1
+		focus = SPR_focus2
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+		army_experience = 15
+		add_tech_bonus = {
+    bonus = 0.25
+    uses = 2
+    category = land_doctrine
+}
+		add_tech_bonus = {
+    bonus = 0.5
+    uses = 1
+    category = land_doctrine
+}
+		}
+		relative_position_id = SPR_focus1
+		x = -1
+		y = 1
+
+	}
+	
+	focus = {
+		id = SPR_spanish_navy
+		icon = GFX_focus_bombard_sevastopol
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = SPR_focus1
+		focus = SPR_focus2
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+		navy_experience = 15
+		add_tech_bonus = {
+    bonus = 0.25
+    uses = 2
+    category = naval_doctrine
+}
+		add_tech_bonus = {
+    bonus = 0.5
+    uses = 1
+    category = naval_doctrine
+}
+		}
+		relative_position_id = SPR_focus2
+		x = 1
+		y = 1
+
+	}
+	
+	focus = {
+		id = SPR_bourbon_union
+		icon = GFX_spr_fra2
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = SPR_spanish_navy
+		}
+		prerequisite = {
+		focus = SPR_spanish_army
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = FRA }
+		unlock_decision_tooltip = RP_SPR_core_france
+		}
+		relative_position_id = SPR_offer_alliance_france
+		x = -1
+		y = 3
+
+	}
+	
+	focus = {
+		id = SPR_one_king_two_nations
+		icon = GFX_spr_fra1
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = SPR_spanish_navy
+		}
+		prerequisite = {
+		focus = SPR_spanish_army
+		}
+		mutually_exclusive = {
+		}
+		completion_reward = {
+		SPR = { country_event = { id = spr_event.8 } }
+		}
+		relative_position_id = SPR_offer_alliance_france
+		x = 1
+		y = 3
+
+	}
+	
+	
+	
+	
+	#BEFRIEND ENGLAND YOLU
+	focus = {
+		id = SPR_improve_relations_with_britain
+		icon = GFX_focus_eng_the_sun_never_sets
+		cost = 10,00
+		available = {
+		OR = {
+		has_completed_focus = SPR_befriend_england
+		has_completed_focus = SPR_democracy_befriend_england
+		}
+		NOT = {
+		OR = {
+		has_completed_focus = SPR_improve_relations_with_germany
+		has_completed_focus = SPR_improve_relations_with_france
+		}
+		}
+		}
+		prerequisite = {
+		focus = 
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		add_opinion_modifier = { target = ENG modifier = huge_increase }
+		ENG = {
+		add_opinion_modifier = { target = SPR modifier = huge_increase }
+		}
 		}
 		x = 15
 		y = 8
 
 	}
 	focus = {
-		id = SPR_neutral_foreign_policy
-		icon = GFX_focus_eagle
-		cost = 10,00
-		available = {
-		GER = {
-		OR = {
-		has_war_with = FRA
-		has_war_with = RUS
-		has_war_with = ENG
-		}
-		}
-		}
-		prerequisite = {
-		focus = SPR_crisis_in_europe
-		}
-		mutually_exclusive = {
-		focus = SPR_join_the_entente
-		focus = SPR_join_the_central_powers
-		}
-		completion_reward = {
-		add_stability = 0.20
-		set_rule = {can_join_factions = no}
-		}
-		relative_position_id = SPR_crisis_in_europe
-		x = 0
-		y = 1
-
-	}
-	focus = {
-		id = SPR_join_the_entente
+		id = SPR_investments_from_britain
 		icon = GFX_focus_consolidate_entente
 		cost = 10,00
 		available = {
-		GER = {
-		OR = {
-		has_war_with = FRA
-		has_war_with = RUS
-		has_war_with = ENG
-		}
-		}
 		}
 		prerequisite = {
-		focus = SPR_crisis_in_europe
+		focus = SPR_improve_relations_with_britain
 		}
 		mutually_exclusive = {
-		focus = SPR_neutral_foreign_policy
-		focus = SPR_join_the_central_powers
+		focus = 
 		}
 		completion_reward = {
-		remove_ideas = neutrality_idea
-		FRA = { country_event = { id = generic.2 } }
-		}
-		relative_position_id = SPR_crisis_in_europe
-		x = -2
-		y = 1
-
+		custom_effect_tooltip = SPR_britain_investment_tt
+		hidden_effect = {
+		random_owned_state = {
+		limit = { is_core_of = SPR }
+		add_extra_state_shared_building_slots = ENG.num_faction_members
+		add_building_construction = {
+    type = industrial_complex
+    level = ENG.num_faction_members
+    instant_build = yes
+}
+}
+		random_owned_state = {
+		limit = { is_core_of = SPR }
+		add_extra_state_shared_building_slots = ENG.num_faction_members
+		add_building_construction = {
+    type = arms_factory
+    level = ENG.num_faction_members
+    instant_build = yes
+}
+}
 	}
-	focus = {
-		id = SPR_join_the_central_powers
-		icon = GFX_focus_ger_weltpolitik
-		cost = 10,00
-		available = {
-		GER = {
-		OR = {
-		has_war_with = FRA
-		has_war_with = RUS
-		has_war_with = ENG
 		}
-		}
-		}
-		prerequisite = {
-		focus = SPR_crisis_in_europe
-		}
-		mutually_exclusive = {
-		focus = SPR_neutral_foreign_policy
-		focus = SPR_join_the_entente
-		}
-		completion_reward = {
-		remove_ideas = neutrality_idea
-		GER = { country_event = { id = generic.2 } }
-		}
-		relative_position_id = SPR_crisis_in_europe
-		x = 2
+		x = 0
 		y = 1
+		relative_position_id = SPR_improve_relations_with_britain
 
 	}
 	
+	focus = {
+		id = SPR_naval_aggrement_with_uk
+		icon = GFX_goal_CAN_fleet_doctrine
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = SPR_investments_from_britain
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		add_offsite_building = { type = dockyard level = 2 }
+		navy_experience = 25
+		add_tech_bonus = {
+    bonus = 0.5
+    uses = 2
+    category = naval_doctrine
+}
+		
+		}
+		x = 2
+		y = 1
+		relative_position_id = SPR_investments_from_britain
+
+	}
+	focus = {
+		id = SPR_military_aggrement_with_uk
+		icon = GFX_focus_eng_the_sun_never_sets
+		cost = 10,00
+		available = {
+		}
+		prerequisite = {
+		focus = SPR_investments_from_britain
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		add_offsite_building = { type = arms_factory level = 2 }
+		army_experience = 5
+		add_tech_bonus = {
+    bonus = 0.5
+    uses = 1
+    category = land_doctrine
+}
+		
+		}
+		x = -2
+		y = 1
+		relative_position_id = SPR_investments_from_britain
+
+	}
+	focus = {
+		id = SPR_join_uk
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10,00
+		available = {
+		ENG = {is_in_faction = yes}
+		}
+		prerequisite = {
+		focus = SPR_naval_aggrement_with_uk
+		focus = SPR_military_aggrement_with_uk
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		every_country = {
+		limit = {
+		AND = {
+		is_faction_leader = yes
+		OR = {
+		tag = ENG
+		is_in_faction_with = ENG
+		}
+		}
+		}
+		country_event = { id = generic.2 } 
+		}
+		}
+		x = 0
+		y = 2
+		relative_position_id = SPR_investments_from_britain
+
+	}
+	focus = {
+		id = SPR_attack_portugal
+		icon = GFX_iberia
+		cost = 10,00
+		available = {
+		NOT = {is_in_faction_with = POR}
+		POR = {exists = yes}
+		}
+		prerequisite = {
+		focus = SPR_join_uk
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = POR }
+		}
+		x = -2
+		y = 3
+		relative_position_id = SPR_investments_from_britain
+
+	}
+	focus = {
+		id = SPR_attack_morocco
+		icon = GFX_focus_planning_bonus
+		cost = 10,00
+		available = {
+		NOT = {is_in_faction_with = MOR}
+		MOR = {exists = yes}
+		}
+		prerequisite = {
+		focus = SPR_join_uk
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = MOR }
+		}
+		x = 0
+		y = 3
+		relative_position_id = SPR_investments_from_britain
+
+	}
+	focus = {
+		id = SPR_attack_france
+		icon = GFX_spr_fra2
+		cost = 10,00
+		available = {
+		NOT = {is_in_faction_with = FRA}
+		FRA = {exists = yes}
+		}
+		prerequisite = {
+		focus = SPR_join_uk
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = FRA }
+		}
+		x = 2
+		y = 3
+		relative_position_id = SPR_investments_from_britain
+
+	}
+	
+	
+	#CENTRAL POWERS YOLU
+	focus = {
+		id = SPR_improve_relations_with_germany
+		icon = GFX_focus_align_germany
+		cost = 10,00
+		available = {
+		OR = {
+		has_completed_focus = SPR_deal_for_gibraltar
+		has_completed_focus = SPR_democracy_deal_for_gibraltar
+		}
+		NOT = {
+		OR = {
+		has_completed_focus = SPR_improve_relations_with_france
+		has_completed_focus = SPR_improve_relations_with_britain
+		}
+		}
+		}
+		prerequisite = {
+		focus = 
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		add_opinion_modifier = { target = ENG modifier = huge_increase }
+		GER = {
+		add_opinion_modifier = { target = SPR modifier = huge_increase }
+		}
+		}
+		x = 8
+		y = 8
+
+	}
+	focus = {
+		id = SPR_investments_from_germany
+		icon = GFX_focus_deal_with_german_empire
+		cost = 10,00
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SPR_improve_relations_with_germany
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		custom_effect_tooltip = SPR_GER_investment_tt
+		hidden_effect = {
+		random_owned_state = {
+		limit = { is_core_of = SPR }
+		add_extra_state_shared_building_slots = GER.num_faction_members
+		add_building_construction = {
+    type = industrial_complex
+    level = GER.num_faction_members
+    instant_build = yes
+}
+}
+		random_owned_state = {
+		limit = { is_core_of = SPR }
+		add_extra_state_shared_building_slots = GER.num_faction_members
+		add_building_construction = {
+    type = arms_factory
+    level = GER.num_faction_members
+    instant_build = yes
+}
+}
+	}
+		}
+		x = 0
+		y = 1
+		relative_position_id = SPR_improve_relations_with_germany
+
+	}
+	focus = {
+		id = SPR_buy_guns
+		icon = GFX_focus_army_is_ready
+		cost = 10,00
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SPR_investments_from_germany
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 10000
+    producer = GER
+}
+		GER = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+		type = industrial_complex
+		level = 2
+		instant_build = yes
+		}
+		}
+		}
+
+		}
+		x = -2
+		y = 1
+		relative_position_id = SPR_investments_from_germany
+
+	}
+	focus = {
+		id = SPR_buy_ships
+		icon = GFX_focus_bombard_sevastopol
+		cost = 10,00
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SPR_investments_from_germany
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		hidden_effect = {
+		load_oob = GER_SPR_naval_mtg
+		}
+		custom_effect_tooltip = SPR_create_heavy_ship
+		GER = {
+		random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+		type = industrial_complex
+		level = 2
+		instant_build = yes
+		}
+		}
+		}
+
+		}
+		x = 2
+		y = 1
+		relative_position_id = SPR_investments_from_germany
+
+	}
+	
+	focus = {
+		id = SPR_germany_military_parade
+		icon = GFX_focus_central_powers
+		cost = 10,00
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SPR_buy_ships
+		focus = SPR_buy_guns
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		army_experience = 25
+		add_tech_bonus = {
+    bonus = 0.25
+    uses = 3
+    category = land_doctrine
+}
+every_country = {
+		limit = {
+		AND = {
+		is_faction_leader = yes
+		OR = {
+		tag = GER
+		is_in_faction_with = GER
+		}
+		}
+		}
+		country_event = { id = generic.2 } 
+		}
+
+		}
+		x = 0
+		y = 2
+		relative_position_id = SPR_investments_from_germany
+
+	}
+	
+	focus = {
+		id = SPR_attack_por_ger
+		icon = GFX_iberia
+		cost = 10,00
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SPR_germany_military_parade
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = POR }
+		}
+		x = -2
+		y = 1
+		relative_position_id = SPR_germany_military_parade
+
+	}
+	
+	focus = {
+		id = SPR_attack_france_ger
+		icon = GFX_spr_fra2
+		cost = 10,00
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SPR_germany_military_parade
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = FRA }
+		}
+		x = 0
+		y = 1
+		relative_position_id = SPR_germany_military_parade
+
+	}
+	
+	focus = {
+		id = SPR_attack_italy
+		icon = GFX_hoi4tgw_italy
+		cost = 10,00
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SPR_germany_military_parade
+		}
+		mutually_exclusive = {
+		focus = 
+		}
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = ITA }
+		}
+		x = 2
+		y = 1
+		relative_position_id = SPR_germany_military_parade
+
+	}
 	
 	
 	#GENERIC#

@@ -87,19 +87,54 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 	original_tag = FRA
-	has_completed_focus = FRA_1910_election
+	date > 1910.4.24
 	}
 	#DEMOCRATIC
 	option = {
 	ai_chance = {base = 10}
 		name = fra_event.3.a
 		set_country_flag = FRA_prrr
+		clr_country_flag = FRA_sfio
+		clr_country_flag = FRA_cons
+		load_focus_tree = { tree = RP_france_prrrs }
 	}
 	#COMMUNIST
 	option = {
 	ai_chance = {base = 10}
 		name = fra_event.3.b
 		set_country_flag = FRA_sfio
+		clr_country_flag = FRA_prrr
+		clr_country_flag = FRA_cons
+		load_focus_tree = { tree = RP_france_sfio }
+	}
+	#COMMUNIST
+	option = {
+	ai_chance = {base = 10}
+		name = fra_event.3.c
+		set_country_flag = FRA_cons
+		clr_country_flag = FRA_prrr
+		clr_country_flag = FRA_sfio
+		load_focus_tree = { tree = RP_france_cons }
+	}
+	
+	}
+
+#ELECTIONS
+country_event = {
+	id = fra_event.5 #event fra_event.5 FRA
+	title = fra_event.5.t
+	desc = fra_event.5.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_trigfraed_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = FRA
+	}
+	#DEMOCRATIC
+	option = {
+	ai_chance = {base = 10}
+		name = fra_event.5.a
 	}
 	
 	}
