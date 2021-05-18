@@ -1,3 +1,0 @@
-﻿add_namespace = ww1_spain
-
-

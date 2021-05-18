@@ -1,8 +1,0 @@
-spriteTypes = {
-
-spriteType = {
-		name = "GFX_modifiers_conscription_exemptions_granted"
-		textureFile = "gfx/interface/state_modifiers/modifiers_conscription_exemptions_granted.dds"
-	}
-	
-}
