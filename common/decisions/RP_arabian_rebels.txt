@@ -21,7 +21,7 @@ decision_category_arabian_rebels = {
 			state = 679
 		}
 		on_map_mode = map_only
-		cost = 50
+		cost =  100
 		complete_effect = {
 		679 = {set_state_flag = RP_arab_1}	
 		679 = {clr_state_flag = RP_arab_0}	
@@ -51,7 +51,7 @@ decision_category_arabian_rebels = {
 			state = 679
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		679 = {set_state_flag = RP_arab_2}	
 		679 = {clr_state_flag = RP_arab_1}	
@@ -80,7 +80,7 @@ decision_category_arabian_rebels = {
 			state = 679
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		679 = {set_state_flag = RP_arab_3}	
 		679 = {clr_state_flag = RP_arab_2}	
@@ -167,7 +167,7 @@ decision_category_arabian_rebels = {
 			state = 454
 		}
 		on_map_mode = map_only
-		cost = 50
+		cost =  100
 		complete_effect = {
 		454 = {set_state_flag = RP_arab_1}	
 		454 = {clr_state_flag = RP_arab_0}	
@@ -197,7 +197,7 @@ decision_category_arabian_rebels = {
 			state = 454
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		454 = {set_state_flag = RP_arab_2}	
 		454 = {clr_state_flag = RP_arab_1}	
@@ -226,7 +226,7 @@ decision_category_arabian_rebels = {
 			state = 454
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		454 = {set_state_flag = RP_arab_3}	
 		454 = {clr_state_flag = RP_arab_2}	
@@ -314,7 +314,7 @@ add_state_core = 454
 			state = 455
 		}
 		on_map_mode = map_only
-		cost = 50
+		cost =  100
 		complete_effect = {
 		455 = {set_state_flag = RP_arab_1}	
 		455 = {clr_state_flag = RP_arab_0}	
@@ -344,7 +344,7 @@ add_state_core = 454
 			state = 455
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		455 = {set_state_flag = RP_arab_2}	
 		455 = {clr_state_flag = RP_arab_1}	
@@ -373,7 +373,7 @@ add_state_core = 454
 			state = 455
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		455 = {set_state_flag = RP_arab_3}	
 		455 = {clr_state_flag = RP_arab_2}	
@@ -454,7 +454,7 @@ add_state_core = 455
 			state = 747
 		}
 		on_map_mode = map_only
-		cost = 50
+		cost =  100
 		complete_effect = {
 		747 = {set_state_flag = RP_arab_1}	
 		747 = {clr_state_flag = RP_arab_0}	
@@ -484,7 +484,7 @@ add_state_core = 455
 			state = 747
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		747 = {set_state_flag = RP_arab_2}	
 		747 = {clr_state_flag = RP_arab_1}	
@@ -513,7 +513,7 @@ add_state_core = 455
 			state = 747
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		747 = {set_state_flag = RP_arab_3}	
 		747 = {clr_state_flag = RP_arab_2}	
@@ -592,7 +592,7 @@ add_state_core = 747
 			state = 293
 		}
 		on_map_mode = map_only
-		cost = 50
+		cost =  100
 		complete_effect = {
 		293 = {set_state_flag = RP_arab_1}	
 		293 = {clr_state_flag = RP_arab_0}	
@@ -622,7 +622,7 @@ add_state_core = 747
 			state = 293
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		293 = {set_state_flag = RP_arab_2}	
 		293 = {clr_state_flag = RP_arab_1}	
@@ -651,7 +651,7 @@ add_state_core = 747
 			state = 293
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		293 = {set_state_flag = RP_arab_3}	
 		293 = {clr_state_flag = RP_arab_2}	
@@ -727,7 +727,7 @@ add_state_core = 293
 			state = 554
 		}
 		on_map_mode = map_only
-		cost = 50
+		cost =  100
 		complete_effect = {
 		554 = {set_state_flag = RP_arab_1}	
 		554 = {clr_state_flag = RP_arab_0}	
@@ -757,7 +757,7 @@ add_state_core = 293
 			state = 554
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		554 = {set_state_flag = RP_arab_2}	
 		554 = {clr_state_flag = RP_arab_1}	
@@ -786,7 +786,7 @@ add_state_core = 293
 			state = 554
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		554 = {set_state_flag = RP_arab_3}	
 		554 = {clr_state_flag = RP_arab_2}	
@@ -870,7 +870,7 @@ add_state_core = 554
 			state = 553
 		}
 		on_map_mode = map_only
-		cost = 50
+		cost =  100
 		complete_effect = {
 		553 = {set_state_flag = RP_arab_1}	
 		553 = {clr_state_flag = RP_arab_0}	
@@ -900,7 +900,7 @@ add_state_core = 554
 			state = 553
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		553 = {set_state_flag = RP_arab_2}	
 		553 = {clr_state_flag = RP_arab_1}	
@@ -929,7 +929,7 @@ add_state_core = 554
 			state = 553
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		553 = {set_state_flag = RP_arab_3}	
 		553 = {clr_state_flag = RP_arab_2}	
@@ -1014,7 +1014,7 @@ add_state_core = 553
 			state = 675
 		}
 		on_map_mode = map_only
-		cost = 50
+		cost =  100
 		complete_effect = {
 		675 = {set_state_flag = RP_arab_1}	
 		675 = {clr_state_flag = RP_arab_0}	
@@ -1044,7 +1044,7 @@ add_state_core = 553
 			state = 675
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		675 = {set_state_flag = RP_arab_2}	
 		675 = {clr_state_flag = RP_arab_1}	
@@ -1073,7 +1073,7 @@ add_state_core = 553
 			state = 675
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		675 = {set_state_flag = RP_arab_3}	
 		675 = {clr_state_flag = RP_arab_2}	
@@ -1157,7 +1157,7 @@ add_state_core = 675
 			state = 804
 		}
 		on_map_mode = map_only
-		cost = 50
+		cost =  100
 		complete_effect = {
 		804 = {set_state_flag = RP_arab_1}	
 		804 = {clr_state_flag = RP_arab_0}	
@@ -1187,7 +1187,7 @@ add_state_core = 675
 			state = 804
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		804 = {set_state_flag = RP_arab_2}	
 		804 = {clr_state_flag = RP_arab_1}	
@@ -1216,7 +1216,7 @@ add_state_core = 675
 			state = 804
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		804 = {set_state_flag = RP_arab_3}	
 		804 = {clr_state_flag = RP_arab_2}	
@@ -1295,7 +1295,7 @@ add_state_core = 804
 			state = 291
 		}
 		on_map_mode = map_only
-		cost = 50
+		cost =  100
 		complete_effect = {
 		291 = {set_state_flag = RP_arab_1}	
 		291 = {clr_state_flag = RP_arab_0}	
@@ -1325,7 +1325,7 @@ add_state_core = 804
 			state = 291
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		291 = {set_state_flag = RP_arab_2}	
 		291 = {clr_state_flag = RP_arab_1}	
@@ -1354,7 +1354,7 @@ add_state_core = 804
 			state = 291
 		}
 		on_map_mode = map_only
-		cost = 100
+		cost =  150
 		complete_effect = {
 		291 = {set_state_flag = RP_arab_3}	
 		291 = {clr_state_flag = RP_arab_2}	
@@ -1450,7 +1450,7 @@ political_actions = {
 		}
 		
 
-		cost = 100
+		cost =  150
 		complete_effect = {
 		every_state = {
 		limit = {is_core_of = FRA}
@@ -1483,7 +1483,7 @@ political_actions = {
 		}
 		
 
-		cost = 100
+		cost =  150
 		complete_effect = {
 		every_state = {
 		limit = {is_core_of = POR}
@@ -1507,7 +1507,7 @@ political_actions = {
 		controls_state = 680
         }
 		visible = {
-		#has_completed_focus = FRA_claim_syria
+		has_completed_focus = FRA_claim_syria
 		}
 		
 

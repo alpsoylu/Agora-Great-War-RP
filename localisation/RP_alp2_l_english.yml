@@ -39,6 +39,12 @@
  SPR_attack_italy:0 "Attack [ITA.GetName]"
  SPR_create_heavy_ship:0 "This focus will create 2 Heavy Ships in Valencia"
  RP_FRA_support_monarchism:0 "Support Monarchism"
+ FRA_befriend_germany:0 "Befriend Germany"
+ FRA_embargo_germany:0 "Embargo Germany"
+ FRA_attack_germany:0 "Attack Germany"
+ FRA_conquer_congo:0 "Conquer Congo"
+ FRA_conquer_spanish_colonies:0 "Conquer Spanish Colonies"
+ FRA_conquer_portugeese_colonies:0 "Conquer Portugese Colonies"
  
  
  
@@ -243,6 +249,7 @@
  fra_event.4.t:0 "Ottoman Goverment exiled Armenians"
  fra_event.4.d:0 "Tensions between Armenian and Ottoman civilians were rising in the last couple of months.Ottoman Goverment has agreed to send the Armenians of Anatolia to Southern Anatolia and Syria.Many Armenians have died because of the circumstances."
  fra_event.4.a:0 "Ok"
+ RP_dissolution_triple_entente:0 "Dissolved the Alliance with us"
  
  fra_event.5:0 "Welcome to AGORA GREAT WAR RP in France"
  fra_event.5.t:0 "Welcome to AGORA GREAT WAR RP in France"

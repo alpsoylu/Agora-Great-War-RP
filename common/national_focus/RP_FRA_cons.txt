@@ -1,7 +1,7 @@
 focus_tree = {
 	id = RP_france_cons
 	default = no
-	country = { factor=0 modifier = { add = 9 tag = FRA} }
+	country = { factor=0 modifier = { add = 2009 tag = FRA} }
 	country = { factor=0 modifier = { add = 100 has_country_flag = FRA_cons} }
 
 	focus = {
