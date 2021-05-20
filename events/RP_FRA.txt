@@ -110,12 +110,12 @@ country_event = {
 		clr_country_flag = FRA_cons
 		load_focus_tree = { tree = RP_france_sfio }
 	}
-	#COMMUNIST
+	#ACTION FRANÇAISE
 	option = {
 	ai_chance = {base = 10}
 		name = fra_event.3.c
 		trigger = {
-		always = no
+		#always = no
 		}
 		set_country_flag = FRA_cons
 		clr_country_flag = FRA_prrr

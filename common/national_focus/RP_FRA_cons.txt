@@ -139,32 +139,8 @@ popularity = -0.25
 	}
 
 	focus = {
-		id = FRA_conquer_egypt
-		icon = GFX_focus_tur_restore_order_in_egypt
-		available = {
-		EGY = {exists = yes}
-		}
-		prerequisite = {
-		focus = FRA_legacy_of_napoleon
-		}
-		bypass = {
-		EGY = {exists = no}
-		}
-		ai_will_do = { factor = 0 }
-		cost = 10
-		available = {
-		}
-		completion_reward = {
-		create_wargoal = {type = annex_everything target = EGY}	
-		}
-		x = 3
-		y = 1
-		relative_position_id = FRA_legacy_of_napoleon
-	}
-
-	focus = {
-		id = FRA_nap_focus
-		icon = GFX_focus_tur_restore_order_in_egypt
+		id = FRA_establish_empire
+		icon = GFX_focus_tur_empower_sultan
 		available = {
 		}
 		prerequisite = {
@@ -175,6 +151,7 @@ popularity = -0.25
 		available = {
 		}
 		completion_reward = {
+		set_cosmetic_tag = FRA_napoleon
 		}
 		x = 1
 		y = 1
@@ -207,7 +184,7 @@ popularity = -0.25
 		available = {
 			is_subject = no
 			OR = {
-			date > 1913.6.1
+			date > 1914.1.1
 			}
 		}
 		
@@ -278,7 +255,7 @@ popularity = -0.25
 		available = {
 			is_subject = no
 			OR = {
-			date > 1914.1.1
+			date > 1914.6.1
 			}
 		}
 		
@@ -326,7 +303,7 @@ popularity = -0.25
 		available = {
 			is_subject = no
 			OR = {
-			date > 1914.6.1
+			date > 1915.1.1
 			}
 		}
 		

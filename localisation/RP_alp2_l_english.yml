@@ -11,6 +11,10 @@
  FRA_anti_british_policy:0 "Anti-British Policy"
  FRA_sfio_victory_desc:0 ""
  FRA_conquer_egypt:0 "Conquer Egypt"
+ FRA_establish_empire:0 "Establish the Empire"
+ FRA_napoleon:0 "French Empire"
+ FRA_napoleon_DEF:0 "French Empire"
+ FRA_napoleon_ADJ:0 "French"
  
  
  

@@ -567,6 +567,10 @@ FRA_start = {
 	color = rgb { 7  57  199 }
 	color_ui = rgb { 74 147 255 }
 }
+FRA_napoleon = {
+	color = rgb { 0 58 145 }
+	color_ui = rgb { 74 147 255 }
+}
 SYR_mandate = {
 	color = rgb { 1 85 164 }  #R-1
 	color_ui = rgb { 75 147 255  } #R-1
