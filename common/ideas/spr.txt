@@ -478,6 +478,25 @@ ideas = {
 			}
 		}
 		
+		RP_FRA_vive_la_france = {
+
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			available = {
+				tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.1
+			}
+		}
+		
 		
 	}
 }

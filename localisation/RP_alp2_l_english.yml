@@ -13,6 +13,14 @@
  FRA_conquer_egypt:0 "Conquer Egypt"
  FRA_establish_empire:0 "Establish the Empire"
  FRA_napoleon:0 "French Empire"
+ FRA_claim_spanish_trone:0 "Claim the Spanish Throne"
+ FRA_befriend_spain:0 "Befriend Spain"
+ FRA_alliance_with_spain:0 "Alliance with Spain"
+ FRA_integrate_spain:0 "Integrate Spain"
+ FRA_italian_campaign:0 "Italian Campaign"
+ FRA_destroy_austria:0 "Destroy [AUH.GetName]"
+ FRA_attack_portugal:0 "Attack [POR.GetName]"
+ FRA_befriend_portugal:0 "Befriend [POR.GetName]"
  FRA_napoleon_DEF:0 "French Empire"
  FRA_napoleon_ADJ:0 "French"
  
@@ -49,6 +57,7 @@
  FRA_conquer_congo:0 "Conquer Congo"
  FRA_conquer_spanish_colonies:0 "Conquer Spanish Colonies"
  FRA_conquer_portugeese_colonies:0 "Conquer Portugese Colonies"
+ FRA_demand_catalonia:0 "Demand Catalonia"
  
  
  
@@ -209,6 +218,8 @@
  fra_event.3.b:0 "SFIO (Socialists)"
  fra_event.3.c:0 "Action Française (Conservatists)"
  FRA_claim_syria:0 "Claim Syria"
+ FRA_claim_syria_monarchy:0 "Claim Syria"
+ FRA_ottoman_campaign:0 "Avenge the Siege of Acre"
  RP_FRA_create_syrian_mandate:0 "Create the Syrian Mandate"
  SYR_mandate:0 "French Mandate of Syria and Lebanon"
  SYR_mandate_DEF:0 "French Mandate of Syria and Lebanon"
@@ -254,11 +265,29 @@
  fra_event.4.d:0 "Tensions between Armenian and Ottoman civilians were rising in the last couple of months.Ottoman Goverment has agreed to send the Armenians of Anatolia to Southern Anatolia and Syria.Many Armenians have died because of the circumstances."
  fra_event.4.a:0 "Ok"
  RP_dissolution_triple_entente:0 "Dissolved the Alliance with us"
+ RP_FRA_vive_la_france:0 "Vive la France!"
  
  fra_event.5:0 "Welcome to AGORA GREAT WAR RP in France"
  fra_event.5.t:0 "Welcome to AGORA GREAT WAR RP in France"
  fra_event.5.d:0 "First of all a couple days later you will get an election event.You will chose your leader and your focus tree will change.So you dont have to select a focus before that.The French Content isn't fully finished and there can be bugs.But if it is released it means its playable.In the election event,the options you can select are finished.Good Luck!"
  fra_event.5.a:0 "Ok"
+ 
+ fra_event.6:0 "France demands Catalonia"
+ fra_event.6.t:0 "France demands Catalonia"
+ fra_event.6.d:0 "France demands Catalonia.Should we give it to them?"
+ fra_event.6.a:0 "YES"
+ fra_event.6.b:0 "NO"
+ 
+ fra_event.7:0 "Spain accepts our demand of Catalonia"
+ fra_event.7.t:0 "Spain accepts our demand of Catalonia"
+ fra_event.7.d:0 "Spain has accepted our demand of Catalonia.This is a great day for our nations friendship!"
+ fra_event.7.a:0 "YES!"
+ 
+ fra_event.8:0 "Spain rejects our demand of Catalonia"
+ fra_event.8.t:0 "Spain rejects our demand of Catalonia"
+ fra_event.8.d:0 "Spain has rejected our demand of Catalonia.If they dont give Catalonia to us,they should be prepared for war!"
+ fra_event.8.a:0 "TO WAR!"
+ 
  
  spr_event.8:0 "Spain suggested that king Alfonso XIII shall rule both of our countries"
  spr_event.8.t:0 "Spain suggested that king Alfonso XIII shall rule both of our countries"
@@ -275,6 +304,7 @@
  spr_event.10.t:0 "France rejects!"
  spr_event.10.d:0 "France has rejected our offer for King Alfonso XIII to rule both of our countries."
  spr_event.10.a:0 "Ok."
+ FRA_not_developed_tt:0 "§RThis path is not finished yet.§!"
  
  
  

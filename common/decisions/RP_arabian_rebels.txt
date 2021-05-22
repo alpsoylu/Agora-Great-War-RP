@@ -1507,7 +1507,10 @@ political_actions = {
 		controls_state = 680
         }
 		visible = {
+		OR = {
 		has_completed_focus = FRA_claim_syria
+		has_completed_focus = FRA_claim_syria_monarchy
+		}
 		}
 		
 

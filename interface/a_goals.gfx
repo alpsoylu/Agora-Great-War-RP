@@ -441,6 +441,10 @@ SpriteType = {
 	name = "GFX_maurras"
 	texturefile = "gfx/interface/goals/newicons/maurras.dds"			
 	}
+SpriteType = {
+	name = "GFX_fra_anti_eng"
+	texturefile = "gfx/interface/goals/newicons/fra_anti_eng.dds"			
+	}
 
 
 	

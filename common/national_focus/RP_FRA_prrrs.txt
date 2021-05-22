@@ -477,7 +477,7 @@ set_cosmetic_tg = FRA_start
 	
 	focus = {
 		id = FRA_anti_british_policy
-		icon = GFX_hoi4tgw_britania
+		icon = GFX_fra_anti_eng
 		prerequisite = {
 			focus = FRA_briand_victory
 		}

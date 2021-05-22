@@ -1,7 +1,7 @@
 focus_tree = {
 	id = RP_france_cons
 	default = no
-	country = { factor=0 modifier = { add = 2009 tag = FRA} }
+	country = { factor=0 modifier = { add = 9 tag = FRA} }
 	country = { factor=0 modifier = { add = 100 has_country_flag = FRA_cons} }
 
 	focus = {
@@ -49,11 +49,31 @@ set_cosmetic_tag = FRA_start
 		ai_will_do = { factor = 0 }
 		cost = 10
 		available = {
+		NOT = {has_completed_focus = FRA_monarchist}
+		always = no
 		}
 		completion_reward = {
-		
+		custom_effect_tooltip = FRA_not_developed_tt
+		create_country_leader = {
+	name = "Maurice Pujo" 
+	picture = "gfx/leaders/FRA/pujo.dds" 
+	expire = "1935.1.1" 
+	ideology = fascism_ideology
+	traits = {} 
+}
+		create_country_leader = {
+	name = "Charles Maurras" 
+	picture = "gfx/leaders/FRA/maurras.dds" 
+	expire = "1935.1.1" 
+	ideology = despotism
+	traits = {} 
+}
+add_popularity = {
+ideology = fascism
+popularity = 0.35
+}
 		}
-		x = -6
+		x = -7
 		y = 1
 		relative_position_id = FRA_cons_victory
 	}
@@ -64,9 +84,13 @@ set_cosmetic_tag = FRA_start
 		prerequisite = {
 		focus = FRA_cons_victory
 		}
+		mutually_exclusive = {
+		focus = FRA_far_right
+		}
 		ai_will_do = { factor = 0 }
 		cost = 10
 		available = {
+		NOT = {has_completed_focus = FRA_far_right}
 		}
 		completion_reward = {
 		create_country_leader = {
@@ -81,7 +105,7 @@ ideology = neutrality
 popularity = -0.25
 }
 		}
-		x = 6
+		x = 7
 		y = 1
 		relative_position_id = FRA_cons_victory
 	}
@@ -133,9 +157,72 @@ popularity = -0.25
 				}
 				
 		}
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = FRA_gain_support_for_monarchism
+	}
+
+	focus = {
+		id = FRA_italian_campaign
+		icon = GFX_focus_ita_victor_emmanuel_assassination
+		available = {
+		ITA = {exists = yes}
+		}
+		prerequisite = {
+		focus = FRA_legacy_of_napoleon
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		available = {
+		}
+		completion_reward = {	
+		create_wargoal = {target = ITA type = annex_everything expire = 0}
+		}
+		x = 1
+		y = 1
+		relative_position_id = FRA_legacy_of_napoleon
+	}
+
+	focus = {
+		id = FRA_destroy_austria
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		available = {
+		AUH = {exists = yes}
+		}
+		prerequisite = {
+		focus = FRA_italian_campaign
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		available = {
+		}
+		completion_reward = {	
+		create_wargoal = {target = AUH type = annex_everything expire = 0}
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_italian_campaign
+	}
+
+	focus = {
+		id = FRA_demand_catalonia
+		icon = GFX_focus_split_helmet
+		available = {
+		SPR = {controls_state = 165}
+		}
+		prerequisite = {
+		focus = FRA_destroy_austria
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		available = {
+		}
+		completion_reward = {	
+		SPR = { country_event = { id = fra_event.6 hours = 6 } }
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_destroy_austria
 	}
 
 	focus = {
@@ -145,6 +232,7 @@ popularity = -0.25
 		}
 		prerequisite = {
 		focus = FRA_legacy_of_napoleon
+		focus = FRA_bourbonist_restoration
 		}
 		ai_will_do = { factor = 0 }
 		cost = 10
@@ -153,7 +241,7 @@ popularity = -0.25
 		completion_reward = {
 		set_cosmetic_tag = FRA_napoleon
 		}
-		x = 1
+		x = -2
 		y = 1
 		relative_position_id = FRA_legacy_of_napoleon
 	}
@@ -162,17 +250,16 @@ popularity = -0.25
 	focus = {
 		id = FRA_avenge_waterloo #you now have ABBA stuck in your head for the rest of the day
 		icon = GFX_focus_attack_britain
-		x = -2
+		x = -1
 		y = 1
 		offset = {
 			x = 0
 			y = 0
 		}
 		prerequisite = {
-			focus = FRA_legacy_of_napoleon
-			focus = FRA_bourbonist_restoration
+			focus = FRA_establish_empire
 		}
-		relative_position_id = FRA_legacy_of_napoleon
+		relative_position_id = FRA_establish_empire
 		cost = 10
 
 		ai_will_do = {
@@ -186,6 +273,7 @@ popularity = -0.25
 			OR = {
 			date > 1914.1.1
 			}
+			
 		}
 		
 		bypass = {
@@ -235,7 +323,7 @@ popularity = -0.25
 	focus = {
 		id = FRA_retribution_for_sedan
 		icon = GFX_focus_attack_germany
-		x = 0
+		x = 1
 		y = 1
 		offset = {
 			x = 0
@@ -243,9 +331,9 @@ popularity = -0.25
 		}
 		
 		prerequisite = {
-			focus = FRA_avenge_waterloo
+			focus = FRA_establish_empire
 		}
-		relative_position_id = FRA_avenge_waterloo
+		relative_position_id = FRA_establish_empire
 		cost = 10
 		will_lead_to_war_with = GER
 		ai_will_do = {
@@ -284,7 +372,7 @@ popularity = -0.25
 		id = FRA_return_to_borodino
 		icon = GFX_focus_attack_russia
 		x = 0
-		y = 1
+		y = 2
 		offset = {
 			x = 0
 			y = 0
@@ -292,8 +380,9 @@ popularity = -0.25
 		
 		prerequisite = {
 			focus = FRA_retribution_for_sedan
+			focus = FRA_avenge_waterloo
 		}
-		relative_position_id = FRA_retribution_for_sedan
+		relative_position_id = FRA_establish_empire
 		cost = 10
 
 		ai_will_do = {
@@ -357,6 +446,207 @@ popularity = -0.25
 		x = -2
 		y = 1
 		relative_position_id = FRA_gain_support_for_monarchism
+	}
+	
+
+	focus = {
+		id = FRA_claim_spanish_trone
+		icon = GFX_spr_fra2
+		available = {
+		}
+		mutually_exclusive = {
+		focus = FRA_befriend_spain
+		}
+		prerequisite = {
+		focus = FRA_bourbonist_restoration
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		available = {
+		}
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = SPR }
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_bourbonist_restoration
+	}
+	
+
+	focus = {
+		id = FRA_befriend_spain
+		icon = GFX_spr_fra1
+		available = {
+		}
+		mutually_exclusive = {
+		focus = FRA_claim_spanish_trone
+		}
+		prerequisite = {
+		focus = FRA_bourbonist_restoration
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		available = {
+		}
+		completion_reward = {
+		add_opinion_modifier = { target = SPR modifier = huge_increase }
+		SPR = {add_opinion_modifier = { target = FRA modifier = huge_increase }}
+		}
+		x = -2
+		y = 1
+		relative_position_id = FRA_bourbonist_restoration
+	}
+	
+
+	focus = {
+		id = FRA_alliance_with_spain
+		icon = GFX_focus_intervention_spain_nationalists
+		available = {
+		}
+		prerequisite = {
+		focus = FRA_befriend_spain
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		available = {
+		}
+		completion_reward = {
+		SPR = {country_event = {id = generic.5 days = 2}}
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_befriend_spain
+	}
+	
+
+	focus = {
+		id = FRA_integrate_spain
+		icon = GFX_focus_intervention_spain_nationalists
+		available = {
+		}
+		prerequisite = {
+		focus = FRA_claim_spanish_trone
+		}
+		ai_will_do = { factor = 0 }
+		cost = 15
+		available = {
+		}
+		completion_reward = {
+		every_state = {
+		limit = {
+		AND = {
+		is_core_of = SPR
+		is_controlled_by = FRA
+		}
+		}
+		add_core_of = FRA
+		}
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_claim_spanish_trone
+	}
+	
+
+	focus = {
+		id = FRA_befriend_portugal
+		icon = GFX_por_fra
+		available = {
+		}
+		prerequisite = {
+		focus = FRA_integrate_spain
+		focus = FRA_alliance_with_spain
+		}
+		mutually_exclusive = {focus = FRA_attack_portugal}
+		ai_will_do = { factor = 0 }
+		cost = 15
+		available = {
+		}
+		completion_reward = {
+		add_opinion_modifier = { target = POR modifier = huge_increase }
+		POR = {add_opinion_modifier = { target = FRA modifier = huge_increase }}
+		}
+		x = 0
+		y = 2
+		relative_position_id = FRA_claim_spanish_trone
+	}
+	
+
+	focus = {
+		id = FRA_attack_portugal
+		icon = GFX_por_republic
+		available = {
+		}
+		prerequisite = {
+		focus = FRA_integrate_spain
+		focus = FRA_alliance_with_spain
+		}
+		mutually_exclusive = {focus = FRA_befriend_portugal}
+		ai_will_do = { factor = 0 }
+		cost = 15
+		available = {
+		}
+		completion_reward = {
+		create_wargoal = {target = POR type = annex_everything expire = 0}
+		}
+		x = -2
+		y = 2
+		relative_position_id = FRA_claim_spanish_trone
+	}
+	
+
+	focus = {
+		id = FRA_claim_syria_monarchy
+		icon = GFX_focus_otto_investment
+		available = {
+		}
+		prerequisite = {
+		focus = FRA_befriend_portugal
+		focus = FRA_attack_portugal
+		focus = FRA_return_to_borodino
+		focus = FRA_demand_catalonia
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		available = {
+		}
+		completion_reward = {
+		add_state_claim = 677			#Syria/Lebanon
+			add_state_claim = 680
+			add_state_claim = 553
+			add_state_claim = 554
+			add_state_claim = 831
+			add_state_claim = 829
+			add_state_claim = 344	
+			add_state_claim = 454	
+			add_state_claim = 455
+			unlock_decision_tooltip = RP_FRA_create_syrian_mandate
+		}
+		x = -1
+		y = 1
+		relative_position_id = FRA_return_to_borodino
+	}
+	
+
+	focus = {
+		id = FRA_ottoman_campaign
+		icon = GFX_focus_tur_son_kalan
+		available = {
+		TUR = {exists = yes}
+		}
+		prerequisite = {
+		focus = FRA_claim_syria_monarchy
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		available = {
+		}
+		completion_reward = {
+		create_wargoal = {target = TUR type = annex_everything expire = 0}
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_claim_syria_monarchy
 	}
 	
 	
