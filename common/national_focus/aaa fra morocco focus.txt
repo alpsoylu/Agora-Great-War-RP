@@ -1,5 +1,6 @@
 shared_focus = {
 		id = FRA_ww11_bureau_colonies
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww11_agadir_crisis
 		}
@@ -20,6 +21,7 @@ shared_focus = {
 	#----- Africa
 	shared_focus = {
 		id = FRA_ww11_french_algeria_infra
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww11_bureau_colonies
 		}
@@ -63,6 +65,7 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = FRA_ww11_french_algeria_civ
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww11_french_algeria_infra
 		}
@@ -106,6 +109,7 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = FRA_ww11_french_algeria_mil
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww11_french_algeria_civ
 		}
@@ -154,6 +158,7 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = FRA_ww11_french_algeria_mobilization
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww11_french_algeria_mil
 		}
@@ -185,6 +190,7 @@ shared_focus = {
 	#----- Indochina
 	shared_focus = {
 		id = FRA_ww11_french_indochina_infra
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww11_bureau_colonies
 		}
@@ -228,6 +234,7 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = FRA_ww11_french_indochina_civ
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww11_french_indochina_infra
 		}
@@ -271,6 +278,7 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = FRA_ww11_french_indochina_mil
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww11_french_indochina_civ
 		}
@@ -319,6 +327,7 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = FRA_ww11_french_indochina_mobilization
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww11_french_indochina_mil
 		}
@@ -347,4 +356,190 @@ shared_focus = {
 		y = 1
 		relative_position_id = FRA_ww11_french_indochina_mil
 		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+shared_focus = {
+		id = FRA_ww11_ready_country
+		prerequisite = {
+			#aa#focus = FRA_ww11_agadir_crisis
+		}
+		icon = GFX_goal_demand_sudetenland
+		available = {
+			threat > 0.25
+		}
+		completion_reward = {
+			add_manpower = 100000
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 8
+		y = 6
+		#x = 20
+		#y = 0
+	}
+	shared_focus = {
+		id = FRA_ww11_defense_border
+		prerequisite = {
+			focus = FRA_ww11_ready_country
+		}
+		icon = GFX_goal_generic_fortify_city
+		completion_reward = {
+			17 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 521
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 11516
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 698
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 3666
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 3646
+					instant_build = yes
+				}
+			}
+			18 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 3560
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 5291
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = FRA_ww11_ready_country
+	}
+	shared_focus = {
+		id = FRA_ww11_fortify_city
+		prerequisite = {
+			focus = FRA_ww11_ready_country
+		}
+		icon = GFX_goal_generic_fortify_city
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					#province = 12299
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		x = -2
+		y = 1
+		relative_position_id = FRA_ww11_ready_country
+		cost = 10
+	}
+	shared_focus = {
+		id = FRA_ww11_plan_VXII
+		prerequisite = {
+			focus = FRA_ww11_ready_country
+		}
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		completion_reward = {
+			add_war_support = 0.15
+			add_ideas = Franch_Staff
+			hidden_effect = {
+				add_named_threat = {
+   					threat = 5 
+    				name = FRA_plan_VXII
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww11_ready_country
+	}
+	shared_focus = {
+		id = FRA_ww11_alsaceloreaine_war
+		prerequisite = {
+			focus = FRA_ww11_plan_VXII
+		}
+		available = {
+			is_puppet = no
+			OR = {
+				threat > 0.5
+				date > 1914.6.1
+			}
+			has_army_manpower = {
+				size > 1500000
+			}
+		}
+		bypass = {
+			OR = {
+				has_war_with = GER
+				owns_state = 28
+			}
+		}
+		icon = GFX_goal_generic_major_war
+		completion_reward = {
+			add_named_threat = {
+				threat = 10
+				name = "FRA_ww1_alsaceloreaine_war"
+			}
+			declare_war_on = {
+				target = GER
+				type = take_state
+				generator = {
+					28
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 2000
+		}
+		x = 0
+		y = 2
+		relative_position_id = FRA_ww11_ready_country
+		cost = 10
 	}

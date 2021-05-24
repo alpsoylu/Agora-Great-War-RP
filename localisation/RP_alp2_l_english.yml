@@ -213,10 +213,18 @@
  fra_event.3:0 "French 1910 Legisletive Elections"
  fra_event.3.t:0 "French 1910 Legisletive Elections"
  #fra_event.3.d:0 "Last election in France was in 1906.But now it is election time.We have to chose our leaders correctly because a storm is coming in Europe.Who should we pick?"
- fra_event.3.d:0 "Last election in France was in 1906.But now it is election time.We have to chose our leaders correctly because a storm is coming in Europe.Who should we pick? ONLY DEMOCRATIC PATH IS AVAILABLE.MONARCHIST AND SOCIALIST PATHS WILL BE UPLOADED IN THE NEXT UPDATES!"
+ fra_event.3.d:0 "Last election in France was in 1906.But now it is election time.We have to chose our leaders correctly because a storm is coming in Europe.Who should we pick?ONLY DEMOCRATIC AND MONARCHIST PATHS ARE FINISHED.SOCIALIST AND MAYBE A FASCIST PATH WILL BE UPLOADED IN THE NEXT UPDATES!"
  fra_event.3.a:0 "PRRRS §OThis will allow a democratic (Anti-German or Anti-British) playtrough.§!"
  fra_event.3.b:0 "SFIO (Socialists)"
  fra_event.3.c:0 "Action Française §OThis will allow a monarchist (Napoleon V or House of Bourbon) playtrough.§!"
+ FOCUS_FILTER_ANTI_ENG:0 "Anti-British Policy"
+ FOCUS_FILTER_FRA_MONARCHY:0 "Monarchist Path"
+ FOCUS_FILTER_FRA_NAPOLEON:0 "Napoleonist Path"
+ FOCUS_FILTER_FRA_READY_COUNTRY:0 "Preparing for War"
+ FOCUS_FILTER_FRA_BOURBON:0 "Bourbonist Path"
+ FOCUS_FILTER_FRA_OTTOMAN:0 "Anti-Ottoman Policy"
+ FOCUS_FILTER_FRA_AFRICA:0 "Colonialism"
+ FOCUS_FILTER_ANTI_GERMAN:0 "Anti-German Policy"
  FRA_claim_syria:0 "Claim Syria"
  FRA_claim_syria_monarchy:0 "Claim Syria"
  FRA_ottoman_campaign:0 "Avenge the Siege of Acre"
@@ -232,6 +240,21 @@
  FRA_fight_turks:0 "War with [TUR.GetName]"
  FRA_support_arab_tt:0 "If Hejaz exists Send §Y10000§! of §YInfantry Equipment§! to §Y[HJZ.GetName]§!\nIf Hejaz doesn't exists Send §Y10000§! of §YInfantry Equipment§! to §Y[SAU.GetName]§!"
  
+ 
+ 
+ FRA_ww11_plan_VXII:0 "Plan VXII"
+ FRA_ww11_plan_VXII_desc:0 "Prepare an attack plan. If we have to wage an offensive war, we must neutralize the German defenses as quickly as possible."
+ FRA_ww11_ready_country:0 "Prepare for War"
+ FRA_ww11_ready_country_desc:0 "As the world tension continues to rise, France must build up to resist any oncoming invasion. When these defense measures are complete, there will be no siege of Paris this time."
+
+ FRA_ww11_fortify_city:0 "Civil Fortifications"
+ FRA_ww11_fortify_city_desc:0 "" #KAISER_ANONY
+ FRA_ww11_alsaceloreaine_war:0 "Get Alsace-Lorraine back"
+ FRA_ww11_alsaceloreaine_war_desc:0 "Alsace-Lorraine belongs to France! We must get it back, whatever the cost!"
+
+ FRA_ww11_defense_border:0 "Defend the border"
+ FRA_ww11_defense_border_desc:0 "Further expansion of prior defensive measures will make France a tough nut to crack, buying us time for our allies to pull their weight in the course of the war. If we can hold off from Germany while Russia hits them from the east, how would they ever resist?"
+
  FRA_ww11_release_asia:0 "Release Vietnam"
  FRA_ww11_release_asia_desc:0 "Vietnam is no longer a valuable enough colony to keep, especially with all of the trouble caused by the natives making it increasingly not worth it. They'll be allowed to call themselves independent...for now." #KAISER_ANONY
  FRA_ww11_bureau_colonies:0 "Ministère des Colonies"

@@ -5,7 +5,7 @@ focus_tree = {
 	country = { factor=0 modifier = { add = 100 has_country_flag = FRA_cons} }
 
 	focus = {
-		id = FRA_cons_victory #SFIO KOMUNIST
+		id = FRA_cons_victory
 		icon = GFX_fra_cons
 		ai_will_do = { factor = 50 }
 		cost = 10
@@ -21,8 +21,8 @@ focus_tree = {
 		popularity = 0.35
 		}
 		create_country_leader = {
-	name = "Maurice Pujo" 
-	picture = "gfx/leaders/FRA/pujo.dds" 
+	name = "Charles Maurras" 
+	picture = "gfx/leaders/FRA/maurras.dds" 
 	expire = "1935.1.1" 
 	ideology = despotism
 	traits = {} 
@@ -40,43 +40,7 @@ set_cosmetic_tag = FRA_start
 		
 	}
 
-	focus = {
-		id = FRA_far_right
-		icon = GFX_vivelafrance
-		prerequisite = {
-		focus = FRA_cons_victory
-		}
-		ai_will_do = { factor = 0 }
-		cost = 10
-		available = {
-		NOT = {has_completed_focus = FRA_monarchist}
-		always = no
-		}
-		completion_reward = {
-		custom_effect_tooltip = FRA_not_developed_tt
-		create_country_leader = {
-	name = "Maurice Pujo" 
-	picture = "gfx/leaders/FRA/pujo.dds" 
-	expire = "1935.1.1" 
-	ideology = fascism_ideology
-	traits = {} 
-}
-		create_country_leader = {
-	name = "Charles Maurras" 
-	picture = "gfx/leaders/FRA/maurras.dds" 
-	expire = "1935.1.1" 
-	ideology = despotism
-	traits = {} 
-}
-add_popularity = {
-ideology = fascism
-popularity = 0.35
-}
-		}
-		x = -7
-		y = 1
-		relative_position_id = FRA_cons_victory
-	}
+	
 
 	focus = {
 		id = FRA_monarchist
@@ -87,11 +51,13 @@ popularity = 0.35
 		mutually_exclusive = {
 		focus = FRA_far_right
 		}
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
 		ai_will_do = { factor = 0 }
 		cost = 10
 		available = {
 		NOT = {has_completed_focus = FRA_far_right}
 		}
+		allow_branch = {always = no}
 		completion_reward = {
 		create_country_leader = {
 	name = "Charles Maurras" 
@@ -105,16 +71,17 @@ ideology = neutrality
 popularity = -0.25
 }
 		}
-		x = 7
-		y = 1
+		x = 1
+		y = 0
 		relative_position_id = FRA_cons_victory
 	}
 
 	focus = {
 		id = FRA_gain_support_for_monarchism
 		icon = GFX_focus_focus_fra_third_empire
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
 		prerequisite = {
-		focus = FRA_monarchist
+		focus = FRA_cons_victory
 		}
 		ai_will_do = { factor = 0 }
 		cost = 10
@@ -125,13 +92,15 @@ popularity = -0.25
 		}
 		x = 0
 		y = 1
-		relative_position_id = FRA_monarchist
+		relative_position_id = FRA_cons_victory
 	}
 	
 
 	focus = {
 		id = FRA_legacy_of_napoleon
 		icon = GFX_napoleon
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
+		search_filters = { FOCUS_FILTER_FRA_NAPOLEON }
 		available = {
 		neutrality > 0.5
 		}
@@ -157,7 +126,7 @@ popularity = -0.25
 				}
 				
 		}
-		x = 3
+		x = 7
 		y = 1
 		relative_position_id = FRA_gain_support_for_monarchism
 	}
@@ -165,6 +134,8 @@ popularity = -0.25
 	focus = {
 		id = FRA_italian_campaign
 		icon = GFX_focus_ita_victor_emmanuel_assassination
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
+		search_filters = { FOCUS_FILTER_FRA_NAPOLEON }
 		available = {
 		ITA = {exists = yes}
 		}
@@ -178,7 +149,7 @@ popularity = -0.25
 		completion_reward = {	
 		create_wargoal = {target = ITA type = annex_everything expire = 0}
 		}
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = FRA_legacy_of_napoleon
 	}
@@ -186,6 +157,8 @@ popularity = -0.25
 	focus = {
 		id = FRA_destroy_austria
 		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
+		search_filters = { FOCUS_FILTER_FRA_NAPOLEON }
 		available = {
 		AUH = {exists = yes}
 		}
@@ -207,6 +180,8 @@ popularity = -0.25
 	focus = {
 		id = FRA_demand_catalonia
 		icon = GFX_focus_split_helmet
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
+		search_filters = { FOCUS_FILTER_FRA_NAPOLEON }
 		available = {
 		SPR = {controls_state = 165}
 		}
@@ -228,6 +203,7 @@ popularity = -0.25
 	focus = {
 		id = FRA_establish_empire
 		icon = GFX_focus_tur_empower_sultan
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
 		available = {
 		}
 		prerequisite = {
@@ -241,7 +217,7 @@ popularity = -0.25
 		completion_reward = {
 		set_cosmetic_tag = FRA_napoleon
 		}
-		x = -2
+		x = -4
 		y = 1
 		relative_position_id = FRA_legacy_of_napoleon
 	}
@@ -250,6 +226,7 @@ popularity = -0.25
 	focus = {
 		id = FRA_avenge_waterloo #you now have ABBA stuck in your head for the rest of the day
 		icon = GFX_focus_attack_britain
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
 		x = -1
 		y = 1
 		offset = {
@@ -323,6 +300,7 @@ popularity = -0.25
 	focus = {
 		id = FRA_retribution_for_sedan
 		icon = GFX_focus_attack_germany
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
 		x = 1
 		y = 1
 		offset = {
@@ -371,6 +349,7 @@ popularity = -0.25
 	focus = {
 		id = FRA_return_to_borodino
 		icon = GFX_focus_attack_russia
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
 		x = 0
 		y = 2
 		offset = {
@@ -417,6 +396,8 @@ popularity = -0.25
 	focus = {
 		id = FRA_bourbonist_restoration
 		icon = GFX_focus_focus_fra_orleans_restoration
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
+		search_filters = { FOCUS_FILTER_FRA_BOURBON }
 		available = {
 		neutrality > 0.5
 		}
@@ -443,7 +424,7 @@ popularity = -0.25
 					}
 				}
 		}
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = FRA_gain_support_for_monarchism
 	}
@@ -452,6 +433,8 @@ popularity = -0.25
 	focus = {
 		id = FRA_claim_spanish_trone
 		icon = GFX_spr_fra2
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
+		search_filters = { FOCUS_FILTER_FRA_BOURBON }
 		available = {
 		}
 		mutually_exclusive = {
@@ -476,6 +459,8 @@ popularity = -0.25
 	focus = {
 		id = FRA_befriend_spain
 		icon = GFX_spr_fra1
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
+		search_filters = { FOCUS_FILTER_FRA_BOURBON }
 		available = {
 		}
 		mutually_exclusive = {
@@ -501,6 +486,8 @@ popularity = -0.25
 	focus = {
 		id = FRA_alliance_with_spain
 		icon = GFX_focus_intervention_spain_nationalists
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
+		search_filters = { FOCUS_FILTER_FRA_BOURBON }
 		available = {
 		}
 		prerequisite = {
@@ -522,6 +509,8 @@ popularity = -0.25
 	focus = {
 		id = FRA_integrate_spain
 		icon = GFX_focus_intervention_spain_nationalists
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
+		search_filters = { FOCUS_FILTER_FRA_BOURBON }
 		available = {
 		}
 		prerequisite = {
@@ -551,6 +540,8 @@ popularity = -0.25
 	focus = {
 		id = FRA_befriend_portugal
 		icon = GFX_por_fra
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
+		search_filters = { FOCUS_FILTER_FRA_BOURBON }
 		available = {
 		}
 		prerequisite = {
@@ -577,6 +568,8 @@ popularity = -0.25
 		icon = GFX_por_republic
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
+		search_filters = { FOCUS_FILTER_FRA_BOURBON }
 		prerequisite = {
 		focus = FRA_integrate_spain
 		focus = FRA_alliance_with_spain
@@ -603,10 +596,14 @@ popularity = -0.25
 		prerequisite = {
 		focus = FRA_befriend_portugal
 		focus = FRA_attack_portugal
-		focus = FRA_return_to_borodino
 		focus = FRA_demand_catalonia
 		}
+		prerequisite = {
+		focus = FRA_return_to_borodino
+		}
 		ai_will_do = { factor = 0 }
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
 		cost = 10
 		available = {
 		}
@@ -622,7 +619,7 @@ popularity = -0.25
 			add_state_claim = 455
 			unlock_decision_tooltip = RP_FRA_create_syrian_mandate
 		}
-		x = -1
+		x = 2
 		y = 1
 		relative_position_id = FRA_return_to_borodino
 	}
@@ -634,6 +631,8 @@ popularity = -0.25
 		available = {
 		TUR = {exists = yes}
 		}
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
+		search_filters = { FOCUS_FILTER_FRA_MONARCHY }
 		prerequisite = {
 		focus = FRA_claim_syria_monarchy
 		}
@@ -642,7 +641,7 @@ popularity = -0.25
 		available = {
 		}
 		completion_reward = {
-		create_wargoal = {target = TUR type = annex_everything expire = 0}
+		create_wargoal = {target = TUR type = take_claimed_state expire = 0}
 		}
 		x = 0
 		y = 1
@@ -650,11 +649,11 @@ popularity = -0.25
 	}
 	
 	
-	focus = {
+		focus = {
 		id = FRA_ww1_agadir_crisis
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
-			focus = FRA_monarchist
-			focus = FRA_far_right
+			focus = FRA_gain_support_for_monarchism
 		}
 		icon = GFX_protect_morocco
 		available = {
@@ -686,14 +685,14 @@ popularity = -0.25
 			}
 		}
 		cost = 5
-		x = 0
-		y = 2
-		relative_position_id = FRA_cons_victory
+		x = -6
+		y = 1
+		relative_position_id = FRA_gain_support_for_monarchism
 	}
-	
 	
 	focus = {
 		id = FRA_ww1_bureau_colonies
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww1_agadir_crisis
 		}
@@ -714,6 +713,7 @@ popularity = -0.25
 	#----- Africa
 	focus = {
 		id = FRA_ww1_french_algeria_infra
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww1_bureau_colonies
 		}
@@ -757,6 +757,7 @@ popularity = -0.25
 	}
 	focus = {
 		id = FRA_ww1_french_algeria_civ
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww1_french_algeria_infra
 		}
@@ -800,6 +801,7 @@ popularity = -0.25
 	}
 	focus = {
 		id = FRA_ww1_french_algeria_mil
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww1_french_algeria_civ
 		}
@@ -848,6 +850,7 @@ popularity = -0.25
 	}
 	focus = {
 		id = FRA_ww1_french_algeria_mobilization
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww1_french_algeria_mil
 		}
@@ -879,6 +882,7 @@ popularity = -0.25
 	#----- Indochina
 	focus = {
 		id = FRA_ww1_french_indochina_infra
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww1_bureau_colonies
 		}
@@ -922,6 +926,7 @@ popularity = -0.25
 	}
 	focus = {
 		id = FRA_ww1_french_indochina_civ
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww1_french_indochina_infra
 		}
@@ -965,6 +970,7 @@ popularity = -0.25
 	}
 	focus = {
 		id = FRA_ww1_french_indochina_mil
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww1_french_indochina_civ
 		}
@@ -1013,6 +1019,7 @@ popularity = -0.25
 	}
 	focus = {
 		id = FRA_ww1_french_indochina_mobilization
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_ww1_french_indochina_mil
 		}
@@ -1042,12 +1049,234 @@ popularity = -0.25
 		relative_position_id = FRA_ww1_french_indochina_mil
 		
 	}
+	
+	
+	
+	
+	
+	
+	focus = {
+		id = FRA_ww1_ready_country
+		search_filters = { FOCUS_FILTER_FRA_READY_COUNTRY }
+		icon = GFX_goal_demand_sudetenland
+		available = {
+			threat > 0.25
+		}
+		#prerequisite = {focus = FRA_gain_support_for_monarchism}
+		completion_reward = {
+			add_manpower = 100000
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 12
+		y = 6
+		#x = 20
+		#y = 0
+	}
+	focus = {
+		id = FRA_ww1_defense_border
+		search_filters = { FOCUS_FILTER_FRA_READY_COUNTRY }
+		prerequisite = {
+			focus = FRA_ww1_ready_country
+		}
+		icon = GFX_goal_generic_fortify_city
+		completion_reward = {
+			17 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 521
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 11516
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 698
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 3666
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 3646
+					instant_build = yes
+				}
+			}
+			18 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 3560
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 5291
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = FRA_ww1_ready_country
+	}
+	focus = {
+		id = FRA_ww1_fortify_city
+		search_filters = { FOCUS_FILTER_FRA_READY_COUNTRY }
+		prerequisite = {
+			focus = FRA_ww1_ready_country
+		}
+		icon = GFX_goal_generic_fortify_city
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					#province = 12299
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		x = -2
+		y = 1
+		relative_position_id = FRA_ww1_ready_country
+		cost = 10
+	}
+	focus = {
+		id = FRA_plan_VXII
+		search_filters = { FOCUS_FILTER_FRA_READY_COUNTRY }
+		prerequisite = {
+			focus = FRA_ww1_ready_country
+		}
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		completion_reward = {
+			add_war_support = 0.15
+			add_ideas = Franch_Staff
+			hidden_effect = {
+				add_named_threat = {
+   					threat = 5 
+    				name = FRA_plan_VXII
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_ww1_ready_country
+	}
+	focus = {
+		id = FRA_ww1_alsaceloreaine_war
+		search_filters = { FOCUS_FILTER_FRA_READY_COUNTRY }
+		prerequisite = {
+			focus = FRA_plan_VXII
+		}
+		available = {
+			is_puppet = no
+			OR = {
+				threat > 0.5
+				date > 1914.6.1
+			}
+			has_army_manpower = {
+				size > 1500000
+			}
+		}
+		bypass = {
+			OR = {
+				has_war_with = GER
+				owns_state = 28
+			}
+		}
+		icon = GFX_goal_generic_major_war
+		completion_reward = {
+			add_named_threat = {
+				threat = 10
+				name = "FRA_ww1_alsaceloreaine_war"
+			}
+			declare_war_on = {
+				target = GER
+				type = take_state
+				generator = {
+					28
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 2000
+		}
+		x = 0
+		y = 2
+		relative_position_id = FRA_ww1_ready_country
+		cost = 10
+	}
 
 	
 	shared_focus = GEN_FRA_aviation_effort
 	shared_focus = GEN_FRA_naval_effort
 	shared_focus = GEN_army_effort
 
+
+focus = {
+		id = FRA_far_right
+		icon = GFX_vivelafrance
+		prerequisite = {
+		focus = FRA_cons_victory
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		available = {
+		NOT = {has_completed_focus = FRA_monarchist}
+		always = no
+		}
+		allow_branch = {always = no}
+		completion_reward = {
+		custom_effect_tooltip = FRA_not_developed_tt
+		create_country_leader = {
+	name = "Maurice Pujo" 
+	picture = "gfx/leaders/FRA/pujo.dds" 
+	expire = "1935.1.1" 
+	ideology = fascism_ideology
+	traits = {} 
+}
+		create_country_leader = {
+	name = "Charles Maurras" 
+	picture = "gfx/leaders/FRA/maurras.dds" 
+	expire = "1935.1.1" 
+	ideology = despotism
+	traits = {} 
+}
+add_popularity = {
+ideology = fascism
+popularity = 0.35
+}
+		}
+		x = -7
+		y = 1
+		relative_position_id = FRA_cons_victory
+	}
 	
 }
 	

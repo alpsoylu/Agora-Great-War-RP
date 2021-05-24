@@ -46,6 +46,7 @@ set_cosmetic_tg = FRA_start
 	
 	focus = {
 		id = FRA_anti_german_policy
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
 		prerequisite = {
 			focus = FRA_briand_victory
 		}
@@ -80,6 +81,7 @@ set_cosmetic_tg = FRA_start
 	
 	focus = {
 		id = FRA_protest_italian_expansionism
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
 		prerequisite = {
 			focus = FRA_anti_german_policy
 		}
@@ -105,6 +107,7 @@ set_cosmetic_tg = FRA_start
 	
 	focus = {
 		id = FRA_oppose_italian_expansionism
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
 		prerequisite = {
 			focus = FRA_anti_german_policy
 		}
@@ -132,6 +135,7 @@ set_cosmetic_tg = FRA_start
 	
 	focus = {
 		id = FRA_support_italian_expansionism
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
 		prerequisite = {
 			focus = FRA_anti_german_policy
 		}
@@ -163,6 +167,7 @@ set_cosmetic_tg = FRA_start
 	
 	focus = {
 		id = FRA_ww1_back_russia
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
 		prerequisite = {
 			focus = FRA_protest_italian_expansionism
 			focus = FRA_oppose_italian_expansionism
@@ -199,6 +204,7 @@ set_cosmetic_tg = FRA_start
 	
 	focus = {
 		id = FRA_ww1_inviteUK		#Open Beta 0.2
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
 		prerequisite = {
 			focus = FRA_ww1_back_russia
 		}
@@ -240,6 +246,7 @@ set_cosmetic_tg = FRA_start
 	
 	focus = {
 		id = FRA_ww1_inviteBELGIUM		#Open Beta 0.2
+		search_filters = { FOCUS_FILTER_ANTI_GERMAN }
 		prerequisite = {
 			focus = FRA_ww1_inviteUK
 		}
@@ -283,6 +290,7 @@ set_cosmetic_tg = FRA_start
 		prerequisite = {
 			focus = FRA_briand_victory
 		}
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
 		icon = GFX_focus_otto_investment
 		available = {
 			NOT = {
@@ -317,6 +325,7 @@ set_cosmetic_tg = FRA_start
 		prerequisite = {
 			focus = FRA_claim_syria
 		}
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
 		icon = GFX_focus_tur_fight_wahhabis
 		available = {
 			NOT = {
@@ -351,6 +360,7 @@ set_cosmetic_tg = FRA_start
 		prerequisite = {
 			focus = FRA_fight_turks
 		}
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
 		icon = GFX_focus_crush_arabia
 		available = {
 			NOT = {
@@ -399,6 +409,7 @@ set_cosmetic_tg = FRA_start
 		prerequisite = {
 			focus = FRA_claim_syria
 		}
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
 		icon = GFX_focus_tur_erkaniharbiye
 		available = {
 			NOT = {
@@ -443,6 +454,7 @@ set_cosmetic_tg = FRA_start
 		prerequisite = {
 			focus = FRA_claim_syria
 		}
+		search_filters = { FOCUS_FILTER_FRA_OTTOMAN }
 		icon = GFX_focus_tur_fight_wahhabis
 		available = {
 			NOT = {
@@ -478,6 +490,7 @@ set_cosmetic_tg = FRA_start
 	focus = {
 		id = FRA_anti_british_policy
 		icon = GFX_fra_anti_eng
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
 		prerequisite = {
 			focus = FRA_briand_victory
 		}
@@ -506,6 +519,7 @@ set_cosmetic_tg = FRA_start
 	focus = {
 		id = FRA_oppose_british_colonialism
 		icon = GFX_focus_eng_continental_affairs
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
 		prerequisite = {
 			focus = FRA_anti_british_policy
 		}
@@ -538,6 +552,7 @@ set_cosmetic_tg = FRA_start
 	focus = {
 		id = FRA_befriend_germany
 		icon = GFX_focus_deal_with_german_empire
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
 		prerequisite = {
 			focus = FRA_oppose_british_colonialism
 		}
@@ -567,6 +582,7 @@ set_cosmetic_tg = FRA_start
 	focus = {
 		id = FRA_embargo_germany
 		icon = GFX_focus_align_germany
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
 		prerequisite = {
 			focus = FRA_oppose_british_colonialism
 		}
@@ -596,6 +612,7 @@ set_cosmetic_tg = FRA_start
 	focus = {
 		id = FRA_conquer_congo
 		icon = GFX_focus_split_helmet
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
 		prerequisite = {
 			focus = FRA_befriend_germany
 			focus = FRA_embargo_germany
@@ -688,6 +705,7 @@ set_cosmetic_tg = FRA_start
 	focus = {
 		id = FRA_conquer_portugeese_colonies
 		icon = GFX_focus_generic_attack_portugal
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
 		prerequisite = {
 			focus = FRA_conquer_congo
 		}
@@ -719,6 +737,7 @@ set_cosmetic_tg = FRA_start
 	focus = {
 		id = FRA_conquer_spanish_colonies
 		icon = GFX_focus_generic_little_entente
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
 		prerequisite = {
 			focus = FRA_conquer_congo
 		}
@@ -751,6 +770,7 @@ set_cosmetic_tg = FRA_start
 	focus = {
 		id = FRA_attack_germany
 		icon = GFX_focus_attack_germany
+		search_filters = { FOCUS_FILTER_ANTI_ENG }
 		prerequisite = {
 			focus = FRA_embargo_germany
 		}
@@ -776,185 +796,12 @@ set_cosmetic_tg = FRA_start
 		relative_position_id = FRA_oppose_british_colonialism
 	}
 	
-	
-	focus = {
-		id = FRA_ww1_ready_country
-		prerequisite = {
-			#aa#focus = FRA_ww1_agadir_crisis
-		}
-		icon = GFX_goal_demand_sudetenland
-		available = {
-			threat > 0.25
-		}
-		completion_reward = {
-			add_manpower = 100000
-		}
-		ai_will_do = {
-			factor = 20
-		}
-		cost = 10
-		x = 8
-		y = 6
-		#x = 20
-		#y = 0
-	}
-	focus = {
-		id = FRA_ww1_defense_border
-		prerequisite = {
-			focus = FRA_ww1_ready_country
-		}
-		icon = GFX_goal_generic_fortify_city
-		completion_reward = {
-			17 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 521
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 11516
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 698
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 3666
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 3646
-					instant_build = yes
-				}
-			}
-			18 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 3560
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 5291
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 20
-		}
-		cost = 10
-		x = 2
-		y = 1
-		relative_position_id = FRA_ww1_ready_country
-	}
-	focus = {
-		id = FRA_ww1_fortify_city
-		prerequisite = {
-			focus = FRA_ww1_ready_country
-		}
-		icon = GFX_goal_generic_fortify_city
-		completion_reward = {
-			random_owned_state = {
-				add_building_construction = {
-					type = bunker
-					level = 3
-					#province = 12299
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		x = -2
-		y = 1
-		relative_position_id = FRA_ww1_ready_country
-		cost = 10
-	}
-	focus = {
-		id = FRA_plan_VXII
-		prerequisite = {
-			focus = FRA_ww1_ready_country
-		}
-		icon = GFX_goal_generic_major_war
-		cost = 10
-		completion_reward = {
-			add_war_support = 0.15
-			add_ideas = Franch_Staff
-			hidden_effect = {
-				add_named_threat = {
-   					threat = 5 
-    				name = FRA_plan_VXII
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		x = 0
-		y = 1
-		relative_position_id = FRA_ww1_ready_country
-	}
-	focus = {
-		id = FRA_ww1_alsaceloreaine_war
-		prerequisite = {
-			focus = FRA_plan_VXII
-		}
-		available = {
-			is_puppet = no
-			OR = {
-				threat > 0.5
-				date > 1914.6.1
-			}
-			has_army_manpower = {
-				size > 1500000
-			}
-		}
-		bypass = {
-			OR = {
-				has_war_with = GER
-				owns_state = 28
-			}
-		}
-		icon = GFX_goal_generic_major_war
-		completion_reward = {
-			add_named_threat = {
-				threat = 10
-				name = "FRA_ww1_alsaceloreaine_war"
-			}
-			declare_war_on = {
-				target = GER
-				type = take_state
-				generator = {
-					28
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 2000
-		}
-		x = 0
-		y = 2
-		relative_position_id = FRA_ww1_ready_country
-		cost = 10
-	}
+	shared_focus = FRA_ww11_ready_country
 	
 	
 	focus = {
 		id = FRA_ww11_agadir_crisis
+		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		prerequisite = {
 			focus = FRA_briand_victory
 		}
@@ -994,356 +841,7 @@ set_cosmetic_tg = FRA_start
 	}
 	shared_focus = FRA_ww11_bureau_colonies
 	
-	focus = {
-		id = FRA_ww1_bureau_colonies
-		prerequisite = {
-			focus = FRA_ww1_agadir_crisis
-		}
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		available = {
-		}
-		completion_reward = {
-			add_political_power = 100
-		}
-		ai_will_do = {
-			factor = 20
-		}
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = FRA_ww1_agadir_crisis
-	}
-	#----- Africa
-	focus = {
-		id = FRA_ww1_french_algeria_infra
-		prerequisite = {
-			focus = FRA_ww1_bureau_colonies
-		}
-		icon = GFX_focus_generic_africa_infrastructure
-		available = {
-			OR = {
-				FRA = {
-					controls_state = 459
-					controls_state = 460
-				}
-				ALG = {
-					is_subject_of = ROOT
-					controls_state = 459
-					controls_state = 460
-				}
-			}
-		}
-		completion_reward = {
-			459 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			460 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 20
-		}
-		cost = 10
-		x = -1
-		y = 1
-		relative_position_id = FRA_ww1_bureau_colonies
-	}
-	focus = {
-		id = FRA_ww1_french_algeria_civ
-		prerequisite = {
-			focus = FRA_ww1_french_algeria_infra
-		}
-		icon = GFX_focus_generic_africa_factory
-		available = {
-			OR = {
-				FRA = {
-					controls_state = 459
-					controls_state = 460
-				}
-				ALG = {
-					is_subject_of = ROOT
-					controls_state = 459
-					controls_state = 460
-				}
-			}
-		}
-		completion_reward = {
-			459 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			460 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 20
-		}
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = FRA_ww1_french_algeria_infra
-	}
-	focus = {
-		id = FRA_ww1_french_algeria_mil
-		prerequisite = {
-			focus = FRA_ww1_french_algeria_civ
-		}
-		icon = GFX_focus_generic_africa_production
-		available = {
-			OR = {
-				FRA = {
-					controls_state = 459
-					controls_state = 460
-				}
-				ALG = {
-					is_subject_of = ROOT
-					controls_state = 459
-					controls_state = 460
-				}
-			}
-		}
-		completion_reward = {
-			459 = {
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = air_base
-					level = 1
-					instant_build = yes
-				}
-			}
-			460 = {
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 20
-		}
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = FRA_ww1_french_algeria_civ
-	}
-	focus = {
-		id = FRA_ww1_french_algeria_mobilization
-		prerequisite = {
-			focus = FRA_ww1_french_algeria_mil
-		}
-		icon = GFX_goal_generic_military_sphere
-		available = {
-			OR = {
-				FRA = {
-					controls_state = 459
-					controls_state = 460
-				}
-				ALG = {
-					is_subject_of = ROOT
-					controls_state = 459
-					controls_state = 460
-				}
-			}
-		}
-		completion_reward = {
-			# load_oob = "FRA_AfricanRegiments"
-		}
-		ai_will_do = {
-			factor = 20
-		}
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = FRA_ww1_french_algeria_mil
-	}
-	#----- Indochina
-	focus = {
-		id = FRA_ww1_french_indochina_infra
-		prerequisite = {
-			focus = FRA_ww1_bureau_colonies
-		}
-		icon = GFX_goal_generic_construct_infrastructure
-		available = {
-			OR = {
-				FRA = {
-					controls_state = 286
-					controls_state = 671
-				}
-				VIN = {
-					is_subject_of = ROOT
-					controls_state = 286
-					controls_state = 671
-				}
-			}
-		}
-		completion_reward = {
-			286 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			671 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 20
-		}
-		cost = 10
-		x = 1
-		y = 1
-		relative_position_id = FRA_ww1_bureau_colonies
-	}
-	focus = {
-		id = FRA_ww1_french_indochina_civ
-		prerequisite = {
-			focus = FRA_ww1_french_indochina_infra
-		}
-		icon = GFX_goal_generic_construct_infrastructure
-		available = {
-			OR = {
-				FRA = {
-					controls_state = 286
-					controls_state = 671
-				}
-				VIN = {
-					is_subject_of = ROOT
-					controls_state = 286
-					controls_state = 671
-				}
-			}
-		}
-		completion_reward = {
-			286 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			671 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 20
-		}
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = FRA_ww1_french_indochina_infra
-	}
-	focus = {
-		id = FRA_ww1_french_indochina_mil
-		prerequisite = {
-			focus = FRA_ww1_french_indochina_civ
-		}
-		icon = GFX_goal_generic_construct_mil_factory
-		available = {
-			OR = {
-				FRA = {
-					controls_state = 286
-					controls_state = 671
-				}
-				VIN = {
-					is_subject_of = ROOT
-					controls_state = 286
-					controls_state = 671
-				}
-			}
-		}
-		completion_reward = {
-			286 = {
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = air_base
-					level = 1
-					instant_build = yes
-				}
-			}
-			671 = {
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 20
-		}
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = FRA_ww1_french_indochina_civ
-	}
-	focus = {
-		id = FRA_ww1_french_indochina_mobilization
-		prerequisite = {
-			focus = FRA_ww1_french_indochina_mil
-		}
-		icon = GFX_goal_generic_military_sphere
-		available = {
-			OR = {
-				FRA = {
-					controls_state = 286
-					controls_state = 671
-				}
-				VIN = {
-					is_subject_of = ROOT
-					controls_state = 286
-					controls_state = 671
-				}
-			}
-		}
-		completion_reward = {
-			# load_oob = "FRA_AsianRegiments"
-		}
-		ai_will_do = {
-			factor = 20
-		}
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = FRA_ww1_french_indochina_mil
-		
-	}
+	
 	shared_focus = GEN_GEN_FRA_aviation_effort
 	shared_focus = GEN_GEN_FRA_naval_effort
 	shared_focus = GEN_GEN_army_effort

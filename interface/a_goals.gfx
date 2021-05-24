@@ -228,7 +228,39 @@ spriteType = {
 	SpriteType = {
 	name = "GFX_mongolia8"
 	texturefile = "gfx/interface/goals/newicons/mongolia8.dds"			
-	}					
+	}	
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_ANTI_GERMAN"
+		texturefile = "gfx/interface/focusview/filter/anti_german.dds"
+	}	
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_ANTI_ENG"
+		texturefile = "gfx/interface/focusview/filter/anti_eng.dds"
+	}		
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_AFRICA"
+		texturefile = "gfx/interface/focusview/filter/fra_africa.dds"
+	}		
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_OTTOMAN"
+		texturefile = "gfx/interface/focusview/filter/fra_ottoman.dds"
+	}
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_MONARCHY"
+		texturefile = "gfx/interface/focusview/filter/fra_monarchy.dds"
+	}	
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_NAPOLEON"
+		texturefile = "gfx/interface/focusview/filter/fra_napoleon.dds"
+	}
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_BOURBON"
+		texturefile = "gfx/interface/focusview/filter/fra_bourbon.dds"
+	}
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_READY_COUNTRY"
+		texturefile = "gfx/interface/focusview/filter/fra_ready_country_a.dds"
+	}
 	SpriteType = {
 	name = "GFX_mongolia9"
 	texturefile = "gfx/interface/goals/newicons/mongolia9.dds"			
