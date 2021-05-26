@@ -2502,8 +2502,13 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_war = no
+			OR = {
+			AND = {
 			has_global_flag = agadir_crisis
 			NOT = { has_global_flag = agadir_crisis_ends }
+			}
+			FRA = {has_completed_focus = FRA_anti_colonialism}
+			}
 		}
 		bypass = {
 			OR = {

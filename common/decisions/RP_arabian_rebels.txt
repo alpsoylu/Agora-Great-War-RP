@@ -1510,6 +1510,7 @@ political_actions = {
 		OR = {
 		has_completed_focus = FRA_claim_syria
 		has_completed_focus = FRA_claim_syria_monarchy
+		has_completed_focus = FRA_claim_syria_socialism
 		}
 		}
 		
@@ -1536,6 +1537,75 @@ political_actions = {
 		autonomy_state = autonomy_tgwr_protectorate
 		}
 		}
+		}
+		ai_will_do = { factor = 100 }
+	}
+	
+	RP_FRA_spread_communism_italy = {
+		icon = GFX_decision_category_generic_propaganda
+		allowed = { 
+		tag = FRA
+		ITA = {exists = yes}
+		}
+		
+		
+		available = {
+        has_completed_focus = FRA_contact_psi
+        }
+		visible = {
+		has_completed_focus = FRA_spread_communism_ita
+		NOT = {has_completed_focus = FRA_communist_uprising_ita}
+		}
+		
+		cost = 50
+		complete_effect = {
+		ITA = {add_popularity = { ideology = communism popularity = 0.05}}
+		}
+		ai_will_do = { factor = 100 }
+	}
+	
+	RP_FRA_spread_communism_spain = {
+		icon = GFX_decision_category_generic_propaganda
+		allowed = { 
+		tag = FRA
+		SPR = {exists = yes}
+		}
+		
+		
+		available = {
+        has_completed_focus = FRA_contact_crs
+        }
+		visible = {
+		has_completed_focus = FRA_spread_communism_spr
+		NOT = {has_completed_focus = FRA_communist_uprising_spr}
+		}
+		
+		cost = 50
+		complete_effect = {
+		SPR = {add_popularity = { ideology = communism popularity = 0.05}}
+		}
+		ai_will_do = { factor = 100 }
+	}
+	
+	RP_FRA_spread_communism_eng = {
+		icon = GFX_decision_category_generic_propaganda
+		allowed = { 
+		tag = FRA
+		ENG = {exists = yes}
+		}
+		
+		
+		available = {
+        has_completed_focus = FRA_contact_fs
+        }
+		visible = {
+		has_completed_focus = FRA_spread_communism_eng
+		NOT = {has_completed_focus = FRA_communist_uprising_eng}
+		}
+		
+		cost = 50
+		complete_effect = {
+		ENG = {add_popularity = { ideology = communism popularity = 0.05}}
 		}
 		ai_will_do = { factor = 100 }
 	}

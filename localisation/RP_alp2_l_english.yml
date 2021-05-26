@@ -58,6 +58,62 @@
  FRA_conquer_spanish_colonies:0 "Conquer Spanish Colonies"
  FRA_conquer_portugeese_colonies:0 "Conquer Portugese Colonies"
  FRA_demand_catalonia:0 "Demand Catalonia"
+ FRA_revolution_in_france:0 "Revolution in France"
+ FRA_spread_revolution:0 "Spreading the Revolution"
+ FRA_release_equat_africa:0 "Release the French Equatorial Africa"
+ FRA_release_west_africa:0 "Release the French West Africa"
+ GER_claim_mittleafrika:0 "Claim Mittleafrica"
+ GER_claim_mittleafrika_desc:0 "Claim Mittleafrica"
+ FRA_release_north_africa:0 "Release North African Colonies"
+ FRA_INTERNATIONAL:0 "Third International"
+ 
+ 
+ 
+ 
+ 
+ FRA_contact_psi:0 "Contact [ITA.GetCommunistParty]"
+ FRA_spread_communism_ita:0 "Spread Socialism in Italy"
+ FRA_contact_ITA_socialism:0 "Contacted the Italian Socialist party (PSI)"
+ FRA_communist_uprising_ita:0 "Socialist Uprising in Italy"
+ RP_FRA_spread_communism_italy:0 "Spread Socialism in Italy"
+ FRA_uprising_ita:0 "§YItalian Union§! joins the §YThird International§!"
+ 
+ 
+ FRA_contact_crs:0 "Contact [SPR.GetCommunistParty]"
+ FRA_spread_communism_spr:0 "Spread Socialism in Spain"
+ FRA_contact_SPR_socialism:0 "Contacted the Spanish Socialist party (CRS)"
+ FRA_communist_uprising_spr:0 "Socialist Uprising in Spain"
+ RP_FRA_spread_communism_spain:0 "Spread Socialism in Spain"
+ FRA_uprising_spr:0 "§YRepublic of Spain§! joins the §YThird International§!"
+ 
+ 
+ FRA_contact_fs:0 "Contact [ENG.GetCommunistParty]"
+ FRA_spread_communism_eng:0 "Spread Socialism in Britain"
+ FRA_contact_ENG_socialism:0 "Contacted the British Socialist movement (Fabian Society)"
+ FRA_communist_uprising_eng:0 "Socialist Uprising in Britain"
+ RP_FRA_spread_communism_eng:0 "Spread Socialism in Britain"
+ FRA_uprising_eng:0 "§YRepublic of Britain§! joins the §YThird International§!"
+ 
+ 
+ 
+ FRA_conquer_germany:0 "Liberate the Central Powers"
+ FRA_attack_switzerland:0 "Liberate Switzerland"
+ FRA_conquer_highlands:0 "Liberate the Benelux"
+ FRA_conquer_portugeese_colonies_socialism:0 "Conquer Portugese Colonies"
+ FRA_claim_syria_socialism:0 "Claim Syria"
+ FRA_ottoman_campaign_socialism:0 "Ottoman Campaign"
+ FRA_increase_worker_rights:0 "Increase workers rights"
+ FRA_decrease_work_hours:0 "Decrease Work Hours"
+ RP_FRA_increased_working_rights:0 "Increased Working Rights"
+ RP_FRA_socialist_education:0 "Socialist Science"
+ FRA_socialist_education:0 "Socialist Science"
+ FRA_promote_agriculture:0 "Promote Agriculture"
+ RP_FRA_agricultural_economy:0 "Agricultural Economy"
+ RP_FRA_decreased_working_times:0 "Decreased Working Hours"
+ FRA_nationalize_factories:0 "Nationalize Factories"
+ FRA_establish_neutrality:0 "Establish Neutrality"
+ RP_FRA_for_fatherland:0 "Defending the Fatherland"
+ FRA_for_fatherland:0 "For the Fatherland"
  
  
  
@@ -215,7 +271,7 @@
  #fra_event.3.d:0 "Last election in France was in 1906.But now it is election time.We have to chose our leaders correctly because a storm is coming in Europe.Who should we pick?"
  fra_event.3.d:0 "Last election in France was in 1906.But now it is election time.We have to chose our leaders correctly because a storm is coming in Europe.Who should we pick?ONLY DEMOCRATIC AND MONARCHIST PATHS ARE FINISHED.SOCIALIST AND MAYBE A FASCIST PATH WILL BE UPLOADED IN THE NEXT UPDATES!"
  fra_event.3.a:0 "PRRRS §OThis will allow a democratic (Anti-German or Anti-British) playtrough.§!"
- fra_event.3.b:0 "SFIO (Socialists)"
+ fra_event.3.b:0 "SFIO §OThis will allow a socialist (Spread the revolution or Revolution in France path) playtrough.§!"
  fra_event.3.c:0 "Action Française §OThis will allow a monarchist (Napoleon V or House of Bourbon) playtrough.§!"
  FOCUS_FILTER_ANTI_ENG:0 "Anti-British Policy"
  FOCUS_FILTER_FRA_MONARCHY:0 "Monarchist Path"
@@ -225,6 +281,11 @@
  FOCUS_FILTER_FRA_OTTOMAN:0 "Anti-Ottoman Policy"
  FOCUS_FILTER_FRA_AFRICA:0 "Colonialism"
  FOCUS_FILTER_ANTI_GERMAN:0 "Anti-German Policy"
+ FOCUS_FILTER_FRA_PEACE:0 "Revolution in France Path"
+ scout_plane_equipment:0 "Scout Plane"
+ FRA_anti_colonialism:0 "Anti-Colonialism"
+ FRA_colonialism:0 "Continue with Colonialism"
+ FOCUS_FILTER_FRA_SPREAD:0 "Spread the Revolution Path"
  FRA_claim_syria:0 "Claim Syria"
  FRA_claim_syria_monarchy:0 "Claim Syria"
  FRA_ottoman_campaign:0 "Avenge the Siege of Acre"
@@ -255,32 +316,35 @@
  FRA_ww11_defense_border:0 "Defend the border"
  FRA_ww11_defense_border_desc:0 "Further expansion of prior defensive measures will make France a tough nut to crack, buying us time for our allies to pull their weight in the course of the war. If we can hold off from Germany while Russia hits them from the east, how would they ever resist?"
 
- FRA_ww11_release_asia:0 "Release Vietnam"
- FRA_ww11_release_asia_desc:0 "Vietnam is no longer a valuable enough colony to keep, especially with all of the trouble caused by the natives making it increasingly not worth it. They'll be allowed to call themselves independent...for now." #KAISER_ANONY
- FRA_ww11_bureau_colonies:0 "Ministère des Colonies"
- FRA_ww11_bureau_colonies_desc:0 "The Ministère des Colonies is the government department responsible for administering most of the French colonies and for the implementation of colonial policies. Delegating this ministry additional power could allow us to pursue major projects in our colonial regions."
- FRA_ww11_french_algeria_infra:0 "Develop Infrastructure in Africa"
- FRA_ww11_french_algeria_infra_desc:0 "Africa is a huge continent that we control much of, but the roads there haven't seen significant improvement in years. If we develop the area, we can introduce more complicated economic centers to the area."
- FRA_ww11_french_algeria_civ:0 "North African Colonial Civilian Factories"
- FRA_ww11_french_algeria_civ_desc:0 "Basic Civilian Industries in Africa are a good introduction of modern manufacturies to the continent. The goods produced there can help France as a whole, let alone the locals in the colonies."
- FRA_ww11_french_algeria_mil:0 "North African Colonial Military Factories"
- FRA_ww11_french_algeria_mil_desc:0 "Establishing military industries in Africa will be no simple task, but nothing is impossible to the French! So long as we can get a solid power grid connection up, and train the locals, we can start military production in the region."
- FRA_ww11_french_algeria_mobilization:0 "Mobilize African Colonial Regiments"
- FRA_ww11_french_algeria_mobilization_desc:0 "On top of being able to supply to France itself, having centers of industry in Africa means that we can straight up equip new troops there from the locally manufactured weapons. This will give us an advantage in defending our colonies, and perhaps taking places like Togo and Cameroon."
- FRA_ww11_french_indochina_infra:0 "Develop Infrastructure in Asia"
- FRA_ww11_french_indochina_infra_desc:0 "The roads in Indochina are poor, and in many places, you are forced to travel by boat. A few bridges and a bit of pavement in the area would go a long way to making it easier to station troops in as well as build up an economy in."
- FRA_ww11_french_indochina_civ:0 "Develop Civil Industry in Asia"
- FRA_ww11_french_indochina_civ_desc:0 "Civilian factories are simple, and not unknown in South East Asia. Developing some in Indochina now that we've improved the infrastructure should just prove a matter of investment and worker training, though it is quite a long way home from there..."
- FRA_ww11_french_indochina_mil:0 "Asian Colonial Military Factories"
- FRA_ww11_french_indochina_mil_desc:0 "With Indochina being well, well away from anywhere the Central Powers could feasably attack, any factories there would be safe to produce weapons for the whole of the war."
- FRA_ww11_french_indochina_mobilization:0 "Mobilize Asian Colonial Regiments"
- FRA_ww11_french_indochina_mobilization_desc:0 "Due to the sheer distance between Indochina and France, our colonial ministers in the area have encouraged us to train and equip some troops with the locally made weapons, to defend the colony, and perhaps, if needed, defend other colonies or France herself. New troops is never a bad thing, right?"
- FRA_ww11_algerie_france_desc:0 "French Africa is one of the world's most significant colonies. Bolstering its infrastructure will not only allow us to defend it much more easily, but also establish some basic industries there."
+ FRA_ww111_release_asia:0 "Release Vietnam"
+ FRA_ww111_release_asia_desc:0 "Vietnam is no longer a valuable enough colony to keep, especially with all of the trouble caused by the natives making it increasingly not worth it. They'll be allowed to call themselves independent...for now." #KAISER_ANONY
+ FRA_ww111_bureau_colonies:0 "Ministère des Colonies"
+ FRA_ww111_bureau_colonies_desc:0 "The Ministère des Colonies is the government department responsible for administering most of the French colonies and for the implementation of colonial policies. Delegating this ministry additional power could allow us to pursue major projects in our colonial regions."
+ FRA_ww111_french_algeria_infra:0 "Develop Infrastructure in Africa"
+ FRA_ww111_french_algeria_infra_desc:0 "Africa is a huge continent that we control much of, but the roads there haven't seen significant improvement in years. If we develop the area, we can introduce more complicated economic centers to the area."
+ FRA_ww111_french_algeria_civ:0 "North African Colonial Civilian Factories"
+ FRA_ww111_french_algeria_civ_desc:0 "Basic Civilian Industries in Africa are a good introduction of modern manufacturies to the continent. The goods produced there can help France as a whole, let alone the locals in the colonies."
+ FRA_ww111_french_algeria_mil:0 "North African Colonial Military Factories"
+ FRA_ww111_french_algeria_mil_desc:0 "Establishing military industries in Africa will be no simple task, but nothing is impossible to the French! So long as we can get a solid power grid connection up, and train the locals, we can start military production in the region."
+ FRA_ww111_french_algeria_mobilization:0 "Mobilize African Colonial Regiments"
+ FRA_ww111_french_algeria_mobilization_desc:0 "On top of being able to supply to France itself, having centers of industry in Africa means that we can straight up equip new troops there from the locally manufactured weapons. This will give us an advantage in defending our colonies, and perhaps taking places like Togo and Cameroon."
+ FRA_ww111_french_indochina_infra:0 "Develop Infrastructure in Asia"
+ FRA_ww111_french_indochina_infra_desc:0 "The roads in Indochina are poor, and in many places, you are forced to travel by boat. A few bridges and a bit of pavement in the area would go a long way to making it easier to station troops in as well as build up an economy in."
+ FRA_ww111_french_indochina_civ:0 "Develop Civil Industry in Asia"
+ FRA_ww111_french_indochina_civ_desc:0 "Civilian factories are simple, and not unknown in South East Asia. Developing some in Indochina now that we've improved the infrastructure should just prove a matter of investment and worker training, though it is quite a long way home from there..."
+ FRA_ww111_french_indochina_mil:0 "Asian Colonial Military Factories"
+ FRA_ww111_french_indochina_mil_desc:0 "With Indochina being well, well away from anywhere the Central Powers could feasably attack, any factories there would be safe to produce weapons for the whole of the war."
+ FRA_ww111_french_indochina_mobilization:0 "Mobilize Asian Colonial Regiments"
+ FRA_ww111_french_indochina_mobilization_desc:0 "Due to the sheer distance between Indochina and France, our colonial ministers in the area have encouraged us to train and equip some troops with the locally made weapons, to defend the colony, and perhaps, if needed, defend other colonies or France herself. New troops is never a bad thing, right?"
+ FRA_ww111_algerie_france_desc:0 "French Africa is one of the world's most significant colonies. Bolstering its infrastructure will not only allow us to defend it much more easily, but also establish some basic industries there."
  
  
  
  FRA_ww11_agadir_crisis:0 "Protectorate of Morocco"
  FRA_ww11_agadir_crisis_desc:0 "Rebels are beginning to organize against our puppet, the Sultan of Morocco. While we could intervene immediately, letting him feel the heat for a bit would not only be the perfect pretext for annexation, but also be a good way to ensure that the local governments comply in it. The Germans may try to stick their nose into our affairs, but we do have a backup plan if such is the case."
+
+ FRA_ww111_agadir_crisis:0 "Protectorate of Morocco"
+ FRA_ww111_agadir_crisis_desc:0 "Rebels are beginning to organize against our puppet, the Sultan of Morocco. While we could intervene immediately, letting him feel the heat for a bit would not only be the perfect pretext for annexation, but also be a good way to ensure that the local governments comply in it. The Germans may try to stick their nose into our affairs, but we do have a backup plan if such is the case."
 
  
  fra_event.4:0 "Ottoman Goverment exiled Armenians"
