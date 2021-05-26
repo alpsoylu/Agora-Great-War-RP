@@ -339,6 +339,29 @@
  FRA_ww111_algerie_france_desc:0 "French Africa is one of the world's most significant colonies. Bolstering its infrastructure will not only allow us to defend it much more easily, but also establish some basic industries there."
  
  
+ FRA_ww11_release_asia:0 "Release Vietnam"
+ FRA_ww11_release_asia_desc:0 "Vietnam is no longer a valuable enough colony to keep, especially with all of the trouble caused by the natives making it increasingly not worth it. They'll be allowed to call themselves independent...for now." #KAISER_ANONY
+ FRA_ww11_bureau_colonies:0 "Ministère des Colonies"
+ FRA_ww11_bureau_colonies_desc:0 "The Ministère des Colonies is the government department responsible for administering most of the French colonies and for the implementation of colonial policies. Delegating this ministry additional power could allow us to pursue major projects in our colonial regions."
+ FRA_ww11_french_algeria_infra:0 "Develop Infrastructure in Africa"
+ FRA_ww11_french_algeria_infra_desc:0 "Africa is a huge continent that we control much of, but the roads there haven't seen significant improvement in years. If we develop the area, we can introduce more complicated economic centers to the area."
+ FRA_ww11_french_algeria_civ:0 "North African Colonial Civilian Factories"
+ FRA_ww11_french_algeria_civ_desc:0 "Basic Civilian Industries in Africa are a good introduction of modern manufacturies to the continent. The goods produced there can help France as a whole, let alone the locals in the colonies."
+ FRA_ww11_french_algeria_mil:0 "North African Colonial Military Factories"
+ FRA_ww11_french_algeria_mil_desc:0 "Establishing military industries in Africa will be no simple task, but nothing is impossible to the French! So long as we can get a solid power grid connection up, and train the locals, we can start military production in the region."
+ FRA_ww11_french_algeria_mobilization:0 "Mobilize African Colonial Regiments"
+ FRA_ww11_french_algeria_mobilization_desc:0 "On top of being able to supply to France itself, having centers of industry in Africa means that we can straight up equip new troops there from the locally manufactured weapons. This will give us an advantage in defending our colonies, and perhaps taking places like Togo and Cameroon."
+ FRA_ww11_french_indochina_infra:0 "Develop Infrastructure in Asia"
+ FRA_ww11_french_indochina_infra_desc:0 "The roads in Indochina are poor, and in many places, you are forced to travel by boat. A few bridges and a bit of pavement in the area would go a long way to making it easier to station troops in as well as build up an economy in."
+ FRA_ww11_french_indochina_civ:0 "Develop Civil Industry in Asia"
+ FRA_ww11_french_indochina_civ_desc:0 "Civilian factories are simple, and not unknown in South East Asia. Developing some in Indochina now that we've improved the infrastructure should just prove a matter of investment and worker training, though it is quite a long way home from there..."
+ FRA_ww11_french_indochina_mil:0 "Asian Colonial Military Factories"
+ FRA_ww11_french_indochina_mil_desc:0 "With Indochina being well, well away from anywhere the Central Powers could feasably attack, any factories there would be safe to produce weapons for the whole of the war."
+ FRA_ww11_french_indochina_mobilization:0 "Mobilize Asian Colonial Regiments"
+ FRA_ww11_french_indochina_mobilization_desc:0 "Due to the sheer distance between Indochina and France, our colonial ministers in the area have encouraged us to train and equip some troops with the locally made weapons, to defend the colony, and perhaps, if needed, defend other colonies or France herself. New troops is never a bad thing, right?"
+ FRA_ww11_algerie_france_desc:0 "French Africa is one of the world's most significant colonies. Bolstering its infrastructure will not only allow us to defend it much more easily, but also establish some basic industries there."
+ 
+ 
  
  FRA_ww11_agadir_crisis:0 "Protectorate of Morocco"
  FRA_ww11_agadir_crisis_desc:0 "Rebels are beginning to organize against our puppet, the Sultan of Morocco. While we could intervene immediately, letting him feel the heat for a bit would not only be the perfect pretext for annexation, but also be a good way to ensure that the local governments comply in it. The Germans may try to stick their nose into our affairs, but we do have a backup plan if such is the case."
