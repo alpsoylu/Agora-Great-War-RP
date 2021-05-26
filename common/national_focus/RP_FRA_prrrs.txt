@@ -815,6 +815,7 @@ set_cosmetic_tg = FRA_start
 					is_subject_of = FRA
 				}
 			}
+			date > 1911.4.1
 		}
 		bypass = {
 			OR = {

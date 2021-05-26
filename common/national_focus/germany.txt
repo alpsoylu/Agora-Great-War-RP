@@ -2507,13 +2507,13 @@ focus_tree = {
 			has_global_flag = agadir_crisis
 			NOT = { has_global_flag = agadir_crisis_ends }
 			}
-			FRA = {has_completed_focus = FRA_anti_colonialism}
 			}
 		}
 		bypass = {
 			OR = {
 				has_global_flag = agadir_crisis_ends
 				has_global_flag = kis_war
+				FRA = {has_completed_focus = FRA_anti_colonialism}
 			}
 		}
 		completion_reward = {
