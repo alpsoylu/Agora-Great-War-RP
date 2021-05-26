@@ -6,28 +6,18 @@ set_war_support = 0.70
 set_convoys = 10
 
 create_country_leader = {
-	name = "George I"
-	picture = "gfx/leaders/GRE/GRE_george_i.dds"
-	expire = "1935.1.1"
-	ideology = autocracy
-	traits = { trait_autocracy } 
-}
-
-create_country_leader = {
 	name = "Eleftherios Venizelos"
 	picture = "gfx/leaders/GRE/GRE_eleftherios_venizelos.dds"
 	expire = "1935.1.1"
 	ideology = classical_liberalism
 	traits = { trait_classical_liberalism } 
 }
-
-
 create_country_leader = {
-	name = "Eleftherios Venizelos"
-	picture = "gfx/leaders/GRE/GRE_stefanos.dds"
+	name = "George I"
+	picture = "gfx/leaders/GRE/GRE_george_i.dds"
 	expire = "1935.1.1"
 	ideology = autocracy
-	traits = {  } 
+	traits = { trait_autocracy } 
 }
 
 create_corps_commander={  
@@ -249,9 +239,9 @@ create_navy_leader={  name = "Hatzikiriakos" traits={   } skill=2 }
 		elections_allowed = no 
 	}	
 	set_popularities = {
-		fascism = 0
-		communism = 0
-		democratic = 38
+		fascism = 2
+		communism = 2
+		democratic = 34
 		neutrality = 62
 	}
 
