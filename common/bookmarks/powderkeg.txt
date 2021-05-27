@@ -32,7 +32,7 @@ bookmarks = {
 			}
 			focuses = {
 				FRA_agadir_crisis_ww1
-				FRA_cons_victory
+				FRA_claim_syria_socialism
 				FRA_anti_german_policy
 			}
 		}
