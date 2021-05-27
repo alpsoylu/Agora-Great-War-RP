@@ -173,7 +173,7 @@ set_cosmetic_tg = FRA_start
 			focus = FRA_oppose_italian_expansionism
 			focus = FRA_support_italian_expansionism
 		}
-		icon = GFX_hoi4tgw_russianempire
+		icon = GFX_focus_deal_with_russia
 		available = {
 			NOT = {
 				has_war_with = RUS

@@ -31,7 +31,7 @@ bookmarks = {
 				ww1_Scramble_for_Africa
 			}
 			focuses = {
-				FRA_ww1_agadir_crisis
+				FRA_agadir_crisis_ww1
 				FRA_cons_victory
 				FRA_anti_german_policy
 			}
