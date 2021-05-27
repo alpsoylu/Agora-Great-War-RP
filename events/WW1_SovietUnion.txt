@@ -1024,9 +1024,9 @@ country_event = {
 			modifier = {
 				factor = 10
 				NOT = {
-					tag = LAT
+					tag = LTR
 					tag = LIT
-					tag = EST
+					tag = ESR
 					tag = POL
 					tag = FIN
 				}				
@@ -1046,9 +1046,9 @@ country_event = {
 			modifier = {
 				add = 10
 				OR = {
-					tag = LAT
+					tag = LTR
 					tag = LIT
-					tag = EST
+					tag = ESR
 					tag = POL
 					tag = FIN
 				}

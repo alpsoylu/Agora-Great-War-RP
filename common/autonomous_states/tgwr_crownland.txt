@@ -55,9 +55,6 @@ autonomy_state = {
 			tag = SER
 			tag = SLV
 		}
-		NOT = {
-			has_government = communism 
-		}
 	}
 	
 	allowed_levels_filter = {
@@ -65,11 +62,9 @@ autonomy_state = {
 	}
 
 	can_take_level = {
-		hidden_trigger = { always = no }
 	}
 
 	can_lose_level = {
-	    hidden_trigger = { always = no }
 	}
 }
 

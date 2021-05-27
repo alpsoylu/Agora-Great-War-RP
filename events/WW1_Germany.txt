@@ -889,7 +889,8 @@ country_event = {
 				NOT = {
 					owns_state = 76
 					owns_state = 84
-					owns_state = 778
+					owns_state = 83
+					owns_state = 80
 				}
 				factor = 0
 			}
@@ -1345,9 +1346,9 @@ country_event = {
 					target = MAF
 					autonomy_state = autonomy_colony
 				}
-			}
-			else = {
-				puppet = MAF
+				else = {
+					puppet = MAF
+				}
 			}
 			MAF = {
 				set_popularities = {
@@ -2229,12 +2230,11 @@ country_event = {
 	option = {
 		name = ww1_germany.48.a
 		set_country_flag = city_of_consenssion
-		add_ideas = GER_legation_profits
 		if = {
 			limit = {
 				owns_state = 729
 			}
-			LGC = {
+			OST = {
 				transfer_state = 729
 				add_state_core = 729
 			}
@@ -2243,7 +2243,7 @@ country_event = {
 			limit = {
 				owns_state = 326
 			}
-			LGC = {
+			OST = {
 				transfer_state = 326
 				add_state_core = 326
 			}
@@ -2252,7 +2252,7 @@ country_event = {
 			limit = {
 				owns_state = 746
 			}
-			LGC = {
+			OST = {
 				transfer_state = 746
 				add_state_core = 746
 			}
@@ -2261,7 +2261,7 @@ country_event = {
 			limit = {
 				owns_state = 745
 			}
-			LGC = {
+			OST = {
 				transfer_state = 745
 				add_state_core = 745
 			}
@@ -2270,15 +2270,15 @@ country_event = {
 			limit = {
 				owns_state = 728
 			}
-			LGC = {
+			OST = {
 				transfer_state = 728
 				add_state_core = 728
 			}
 		}
-		LGC = {
+		OST = {
 			give_military_access = ROOT
 		}
-		give_guarantee = LGC
+		give_guarantee = OST
 		ai_chance = {
 			factor = 100
 			modifier = {
@@ -2347,22 +2347,7 @@ country_event = {
 	option = {
 		name = ww1_germany.49.a
 		GER = {
-			if = {
-				limit = {
-					OR = {
-						has_dlc = "Together for Victory"
-						has_dlc = "Waking the Tiger"
-					}
-				}
-				set_autonomy = {
-					target = ROOT
-					autonomy_state = autonomy_tgwr_informal_protectorate
-				}
-			}
-			else = {
-				puppet = ROOT
-				add_ideas = protectorate
-			}
+			puppet = ROOT
 		}
 		ai_chance = {
 			factor = 5
@@ -2861,17 +2846,10 @@ country_event = {
 			}
 			AUH = {
 				add_manpower = 100000
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 76
-							state = 84
-							state = 778
-						}	
-					}
-					remove_core_of = AUH
-					ROM = { transfer_state = PREV }
-				}
+				remove_state_core = 76
+				remove_state_core = 84
+				remove_state_core = 83
+				remove_state_core = 82
 				random_owned_state = {
 					limit = {
 						is_core_of = AUH
@@ -2883,6 +2861,12 @@ country_event = {
 					}
 					add_extra_state_shared_building_slots = 2
 				}
+			}
+			ROM = {
+				transfer_state = 76
+				transfer_state = 84
+				transfer_state = 83
+				transfer_state = 82
 			}
 			GER = {
 				random_owned_state = {
@@ -2921,13 +2905,6 @@ country_event = {
 			}
 			AUH = {
 				add_manpower = 50000
-				every_owned_state = {
-					limit = {
-						state = 84
-					}
-					remove_core_of = AUH
-					ROM = { transfer_state = PREV }
-				}
 				remove_state_core = 84
 				random_owned_state = {
 					limit = {
@@ -2940,6 +2917,9 @@ country_event = {
 					}
 					add_extra_state_shared_building_slots = 1
 				}
+			}
+			ROM = {
+				transfer_state = 84
 			}
 			GER = {
 				random_owned_state = {
@@ -3823,7 +3803,6 @@ news_event = {
 			has_country_flag = great_war_loser
 		}
 	}
-	fire_only_once = yes
 	immediate = {
 	    hidden_effect = {
 			if = {
@@ -3862,161 +3841,6 @@ news_event = {
 		trigger = {
 			NOT = {
 				original_tag = GER
-				has_country_flag = great_war_loser
-			}
-		}
-	}
-}
-
-# SCUTTLING OF THE GERMAN FLEET
-####################################
-country_event = {
-	id = ww1_germany.82
-	title = ww1_germany.82.t
-	desc = ww1_germany.82.d
-	trigger = {
-		original_tag = GER
-		has_country_flag = great_war_loser
-		has_global_flag = compiegne_armistice
-	}
-	fire_only_once = yes
-	mean_time_to_happen = { days = 20 }
-	option = {
-		name = ww1_germany.82.a
-		destroy_ships = {
-			type = carrier
-			count = all
-		}
-		destroy_ships = {
-			type = battleship
-			count = all
-		}
-		destroy_ships = {
-			type = battle_cruiser
-			count = all
-		}
-		destroy_ships = {
-			type = heavy_cruiser
-			count = all
-		}
-		destroy_ships = {
-			type = light_cruiser
-			count = all
-		}
-		destroy_ships = {
-			type = destroyer
-			count = all
-		}
-		destroy_ships = {
-			type = submarine
-			count = all
-		}
-		hidden_effect = {
-			news_event = ww1_germany.83
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				load_oob = GER_1921_naval_mtg
-			}
-			else = {
-				load_oob = GER_1921_naval_legacy
-			}
-		}
-		ai_chance = {
-			factor = 100
-		}
-	}
-	option = {
-		name = ww1_germany.82.b
-		if = {
-			limit = {
-				USA = {
-					exists = yes
-					has_country_flag = great_war_winner
-				}
-			}
-			transfer_units_fraction= {
-				target = USA
-				size = 0.5
-				stockpile_ratio = 0
-				army_ratio = 0
-				navy_ratio = 1
-				air_ratio = 0
-				keep_unit_leaders_trigger = {
-					always = yes
-				}
-			}
-		}
-		if = {
-			limit = {
-				ENG = {
-					exists = yes
-					has_country_flag = great_war_winner
-				}
-			}
-			transfer_units_fraction= {
-				target = ENG
-				size = 0.5
-				stockpile_ratio = 0
-				army_ratio = 0
-				navy_ratio = 1
-				air_ratio = 0
-				keep_unit_leaders_trigger = {
-					always = yes
-				}
-			}
-		}
-		if = {
-			limit = {
-				FRA = {
-					exists = yes
-					has_country_flag = great_war_winner
-				}
-			}
-			transfer_units_fraction= {
-				target = FRA
-				size = 0.5
-				stockpile_ratio = 0
-				army_ratio = 0
-				navy_ratio = 1
-				air_ratio = 0
-				keep_unit_leaders_trigger = {
-					always = yes
-				}
-			}
-		}
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-
-# SCUTTLING OF THE GERMAN FLEET
-news_event = {
-	id = ww1_germany.83
-	title = ww1_germany.83.t
-	desc = ww1_germany.83.d
-	picture = ww1_germany_83
-	major = yes
-	is_triggered_only = yes
-	option = {
-		name = ww1_germany.83.a
-		trigger = {
-			has_country_flag = great_war_winner
-		}
-	}
-	option = {
-		name = ww1_germany.83.b
-		trigger = {
-			has_country_flag = great_war_loser
-		}
-	}
-	option = {
-		name = ww1_germany.83.c
-		trigger = {
-			NOT = {
-				has_country_flag = great_war_winner
 				has_country_flag = great_war_loser
 			}
 		}

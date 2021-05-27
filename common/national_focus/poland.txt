@@ -163,14 +163,7 @@ focus_tree = {
 			base = 50
 			modifier = {
 				factor = 0
-				AND = {
-					is_historical_focus_on = yes
-					GER = {
-						NOT = {
-							has_country_flag = great_war_winner
-						}
-					}	
-				}				
+				is_historical_focus_on = yes
 			}
 		}
 		available = {

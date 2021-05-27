@@ -4,11 +4,11 @@ focus_tree = {
 		base = 0
 		modifier = {
 			add = 10
-			original_tag = QIN
+			tag = QIN
 		}
 		modifier = {
 			add = 10
-			original_tag = CHI
+			tag = CHI
 		}
 	}
 	default = no
@@ -114,7 +114,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CHI_pave_way_for_industrialization
-		icon = GFX_focus_seven_year_plan
+		icon = GFX_goal_generic_construction
 		cost = 10
 		prerequisite = {
 			focus = CHI_restore_military_production
@@ -267,7 +267,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CHI_central_provinces
-		icon = GFX_focus_train_railroads
+		icon = GFX_focus_generic_industry_1
 		cost = 10
 		prerequisite = {
 			focus = CHI_pave_way_for_industrialization
@@ -380,7 +380,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CHI_sichuan_factories
-		icon = GFX_focus_industry_profit
+		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10
 		prerequisite = {
 			focus = CHI_central_provinces
@@ -1535,7 +1535,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CHI_mauser_c96_contract
-		icon = GFX_focus_german_equipment
+		icon = GFX_goal_generic_small_arms
 		cost = 10
 		prerequisite = {
 			focus = CHI_german_manufacturer
@@ -1761,37 +1761,14 @@ focus_tree = {
 		}
 		x = 26
 		y = 1
-		bypass = {
-			NOT = {
-				has_government = neutrality
-				tag = QIN
-			}
-		}
 		completion_reward = {
 			add_stability = 0.05
-			add_political_power = 100
-			create_country_leader = {
-				name = "Yikuang" 
-				picture = "gfx/leaders/QIN/QIN_Yikuang.dds" 
-				expire = "1935.1.1" 
-				ideology = autocracy
-				traits = { trait_autocracy }
-			}
-			set_party_name = {
-				ideology = neutrality
-				long_name = QIN_neutrality_cabinet_party
-				name = QIN_neutrality_cabinet_party
-			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 100
-				date > 1911.2.1
-			}
+			factor = 1
 		}
 	}
 	focus = {
@@ -2278,14 +2255,11 @@ focus_tree = {
 			}
 			set_politics = {
 				ruling_party = neutrality
-				elections_allowed = yes
-			} 
-			set_capital = 608
-			set_party_name = {
-				ideology = neutrality
-				long_name = CHI_neutrality_party
-				name = CHI_neutrality_party
+				last_election = "1910.1.1"
+				election_frequency = 48
+				elections_allowed = no
 			}
+			set_capital = 608
 			hidden_effect = {
 				create_country_leader = {
 					name = "Yuan Shikai"
@@ -2334,6 +2308,8 @@ focus_tree = {
 			}
 			set_politics = {
 				ruling_party = democratic
+				last_election = "1910.1.1"
+				election_frequency = 48
 				elections_allowed = yes
 			}
 			hidden_effect = {
@@ -2394,7 +2370,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CHI_party_expansion
-		icon = GFX_focus_chi_united_front
+		icon = GFX_focus_chi_one_china_policy
 		cost = 10
 		prerequisite = {
 			focus = CHI_kuomintang
@@ -2840,17 +2816,13 @@ focus_tree = {
 		}
 		available = {
 			has_war = no
-			OR = {
-				has_global_flag = warlord_era
-				has_global_flag = warlord_era_end
-			}
+			has_global_flag = warlord_era
 			if = {
 				limit = {
 					original_tag = CHI
 				}
 				has_global_flag = constitutional_protection_war
 			}
-			NOT = { has_idea = CHI_idea_government_divided }
 		}
 		completion_reward = {
 			hidden_effect = {
@@ -2951,7 +2923,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CHI_marine_engineering
-		icon = GFX_focus_otto_naval_train
+		icon = GFX_goal_generic_production2
 		cost = 10
 		prerequisite = {
 			focus = CHI_admiralty
@@ -3189,7 +3161,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CHI_armored_vehicles
-		icon = GFX_focus_early_tank
+		icon = GFX_goal_generic_army_tanks
 		cost = 10
 		prerequisite = {
 			focus = CHI_train_engineers

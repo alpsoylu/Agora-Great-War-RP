@@ -1,4 +1,4 @@
-peace_deals = {
+foreign_politics = {
 	HUN_sue_for_peace_ROM = {
 		allowed = {
 			original_tag = HUN

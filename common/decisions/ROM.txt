@@ -110,11 +110,7 @@ GER_great_war = {
 			}
 		}
 		ai_will_do = {
-			base = 1000
-			modifier = {
-				factor = 0
-				has_global_flag = AI_conference_off
-			}
+			factor = 1000
 			modifier = {
 				factor = 0
 				surrender_progress < 0.02
@@ -126,17 +122,7 @@ GER_great_war = {
 				factor = 0
 				date < 1918.10.11
 				surrender_progress < 0.2
-				casualties < 2500000
-				NOT = {
-					AND = {
-						AUH = {
-							is_in_faction_with = GER
-						}
-						AUH = {
-							has_capitulated = yes
-						}
-					}
-				}
+				casualties < 3000000
 			}
 			modifier = {
 				factor = 0
@@ -151,8 +137,19 @@ GER_great_war = {
 				BEL = {
 					has_capitulated = yes
 				}
-				surrender_progress < 0.2
+				surrender_progress < 0.3
 				casualties < 2500000
+			}
+			modifier = {
+				factor = 0
+				FRA = { surrender_progress < 0.2 }
+				casualties < 3000000
+			}
+			modifier = {
+				factor = 0
+				FRA = { surrender_progress < 0.3 }
+				surrender_progress < 0.2
+				casualties < 3500000
 			}
 			modifier = {
 				factor = 0
@@ -203,8 +200,7 @@ GER_great_war = {
 						}
 					}
 				}
-				surrender_progress < 0.3
-				casualties < 3000000
+				surrender_progress < 0.5
 			}
 		}
 	}
@@ -253,7 +249,7 @@ GER_great_war = {
 			if = {
 				limit = {
 					is_ai = yes
-					num_divisions < 10
+					num_units < 10
 				}
                 load_oob = "ROM_1910"
 			}

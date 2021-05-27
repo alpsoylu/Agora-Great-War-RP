@@ -1471,7 +1471,7 @@ country_event = {
 		has_war = no
 	}
 	mean_time_to_happen = {
-		days = 240
+		days = 180
 	}
 	option = {
 		name = ww1_england.36.a
@@ -1745,7 +1745,6 @@ country_event = {
 		}
 		hidden_effect = {
 			load_focus_tree = uk_cw_focus
-			set_global_flag = british_civil_war
 			set_country_flag = british_white_civil_war
 			random_other_country = {
 				limit = {
@@ -1755,7 +1754,6 @@ country_event = {
 				load_focus_tree = uk_cw_focus
 				set_country_flag = british_white_civil_war
 				set_country_flag = ENG_socialist_britain_flag
-				set_country_flag = great_war_loser
 				set_rule = {
 					#To prevent joining Red Guard faction, jesus
 					can_join_factions = no
@@ -2162,12 +2160,6 @@ country_event = {
 				}
 				release = IRE
 			}
-			else_if = {
-				limit = {
-					owns_state = 119
-				}
-				IRE = { transfer_state = 119 }
-			}
 			EGY = {
 				hidden_effect = {
 					country_lock_all_division_template = no
@@ -2548,7 +2540,9 @@ country_event = {
 			has_global_flag = frankfurt_treaty
 			has_global_flag = versallies_treaty
 		}
-		has_subject = EGY
+		EGY = {
+			is_subject_of = ENG
+		}
 		NOT = {
 			TUR = {
 				has_country_flag = ottomans_hold_cairo_and_alexandria
@@ -2561,34 +2555,23 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = ww1_england.52.a
+		end_puppet = EGY
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = EGY
+					is_core_of = SUD
+					is_claimed_by = EGY
+				}
+				is_owned_by = ENG
+			}
+			EGY = {
+				transfer_state = PREV
+			}
+		}
 		hidden_effect = {
 			news_event = {
 				id = eng_news.5
-			}
-			# North Darfur
-			if = {
-				limit = {
-					owns_state = 767
-				}
-				if = {
-					limit = {
-						any_country = {
-							owns_state = 754
-							owns_state = 552
-						}
-					}
-					every_other_country = {
-						limit = {
-							owns_state = 754
-							owns_state = 552
-						}
-						transfer_state = 767
-					}
-					else = {
-						EGY = { transfer_state = 767 }
-					}
-				}
-				
 			}
 			EGY = {
 				add_ideas = ENG_british_officers_independent_egypt
@@ -2603,19 +2586,6 @@ country_event = {
 						trait_autocracy
 					}
 				}
-			}
-		}
-		end_puppet = EGY
-		every_owned_state = {
-			limit = {
-				OR = {
-					is_core_of = EGY
-					is_core_of = SUD
-					is_claimed_by = EGY
-				}
-			}
-			EGY = {
-				transfer_state = PREV
 			}
 		}
 	}
@@ -2643,6 +2613,8 @@ country_event = {
 		add_state_claim = 268
 	}
 }
+
+###Egyptian/German conflict for Sudan mini event chain
 #Egypt gets option to move into Sudan
 country_event = {
 	id = ww1_england.54
@@ -2659,7 +2631,7 @@ country_event = {
 			OR = {
 				has_civil_war = yes
 				AND = {
-					has_country_flag = ENG_socialist_britain_flag
+					has_cosmetic_tag = UOB
 					has_government = communism
 				}
 			}
@@ -2672,13 +2644,13 @@ country_event = {
 	#Egypt moves into Sudan
 	option = {
 		name = ww1_england.54.a
+		add_manpower = -1000
 		every_state = {
 			limit = {
 				is_owned_by = ENG
 				OR = {
 					is_core_of = EGY
 					is_core_of = SUD
-					is_core_of = DAR
 				}
 			}
 			EGY = { transfer_state = PREV }
@@ -2699,31 +2671,39 @@ country_event = {
 		has_country_flag = great_war_winner
 		owns_state = 546
 		ENG = {
+			owns_state = 547
 			OR = {
-				owns_state = 547
-				owns_state = 548
-				owns_state = 792
+				has_civil_war = yes
+				AND = {
+					has_cosmetic_tag = UOB
+					has_government = communism
+				}
 			}
-			has_country_flag = great_war_loser
 		}
 	}
 	mean_time_to_happen = {
-		days = 20
+		days = 30
 	}
 	fire_only_once = yes
 	option = {
 		name = ww1_england.66.a
-		every_state = {
+		if = {
 			limit = {
-				is_owned_by = ENG
-				OR = {
-					state = 547
-					state = 548
-					state = 792
+				ENG = {
+					owns_state = 548
 				}
 			}
-			ROOT = { transfer_state = PREV }
+			transfer_state = 548
 		}
+		if = {
+			limit = {
+				ENG = {
+					owns_state = 792
+				}
+			}
+			transfer_state = 792
+		}
+		transfer_state = 547
 	}
 }
 
@@ -2991,82 +2971,34 @@ country_event = {
 	trigger = {
 		original_tag = ENG
 		has_country_flag = great_war_loser
-		OR = {
-			has_global_flag = versallies_treaty
-			has_global_flag = frankfurt_treaty
-		}
 		GER = {
 			has_country_flag = great_war_winner
 		}
-		OR = {
-			owns_state = 700
-			owns_state = 701
-			owns_state = 703
-			owns_state = 704
-			owns_state = 720
-			owns_state = 299
-			owns_state = 118
-		}
+		owns_state = 700
+		owns_state = 701
+		owns_state = 703
+		owns_state = 704
+		owns_state = 720
+		owns_state = 299
+		owns_state = 118
 	}
-	mean_time_to_happen = { days = 3 }
 	fire_only_once = yes
 	option = {
 		name = ww1_england.73.a
-		if = {
-			limit = {
-				owns_state = 703
-			    owns_state = 704
-			}
-			GER = {
-				transfer_state = 703
-				transfer_state = 704
-			}
+		GER = {
+			transfer_state = 703
+			transfer_state = 704
 		}
-		if = {
-			limit = {
-			    owns_state = 118
-			}
-			every_other_country = {
-				limit = {
-					owns_state = 173
-				}
-				transfer_state = 118
-			}
+		SPR = {
+			transfer_state = 118
 		}
-		if = {
-			limit = {
-			    owns_state = 720
-			    owns_state = 299
-			}
-			every_other_country = {
-				limit = {
-					owns_state = 512
-				}
-				transfer_state = 299
-				transfer_state = 720
-			}
+		ARG = {
+			transfer_state = 299
+			transfer_state = 720
 		}
-		if = {
-			limit = {
-			    owns_state = 701
-			}
-			every_other_country = {
-				limit = {
-					owns_state = 273
-				}
-				transfer_state = 701
-			}
-		}
-		if = {
-			limit = {
-			    owns_state = 700
-			}
-			every_other_country = {
-				limit = {
-					owns_state = 780
-				}
-				transfer_state = 700
-			}
+		FRA = {
+			transfer_state = 700
+			transfer_state = 701
 		}
 		if = {
 			limit = {
@@ -3094,35 +3026,9 @@ country_event = {
 					owns_state = 183
 				}
 			}
-			if = {
-			    limit = {
-				    TUR = {
-					    NOT = {
-						    has_country_flag = great_war_loser
-					    }
-	 				}					
-				}	
-				TUR = {
-					transfer_state = 183
-				}
-				else_if = {
-					limit = {
-						GRE = {
-							NOT = {
-								has_country_flag = great_war_loser
-							}
-						}
-					}
-					GRE = {
-						transfer_state = 183
-					}
-					else = {
-						CYP = {
-							transfer_state = 183
-						}
-					}
-				}
-			}						
+			CYP = {
+				transfer_state = 183
+			}
 		}
 		if = {
 			limit = {
@@ -3131,14 +3037,6 @@ country_event = {
 				}
 			}
 			end_puppet = OMA
-		}
-		if = {
-			limit = {
-				DAR = {
-					is_subject_of = ENG
-				}
-			}
-			end_puppet = DAR
 		}
 	}
 }
@@ -3152,10 +3050,6 @@ country_event = {
 	trigger = {
 		original_tag = ENG
 		has_country_flag = great_war_loser
-		OR = {
-			has_global_flag = versallies_treaty
-			has_global_flag = frankfurt_treaty
-		}
 		FRA = {
 			has_country_flag = great_war_winner
 		}
@@ -3444,10 +3338,7 @@ country_event = {
 	picture = GFX_report_event_saf_soldiers_3
 	trigger = {
 		original_tag = ENG
-		OR = {
-			has_country_flag = great_war_loser
-			has_cosmetic_tag = UOB
-		}
+		has_country_flag = great_war_loser
 		GER = {
 			has_country_flag = great_war_winner
 		}
@@ -3456,7 +3347,6 @@ country_event = {
 			has_global_flag = versallies_treaty
 		}
 	}
-	mean_time_to_happen = { days = 11 }
 	fire_only_once = yes
 	option = {
 		name = ww1_england.83.a
@@ -3581,20 +3471,11 @@ country_event = {
 	trigger = {
 		original_tag = GER
 		has_country_flag = great_war_winner
+		has_completed_focus = GER_turn_to_asia
 		ENG = {
-			OR = {
-				has_country_flag = great_war_loser
-				has_cosmetic_tag = UOB
-			}
-			owns_state = 771
-			owns_state = 770
-		}
-		OR = {
-			has_global_flag = versallies_treaty
-			has_global_flag = frankfurt_treaty
+			has_country_flag = great_war_loser
 		}
 	}
-	mean_time_to_happen = { days = 5 }
 	hidden = yes
 	fire_only_once = yes
 	immediate = {
@@ -4643,10 +4524,6 @@ country_event = {
 		original_tag = ENG
 		has_country_flag = great_war_loser
 		OR = {
-			has_global_flag = versallies_treaty
-			has_global_flag = frankfurt_treaty
-		}
-		OR = {
 			has_country_leader = {
 				name = "Rotha Lintorn-Orman"
 				ruling_only = yes
@@ -4682,10 +4559,6 @@ country_event = {
 		original_tag = ENG
 		has_global_flag = french_civil_war
 		has_country_flag = great_war_loser
-		OR = {
-			has_global_flag = versallies_treaty
-			has_global_flag = frankfurt_treaty
-		}
 		has_global_flag = great_war_ends
 		has_global_flag = interbellum
 		NOT = {
@@ -5325,7 +5198,7 @@ country_event = {
 	}
 }
 
-#Kitchener returns to ENG after the Great War
+#Kitchener returns to ENG after the Great War (if Russian Civil War isn't happening)
 country_event = {
 	id = ww1_england.118
 	title = ww1_england.118.t
@@ -5334,6 +5207,9 @@ country_event = {
 	trigger = {
 		original_tag = RUS
 		has_unit_leader = 899
+		NOT = {
+			has_war_with = SOV
+		}
 		ENG = {
 			OR = {
 				has_country_flag = great_war_winner
@@ -7153,7 +7029,7 @@ country_event = {
 	option = {
 		name = ww1_england.157.a
 		ai_chance = {
-			factor = 20
+			factor = 80
 		}
 		add_political_power = -100
 		set_cosmetic_tag = ENG_angevin_empire
@@ -7229,7 +7105,7 @@ country_event = {
 		name = ww1_england.157.c
 		add_political_power = 100
 		ai_chance = {
-			factor = 80
+			factor = 40
 		}
 	}
 }
@@ -7479,15 +7355,10 @@ country_event = {
 	trigger = {
 		original_tag = ENG
 		has_country_flag = great_war_loser
-		OR = {
-			has_global_flag = versallies_treaty
-			has_global_flag = frankfurt_treaty
-		}
 		NOT = {
 			country_exists = MLT
 		}
 	}
-	mean_time_to_happen = { days = 50 }
 	option = {
 		name = ww1_england.164.a
 		ai_chance = {
@@ -8706,26 +8577,13 @@ country_event = {
 	trigger = {
 		tag = ENG
 		owns_state = 827
-		
+		is_ai = no
 	}
 	immediate = {
 		hidden_effect = {
-			if = {
-			    limit = {
-				    is_ai = no
-				}
-                SUD = {
-                    add_state_core = 827
-                }	
-                DAR = {
-					remove_state_core = 827
-				}
-                else = {
-					set_country_flag = ENG_pacify_darfur
-					827 = {
-						set_border_war = yes
-					}	
-				}			
+			set_country_flag = ENG_pacify_darfur
+			827 = {
+				set_border_war = yes
 			}
 		}
 	}
@@ -8758,14 +8616,12 @@ country_event = {
 				add_state_core = 827
 			}
 			DAR = {
-				remove_state_core = 827			
+				remove_state_core = 827
+				kill_ideology_leader = neutrality
 			}
 		}
 	}
 	option = {
 		name = ww1_england.191.a
-		DAR = {
-			kill_ideology_leader = neutrality
-		}
 	}
 }

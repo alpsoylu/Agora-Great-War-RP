@@ -125,7 +125,7 @@ AFG_attack_entente = {
 			add_state_claim = 586
 		}
 		ai_will_do = {
-			base = 0
+			base = 10
 		} 
 	}
 	AFG_tribal_mobilization = {

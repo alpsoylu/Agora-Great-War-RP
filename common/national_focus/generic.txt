@@ -1678,7 +1678,6 @@ focus_tree = {
 						building = infrastructure
 						size > 0
 					}
-					impassable = no
 					OR = {
 						is_in_home_area = yes
 						NOT = {
@@ -1706,7 +1705,6 @@ focus_tree = {
 						building = infrastructure
 						size > 1
 					}
-					impassable = no
 					OR = {
 						is_in_home_area = yes
 						NOT = {
@@ -1748,7 +1746,7 @@ focus_tree = {
 						building = industrial_complex
 						size < 1
 						include_locked = yes
-					}			
+					}					
 				}
 			}
 		}
@@ -1770,7 +1768,6 @@ focus_tree = {
 						size > 0
 						include_locked = yes
 					}
-					impassable = no
 					OR = {
 						is_in_home_area = yes
 						NOT = {
@@ -1836,7 +1833,6 @@ focus_tree = {
 						size > 0
 						include_locked = yes
 					}
-					impassable = no
 					OR = {
 						is_in_home_area = yes
 						NOT = {
@@ -1881,7 +1877,6 @@ focus_tree = {
 			any_owned_state = {
 				is_coastal = yes
 				is_controlled_by = ROOT
-				impassable = no
 			}
 		}
 
@@ -1903,7 +1898,6 @@ focus_tree = {
 						size > 0
 						include_locked = yes
 					}
-					impassable = no
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1947,7 +1941,6 @@ focus_tree = {
 						building = air_base
 						size > 1
 					}
-					impassable = no
 				}
 				add_building_construction = {
 					type = air_base
@@ -1995,8 +1988,6 @@ focus_tree = {
 						building = infrastructure
 						size > 0
 					}
-					impassable = no
-					impassable = no
 					OR = {
 						is_in_home_area = yes
 						NOT = {
@@ -2024,7 +2015,6 @@ focus_tree = {
 						building = infrastructure
 						size > 1
 					}
-					impassable = no
 					OR = {
 						is_in_home_area = yes
 						NOT = {
@@ -2089,7 +2079,6 @@ focus_tree = {
 						size > 0
 						include_locked = yes
 					}
-					impassable = no
 					OR = {
 						is_in_home_area = yes
 						NOT = {
@@ -2171,7 +2160,6 @@ focus_tree = {
 							}
 						}
 					}
-					impassable = no
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -2201,7 +2189,6 @@ focus_tree = {
 			any_owned_state = {
 				is_coastal = yes
 				is_controlled_by = ROOT
-				impassable = no
 			}
 		}
 
@@ -2223,7 +2210,6 @@ focus_tree = {
 						size > 0
 						include_locked = yes
 					}
-					impassable = no
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -2266,7 +2252,6 @@ focus_tree = {
 						building = air_base
 						size > 1
 					}
-					impassable = no
 				}
 				add_building_construction = {
 					type = air_base
@@ -2318,7 +2303,6 @@ focus_tree = {
 						building = infrastructure
 						size > 0
 					}
-					impassable = no
 					OR = {
 						is_in_home_area = yes
 						NOT = {
@@ -2410,7 +2394,6 @@ focus_tree = {
 						size > 0
 						include_locked = yes
 					}
-					impassable = no
 					OR = {
 						is_in_home_area = yes
 						NOT = {
@@ -2477,7 +2460,6 @@ focus_tree = {
 						size > 0
 						include_locked = yes
 					}
-					impassable = no
 					OR = {
 						is_in_home_area = yes
 						NOT = {
@@ -2523,7 +2505,6 @@ focus_tree = {
 			any_owned_state = {
 				is_coastal = yes
 				is_controlled_by = ROOT
-				impassable = no
 			}
 		}
 
@@ -2545,7 +2526,6 @@ focus_tree = {
 						size > 0
 						include_locked = yes
 					}
-					impassable = no
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -2588,9 +2568,7 @@ focus_tree = {
 						building = air_base
 						size > 1
 					}
-					impassable = no
 				}
-				impassable = no
 				add_building_construction = {
 					type = air_base
 					level = 1

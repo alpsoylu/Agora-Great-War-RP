@@ -1399,7 +1399,7 @@ RUS_civil_war = {
 		available = {
 			has_war_with = SOV
 			has_manpower > 30000
-			EST = { 
+			ESR = { 
 				exists = yes
 				is_subject = no
 			}
@@ -1408,7 +1408,7 @@ RUS_civil_war = {
 		days_remove = 25
 		fire_only_once = yes
 		remove_effect = {
-			EST = { country_event = { id = ww1_estonia.2 } }
+			ESR = { country_event = { id = ww1_estonia.2 } }
 		}
 		ai_will_do = {
 			factor = 10
@@ -1951,7 +1951,7 @@ RUS_release_country = {
 		fire_only_once = yes
 		complete_effect = {
 			set_global_flag = estonia_released
-			EST = {
+			ESR = {
 				set_country_flag = released_by_russia
 				transfer_state = 13
 				hidden_effect = {
@@ -1964,11 +1964,11 @@ RUS_release_country = {
 			add_stability = 0.05
 			if = {
 				limit = { RUS = { is_faction_leader = yes } }
-				add_to_faction = EST
+				add_to_faction = ESR
 			}
 			if = {
 				limit = { RUS = { is_in_faction_with = FRA } }
-				FRA = { add_to_faction = EST }
+				FRA = { add_to_faction = ESR }
 			}
 			if = {
 				limit = {
@@ -1978,11 +1978,11 @@ RUS_release_country = {
 					}
 				}
 				set_autonomy = {
-					target = EST
+					target = ESR
 					autonomous_state = autonomy_dominion
 					freedom_level = 0.25
 				}
-				EST = { set_cosmetic_tag = EST_RUS }
+				ESR = { set_cosmetic_tag = EST_RUS }
 			}
 		}
 	}
@@ -2009,7 +2009,7 @@ RUS_release_country = {
 		fire_only_once = yes
 		complete_effect = {
 			set_global_flag = latvia_released
-			LAT = {
+			LTR = {
 				set_country_flag = released_by_russia
 				transfer_state = 12
 				transfer_state = 190
@@ -2027,11 +2027,11 @@ RUS_release_country = {
 			add_stability = 0.05
 			if = {
 				limit = { RUS = { is_faction_leader = yes } }
-				add_to_faction = LAT
+				add_to_faction = LTR
 			}
 			if = {
 				limit = { RUS = { is_in_faction_with = FRA } }
-				FRA = { add_to_faction = LAT }
+				FRA = { add_to_faction = LTR }
 			}
 			if = {
 				limit = {
@@ -2041,11 +2041,11 @@ RUS_release_country = {
 					}
 				}
 				set_autonomy = {
-					target = LAT
+					target = LTR
 					autonomous_state = autonomy_dominion
 					freedom_level = 0.25
 				}
-				LAT = { set_cosmetic_tag = LAT_RUS }
+				LTR = { set_cosmetic_tag = LAT_RUS }
 			}
 		}
 	}
@@ -2623,14 +2623,14 @@ RUS_release_country = {
 		}
 		timeout_effect = {
 			set_global_flag = estonia_released
-			EST = {
+			ESR = {
 				transfer_state = 13
 				transfer_state = 191
 				hidden_effect = {
 					#load_oob = "EST_army"
 				}			
 			}
-			EST = {
+			ESR = {
 				declare_war_on = {
 					target = RUS
 					type = liberate_wargoal
@@ -2663,7 +2663,7 @@ RUS_release_country = {
 		}
 		timeout_effect = {
 			set_global_flag = latvia_released
-			LAT = {
+			LTR = {
 				transfer_state = 12
 				transfer_state = 190
 				transfer_state = 96
@@ -2671,7 +2671,7 @@ RUS_release_country = {
 					#load_oob = "LAT_army"
 				}			
 			}
-			LAT = {
+			LTR = {
 				declare_war_on = {
 					target = RUS
 					type = liberate_wargoal

@@ -61,7 +61,7 @@ BRA_contestado_war = {
 			state = 503	
 		}
 		ai_will_do = {
-			factor = 200
+			factor = 100
 		}
 		days_remove = 100
 		visible = {
@@ -137,7 +137,7 @@ BRA_contestado_war = {
 			state = 503	
 		}
 		ai_will_do = {
-			factor = 200
+			factor = 150
 		}
 		days_remove = 100
 		visible = {

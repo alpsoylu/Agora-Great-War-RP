@@ -391,6 +391,9 @@ country_event = {
 				add_state_core = 153
 				add_state_core = 736
 				add_state_core = 39
+			}
+			release = AUS
+			AUS = { #just because I'm not sure if messing with country politics works if they don't exist and this scares me
 				set_party_name = { 
 				    ideology = fascism
 				    long_name = AUS_vaterland_party
@@ -407,7 +410,7 @@ country_event = {
 				}
 				create_field_marshal = {
 					name = "Engelbert Dollfuss"  
-					portrait_path="gfx/leaders/AUS/AUS_Engelbert_Dollfuss_general.dds"
+					portrait_path="gfx/leaders/AUS/AUS_dollfuss.tga"
 					traits={ media_personality politically_connected guerilla_fighter trait_mountaineer } 
 					skill = 2
 					attack_skill = 2
@@ -422,9 +425,7 @@ country_event = {
 				set_politics = {
 					ruling_party = fascism
 				}
-				set_cosmetic_tag = AUS_vaterland
 			}
-			release = AUS
 		}
 	}
 	#ok

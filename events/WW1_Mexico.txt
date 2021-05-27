@@ -29,7 +29,6 @@ country_event = {
 	trigger = {
 		tag = MEX
 		has_global_flag = mexican_revolution
-		is_subject = no
 	}
 	mean_time_to_happen = {
 		days = 60
@@ -297,7 +296,6 @@ country_event = {
 		}
 		has_stability < 0.5
 		has_civil_war = no
-		is_subject = no
 	}
 	mean_time_to_happen = {
 		days = 120
@@ -428,7 +426,6 @@ country_event = {
 		}
 		has_stability < 0.5
 		has_civil_war = no
-		is_subject = no
 	}
 	mean_time_to_happen = {
 		days = 90

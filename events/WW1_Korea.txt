@@ -35,16 +35,8 @@ country_event = {
 	}
 	immediate = {
 		hidden_effect = {
+			release = KOR
 			KOR = {
-				if = {
-					limit = {
-						is_subject_of = JAP
-					}
-					JAP = { end_puppet = KOR }
-				}
-				else = {
-					JAP = { release = KOR }
-				}
 				set_country_flag = korean_independence
 				set_politics = {
 					ruling_party = democratic
@@ -1430,12 +1422,6 @@ country_event = {
 					target = KOR
 					type = civil_war
 				}
-				if = {
-					limit = {
-						has_idea = KOR_idea_army_tradition
-					}
-					remove_ideas = KOR_idea_army_tradition
-				}
 			}
 			JAP = {
 				set_country_flag = korean_independence_war_fired
@@ -1815,11 +1801,13 @@ country_event = {
 	option = {
 		name = ww1_korea.34.a
 		ai_chance = {
-			factor = 70
+			factor = 100
 			modifier = {
 				factor = 0
-				has_war_support > 0.7
-				enemies_strength_ratio < 0.5
+				NOT = {
+					has_war_support > 0.5
+					enemies_strength_ratio < 0.5
+				}
 			}
 		}
 		JAP = {
@@ -1845,11 +1833,13 @@ country_event = {
 	option = {
 		name = ww1_korea.34.b
 		ai_chance = {
-			base = 30
+			base = 0
 			modifier = {
 				add = 100
-				has_war_support > 0.7
-				enemies_strength_ratio < 0.5
+				OR = {
+					has_war_support > 0.5
+					enemies_strength_ratio < 0.5
+				}
 			}
 		}
 		KOR = {
@@ -1883,51 +1873,7 @@ country_event = {
 	option = {
 		name = ww1_korea.35.a
 		ai_chance = {
-			base = 10
-			modifier = {
-				add = 10
-				fascism > 0.1
-				fascism < 0.2
-			}
-			modifier = {
-				add = 20
-				fascism > 0.2
-				fascism < 0.3
-			}
-			modifier = {
-				add = 30
-				fascism > 0.3
-				fascism < 0.4
-			}
-			modifier = {
-				add = 40
-				fascism > 0.4
-				fascism < 0.5
-			}
-			modifier = {
-				add = 50
-				fascism > 0.5
-				fascism < 0.6
-			}
-			modifier = {
-				add = 60
-				fascism > 0.6
-				fascism < 0.7
-			}
-			modifier = {
-				add = 70
-				fascism > 0.7
-				fascism < 0.8
-			}
-			modifier = {
-				add = 80
-				fascism > 0.8
-				fascism < 0.9
-			}
-			modifier = {
-				add = 90
-				fascism > 0.9
-			}
+			factor = 90
 		}
 		JAP = {
 			complete_national_focus = JAP_ww1_support_republic
@@ -1937,7 +1883,7 @@ country_event = {
 	option = {
 		name = ww1_korea.35.b
 		ai_chance = {
-			factor = 50
+			factor = 10
 		}
 		JAP = {
 			start_civil_war = {
@@ -1957,7 +1903,7 @@ country_event = {
 			}
 			create_country_leader = {
 				name = "Tokugawa Iesato"
-				picture = "gfx/leaders/JAP/JAP_Tokugawa_Iesato.dds"
+				#picture = ""
 				expire = "1935.1.1"
 				ideology = stratocracy
 				traits = {
@@ -1965,9 +1911,9 @@ country_event = {
 					trait_stratocracy
 				}
 			}
-			declare_war_on = {
-				target = KOR
+			create_wargoal = {
 				type = puppet_wargoal_focus
+				target = KOR
 			}
 		}
 	}
@@ -2888,10 +2834,6 @@ country_event = {
 			modifier = {
 				add = 40
 				is_in_faction_with = KOR
-			}
-			modifier = {
-				add = -1000
-				has_war_with = KOR
 			}
 		}
 	}

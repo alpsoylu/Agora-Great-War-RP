@@ -317,30 +317,10 @@ country_event = {
 		add_stability = -0.25
 		add_political_power = -150
 		ai_chance = {
-			base = 50
+			factor = 50
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = RUS_ai_behavior 
-							option = DEFAULT
-						}
-					}
-					has_country_flag = RUS_AI_RANDOM_HISTORICAL
-					has_game_rule = {
-						rule = RUS_ai_behavior 
-						option = HISTORICAL
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				GER = {
-					is_ai = no
-					has_war_with = RUS
-				}	
+				is_historical_focus_on = yes
 			}
 		}
 	}
@@ -392,30 +372,10 @@ country_event = {
 		add_stability = -0.05
 		add_political_power = -200
 		ai_chance = {
-			base = 30
+			factor = 30
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = RUS_ai_behavior 
-							option = DEFAULT
-						}
-					}
-					has_country_flag = RUS_AI_RANDOM_HISTORICAL
-					has_game_rule = {
-						rule = RUS_ai_behavior 
-						option = HISTORICAL
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				GER = {
-					is_ai = no
-					has_war_with = RUS
-				}	
+				is_historical_focus_on = yes
 			}
 		}
 	}
@@ -591,7 +551,7 @@ country_event = {
 						NOT = {
 							has_id = 76187
 							has_id = 76236
-							has_id = 76242
+							has_id = 76241
 						}
 					}
 					#Brusilov, Bonch-Bruevich, Radkevich
@@ -750,7 +710,6 @@ country_event = {
 				remove_unit_leader = 92222
 				remove_unit_leader = 92223
 				remove_unit_leader = 76238
-				remove_unit_leader = 76243
 				create_corps_commander = {
 					name = "Mikhail Drozdovsky"
 					picture = "RUS_mikhail_drozdovskiy.dds"
@@ -1294,58 +1253,6 @@ news_event = {
 	picture = rusrevolt_19
 	major = yes
 	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					RUS = {
-						has_country_flag = russian_civil_war_winner
-					}
-				}
-				every_state = {
-					limit = {
-						OR = {
-							is_core_of = SOV
-							is_claimed_by = SOV
-						}						
-					}
-					SOV = {
-						remove_state_claim = PREV
-						remove_state_core = PREV
-					}				
-				}
-				RUS = {
-					annex_country = {
-						target = SOV
-					}
-				}
-			}
-			if = {
-				limit = {
-					SOV = {
-						has_country_flag = russian_civil_war_winner
-					}
-				}
-				every_state = {
-					limit = {
-						OR = {
-							is_core_of = RUS
-							is_claimed_by = RUS
-						}						
-					}
-					RUS = {
-						remove_state_claim = PREV
-						remove_state_core = PREV
-					}				
-				}
-				SOV = {
-					annex_country = {
-						target = RUS
-					}
-				}
-			}
-		}
-	}
 	option = {
 		name = news.64.a
 		trigger = {
