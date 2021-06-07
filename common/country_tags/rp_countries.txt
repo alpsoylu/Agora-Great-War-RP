@@ -1,1 +1,1 @@
-KUR = "countries/Kurdistan.txt"
+TIM = "countries/Turkish Independence Movement.txt"

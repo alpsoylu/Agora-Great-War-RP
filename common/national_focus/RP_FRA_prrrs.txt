@@ -1,7 +1,7 @@
 focus_tree = {
 	id = RP_france_prrrs
 	default = no
-	country = { factor=0 modifier = { add = 9 tag = FRA} }
+	country = { factor=0 modifier = { add = 10 tag = FRA} }
 	country = { factor=0 modifier = { add = 100 has_country_flag = FRA_prrr} }
 
 	focus = {
@@ -558,6 +558,7 @@ set_cosmetic_tg = FRA_start
 		}
 		available = {
 		GER = {exists = yes}
+		always = no
 		}
 		bypass = {
 			

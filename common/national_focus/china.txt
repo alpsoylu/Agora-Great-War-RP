@@ -142,7 +142,7 @@ focus_tree = {
 	focus = {
 		id = CHI_north_provinces
 		icon = GFX_focus_generic_industry_1
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CHI_pave_way_for_industrialization
 		}
@@ -268,7 +268,7 @@ focus_tree = {
 	focus = {
 		id = CHI_central_provinces
 		icon = GFX_focus_train_railroads
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CHI_pave_way_for_industrialization
 		}
@@ -381,7 +381,7 @@ focus_tree = {
 	focus = {
 		id = CHI_sichuan_factories
 		icon = GFX_focus_industry_profit
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CHI_central_provinces
 		}
@@ -476,7 +476,7 @@ focus_tree = {
 	focus = {
 		id = CHI_manchu_factories
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CHI_north_provinces
 		}
@@ -571,7 +571,7 @@ focus_tree = {
 	focus = {
 		id = CHI_south_provinces
 		icon = GFX_focus_generic_industry_1
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CHI_pave_way_for_industrialization
 		}
@@ -684,7 +684,7 @@ focus_tree = {
 	focus = {
 		id = CHI_guangzhou_factories
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CHI_south_provinces
 		}
@@ -809,7 +809,7 @@ focus_tree = {
 	focus = {
 		id = CHI_nanjing_arsenal
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CHI_restore_military_production
 		}
@@ -842,7 +842,7 @@ focus_tree = {
 	focus = {
 		id = CHI_beijing_arsenal
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CHI_nanjing_arsenal
 		}
@@ -875,7 +875,7 @@ focus_tree = {
 	focus = {
 		id = CHI_village_mechanization
 		icon = GFX_goal_generic_construct_civilian
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CHI_beijing_arsenal
 		}

@@ -1001,6 +1001,20 @@ SpriteType = {
 	}
 	
 	#ARAB
+	
+	
+	spriteType = {
+		name = "GFX_dectim0"
+		texturefile = "gfx/interface/decisions/dectim0.dds"
+	}
+	spriteType = {
+		name = "GFX_dectim1"
+		texturefile = "gfx/interface/decisions/dectim1.dds"
+	}
+	spriteType = {
+		name = "GFX_dectim2"
+		texturefile = "gfx/interface/decisions/dectim2.dds"
+	}
 
 
 
@@ -1133,8 +1147,40 @@ SpriteType = {
 	texturefile = "gfx/interface/goals/newicons/generic_support_socialism.dds"			
 	}
 SpriteType = {
+	name = "GFX_modifiers_kuvayimilliye_dyn"
+	texturefile = "gfx/interface/goals/newicons/kuvayimilliye_dyn.dds"			
+	}
+SpriteType = {
 	name = "GFX_benelux"
 	texturefile = "gfx/interface/goals/newicons/benelux.dds"			
+	}
+SpriteType = {
+	name = "GFX_cumhuriyet"
+	texturefile = "gfx/interface/goals/newicons/cumhuriyet.dds"
+	}
+SpriteType = {
+	name = "GFX_tur_sivas"
+	texturefile = "gfx/interface/goals/newicons/tur_sivas.dds"
+	}
+SpriteType = {
+	name = "GFX_tur_amasya"
+	texturefile = "gfx/interface/goals/newicons/tur_amasya.dds"
+	}
+SpriteType = {
+	name = "GFX_tur_erzurum"
+	texturefile = "gfx/interface/goals/newicons/tur_erzurum.dds"
+	}
+SpriteType = {
+	name = "GFX_kazım_karabekir_gumru"
+	texturefile = "gfx/interface/goals/newicons/kazım_karabekir_gumru.dds"
+	}
+SpriteType = {
+	name = "GFX_stop_the_armenians"
+	texturefile = "gfx/interface/goals/newicons/stop_the_armenians.dds"
+	}
+SpriteType = {
+	name = "GFX_bosnia"
+	texturefile = "gfx/interface/goals/newicons/bosnia.dds"
 	}
 
 

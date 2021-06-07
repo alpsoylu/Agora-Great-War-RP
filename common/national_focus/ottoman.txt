@@ -16,6 +16,7 @@ focus_tree = {
 		x = 5
 		y = 0
 	}
+	shared_focus = TUR_send_kemal_to_samsun
 	focus = {
 		id = TUR_erkani_harbiye_reforms
 		icon = GFX_focus_tur_erkaniharbiye

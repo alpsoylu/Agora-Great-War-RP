@@ -1,4 +1,4 @@
-﻿add_namespace = ww1_turkey
+﻿#add_namespace = ww1_turkey
 # Parliament dissolved, declare Independence
 #######
 country_event = {

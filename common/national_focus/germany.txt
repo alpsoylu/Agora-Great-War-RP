@@ -193,7 +193,7 @@ focus_tree = {
 			AUH = { 
 				add_opinion_modifier = { target = GER modifier = embargo }
 				add_opinion_modifier = { target = ITA modifier = embargo }
-				add_ideas = { GER_idea_isolation_of_adriatic_sea }
+				add_timed_idea = {idea = GER_idea_isolation_of_adriatic_sea days = 160 }
 			}			
 		}	
 		ai_will_do = {
@@ -883,7 +883,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_military_mission_in_turkey
-		icon = GFX_goal_heal
+		icon = GFX_focus_central_powers
 		cost = 10
 		prerequisite = {
 			focus = GER_military_advisers

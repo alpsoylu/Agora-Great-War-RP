@@ -1,4 +1,4 @@
-﻿add_namespace = ww1_hejaz
+﻿#add_namespace = ww1_hejaz
 
 country_event = {
 	title = ww1_hejaz.7.t

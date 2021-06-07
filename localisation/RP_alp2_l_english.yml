@@ -1,6 +1,425 @@
 ﻿l_english:
  TUR_sarikamis:0 "Sarıkamış Harekatı"
  RP_sarikamis:0 "Sarıkamış Harekatı"
+ TUR_send_kemal_to_samsun:0 "Send Mustafa Kemal Pasha to Samsun"
+ TUR_erzurum_kongresi:0 "Erzurum Congress"
+ TUR_sivas_kongresi:0 "Sivas Congress"
+ TUR_amasya_genelgesi:0 "Amasya Circular"
+ TUR_go_to_ankara:0 "Go to Ankara with Heyet-i Temsiliye"
+ TUR_meclis_kur:0 "Establish the Büyük Millet Meclisi"
+ TUR_anayasa:0 "Establish the Constitution"
+ 
+ 
+ 
+ 
+ 
+ 
+ TUR_misakimilli:0 "Misakımilli"
+ TUR_armenian_sit:0 "Armenian Situation"
+ TUR_sit_of_kuvayimilliye:0 "Situation of the Kuvayimilliye"
+ TUR_preprations_for_the_great_assasult:0 "Preprations for the Great Assasult"
+ TUR_open_a_parliement_in_ankara:0 "Open a Parliement in Ankara"
+ TUR_elections:0 "Elections"
+ TUR_reject_sevres:0 "Reject the Treaty of Sevres"
+ TUR_moscow_agreement:0 "Moscow Agreement"
+ TUR_afghan_friendship:0 "Friendship with Afghanistan"
+ TUR_ukranian_friendship:0 "Friendship with Ukraine"
+ TUR_azeri_friendship:0 "Frienship with Azerbaijan"
+ TUR_kazim_army:0 "Get help from Kazım Pasha's Army"
+ TUR_stop_armenians:0 "Stop the Armenians"
+ 
+ 
+ hero_of_gallipolu:0 "Hero of Gallipoli"
+ military_genius:0 "Military Genius"
+ TUR_change_tag_tt:0 "We will change to the §YTurkish independence Movement§! in §YAnkara§!"
+ TIM_focus_tree:0 "§YTurkish Independence Movement Focus Tree§!"
+ TUR_kuvayimilliye_resistance:0 "Support For Kuvayimilliye"
+ TUR_kuvayimilliye_resistance_desc:0 "Support For Kuvayimilliye"
+ TUR_kuvayimilliye_tt:0 "The population in this state is supporting the Turkish Volunteer Resistance Force (Kuvayimilliye)"
+ decision_category_turkish_invasion:0 "Turkish Invasion"
+ decision_category_turkish_war_of_independence:0 "War of Independence"
+ TUR_reclaim_izmir:0 "Reclaim Izmir"
+ TUR_reclaim_aydin:0 "Reclaim Aydın"
+ GRE_conquer_izmir:0 "Conquer Smyrni"
+ GRE_conquer_antalya:0 "Conquer Antalya"
+ GRE_conquer_gelibolu:0 "Conquer Gallipoli"
+ GRE_conquer_aydin:0 "Conquer Aydın"
+ TIM_peace_with_turkey:0 "Peace with Turkey"
+ GRE_conquer_adana:0 "Conquer Adana"
+ TUR_reclaim_biga:0 "Reclaim Biga"
+ TUR_reclaim_gelibolu:0 "Reclaim Gelibolu"
+ TUR_reclaim_adana:0 "Reclaim Adana"
+ TUR_reclaim_urfa:0 "Reclaim Urfa"
+ 
+ 
+ 
+ TIM_claim_1:0 ""
+ TIM_claim_2:0 ""
+ TIM_claim_3:0 ""
+ 
+ 
+ 
+ TUR_kastamonu1:0 "Nationalist Propaganda in Kastamonu"
+ TUR_kastamonu2:0 "Kuvayimilliye Propaganda in Kastamonu"
+ TUR_kastamonu3:0 "Secure help from Kastamonu"
+ 
+ TUR_bursa1:0 "Nationalist Propaganda in Bursa"
+ TUR_bursa2:0 "Kuvayimilliye Propaganda in Bursa"
+ TUR_bursa3:0 "Secure help from Bursa"
+ 
+ TUR_afyon1:0 "Nationalist Propaganda in Afyon"
+ TUR_afyon2:0 "Kuvayimilliye Propaganda in Afyon"
+ TUR_afyon3:0 "Secure help from Afyon"
+ 
+ TUR_konya1:0 "Nationalist Propaganda in Konya"
+ TUR_konya2:0 "Kuvayimilliye Propaganda in Konya"
+ TUR_konya3:0 "Secure help from Konya"
+ 
+ TUR_kayseri1:0 "Nationalist Propaganda in Kayseri"
+ TUR_kayseri2:0 "Kuvayimilliye Propaganda in Kayseri"
+ TUR_kayseri3:0 "Secure help from Kayseri"
+ 
+ TUR_diyarbakir1:0 "Nationalist Propaganda in Diyarbakır"
+ TUR_diyarbakir2:0 "Kuvayimilliye Propaganda in Diyarbakır"
+ TUR_diyarbakir3:0 "Secure help from Diyarbakır"
+ 
+ TUR_van1:0 "Nationalist Propaganda in Van"
+ TUR_van2:0 "Kuvayimilliye Propaganda in Van"
+ TUR_van3:0 "Secure help from Van"
+ 
+ TUR_hakkari1:0 "Nationalist Propaganda in Hakkari"
+ TUR_hakkari2:0 "Kuvayimilliye Propaganda in Hakkari"
+ TUR_hakkari3:0 "Secure help from Hakkari"
+ 
+ TUR_edirne1:0 "Nationalist Propaganda in Edirne"
+ TUR_edirne2:0 "Kuvayimilliye Propaganda in Edirne"
+ TUR_edirne3:0 "Secure help from Edirne"
+ 
+ 
+ 
+ 
+ TIM_victory:0 "Victory in the War of Independence"
+ TIM_victory_tt:0 "We will declare our victory in the war of independence."
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ #TUR#
+ RP_TIM_izmir.1:0 "We won the battle for Izmir!"
+ RP_TIM_izmir.1.t:0 "We won the battle for Izmir!"
+ RP_TIM_izmir.1.d:0 "We won the battle for Izmir and our forces have entered the city!"
+ RP_TIM_izmir.1.a:0 "Delightfull!"
+ 
+ RP_TIM_izmir.2:0 "We lost the battle for Izmir!"
+ RP_TIM_izmir.2.t:0 "We lost the battle for Izmir!"
+ RP_TIM_izmir.2.d:0 "We lost the battle for Izmir.Enemy armies have defeated our forces!"
+ RP_TIM_izmir.2.a:0 "Not Delightfull!"
+ 
+ #GRE#
+ RP_TIM_izmir.3:0 "We won the battle for Smyrni!"
+ RP_TIM_izmir.3.t:0 "We won the battle for Smyrni!"
+ RP_TIM_izmir.3.d:0 "We won the battle for Smyrni.We have defeated the Turkish army in Smyrni!"
+ RP_TIM_izmir.3.a:0 "Not Delightfull!"
+ 
+ RP_TIM_izmir.4:0 "We lost the battle for Smyrni!"
+ RP_TIM_izmir.4.t:0 "We lost the battle for Smyrni!"
+ RP_TIM_izmir.4.d:0 "We lost the battle for Smyrni and Turkish forces have entered the city!"
+ RP_TIM_izmir.4.a:0 "Not Delightfull!"
+ 
+ 
+ 
+ #TUR#
+ RP_GRE_izmir.1:0 "We won the battle for Izmir!"
+ RP_GRE_izmir.1.t:0 "We won the battle for Izmir!"
+ RP_GRE_izmir.1.d:0 "We won the battle for Izmir we have succesfully defeated the enemy forces!"
+ RP_GRE_izmir.1.a:0 "Delightfull!"
+ 
+ RP_GRE_izmir.2:0 "We lost the battle for Izmir!"
+ RP_GRE_izmir.2.t:0 "We lost the battle for Izmir!"
+ RP_GRE_izmir.2.d:0 "We lost the battle for Izmir.Enemy forces have entered the city!!"
+ RP_GRE_izmir.2.a:0 "Not Delightfull!"
+ 
+ #GRE#
+ RP_GRE_izmir.3:0 "We won the battle for Smyrni!"
+ RP_GRE_izmir.3.t:0 "We won the battle for Smyrni!"
+ RP_GRE_izmir.3.d:0 "We won the battle for Smyrni and our forces have entered the city!!"
+ RP_GRE_izmir.3.a:0 "Not Delightfull!"
+ 
+ RP_GRE_izmir.4:0 "We lost the battle for Smyrni!"
+ RP_GRE_izmir.4.t:0 "We lost the battle for Smyrni!"
+ RP_GRE_izmir.4.d:0 "We lost the battle for Smyrni enemy armies have defeated us!"
+ RP_GRE_izmir.4.a:0 "Not Delightfull!"
+ 
+ #AYDIN
+ #TUR#
+ RP_GRE_aydin.1:0 "We won the battle for Aydın!"
+ RP_GRE_aydin.1.t:0 "We won the battle for Aydın!"
+ RP_GRE_aydin.1.d:0 "We won the battle for Aydın we have succesfully defeated the enemy forces!"
+ RP_GRE_aydin.1.a:0 "Delightfull!"
+ 
+ RP_GRE_aydin.2:0 "We lost the battle for Aydın!"
+ RP_GRE_aydin.2.t:0 "We lost the battle for Aydın!"
+ RP_GRE_aydin.2.d:0 "We lost the battle for Aydın.Enemy forces have entered the city!!"
+ RP_GRE_aydin.2.a:0 "Not Delightfull!"
+ 
+ #ITA#
+ RP_GRE_aydin.3:0 "We won the battle for Aydın!"
+ RP_GRE_aydin.3.t:0 "We won the battle for Aydın!"
+ RP_GRE_aydin.3.d:0 "We won the battle for Aydın and our forces have entered the city!!"
+ RP_GRE_aydin.3.a:0 "Not Delightfull!"
+ 
+ RP_GRE_aydin.4:0 "We lost the battle for Aydın!"
+ RP_GRE_aydin.4.t:0 "We lost the battle for Aydın!"
+ RP_GRE_aydin.4.d:0 "We lost the battle for Aydın enemy armies have defeated us!"
+ RP_GRE_aydin.4.a:0 "Not Delightfull!"
+ 
+ 
+ 
+ 
+ #GELIBOLU
+ #TUR#
+ RP_ENG_gelibolu.1:0 "We won the battle for Gelibolu!"
+ RP_ENG_gelibolu.1.t:0 "We won the battle for Gelibolu!"
+ RP_ENG_gelibolu.1.d:0 "We won the battle for Gelibolu we have succesfully defeated the enemy forces!"
+ RP_ENG_gelibolu.1.a:0 "Delightfull!"
+ 
+ RP_ENG_gelibolu.2:0 "We lost the battle for Gelibolu!"
+ RP_ENG_gelibolu.2.t:0 "We lost the battle for Gelibolu!"
+ RP_ENG_gelibolu.2.d:0 "We lost the battle for Gelibolu.Enemy forces have entered the city!!"
+ RP_ENG_gelibolu.2.a:0 "Not Delightfull!"
+ 
+ #ENG#
+ RP_ENG_gelibolu.3:0 "We won the battle for Gelibolu!"
+ RP_ENG_gelibolu.3.t:0 "We won the battle for Gelibolu!"
+ RP_ENG_gelibolu.3.d:0 "We won the battle for Gelibolu and our forces have entered the city!!"
+ RP_ENG_gelibolu.3.a:0 "Delightfull!"
+ 
+ RP_ENG_gelibolu.4:0 "We lost the battle for Gelibolu!"
+ RP_ENG_gelibolu.4.t:0 "We lost the battle for Gelibolu!"
+ RP_ENG_gelibolu.4.d:0 "We lost the battle for Gelibolu enemy armies have defeated us!"
+ RP_ENG_gelibolu.4.a:0 "Not Delightfull!"
+ 
+ 
+ 
+ 
+ #Adana
+ #TUR#
+ RP_FRA_adana.1:0 "We won the battle for Adana!"
+ RP_FRA_adana.1.t:0 "We won the battle for Adana!"
+ RP_FRA_adana.1.d:0 "We won the battle for Adana we have succesfully defeated the enemy forces!"
+ RP_FRA_adana.1.a:0 "Delightfull!"
+ 
+ RP_FRA_adana.2:0 "We lost the battle for Adana!"
+ RP_FRA_adana.2.t:0 "We lost the battle for Adana!"
+ RP_FRA_adana.2.d:0 "We lost the battle for Adana.Enemy forces have entered the city!!"
+ RP_FRA_adana.2.a:0 "Not Delightfull!"
+ 
+ #FRA#
+ RP_FRA_adana.3:0 "We won the battle for Adana!"
+ RP_FRA_adana.3.t:0 "We won the battle for Adana!"
+ RP_FRA_adana.3.d:0 "We won the battle for Adana and our forces have entered the city!!"
+ RP_FRA_adana.3.a:0 "Delightfull!"
+ 
+ RP_FRA_adana.4:0 "We lost the battle for Adana!"
+ RP_FRA_adana.4.t:0 "We lost the battle for Adana!"
+ RP_FRA_adana.4.d:0 "We lost the battle for Adana enemy armies have defeated us!"
+ RP_FRA_adana.4.a:0 "Not Delightfull!"
+ 
+ 
+ #TUR#
+ RP_TIM_aydin.1:0 "We won the battle for Aydın!"
+ RP_TIM_aydin.1.t:0 "We won the battle for Aydın!"
+ RP_TIM_aydin.1.d:0 "We won the battle for Aydın and our forces have entered the city!"
+ RP_TIM_aydin.1.a:0 "Delightfull!"
+ 
+ RP_TIM_aydin.2:0 "We lost the battle for Aydın!"
+ RP_TIM_aydin.2.t:0 "We lost the battle for Aydın!"
+ RP_TIM_aydin.2.d:0 "We lost the battle for Aydın.Enemy armies have defeated our forces!"
+ RP_TIM_aydin.2.a:0 "Not Delightfull!"
+ 
+ #GRE#
+ RP_TIM_aydin.3:0 "We won the battle for Aydın!"
+ RP_TIM_aydin.3.t:0 "We won the battle for Aydın!"
+ RP_TIM_aydin.3.d:0 "We won the battle for Aydın.We have defeated the Turkish army in Aydın!"
+ RP_TIM_aydin.3.a:0 "Delightfull!"
+ 
+ RP_TIM_aydin.4:0 "We lost the battle for Aydın!"
+ RP_TIM_aydin.4.t:0 "We lost the battle for Aydın!"
+ RP_TIM_aydin.4.d:0 "We lost the battle for Aydın and Turkish forces have entered the city!"
+ RP_TIM_aydin.4.a:0 "Not Delightfull!"
+ 
+ 
+ 
+ #TUR#
+ RP_TIM_antalya.1:0 "We won the battle for Antalya!"
+ RP_TIM_antalya.1.t:0 "We won the battle for Antalya!"
+ RP_TIM_antalya.1.d:0 "We won the battle for Antalya and our forces have entered the city!"
+ RP_TIM_antalya.1.a:0 "Delightfull!"
+ 
+ RP_TIM_antalya.2:0 "We lost the battle for Antalya!"
+ RP_TIM_antalya.2.t:0 "We lost the battle for Antalya!"
+ RP_TIM_antalya.2.d:0 "We lost the battle for Antalya.Enemy armies have defeated our forces!"
+ RP_TIM_antalya.2.a:0 "Not Delightfull!"
+ 
+ #GRE#
+ RP_TIM_antalya.3:0 "We won the battle for Antalya!"
+ RP_TIM_antalya.3.t:0 "We won the battle for Antalya!"
+ RP_TIM_antalya.3.d:0 "We won the battle for Antalya.We have defeated the Turkish army in Antalya!"
+ RP_TIM_antalya.3.a:0 "Delightfull!"
+ 
+ RP_TIM_antalya.4:0 "We lost the battle for Antalya!"
+ RP_TIM_antalya.4.t:0 "We lost the battle for Antalya!"
+ RP_TIM_antalya.4.d:0 "We lost the battle for Antalya and Turkish forces have entered the city!"
+ RP_TIM_antalya.4.a:0 "Not Delightfull!"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ #TUR#
+ RP_TIM_biga.1:0 "We won the battle for Çanakkale!"
+ RP_TIM_biga.1.t:0 "We won the battle for Çanakkale!"
+ RP_TIM_biga.1.d:0 "We won the battle for Çanakkale and our forces have entered the city!"
+ RP_TIM_biga.1.a:0 "Delightfull!"
+ 
+ RP_TIM_biga.2:0 "We lost the battle for Çanakkale!"
+ RP_TIM_biga.2.t:0 "We lost the battle for Çanakkale!"
+ RP_TIM_biga.2.d:0 "We lost the battle for Çanakkale.Enemy armies have defeated our forces!"
+ RP_TIM_biga.2.a:0 "Not Delightfull!"
+ 
+ #ENG#
+ RP_TIM_biga.3:0 "We won the battle for Çanakkale!"
+ RP_TIM_biga.3.t:0 "We won the battle for Çanakkale!"
+ RP_TIM_biga.3.d:0 "We won the battle for Çanakkale.We have defeated the Turkish army in Çanakkale!"
+ RP_TIM_biga.3.a:0 "Delightfull!"
+ 
+ RP_TIM_biga.4:0 "We lost the battle for Çanakkale!"
+ RP_TIM_biga.4.t:0 "We lost the battle for Çanakkale!"
+ RP_TIM_biga.4.d:0 "We lost the battle for Çanakkale and Turkish forces have entered the city!"
+ RP_TIM_biga.4.a:0 "Not Delightfull!"
+ 
+ #TUR#
+ RP_TIM_gelibolu.1:0 "We won the battle for Çanakkale!"
+ RP_TIM_gelibolu.1.t:0 "We won the battle for Çanakkale!"
+ RP_TIM_gelibolu.1.d:0 "We won the battle for Çanakkale and our forces have entered the city!"
+ RP_TIM_gelibolu.1.a:0 "Delightfull!"
+ 
+ RP_TIM_gelibolu.2:0 "We lost the battle for Çanakkale!"
+ RP_TIM_gelibolu.2.t:0 "We lost the battle for Çanakkale!"
+ RP_TIM_gelibolu.2.d:0 "We lost the battle for Çanakkale.Enemy armies have defeated our forces!"
+ RP_TIM_gelibolu.2.a:0 "Delightfull!"
+ 
+ #ENG#
+ RP_TIM_gelibolu.3:0 "We won the battle for Çanakkale!"
+ RP_TIM_gelibolu.3.t:0 "We won the battle for Çanakkale!"
+ RP_TIM_gelibolu.3.d:0 "We won the battle for Çanakkale.We have defeated the Turkish army in Çanakkale!"
+ RP_TIM_gelibolu.3.a:0 "Not Delightfull!"
+ 
+ RP_TIM_gelibolu.4:0 "We lost the battle for Çanakkale!"
+ RP_TIM_gelibolu.4.t:0 "We lost the battle for Çanakkale!"
+ RP_TIM_gelibolu.4.d:0 "We lost the battle for Çanakkale and Turkish forces have entered the city!"
+ RP_TIM_gelibolu.4.a:0 "Not Delightfull!"
+ 
+ 
+ 
+ 
+ #TUR#
+ RP_TIM_adana.1:0 "We won the battle for Adana!"
+ RP_TIM_adana.1.t:0 "We won the battle for Adana!"
+ RP_TIM_adana.1.d:0 "We won the battle for Adana and our forces have entered the city!"
+ RP_TIM_adana.1.a:0 "Delightfull!"
+ 
+ RP_TIM_adana.2:0 "We lost the battle for Adana!"
+ RP_TIM_adana.2.t:0 "We lost the battle for Adana!"
+ RP_TIM_adana.2.d:0 "We lost the battle for Adana.Enemy armies have defeated our forces!"
+ RP_TIM_adana.2.a:0 "Not Delightfull!"
+ 
+ #FRA#
+ RP_TIM_adana.3:0 "We won the battle for Adana!"
+ RP_TIM_adana.3.t:0 "We won the battle for Adana!"
+ RP_TIM_adana.3.d:0 "We won the battle for Adana.We have defeated the Turkish army in Adana!"
+ RP_TIM_adana.3.a:0 "Delightfull!"
+ 
+ RP_TIM_adana.4:0 "We lost the battle for Adana!"
+ RP_TIM_adana.4.t:0 "We lost the battle for Adana!"
+ RP_TIM_adana.4.d:0 "We lost the battle for Adana and Turkish forces have entered the city!"
+ RP_TIM_adana.4.a:0 "Not Delightfull!"
+ 
+ 
+ 
+ 
+ 
+ #TUR#
+ RP_TIM_urfa.1:0 "We won the battle for Urfa!"
+ RP_TIM_urfa.1.t:0 "We won the battle for Urfa!"
+ RP_TIM_urfa.1.d:0 "We won the battle for Urfa and our forces have entered the city!"
+ RP_TIM_urfa.1.a:0 "Delightfull!"
+ 
+ RP_TIM_urfa.2:0 "We lost the battle for Urfa!"
+ RP_TIM_urfa.2.t:0 "We lost the battle for Urfa!"
+ RP_TIM_urfa.2.d:0 "We lost the battle for Urfa.Enemy armies have defeated our forces!"
+ RP_TIM_urfa.2.a:0 "Not Delightfull!"
+ 
+ #FRA#
+ RP_TIM_urfa.3:0 "We won the battle for Urfa!"
+ RP_TIM_urfa.3.t:0 "We won the battle for Urfa!"
+ RP_TIM_urfa.3.d:0 "We won the battle for Urfa.We have defeated the Turkish army in Urfa!"
+ RP_TIM_urfa.3.a:0 "Delightfull!"
+ 
+ RP_TIM_urfa.4:0 "We lost the battle for Urfa!"
+ RP_TIM_urfa.4.t:0 "We lost the battle for Urfa!"
+ RP_TIM_urfa.4.d:0 "We lost the battle for Urfa and Turkish forces have entered the city!"
+ RP_TIM_urfa.4.a:0 "Not Delightfull!"
+ 
+ 
+ 
+ 
+ 
+ #DODE#
+ #TUR#
+ RP_ITA_antalya.1:0 "We won the battle for Antalya!"
+ RP_ITA_antalya.1.t:0 "We won the battle for Antalya!"
+ RP_ITA_antalya.1.d:0 "We won the battle for Antalya we have succesfully defeated the enemy forces!"
+ RP_ITA_antalya.1.a:0 "Delightfull!"
+ 
+ RP_ITA_antalya.2:0 "We lost the battle for Antalya!"
+ RP_ITA_antalya.2.t:0 "We lost the battle for Antalya!"
+ RP_ITA_antalya.2.d:0 "We lost the battle for Antalya.Enemy forces have entered the city!!"
+ RP_ITA_antalya.2.a:0 "Not Delightfull!"
+ 
+ #ITA#
+ RP_ITA_antalya.3:0 "We won the battle for Antalya!"
+ RP_ITA_antalya.3.t:0 "We won the battle for Antalya!"
+ RP_ITA_antalya.3.d:0 "We won the battle for Antalya and our forces have entered the city!!"
+ RP_ITA_antalya.3.a:0 "Delightfull!"
+ 
+ RP_ITA_antalya.4:0 "We lost the battle for Antalya!"
+ RP_ITA_antalya.4.t:0 "We lost the battle for Antalya!"
+ RP_ITA_antalya.4.d:0 "We lost the battle for Antalya enemy armies have defeated us!"
+ RP_ITA_antalya.4.a:0 "Not Delightfull!"
+ 
+ 
+ 
+ 
+ 
+ 
+ TIM:0 "Turkish Independence Movement"
+ TIM_DEF:0 "Turkish Independence Movement"
+ TIM_ADJ:0 "Turkish"
+ TIM_neutrality_party:0 "Müdafa-i Hukuk"
+ TIM_neutrality_party_long:0 "Müdafa-i Hukuk"
+ TIM_fascism_party:0 "Tenasüt"
+ TIM_fascism_party_long:0 "Tenasüt"
+ TIM_communism_party:0 "Halk Zümresi"
+ TIM_communism_party_long:0 "Halk Zümresi"
+ TIM_democratic_party:0 "Islahat"
+ TIM_democratic_party_long:0 "Islahat"
  
  
  #FRA TREE
@@ -2730,3 +3149,4 @@
  GEN_POR_propaganda_focus_desc:0 "A motivated populace can do great things! By inspiring our people to rally around our sacred banner, we can easily win their hearts and minds, and string them along for, well, anything we want to do, really, so long as we have a reasonable enough opposing force to look like the good guys."
  GEN_POR_fortification_focus:0 "Fortification Focus"
  GEN_POR_fortification_focus_desc:0 "When the fight comes to our borders, it's best to be prepared. By hiring construction workers to build up fortresses and bunkers on some of our outer provinces, we can safely hold off any enemy who dares attack us!"
+ 

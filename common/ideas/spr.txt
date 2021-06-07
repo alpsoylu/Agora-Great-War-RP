@@ -7,6 +7,7 @@ ideas = {
 
 			available = {
 				tag = TUR
+				date < 1914.1.1
 			}
 
 			allowed_civil_war = {
@@ -14,8 +15,9 @@ ideas = {
 			}
 
 			modifier = {
-			production_speed_industrial_complex_factor = -0.3
-			production_speed_arms_factory_factor = -0.3
+			production_speed_industrial_complex_factor = -0.15
+			production_speed_arms_factory_factor = -0.15
+			consumer_goods_factor_factor = 0.15
 			}
 		}
 		}

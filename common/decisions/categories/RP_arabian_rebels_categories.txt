@@ -8,3 +8,23 @@ decision_category_arabian_rebels = {
 	visible = {
 	}
 }
+
+decision_category_turkish_invasion = {
+	icon = decision_category_border_conflicts
+	allowed = {
+	NOT = {tag = TIM}
+	NOT = {tag = TUR}
+	}
+	priority = 200
+	visible = {
+	}
+}
+
+decision_category_turkish_war_of_independence = {
+	icon = decision_category_border_conflicts
+	allowed = {
+	}
+	priority = 200
+	visible = {
+	}
+}
