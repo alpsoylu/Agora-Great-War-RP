@@ -336,7 +336,7 @@ set_cosmetic_tag = FRA_start
 		}
 		search_filters = { FOCUS_FILTER_FRA_SPREAD }
 		available = {
-		ITA = {communism > 0.55}
+		ITA = {communism > 0.50}
 		}
 		bypass = {
 		}
@@ -344,7 +344,7 @@ set_cosmetic_tag = FRA_start
 		ITA = {
 		start_civil_war = {
 	ideology = communism
-    size = 0.55
+    size = ITA.party_popularity@communism
     only_own_territory = yes
     keep_political_leader = yes
 }
@@ -357,11 +357,10 @@ set_cosmetic_tag = FRA_start
 		}
 		FRA = {add_to_faction = PREV}
 		load_focus_tree = { tree = generic_focus }
-		
 	}
 	}
 	custom_effect_tooltip = FRA_uprising_ita
-	declare_war_on = {type = take_state_focus target = ITA generator = {}}
+	#declare_war_on = {type = take_state_focus target = ITA generator = {}}
 		}
 		cost = 10
 		x = 0
@@ -420,7 +419,7 @@ set_cosmetic_tag = FRA_start
 		}
 		search_filters = { FOCUS_FILTER_FRA_SPREAD }
 		available = {
-		SPR = {communism > 0.55}
+		SPR = {communism > 0.50}
 		}
 		bypass = {
 		}
@@ -428,7 +427,7 @@ set_cosmetic_tag = FRA_start
 		SPR = {
 		start_civil_war = {
 	ideology = communism
-    size = 0.55
+    size = SPR.party_popularity@communism
     only_own_territory = yes
     keep_political_leader = yes
 }
@@ -441,12 +440,11 @@ set_cosmetic_tag = FRA_start
 		}
 		FRA = {add_to_faction = PREV}
 		load_focus_tree = { tree = generic_focus }
-		
 	}
 	}
 	
 	custom_effect_tooltip = FRA_uprising_spr
-	declare_war_on = {type = take_state_focus target = SPR generator = {}}
+	#declare_war_on = {type = take_state_focus target = SPR generator = {}}
 		}
 		cost = 10
 		x = 0
@@ -506,7 +504,7 @@ set_cosmetic_tag = FRA_start
 		}
 		search_filters = { FOCUS_FILTER_FRA_SPREAD }
 		available = {
-		ENG = {communism > 0.55}
+		ENG = {communism > 0.50}
 		}
 		bypass = {
 		}
@@ -514,7 +512,7 @@ set_cosmetic_tag = FRA_start
 		ENG = {
 		start_civil_war = {
 	ideology = communism
-    size = 0.55
+    size = ENG.party_popularity@communism
     only_own_territory = yes
     keep_political_leader = yes
 }
@@ -531,7 +529,7 @@ set_cosmetic_tag = FRA_start
 	}
 	}
 	custom_effect_tooltip = FRA_uprising_eng
-	declare_war_on = {type = take_state_focus target = ENG generator = {}}
+	#declare_war_on = {type = take_state_focus target = ENG generator = {}}
 		}
 		cost = 10
 		x = 0
@@ -626,7 +624,6 @@ set_cosmetic_tag = FRA_start
 		icon = GFX_goal_CAN_france_demands
 		prerequisite = {
 			focus = FRA_revolution_in_france
-			focus = FRA_spread_revolution
 		}
 		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		mutually_exclusive = {focus = FRA_colonialism}
@@ -869,6 +866,7 @@ set_cosmetic_tag = FRA_start
 		icon = GFX_purge2
 		prerequisite = {
 			focus = FRA_spread_revolution
+			focus = FRA_revolution_in_france
 		}
 		search_filters = { FOCUS_FILTER_FRA_AFRICA }
 		mutually_exclusive = {focus = FRA_anti_colonialism}
