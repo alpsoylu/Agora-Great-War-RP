@@ -58,9 +58,15 @@ CHI_xinhai_revolution = {
 			}
 			has_government = neutrality
 		}
-		cost = 25
+		custom_cost_trigger = {
+			command_power > 14
+		}
+		custom_cost_text = TUR_decision_cost_kurd_rebels
 		days_remove = 10
 		fire_only_once = yes
+		complete_effect = {
+			add_command_power = -15
+		}	
 		remove_effect = {
 			add_war_support = 0.1
 			add_popularity = {
@@ -479,7 +485,7 @@ CHI_warlord_era = {
 			GXC = {
 				has_war_with = CHI
 			}
-			surrender_progress > 0.25
+			surrender_progress > 0.3
 			NOT = {
 				has_global_flag = warlord_era
 			}
@@ -499,7 +505,7 @@ CHI_warlord_era = {
 			base = 0
 			modifier = {
 				add = 1000
-				surrender_progress > 0.3
+				surrender_progress > 0.5
 			}
 		}
 		complete_effect = {
@@ -610,6 +616,7 @@ CHI_warlord_era = {
 			has_global_flag = manchu_restoration
 			has_global_flag = warlord_era
 			has_global_flag = zhili_anhui_war
+			has_global_flag = zhili_anhui_war_end
 			SDC = {
 				exists = yes
 				NOT = {
@@ -792,8 +799,16 @@ CHI_warlord_era = {
 		days_mission_timeout = 60		#historical
 		activation = {
 			has_global_flag = first_zhili_fengtian_war
+			SDC = {
+				has_war = no
+				is_neighbor_of = GDC
+			}
+			NOT = { has_global_flag = north_expedition }
 			GXC = {
-				exists = no
+				OR  = {
+					exists = no
+					is_subject_of = ROOT
+				}
 			}
 			any_country = {
 				has_country_flag = CHI_kuomintang_flag
@@ -806,18 +821,16 @@ CHI_warlord_era = {
 		available = {
 			GXC = {
 				exists = yes
+				NOT = { is_subject_of = ROOT }
 			}
 			has_global_flag = yung_feng_incident
+			NOT = { has_global_flag = north_expedition }
 			any_country = {
 				has_country_flag = CHI_kuomintang_flag
 				NOT = {
 					owns_state = 591
 				}
 			}
-		}
-		visible = {
-			has_country_flag = CHI_kuomintang_flag
-			owns_state = 591
 		}
 		fire_only_once = yes
 		is_good = no
@@ -864,23 +877,43 @@ CHI_warlord_era = {
 	}
 	CHI_long_march_decision = {
 		allowed = {
-			original_tag = PRC
+			original_tag = JXC
 		}
 		available = {
-			has_country_flag = CHI_soviet_republic_flag
-			has_war_with = KMT
-			surrender_progress > 0.5
+			owns_state = 600
+			has_government = communism
+			any_country = {
+				OR = {
+					has_country_leader = {
+						name = "Chiang Kai-shek"
+						ruling_only = yes
+					}
+					has_country_flag = CHI_kuomintang_flag
+				}
+				has_war_with = ROOT
+			}
+			surrender_progress > 0.1
 		}
 		visible = {
-			has_country_flag = CHI_soviet_republic_flag
-			has_war_with = KMT
+			owns_state = 600
+			has_government = communism
+			any_country = {
+				OR = {
+					has_country_leader = {
+						name = "Chiang Kai-shek"
+						ruling_only = yes
+					}
+					has_country_flag = CHI_kuomintang_flag
+				}
+				has_war_with = ROOT
+			}
 		}
 		fire_only_once = yes
 		ai_will_do = {
 			base = 0
 			modifier = {
 				add = 1000
-				surrender_progress > 0.7
+				surrender_progress > 0.15
 			}
 		}
 		complete_effect = {
@@ -951,6 +984,15 @@ CHI_warlord_era = {
 				}
 				remove_core_of = CSR
 			}
+			every_country = {
+				limit = {
+					is_neighbor_of = PRC
+				}
+				set_truce = {
+					target = PRC
+					days = 365
+				}
+			}
 			KMT = {
 				annex_country = {
 					target = CSR
@@ -1013,6 +1055,11 @@ CHI_warlord_era = {
 		}
 		fire_only_once = yes
 		complete_effect = {
+			hidden_effect = {
+				CHI = {
+					add_state_core = 599
+				}
+			}
 			GXC = {
 				transfer_state = 599
 				add_state_core = 599
@@ -1118,7 +1165,28 @@ CHI_warlord_era = {
 			create_faction = nationalist_government
 			every_state = {
 				limit = {
-					is_core_of = CHI
+					OR = {
+						is_core_of = CHI
+						is_core_of = QIN
+						is_core_of = ANC
+						is_core_of = XSM
+						is_core_of = SHX
+						is_core_of = SIK
+						is_core_of = FNG
+						is_core_of = PRC
+						is_core_of = SDC
+						is_core_of = JNC
+						is_core_of = JXC
+						is_core_of = SCC
+						is_core_of = ZHC
+						is_core_of = ZHE
+						is_core_of = GDC
+						is_core_of = GXC
+						is_core_of = YUN
+						is_core_of = HNC
+						is_core_of = GZC
+						is_core_of = GMJ
+					}
 				}
 				add_core_of = PREV
 			}
@@ -1146,23 +1214,36 @@ CHI_warlord_era = {
 			}
 			if = {
 				limit = {
-					SDC = {
+					FNG = {
 						exists = yes
 					}
 				}
+				FNG = {
+					create_faction = beiyang_government
+				}
 				declare_war_on = {
-					target = SDC
+					target = FNG
 					type = annex_everything
 				}
 			}
 			if = {
 				limit = {
-					FNG = {
+					SDC = {
 						exists = yes
 					}
 				}
+				if = {
+					limit = {
+						FNG = {
+							is_faction_leader = yes
+						}
+					}
+					FNG = {
+						add_to_faction = SDC
+					}
+				}
 				declare_war_on = {
-					target = FNG
+					target = SDC
 					type = annex_everything
 				}
 			}
@@ -1176,6 +1257,7 @@ CHI_warlord_era = {
 				}
 				annex_country = {
 					target = HNC
+					transfer_troops = yes
 				}
 			}
 			if = {
@@ -1184,9 +1266,29 @@ CHI_warlord_era = {
 						exists = yes
 					}
 				}
+				if = {
+					limit = {
+						FNG = {
+							is_faction_leader = yes
+						}
+					}
+					FNG = {
+						add_to_faction = ANC
+					}
+				}
 				declare_war_on = {
 					target = ANC
 					type = annex_everything
+				}
+			}
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				add_ideas = CHI_idea_nationalist_revolution
+				add_to_war = {
+					targeted_alliance = KMT
+					enemy = SDC
 				}
 			}
 			add_ideas = CHI_idea_nationalist_revolution
@@ -1269,7 +1371,7 @@ CHI_warlord_era = {
 		available = {
 			has_global_flag = zhili_fengtian_fengyushang_war
 			has_war_with = FNG
-			surrender_progress > 0.3
+			surrender_progress > 0.1
 		}
 		visible = {
 			has_global_flag = zhili_fengtian_fengyushang_war
@@ -1280,7 +1382,7 @@ CHI_warlord_era = {
 			base = 0
 			modifier = {
 				add = 1000
-				surrender_progress > 0.5
+				surrender_progress > 0.3
 				has_war_with = SDC
 				if = {
 					limit = {
@@ -1294,7 +1396,7 @@ CHI_warlord_era = {
 		}
 		complete_effect = {
 			FNG = {
-				country_event = ww1_china.52
+				country_event = ww1_china.60
 			}
 		}
 	}
@@ -1348,12 +1450,7 @@ CHI_warlord_era = {
 					ruling_only = yes
 				}
 				OR = {
-					AND = {
-						NOT = {
-							owns_state = 608
-						}
-						has_global_flag = zhili_fengtian_fengyushang_war
-					}
+					date > 1928.6.4
 					has_global_flag = north_expedition_end
 				}
 			}
@@ -1790,12 +1887,15 @@ CHI_chinese_warlords = {
 			QIN = {
 				exists = no
 			}
-			owns_state = 608
-			owns_state = 597
-			owns_state = 598
-			owns_state = 595
-			owns_state = 605
-			owns_state = 613
+			owns_state = 595 #Fujian
+			owns_state = 597 #Shandong
+			owns_state = 598 #Jiangsu
+			owns_state = 602 #Henan
+			owns_state = 603 #Guizhou
+			owns_state = 605 #Sichuan
+			owns_state = 608 #Beijing
+			owns_state = 613 #Shanghai
+			owns_state = 620 #Hubei
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -1803,17 +1903,33 @@ CHI_chinese_warlords = {
 			set_global_flag = reunite_china
 			every_state = {
 				limit = {
-					is_core_of = QIN
+					OR = {
+						is_core_of = CHI
+						is_core_of = QIN
+						is_core_of = ANC
+						is_core_of = XSM
+						is_core_of = SHX
+						is_core_of = SIK
+						is_core_of = FNG
+						is_core_of = PRC
+						is_core_of = SDC
+						is_core_of = JNC
+						is_core_of = JXC
+						is_core_of = SCC
+						is_core_of = ZHC
+						is_core_of = ZHE
+						is_core_of = GDC
+						is_core_of = GXC
+						is_core_of = YUN
+						is_core_of = HNC
+						is_core_of = GZC
+						is_core_of = GMJ
+					}
 				}
+				remove_core_of = QIN
+				remove_core_of = CHI
 				add_core_of = ROOT
 				remove_core_of = QIN
-			}
-			every_state = {
-				limit = {
-					is_core_of = CHI
-				}
-				add_core_of = ROOT
-				remove_core_of = CHI
 			}
 		}
 		ai_will_do = {
@@ -3396,6 +3512,90 @@ CHI_chinese_warlords = {
 						is_in_faction_with = QIN
 					}
 				}
+			}
+		}
+	}
+	CHI_SDC_proclaim_qing_government = {
+		allowed = {
+			original_tag = SDC
+		}
+		visible = {
+			QIN = {
+				exists = no
+			}
+			CHI = {
+				exists = no
+			}
+			has_global_flag = warlord_era
+			has_global_flag = zhili_anhui_war
+			owns_state = 608
+			owns_state = 614
+		}
+		available = {
+			QIN = {
+				exists = no
+			}
+			CHI = {
+				exists = no
+			}
+			has_global_flag = warlord_era
+			has_global_flag = zhili_anhui_war
+			has_global_flag = great_war_ends
+			GER = {
+				has_country_flag = great_war_winner
+				has_government = neutrality
+			}
+			is_subject = no
+			has_war = no
+			owns_state = 608
+			owns_state = 614
+			NOT = {
+				has_cosmetic_tag = QIN_government
+			}
+		}
+		cost = 200
+		fire_only_once = yes
+		complete_effect = {
+			set_cosmetic_tag = QIN_government
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = CHI
+							is_core_of = QIN
+							is_core_of = ANC
+							is_core_of = XSM
+							is_core_of = SHX
+							is_core_of = SIK
+							is_core_of = FNG
+							is_core_of = PRC
+							is_core_of = SDC
+							is_core_of = JNC
+							is_core_of = JXC
+							is_core_of = SCC
+							is_core_of = ZHC
+							is_core_of = ZHE
+							is_core_of = GDC
+							is_core_of = GXC
+							is_core_of = YUN
+							is_core_of = HNC
+							is_core_of = GZC
+							is_core_of = GMJ
+						}
+					}
+					add_core_of = SDC
+					remove_core_of = QIN
+					remove_core_of = CHI
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 1000
+				neutrality > 0.9
+				has_stability > 0.5
+				has_war_support > 0.7
 			}
 		}
 	}

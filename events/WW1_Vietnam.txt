@@ -178,15 +178,24 @@ country_event = {
 			limit = {
 				SIA = {
 					exists = yes
-					NOT = {
-						has_country_flag = great_war_loser
+					OR = {
+						AND = {
+							NOT = {
+								has_country_flag = great_war_loser
+								GER = { has_completed_focus = GER_ostasien }
+							}
+						}
+						has_country_flag = great_war_winner
 					}
 				}
 			}
 			if = {
 				limit = {
 					any_country = {
-						has_country_flag = great_war_loser
+						OR = {
+							has_country_flag = great_war_loser
+							original_tag = FRA
+						}
 						owns_state = 819
 					}
 				}
@@ -195,7 +204,10 @@ country_event = {
 			if = {
 				limit = {
 					any_country = {
-						has_country_flag = great_war_loser
+						OR = {
+							has_country_flag = great_war_loser
+							original_tag = FRA
+						}
 						owns_state = 822
 					}
 				}
@@ -248,6 +260,8 @@ country_event = {
 					target = MAL
 					transfer_troops = no
 				}
+				add_state_core = 333
+				add_state_core = 336
 				set_capital = 336
 			}
 		}
