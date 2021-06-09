@@ -2,7 +2,7 @@
 	#AIR#
 	shared_focus = {
 		id = GEN_GEN_FRA_aviation_effort
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_fra_air
 		complete_tooltip = {
 			if = { limit = { has_country_flag = aviation_effort_AB }
 				add_building_construction = {
@@ -1457,7 +1457,7 @@
 
 	shared_focus = {
 		id = GEN_GEN_FRA_naval_effort
-		icon = GFX_goal_generic_build_navy 
+		icon = GFX_fra_navy
 		available = {
 			any_state = {
 				is_coastal = yes
@@ -1921,7 +1921,7 @@
 #ARMEE#
 	shared_focus = {
 		id = GEN_GEN_army_effort
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_fra_army
 		completion_reward = { 
 			army_experience = 5
 			add_tech_bonus = {

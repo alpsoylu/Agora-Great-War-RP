@@ -35,7 +35,7 @@ focus_tree = {
 }
 set_cosmetic_tag = FRA_start
 		}
-		x = 12
+		x = 10
 		y = 0
 		
 	}
@@ -619,7 +619,7 @@ popularity = -0.25
 			add_state_claim = 455
 			unlock_decision_tooltip = RP_FRA_create_syrian_mandate
 		}
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = FRA_return_to_borodino
 	}
@@ -1241,9 +1241,13 @@ popularity = -0.25
 	
 
 	
-	shared_focus = GEN_FRA_aviation_effort
-	shared_focus = GEN_FRA_naval_effort
-	shared_focus = GEN_army_effort
+	#shared_focus = GEN_FRA_aviation_effort
+	#shared_focus = GEN_FRA_naval_effort
+	#shared_focus = GEN_army_effort
+	
+	shared_focus = GEN_GEN_FRA_aviation_effort
+	shared_focus = GEN_GEN_FRA_naval_effort
+	shared_focus = GEN_GEN_army_effort
 
 
 focus = {

@@ -1540,6 +1540,8 @@ political_actions = {
 		}
 		ai_will_do = { factor = 100 }
 	}
+}
+FRA_spreading_communism_cat = {
 	
 	RP_FRA_spread_communism_italy = {
 		icon = GFX_decision_category_generic_propaganda
@@ -1608,5 +1610,49 @@ political_actions = {
 		ENG = {add_popularity = { ideology = communism popularity = 0.05}}
 		}
 		ai_will_do = { factor = 100 }
+	}
+	
+	RP_FRA_anti_socialism = {
+		icon = GFX_decision_category_generic_propaganda
+		allowed = { 
+		OR = {
+		tag = ENG
+		tag = ITA
+		tag = SPR
+		}
+		FRA = {exists = yes}
+		}
+		
+		
+		available = {
+        }
+		visible = {
+		NOT = {has_goverment = communism}
+		OR = {
+		AND = {
+		FRA = {has_completed_focus = FRA_spread_communism_eng}
+		FRA = {NOT = {has_completed_focus = FRA_communist_uprising_eng}}
+		tag = ENG
+		}
+		AND = {
+		FRA = {has_completed_focus = FRA_spread_communism_ita}
+		FRA = {NOT = {has_completed_focus = FRA_communist_uprising_ita}}
+		tag = ITA
+		}
+		AND = {
+		FRA = {has_completed_focus = FRA_spread_communism_spr}
+		FRA = {NOT = {has_completed_focus = FRA_communist_uprising_spr}}
+		tag = SPR
+		}
+		}
+		}
+		
+		cost = 75
+		complete_effect = {
+		if = {limit = {tag = SPR} add_popularity = { ideology = SPR.ruling_party popularity = 0.05}}
+		if = {limit = {tag = ENG} add_popularity = { ideology = ENG.ruling_party popularity = 0.05}}
+		if = {limit = {tag = ITA} add_popularity = { ideology = ITA.ruling_party popularity = 0.05}}
+		}
+		ai_will_do = { factor = 120 }
 	}
 }

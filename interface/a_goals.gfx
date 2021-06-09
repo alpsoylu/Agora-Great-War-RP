@@ -912,6 +912,10 @@ spriteType = {
 		name = "GFX_FOCUS_FILTER_FRA_SPREAD"
 		texturefile = "gfx/interface/focusview/filter/fra_spread.dds"
 	}
+    spriteType = {
+		name = "GFX_FOCUS_FILTER_FRA_ready_country_ww1"
+		texturefile = "gfx/interface/focusview/filter/fra_ready_country_a.dds"
+	}
 	SpriteType = {
 	name = "GFX_mongolia9"
 	texturefile = "gfx/interface/goals/newicons/mongolia9.dds"			
@@ -1181,6 +1185,18 @@ SpriteType = {
 SpriteType = {
 	name = "GFX_bosnia"
 	texturefile = "gfx/interface/goals/newicons/bosnia.dds"
+	}
+SpriteType = {
+	name = "GFX_fra_army"
+	texturefile = "gfx/interface/goals/newicons/fra_army.dds"
+	}
+SpriteType = {
+	name = "GFX_fra_navy"
+	texturefile = "gfx/interface/goals/newicons/fra_navy.dds"
+	}
+SpriteType = {
+	name = "GFX_fra_air"
+	texturefile = "gfx/interface/goals/newicons/fra_air.dds"
 	}
 
 

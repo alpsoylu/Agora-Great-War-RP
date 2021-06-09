@@ -28,3 +28,13 @@ decision_category_turkish_war_of_independence = {
 	visible = {
 	}
 }
+
+FRA_spreading_communism_cat = {
+	icon = decision_category_generic_communism
+	allowed = {
+	}
+	priority = 300
+	visible = {
+	FRA = {has_goverment = communism}
+	}
+}

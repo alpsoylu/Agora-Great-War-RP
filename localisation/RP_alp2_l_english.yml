@@ -923,6 +923,9 @@
  FRA_bourbonist_restoration:0 "Bourbonist Restoration"
  FRA_legacy_of_napoleon:0 "Legacy of Napoleon"
  FRA_gain_support_for_monarchism:0 "Gain Support for Monarchism"
+ RP_FRA_anti_socialism:0 "Oppose the Socialist Movement"
+ FRA_spreading_communism_cat:0 "Revolution"
+ FOCUS_FILTER_FRA_ready_country_ww1:0 "Preparing For War"
  
  
  
