@@ -34,10 +34,7 @@ intelligence_agency = {
 	names = { "Cheka" }
 	
 	default = { tag = SOV }
-	available = {
-		original_tag = SOV
-		has_government = communism
-	}
+	available = { original_tag = SOV }
 }
 
 intelligence_agency = {

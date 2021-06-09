@@ -47,8 +47,6 @@ country_event = {
 					target = MAL
 					transfer_troops = no
 				}
-				add_state_core = 333
-				add_state_core = 336
 				set_capital = 336
 			}
 		}
@@ -74,6 +72,21 @@ country_event = {
 			}
 			else = {
 				release = SRL
+			}
+		}
+		if = {
+			limit = {
+				VIN = {
+					is_subject_of = GER
+				}
+			}
+			VIN = {
+				annex_country = {
+					target = MAL
+					transfer_troops = no
+				}
+				set_cosmetic_tag = GEA
+				set_capital = 336
 			}
 		}
 		hidden_effect = {
@@ -138,12 +151,6 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = britas.2.a
-		every_state = {
-			limit = {
-				is_core_of = PAK
-			}
-			remove_core_of = RAJ
-		}
 		release = PAK
 		PAK = {
 			declare_war_on = {
@@ -164,7 +171,7 @@ country_event = {
 			}
 			create_field_marshal = {
 				name = "K. B. Hedgewar"
-				portrait_path = "gfx/leaders/RAJ/RAJ_Keshav_Baliram_Hedgewar.dds"
+				portrait_path = "gfx/leaders/RAJ/hedgewar.dds"
 				traits = {
 					old_guard
 					politically_connected
@@ -177,7 +184,7 @@ country_event = {
 			}
 			create_corps_commander = {
 				name = "Rajendra Prasad"
-				portrait_path = "gfx/leaders/RAJ/RAJ_Rajendra_Prasad.dds"
+				portrait_path = "gfx/leaders/RAJ/RAJ_prasad.dds"
 				traits = {
 					politically_connected
 				}
@@ -189,7 +196,7 @@ country_event = {
 			}
 			create_corps_commander = {
 				name = "Abul Kalam Azad"
-				portrait_path = "gfx/leaders/RAJ/RAJ_Abul_Kalam_Azad.dds"
+				portrait_path = "gfx/leaders/RAJ/RAJ_azad.dds"
 				traits = {
 					politically_connected
 				}
@@ -201,7 +208,7 @@ country_event = {
 			}
 			create_corps_commander = {
 				name = "Vallabhbhai Patel"
-				portrait_path = "gfx/leaders/RAJ/RAJ_Vallabhbhai_Patel.dds"
+				portrait_path = "gfx/leaders/RAJ/RAJ_patel.dds"
 				traits = {
 					politically_connected
 				}
@@ -676,14 +683,6 @@ country_event = {
 			}
 		}
 		release = BAN
-		hidden_effect = {
-			every_state = {
-				limit = {
-					is_core_of = BAN
-				}
-				remove_core_of = RAJ
-			}
-		}
 	}
 }
 
@@ -1175,7 +1174,7 @@ country_event = {
 		}
 		create_country_leader = {
 			name = "Mohandas Karamchand Gandhi"
-			picture = "RAJ_Mohandas_Karamchand_Gandhi.dds"
+			picture = "RAJ_gandhi.dds"
 			expire = "1935.1.1"
 			ideology = religious_communism
 			traits = {

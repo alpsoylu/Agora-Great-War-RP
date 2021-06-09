@@ -351,9 +351,9 @@ country_event = {
 					name = "Victoriano Huerta"
 					picture = "gfx/leaders/MEX/MEX_victoriano_huerta.dds"
 					expire = "1935.1.1"
-					ideology = despotism
+					ideology = autocracy
 					traits = {
-						trait_despotism
+						trait_autocracy
 					}
 				}
 			}
@@ -812,14 +812,14 @@ country_event = {
 	#SUPPORT CARRANZA
 	option = {
 		name = ww1_mexico.5.a
-		kill_ideology_leader = neutrality
+		kill_country_leader = yes
 		create_country_leader = {
 			name = "Victoriano Huerta"
 			picture = "gfx/leaders/MEX/MEX_victoriano_huerta.dds"
 			expire = "1935.1.1"
-			ideology = despotism
+			ideology = autocracy
 			traits = {
-				trait_despotism
+				trait_autocracy
 			}
 		}
 		ai_chance = {

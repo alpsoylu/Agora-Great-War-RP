@@ -3474,6 +3474,7 @@ focus_tree = {
 			add_state_claim = 676
 			add_state_claim = 832
 			add_state_claim = 675
+			add_state_claim = 825
 			#if = { #this was fucking with Turkey games and was pretty unfair/ahistorical.
 			#	limit = { NOT = { has_war_with = TUR } }
 			#	add_named_threat = { threat = 1 name = ENG_Fight_Turk }

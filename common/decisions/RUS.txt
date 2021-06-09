@@ -673,7 +673,7 @@ RUS_tsar_decision = {
 			original_tag = RUS
 		}
 		visible = {
-			has_war = yes		
+			has_war = yes
 		}
 		cancel_if_not_visible = yes
 		fire_only_once = yes
@@ -1014,7 +1014,9 @@ crisis = {
 				has_government = communism
 				has_global_flag = great_war_ends
 				has_capitulated = yes
-				NOT = {
+			}
+			NOT = {
+				OR = { 
 					has_idea = RUS_threat_of_revolution
 					has_idea = RUS_threat_of_revolution2
 					has_idea = RUS_threat_of_revolution3 
@@ -1023,7 +1025,6 @@ crisis = {
 		}		
 		activation = {
 			tag = RUS
-			has_war = yes
 			has_capitulated = no
 			OR = {
 				has_idea = RUS_threat_of_revolution
@@ -1879,6 +1880,7 @@ RUS_release_country = {
 		complete_effect = {
 			set_global_flag = finland_released
 			FIN = {
+				clr_country_flag = FIN_senate
 				set_country_flag = released_by_russia
 			}
 			every_state = {
@@ -2584,6 +2586,7 @@ RUS_release_country = {
 					}
 					remove_unit_leader = 100
 					drop_cosmetic_tag = yes
+					clr_country_flag = FIN_senate
 					load_oob = "FIN_1918"
 					declare_war_on = {
 						target = RUS

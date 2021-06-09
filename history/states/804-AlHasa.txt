@@ -6,9 +6,6 @@ state={
 		victory_points = {
 			10791 1 
 		}
-		victory_points = {
-			12702 2 
-		}
 		owner = TUR
 		add_core_of = SAU
 		buildings = {

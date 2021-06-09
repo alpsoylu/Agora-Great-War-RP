@@ -283,15 +283,6 @@ country_event = {
 			target = MOL
 			transfer_troops = yes
 		}
-		if = {
-			limit = {
-				is_ai = yes
-				MOL = {
-					is_ai = no
-				}
-			}
-			change_tag_from = MOL
-		}
 	}
 	option = {
 		name = ww1_romania.7.b
@@ -430,32 +421,11 @@ country_event = {
 			if = {
 				limit = {
 					owns_state = 147
+					AUS = { exists = yes }
 				}
-				if = {
-					limit = {
-						AUS = {
-							exists = yes
-						}
-					}
-					AUS = {
-						transfer_state = 147
-						add_state_core = 147
-					}
-				}
-				else_if = {
-					limit = {
-						AUH = {
-							exists = yes
-							OR = {
-								has_completed_focus = AUH_unitary_monarchy
-								has_completed_focus = AUH_reform_transleithania
-							}
-						}
-					}
-					AUH = {
-						transfer_state = 147
-						add_state_core = 147
-					}
+				AUS = {
+					transfer_state = 147
+					add_state_core = 147
 				}
 			}
 		}

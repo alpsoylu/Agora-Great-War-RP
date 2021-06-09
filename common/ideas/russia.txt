@@ -65,16 +65,12 @@ ideas = {
 				always = no
 			}
 			available = {
-				NOT = {
-				    has_government = communism
-					has_government = neutrality
-					has_cosmetic_tag = RUS_republic
-				}	
+				has_government = democratic
 			}
 			removal_cost = -1 
 			modifier = {
-				war_support_factor = 0.05
-				neutrality_acceptance = 20
+				democratic_drift = 0.05 
+				political_power_gain = 0.05
 			} 
 		}
 		RUS_threat_of_revolution = {

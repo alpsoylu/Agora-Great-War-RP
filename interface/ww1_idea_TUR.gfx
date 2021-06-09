@@ -1,266 +1,252 @@
 spriteTypes = {
 	#MINSTER
 	SpriteType = {
-		name = "GFX_idea_TUR_ziya_gokalp"
-		texturefile = "gfx/interface/ideas/TUR/TUR_ziya_gokalp.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_TUR_nazim_bey"
-		texturefile = "gfx/interface/ideas/TUR/TUR_nazim_bey.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_TUR_mustafa_suphi"
-		texturefile = "gfx/interface/ideas/TUR/TUR_mustafa_suphi.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_TUR_nazim_hikmet"
-		texturefile = "gfx/interface/ideas/TUR/TUR_nazim_hikmet.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_TUR_hasan_saka"
-		texturefile = "gfx/interface/ideas/TUR/idea_TUR_hasan_saka.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_TUR_celal_bayar"
-		texturefile = "gfx/interface/ideas/TUR/idea_TUR_celal_bayar.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_TUR_cavid_bey"
-		texturefile = "gfx/interface/ideas/TUR/TUR_cavid_bey.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_TUR_bahattin_bey"
-		texturefile = "gfx/interface/ideas/TUR/TUR_bahattin_bey.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_TUR_ahmed_tevfik"
-		texturefile = "gfx/interface/ideas/TUR/idea_TUR_ahmed_tevfik.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_TUR_Esref_Kuscu_Basi"
-		texturefile = "gfx/interface/ideas/TUR/idea_TUR_Esref_Kuscu_Basi.dds"
-	}
-	SpriteType = {
 		name = "GFX_idea_TUR_ahmet_riza"
-		texturefile = "gfx/interface/ideas/TUR/TUR_ahmet_riza.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_ahmet_riza.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_ismet_inonu"
-		texturefile = "gfx/interface/ideas/TUR/TUR_ismet_inonu.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_ismet_inonu.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_sevket_pasha"
-		texturefile = "gfx/interface/ideas/TUR/TUR_sevket_pasha.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_sevket_pasha.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_mehmed_talat"
-		texturefile = "gfx/interface/ideas/TUR/TUR_mehmed_talat.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_mehmed_talat.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_ismail_enver"
-		texturefile = "gfx/interface/ideas/TUR/TUR_ismail_enver.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_ismail_enver.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_mustafa_kemal"
-		texturefile = "gfx/interface/ideas/TUR/TUR_mustafa_kemal.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_mustafa_kemal.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_ali_ihsan"
-		texturefile = "gfx/interface/ideas/TUR/TUR_ali_ihsan.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_ali_ihsan.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_ali_fuat"
-		texturefile = "gfx/interface/ideas/TUR/TUR_ali_fuat.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_ali_fuat.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_kazim_ozalp"
-		texturefile = "gfx/interface/ideas/TUR/TUR_kazim_ozalp.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_kazim_ozalp.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_mehmet_emin_yurdakul"
-		texturefile = "gfx/interface/ideas/TUR/TUR_mehmet_emin_yurdakul.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_mehmet_emin_yurdakul.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_said_i_nursi"
-		texturefile = "gfx/interface/ideas/TUR/TUR_said_i_nursi.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_said_i_nursi.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_osman_fuad"
-		texturefile = "gfx/interface/ideas/TUR/TUR_osman_fuad.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_osman_fuad.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_fevzi_cakmak"
-		texturefile = "gfx/interface/ideas/TUR/TUR_fevzi_cakmak.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_fevzi_cakmak.png"
 	}	
 	SpriteType = {
 		name = "GFX_idea_TUR_fahrettin_altay"
-		texturefile = "gfx/interface/ideas/TUR/TUR_fahrettin_altay.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_fahrettin_altay.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_kazim_karabekir"
-		texturefile = "gfx/interface/ideas/TUR/TUR_kazim_karabekir.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_kazim_karabekir.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_ali_riza"
-		texturefile = "gfx/interface/ideas/TUR/TUR_ali_riza.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_ali_riza.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_ethem_nejat"
-		texturefile = "gfx/interface/ideas/TUR/TUR_ethem_nejat.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_ethem_nejat.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_izzettin_calislar"
-		texturefile = "gfx/interface/ideas/TUR/TUR_izzettin_calislar.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_izzettin_calislar.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_ahmed_djemal"
-		texturefile = "gfx/interface/ideas/TUR/TUR_ahmed_djemal.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_ahmed_djemal.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_halil_kut"
-		texturefile = "gfx/interface/ideas/TUR/TUR_halil_kut.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_halil_kut.png"
+	}
+	
+	#AGENTS
+	SpriteType = {
+		name = "GFX_portrait_Aksoy"
+		texturefile = "gfx/leaders/TUR/Aksoy.png"
+	}
+	SpriteType = {
+		name = "GFX_portrait_Esref"
+		texturefile = "gfx/leaders/TUR/Esref.png"
+	}
+	SpriteType = {
+		name = "GFX_portrait_Suleyman"
+		texturefile = "gfx/leaders/TUR/Suleyman.png"
+	}
+	SpriteType = {
+		name = "GFX_portrait_Yakub"
+		texturefile = "gfx/leaders/TUR/Yakub.png"
 	}
 	
 	#SPIRITS
 	SpriteType = {
 		name = "GFX_idea_ottoman_internal_fight"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_internal_fight.dds"
+		texturefile = "gfx/interface/ideas/TUR/internalfight.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_mahsusa"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_mahsusa.dds"
+		texturefile = "gfx/interface/ideas/TUR/mahsusa.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ottoman_blue_uniforms"
+		texturefile = "gfx/interface/ideas/TUR/blue uniforms.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_qatar_money"
-		texturefile = "gfx/interface/ideas/TUR/money_qatar.dds"
+		texturefile = "gfx/interface/ideas/TUR/money_qatar.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ottoman_rev_nationalism"
+		texturefile = "gfx/interface/ideas/TUR/TUR_monster.png"
 	}
 	spriteType = {
 		name = "GFX_idea_ottoman_expand_minority"
-		texturefile = "gfx/interface/ideas/TUR/minorityact.dds"
+		texturefile = "gfx/interface/ideas/TUR/minorityact.png"
 	}
 	# SpriteType = {
 	# 	name = "GFX_idea_ottoman_investments"
-	# 	texturefile = "gfx/interface/ideas/TUR/invest.dds"
+	# 	texturefile = "gfx/interface/ideas/TUR/invest.png"
 	# }
 	SpriteType = {
 		name = "GFX_idea_ottoman_family"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_family.dds"
+		texturefile = "gfx/interface/ideas/TUR/herneyse.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_socialist_family"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_socialist_family.dds"
-	}	
+		texturefile = "gfx/interface/ideas/TUR/socialistfamily.png"
+	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_frontline_comissars"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_frontline_comissars.dds"
+		texturefile = "gfx/interface/ideas/TUR/frontlinecommisar.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_dkzb"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_dkzb.dds"
+		texturefile = "gfx/interface/ideas/TUR/dkzb2.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_red_army"
-		texturefile = "gfx/interface/ideas/TUR/turkish_red_Army.dds"
+		texturefile = "gfx/interface/ideas/TUR/turkish_red_Army.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_red_ace"
-		texturefile = "gfx/interface/ideas/TUR/redaces.dds"
+		texturefile = "gfx/interface/ideas/TUR/redaces.png"
 	}
 	spriteType = {
 		name = "GFX_idea_ottoman_red_rosemarines"
-		texturefile = "gfx/interface/ideas/TUR/redrosemarines.dds"
+		texturefile = "gfx/interface/ideas/TUR/redrosemarines.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_red_navy"
-		texturefile = "gfx/interface/ideas/TUR/rednavy.dds"
+		texturefile = "gfx/interface/ideas/TUR/rednavy.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_rule_with_red"
-		texturefile = "gfx/interface/ideas/TUR/rule_with_red.dds"
+		texturefile = "gfx/interface/ideas/TUR/rule_with_red.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_harmony_rule"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_harmony_rule.dds"
+		texturefile = "gfx/interface/ideas/TUR/harmonyarmy.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_islamism"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_islamism.dds"
+		texturefile = "gfx/interface/ideas/TUR/islamism.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_protect_islam"
-		texturefile = "gfx/interface/ideas/TUR/protectorofislam.dds"
+		texturefile = "gfx/interface/ideas/TUR/protectorofislam.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_mecelle"
-		texturefile = "gfx/interface/ideas/TUR/mecelle.dds"
+		texturefile = "gfx/interface/ideas/TUR/mecelle.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_islamic_education"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_islamic_education.dds"
+		texturefile = "gfx/interface/ideas/TUR/islamiceducation.png"
 	}
 	spriteType = {
 		name = "GFX_idea_ottoman_sharia"
-		texturefile = "gfx/interface/ideas/TUR/sharia.dds"
+		texturefile = "gfx/interface/ideas/TUR/sharia.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_istirak"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_istirak.dds"
+		texturefile = "gfx/interface/ideas/TUR/istirakimukavemet.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_sanatkar"
-		texturefile = "gfx/interface/ideas/TUR/sanatkar.dds"
+		texturefile = "gfx/interface/ideas/TUR/sanatkar.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_zanatkar"
-		texturefile = "gfx/interface/ideas/TUR/zanatkar.dds"
+		texturefile = "gfx/interface/ideas/TUR/zanatkar.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_eris"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_eris.dds"
+		texturefile = "gfx/interface/ideas/TUR/erishak.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_welfare"
-		texturefile = "gfx/interface/ideas/TUR/socialistrule.dds"
+		texturefile = "gfx/interface/ideas/TUR/socialistrule.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_2yearplan"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_2yearplan.dds"
+		texturefile = "gfx/interface/ideas/TUR/2yearplan.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_7yearplan"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_7yearplan.dds"
+		texturefile = "gfx/interface/ideas/TUR/7yearplan.png"
 	}
 	spriteType = {
 		name = "GFX_idea_ottoman_radical_engine"
-		texturefile = "gfx/interface/ideas/TUR/radicalengine.dds"
+		texturefile = "gfx/interface/ideas/TUR/radicalengine.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_puppetgg_politic"
-		texturefile = "gfx/interface/ideas/TUR/puppetgg.dds"
+		texturefile = "gfx/interface/ideas/TUR/puppetgg.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_nation_program"
-		texturefile = "gfx/interface/ideas/TUR/nation_program.dds"
+		texturefile = "gfx/interface/ideas/TUR/nation_program.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_stormtroopers"
-		texturefile = "gfx/interface/ideas/TUR/uber_mega_cool_ottoman_soldiers.dds"
+		texturefile = "gfx/interface/ideas/TUR/uber_mega_cool_ottoman_soldiers.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_german_highcommand"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_german_highcommand.dds"
+		texturefile = "gfx/interface/ideas/TUR/germangeneral.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_army_teyyare"
-		texturefile = "gfx/interface/ideas/TUR/teyyare.dds"
+		texturefile = "gfx/interface/ideas/TUR/teyyare.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_last_stand_bruh_moment"
-		texturefile = "gfx/interface/ideas/TUR/ottoman_last_stand_bruh_moment.dds"
+		texturefile = "gfx/interface/ideas/TUR/bruh.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_candarma"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_candarma.dds"
+		texturefile = "gfx/interface/ideas/TUR/candarma.png"
 	}
 	spriteType = {
 		name = "GFX_idea_ottoman_balkan_garison"
@@ -268,43 +254,55 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_balkan_defend"
-		texturefile = "gfx/interface/ideas/TUR/defed.dds"
+		texturefile = "gfx/interface/ideas/TUR/defed.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_medit_sea"
-		texturefile = "gfx/interface/ideas/TUR/otto_navy.dds"
+		texturefile = "gfx/interface/ideas/TUR/otto_navy.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_mavi_Vatan"
-		texturefile = "gfx/interface/ideas/TUR/mavivatan.dds"
+		texturefile = "gfx/interface/ideas/TUR/mavivatan.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_german_advisor"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_german_adviso.dds"
+		texturefile = "gfx/interface/ideas/TUR/german_advisors.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_good_army"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_good_army.dds"
+		texturefile = "gfx/interface/ideas/TUR/goodarmy.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_harbiyeli"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_harbiyeli.dds"
+		texturefile = "gfx/interface/ideas/TUR/harbiyeliler.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ottoman_yildizlilar"
+		texturefile = "gfx/interface/ideas/TUR/nedense.png"
 	}
 	spriteType = {
 		name = "GFX_idea_ottoman_bahriye"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_bahriye.dds"
+		texturefile = "gfx/interface/ideas/TUR/bahriyeliler.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_fra_advisor"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_fra_advisor.dds"
+		texturefile = "gfx/interface/ideas/TUR/frenchadv.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_army_airforce"
-		texturefile = "gfx/interface/ideas/TUR/idea_ottoman_army_airforce.dds"
+		texturefile = "gfx/interface/ideas/TUR/Airforce.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ottoman_army_uniform_reformed"
+		texturefile = "gfx/interface/ideas/TUR/greenunifroms.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ottoman_panturkism"
+		texturefile = "gfx/interface/ideas/TUR/radicalturks.png"
 	}
 	SpriteType = {
 		name = "GFX_idea_ottoman_vatan_yahut_slistre"
-		texturefile = "gfx/interface/ideas/TUR/defed.dds"
+		texturefile = "gfx/interface/ideas/TUR/defed.png"
 	}
 	
 	###1.10
@@ -358,6 +356,6 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_idea_TUR_ahmet_nihad"
-		texturefile = "gfx/interface/ideas/TUR/TUR_ahmet_nihad.dds"
+		texturefile = "gfx/interface/ideas/TUR/TUR_ahmet_nihad.png"
 	}
 }

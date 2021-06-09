@@ -595,7 +595,6 @@ ideas = {
 		#   }
 		#}
 		AST_idea_fed_army = {
-			picture = eng_imperial_conscription
 			allowed = {
 				original_tag = AST
 			}
@@ -609,7 +608,6 @@ ideas = {
 			}
 		}
 		AST_idea_1st_dep_defense = {
-			picture = eng_imperial_conscription
 			allowed = {
 				original_tag = AST
 			}
@@ -623,7 +621,6 @@ ideas = {
 			}
 		}
 		AST_idea_overseas_vol = {
-			picture = eng_imperial_conscription
 			allowed = {
 				original_tag = AST
 			}

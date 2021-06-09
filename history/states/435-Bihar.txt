@@ -7,9 +7,15 @@ state={
 	history={
 		victory_points={ 4516 1 }
 		owner=RAJ
-		add_core_of = RAJ
+		1936.1.1={ 
+			owner=RAJ
+			victory_points={ 4516 1 }
+			buildings={
+				infrastructure=5
+				}
+			}
 		buildings={
 			infrastructure=4
+			}
 		}
 	}
-}

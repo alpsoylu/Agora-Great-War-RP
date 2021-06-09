@@ -183,7 +183,7 @@ country_event = {
 			leave_faction = yes
 		}
 		create_country_leader = {
-			name = "Volodymyr Vynnychenko"
+			name = "Vladimir Vynnychenko"
 			picture = "gfx/leaders/UKR/UKR_vladimir_vynnychenko.dds"
 			expire = "1935.1.1"
 			ideology = socialism

@@ -1353,31 +1353,34 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			allowed_civil_war = {
+			}
 			removal_cost = -1
 			modifier = {
 				justify_war_goal_time = -0.75
 			}
 		}
 		eng_idea_churchill = {
-			picture = ENG_churchill_PM
+			picture = ENG_winston_churchill
 			allowed = {
 				always = no
 			}
-			available = {
-				has_government = neutrality
+			allowed_civil_war = {
 				NOT = {
-					has_country_flag = great_war_loser
+					has_government = communism
 				}
-			}	
+			}
 			removal_cost = -1
 			modifier = {
-				army_core_defence_factor = 0.1
-				democratic_acceptance = 20
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
 			}
 		}
 		eng_overextension = {
 			allowed = {
 				always = no
+			}
+			allowed_civil_war = {
 			}
 			removal_cost = -1
 			picture = eng_guided_by_britain
@@ -1390,6 +1393,8 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			allowed_civil_war = {
+			}
 			removal_cost = -1
 			picture = FRA_scw_intervention_republicans_focus
 			modifier = {
@@ -1400,6 +1405,8 @@ ideas = {
 			picture = generic_coastal_navy
 			allowed = {
 				always = no
+			}
+			allowed_civil_war = {
 			}
 			removal_cost = -1
 			modifier = {
