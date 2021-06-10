@@ -31,7 +31,7 @@ country_event = {
 	}
 	#DEMOCRATIC
 	option = {
-	ai_chance = {base = 50}
+	ai_chance = {base = 500000}
 		name = fra_event.3.a
 		set_country_flag = FRA_prrr
 		clr_country_flag = FRA_sfio
@@ -40,7 +40,7 @@ country_event = {
 	}
 	#COMMUNIST
 	option = {
-	ai_chance = {base = 10}
+	ai_chance = {base = 0}
 		name = fra_event.3.b
 		trigger = {
 		#always = no
@@ -52,7 +52,7 @@ country_event = {
 	}
 	#ACTION FRANÇAISE
 	option = {
-	ai_chance = {base = 10}
+	ai_chance = {base = 0}
 		name = fra_event.3.c
 		trigger = {
 		#always = no

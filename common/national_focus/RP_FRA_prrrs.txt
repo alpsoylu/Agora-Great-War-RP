@@ -9,7 +9,7 @@ focus_tree = {
 		icon = GFX_srr
 		completion_reward = {
 		}
-		ai_will_do = { factor = 20 }
+		ai_will_do = { factor = 200000 }
 		cost = 10
 		available = {
 		has_country_flag = FRA_prrr
