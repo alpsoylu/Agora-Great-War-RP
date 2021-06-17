@@ -66,6 +66,14 @@ spriteType = {
 	SpriteType = {
 	name = "GFX_elections1"
 	texturefile = "gfx/interface/goals/newicons/elections1.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_idea_dragoumis"
+	texturefile = "gfx/interface/goals/newicons/dragoumis.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_idea_venizelos"
+	texturefile = "gfx/interface/goals/newicons/venizelos.dds"			
 	}					
 	SpriteType = {
 	name = "GFX_fevzi"
@@ -1197,6 +1205,38 @@ SpriteType = {
 SpriteType = {
 	name = "GFX_fra_air"
 	texturefile = "gfx/interface/goals/newicons/fra_air.dds"
+	}
+SpriteType = {
+	name = "GFX_veni1"
+	texturefile = "gfx/interface/goals/newicons/veni1.dds"
+	}
+SpriteType = {
+	name = "GFX_veni2"
+	texturefile = "gfx/interface/goals/newicons/veni2.dds"
+	}
+SpriteType = {
+	name = "GFX_ger_army"
+	texturefile = "gfx/interface/goals/newicons/ger_army.dds"
+	}
+SpriteType = {
+	name = "GFX_smyrni"
+	texturefile = "gfx/interface/goals/newicons/smyrni.dds"
+	}
+SpriteType = {
+	name = "GFX_idea_education"
+	texturefile = "gfx/interface/goals/newicons/education.dds"
+	}
+SpriteType = {
+	name = "GFX_GRE_in"
+	texturefile = "gfx/interface/goals/newicons/GRE_in.dds"
+	}
+SpriteType = {
+	name = "GFX_GRE_out"
+	texturefile = "gfx/interface/goals/newicons/GRE_out.dds"
+	}
+SpriteType = {
+	name = "GFX_constantine"
+	texturefile = "gfx/interface/goals/newicons/constantine.dds"
 	}
 
 

@@ -292,6 +292,20 @@ bookmarks = {
 			}
 		}
 
+		"GRE"={
+			minor = yes
+			history = "GRE_POWDERKEG_DESC"
+			ideology = neutrality
+			ideas = {
+				RP_dragoumis
+			}
+			focuses = {
+				GRE_oppose_venizelos
+				GRE_fire_coup
+				GRE_sending_greeks_to_izmir
+			}
+		}
+
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

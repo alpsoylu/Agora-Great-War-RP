@@ -1,0 +1,116 @@
+ideas = {
+	
+		country = {
+
+		RP_dragoumis = {
+
+
+			picture = dragoumis
+
+			allowed = {
+				tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			}
+		}
+
+		RP_venizelos = {
+
+
+			picture = venizelos
+
+			allowed = {
+				tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			}
+		}
+
+		RP_megali_idea = {
+
+
+			picture = gre_martyrs_of_the_anatolian_catastrophe
+
+			allowed = {
+				tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			war_support_factor = 0.05
+			}
+		}
+
+		GRE_zorunlu_ilkokul_idea = {
+
+
+			picture = education
+
+			allowed = {
+				tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			research_speed_factor = 0.05
+			}
+		}
+
+		GRE_ministry_of_national_economy = {
+
+
+			picture = generic_economic_increase
+
+			allowed = {
+				tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			consumer_goods_factor = -0.075
+			}
+		}
+
+		GRE_purge = {
+
+
+			picture = great_depression
+
+			allowed = {
+				tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			army_org_factor = -0.15
+			army_offense_factor = -0.15
+			army_defence_factor = -0.1
+			industrial_capacity_factory = -0.1
+			training_time_factor = 0.15
+			}
+		}
+
+	}
+}

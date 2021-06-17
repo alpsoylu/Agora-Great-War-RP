@@ -1,0 +1,71 @@
+﻿###########################
+# GRE Events
+###########################
+
+add_namespace = gre_event
+
+	
+	
+
+	
+
+
+
+
+
+
+
+
+#DRAGOUMIS RESIGNITION
+country_event = {
+	id = gre_event.1 #event gre_event.1 GRE
+	title = gre_event.1.t
+	desc = gre_event.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_trigfraed_only = yes
+	fire_only_once = yes
+	trigger = {
+	original_tag = GRE
+	date > 1910.10.1
+	has_completed_focus = GRE_elections
+	}
+	#DRAGOUMIS
+	option = {
+	ai_chance = {base = 500000}
+		name = gre_event.1.a
+		set_country_flag = GRE_dragoumis_resignition_flag
+		remove_ideas = RP_dragoumis
+	}
+	
+	}
+
+
+
+
+#NO CONFIDENCE
+country_event = {
+	id = gre_event.2 #event gre_event.2 GRE
+	title = gre_event.2.t
+	desc = gre_event.2.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_trigfraed_only = yes
+	fire_only_once = yes
+	trigger = {
+	has_completed_focus = GRE_dragoumis_resignition
+	}
+	#OFFER KING A DEAL
+	option = {
+	ai_chance = {base = 500000}
+		name = gre_event.2.a
+		set_country_flag = GRE_king_accept
+	}
+	#Oppose Venizellos
+	option = {
+	ai_chance = {base = 500000}
+		name = gre_event.2.b
+		set_country_flag = GRE_king_reject
+	}
+	
+	}

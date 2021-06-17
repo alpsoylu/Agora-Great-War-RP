@@ -1,0 +1,863 @@
+focus_tree = {
+	id = RP_greece_focus
+	default = no
+	country = { factor=0 modifier = { add = 20 tag = GRE} }
+	continuous_focus_position = { x = 0 y = 2000 }
+
+	
+
+	
+	
+	#shared_focus = GEN_FRA_aviation_effort
+	#shared_focus = GEN_FRA_naval_effort
+	#shared_focus = GEN_army_effort
+	
+	
+	focus = {
+		id = GRE_elections
+		icon = GFX_elections1
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = }
+		completion_reward = {
+		custom_effect_tooltip = GRE_elections_tt
+		hidden_effect = {
+		GRE = { country_event = { id = gre_event.1 days = 100 } }#100 gün sonra dragumis istifa ediyor
+		}
+		}
+		#relative_position_id = 
+		x = 10
+		y = 0
+	}
+	
+	
+	focus = {
+		id = GRE_dragoumis_resignition
+		icon = GFX_focus_stabilize_democracy
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_elections}
+		available = {
+		has_country_flag = GRE_dragoumis_resignition_flag
+		}
+		completion_reward = {
+		hidden_effect = {
+		remove_ideas = RP_dragoumis
+		}
+		add_ideas = RP_venizelos
+		GRE = { country_event = { id = gre_event.2 days = 2 } }
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.1
+		}
+		}
+		relative_position_id = GRE_elections
+		x = 0
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_deal_with_the_king
+		icon = GFX_veni1
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_dragoumis_resignition}
+		available = {
+		has_country_flag = GRE_king_accept
+		NOT = {has_completed_focus = GRE_oppose_venizelos}
+		}
+		completion_reward = {
+		set_party_name = {
+ideology = democratic
+    name = GRE_lp
+    long_name = GRE_lp
+}
+		}
+		relative_position_id = GRE_dragoumis_resignition
+		x = -4
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_new_elections
+		icon = GFX_focus_hold_elections
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 5
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_deal_with_the_king}
+		available = {
+		}
+		completion_reward = {
+		set_politics = {
+	ruling_party = democratic
+        elections_allowed = yes
+        last_election = "1935.12.17"
+        election_frequency = 48
+}
+create_country_leader = {
+	name = "Elefterios Venizelos"
+	picture = "gfx/leaders/GRE/GRE_eleftherios_venizelos.dds"
+	expire = "1935.1.1"
+	ideology = classical_liberalism
+	traits = {} 
+}
+		}
+		relative_position_id = GRE_deal_with_the_king
+		x = 0
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_zorunlu_ilkokul
+		icon = GFX_focus_tur_socialist_education
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 5
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_new_elections}
+		available = {
+		}
+		completion_reward = {
+		add_ideas = GRE_zorunlu_ilkokul_idea
+		}
+		relative_position_id = GRE_new_elections
+		x = -1
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_new_constitution
+		icon = GFX_focus_convention
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 14.3
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_new_elections}
+		available = {
+		}
+		completion_reward = {
+		}
+		relative_position_id = GRE_new_elections
+		x = 1
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_establish_ministry_of_national_economy
+		icon = GFX_focus_dead_economy
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_new_constitution}
+		prerequisite = {focus = GRE_zorunlu_ilkokul}
+		available = {
+		}
+		completion_reward = {
+		add_ideas = GRE_ministry_of_national_economy
+		}
+		relative_position_id = GRE_new_elections
+		x = 1
+		y = 2
+	}
+	
+	
+	focus = {
+		id = GRE_increase_workers_rights
+		icon = GFX_focus_economic_control_red
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_new_constitution}
+		prerequisite = {focus = GRE_zorunlu_ilkokul}
+		available = {
+		}
+		completion_reward = {
+		add_stability = 0.025
+		}
+		relative_position_id = GRE_new_elections
+		x = -1
+		y = 2
+	}
+	
+	
+	focus = {
+		id = GRE_oppose_venizelos
+		icon = GFX_veni2
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_dragoumis_resignition}
+		available = {
+		has_country_flag = GRE_king_reject
+		NOT = {has_completed_focus = GRE_deal_with_the_king}
+		}
+		completion_reward = {
+		add_popularity = {
+    ideology = democratic
+    popularity = -0.1
+	}
+		add_popularity = {
+    ideology = neutrality
+    popularity = 0.1
+	}
+	add_stability = -0.1
+		}
+		relative_position_id = GRE_dragoumis_resignition
+		x = 0
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_fire_coup
+		icon = GFX_focus_GRE_bedrock_of_balkan_stability
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_oppose_venizelos}
+		available = {
+		}
+		completion_reward = {
+start_civil_war = {
+    ruling_party = neutrality
+    ideology = democratic
+    only_own_territory = no
+    capital = 182
+    keep_political_leader = yes
+	states = { 
+    182 186
+    }
+}
+hidden_effect = {
+		set_politics = {
+	ruling_party = neutrality
+        elections_allowed = no
+        last_election = "1935.12.17"
+        election_frequency = 48
+}
+every_country = {
+limit = {
+original_tag = GRE
+has_goverment = democratic
+}
+create_country_leader = {
+	name = "Elefterios Venizelos"
+	picture = "gfx/leaders/GRE/GRE_eleftherios_venizelos.dds"
+	expire = "1935.1.1"
+	ideology = classical_liberalism
+	traits = {} 
+}
+}
+}
+		}
+		relative_position_id = GRE_oppose_venizelos
+		x = 0
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_victory
+		icon = GFX_focus_GRE_resurrecting_the_megali_idea
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_fire_coup}
+		available = {
+		}
+		completion_reward = {
+		add_ideas = RP_dragoumis
+		hidden_effect = {
+		remove_ideas = RP_venizelos
+		}
+		}
+		relative_position_id = GRE_fire_coup
+		x = 0
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_crown_constantine
+		icon = GFX_constantine
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_victory}
+		available = {
+		}
+		completion_reward = {
+		create_country_leader = {
+	name = "Constantine I"
+	picture = "gfx/leaders/GRE/GRE_constantine_i.dds"
+	expire = "1935.1.1"
+	ideology = despotism
+	traits = {} 
+}
+		}
+		relative_position_id = GRE_victory
+		x = -1
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_anti_liberalism
+		icon = GFX_focus_GRE_an_orthodox_state
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_victory}
+		available = {
+		}
+		completion_reward = {
+		}
+		relative_position_id = GRE_victory
+		x = 2
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_close_parliement
+		icon = GFX_sign_parliement
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_anti_liberalism}
+		available = {
+		}
+		completion_reward = {
+		add_stability = -0.075
+		}
+		relative_position_id = GRE_anti_liberalism
+		x = 1
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_prison_liberals
+		icon = GFX_purge2
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_anti_liberalism}
+		available = {
+		}
+		completion_reward = {
+		add_popularity = {
+    ideology = democratic
+    popularity = -0.1
+	}
+	add_stability -0.025
+		}
+		relative_position_id = GRE_anti_liberalism
+		x = -1
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_diplomatic_direction
+		icon = GFX_focus_choose_side
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		#prerequisite = {focus = GRE_dragoumis_resignition}
+		available = {
+		}
+		completion_reward = {
+		add_political_power = 100
+		}
+		#relative_position_id = GRE_dragoumis_resignition
+		x = 18
+		y = 0
+	}
+	
+	focus = {
+		id = GRE_neutrality_focus
+		icon = GFX_focus_eagle
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_diplomatic_direction }
+		available = {
+		NOT = {OR = {has_completed_focus = GRE_closer_ties_to_entente has_completed_focus = GRE_closer_ties_to_central}}
+		}
+		completion_reward = {
+		}
+		relative_position_id = GRE_diplomatic_direction
+		x = 0
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_closer_ties_to_entente
+		icon = GFX_focus_consolidate_entente
+		completion_reward = {
+		}
+		ai_will_do = { factor = 10 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_diplomatic_direction }
+		available = {
+		NOT = {OR = {has_completed_focus = GRE_neutrality_focus has_completed_focus = GRE_closer_ties_to_central}}
+		}
+		completion_reward = {
+		}
+		relative_position_id = GRE_diplomatic_direction
+		x = 2
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_french_mission
+		icon = GFX_fra_army
+		completion_reward = {
+		}
+		ai_will_do = { factor = 10 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_closer_ties_to_entente }
+		available = {
+		}
+		completion_reward = {
+		}
+		relative_position_id = GRE_closer_ties_to_entente
+		x = 0
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_german_mission
+		icon = GFX_ger_army
+		completion_reward = {
+		}
+		ai_will_do = { factor = 10 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_closer_ties_to_central }
+		available = {
+		}
+		completion_reward = {
+		}
+		relative_position_id = GRE_closer_ties_to_central
+		x = 0
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_closer_ties_to_central
+		icon = GFX_focus_central_powers
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_diplomatic_direction }
+		available = {
+		NOT = {OR = {has_completed_focus = GRE_neutrality_focus has_completed_focus = GRE_closer_ties_to_entente}}
+		}
+		completion_reward = {
+		}
+		relative_position_id = GRE_diplomatic_direction
+		x = -2
+		y = 1
+	}
+	
+	
+	
+	focus = {
+		id = GRE_megali_idea
+		icon = GFX_focus_GRE_resurrecting_the_megali_idea
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		#prerequisite = {focus = GRE_dragoumis_resignition}
+		available = {
+		owns_state = 826
+		owns_state = 758
+		owns_state = 731
+		owns_state = 345
+		owns_state = 790
+		}
+		completion_reward = {
+		add_ideas = RP_megali_idea
+		}
+		#relative_position_id = GRE_dragoumis_resignition
+		x = 18
+		y = 3
+	}
+	
+	focus = {
+		id = GRE_assign_governer_general_izmir
+		icon = GFX_smyrni
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_megali_idea}
+		available = {
+		owns_state = 339
+		controls_state = 339
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+		
+		}
+		relative_position_id = GRE_megali_idea
+		x = 2
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_supress_resisters
+		icon = GFX_focus_tur_son_kalan
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_assign_governer_general_izmir}
+		available = {
+		owns_state = 339
+		controls_state = 339
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+		339 = {add_resistance = -15}
+		}
+		bypass = {
+		339 = {
+		resistance < 10
+		}
+		}
+		relative_position_id = GRE_assign_governer_general_izmir
+		x = 1
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_change_the_name_of_izmir
+		icon = GFX_focus_GRE_byzantine_themata
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_assign_governer_general_izmir}
+		available = {
+		owns_state = 339
+		controls_state = 339
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+		339 = {set_state_name = "Smyrni"}
+		}
+		relative_position_id = GRE_assign_governer_general_izmir
+		x = -1
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_sending_greeks_to_izmir
+		icon = GFX_GRE_in
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = GRE_mass_killings_of_turks}
+		prerequisite = {focus = GRE_change_the_name_of_izmir}
+		prerequisite = {focus = GRE_supress_resisters}
+		available = {
+		owns_state = 339
+		controls_state = 339
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+		
+		}
+		relative_position_id = GRE_assign_governer_general_izmir
+		x = 1
+		y = 2
+	}
+	
+	focus = {
+		id = GRE_mass_killings_of_turks
+		icon = GFX_GRE_out
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = GRE_sending_greeks_to_izmir}
+		prerequisite = {focus = GRE_change_the_name_of_izmir}
+		prerequisite = {focus = GRE_supress_resisters}
+		available = {
+		owns_state = 339
+		controls_state = 339
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+		
+		}
+		relative_position_id = GRE_assign_governer_general_izmir
+		x = -1
+		y = 2
+	}
+	
+	focus = {
+		id = GRE_annex_smyrni
+		icon = GFX_smyrni
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_mass_killings_of_turks}
+		prerequisite = {focus = GRE_sending_greeks_to_izmir}
+		available = {
+		owns_state = 339
+		controls_state = 339
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+		add_state_core = 339
+		}
+		relative_position_id = GRE_assign_governer_general_izmir
+		x = 0
+		y = 3
+	}
+	
+	focus = {
+		id = GRE_moving_inside_anatolia
+		icon = GFX_focus_generic_attack_turkey
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_megali_idea}
+		available = {
+		owns_state = 339
+		controls_state = 339
+		has_completed_focus = GRE_annex_smyrni
+		TIM = {NOT = {has_country_flag = great_war_winner}}
+		has_global_flag = great_war_ends
+		}
+		cancel = {
+		AND = {
+		TIM = {NOT = {has_country_flag = great_war_winner}}
+		has_global_flag = great_war_ends
+		}
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+		
+		}
+		relative_position_id = GRE_megali_idea
+		x = -2
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_prepare_for_anatolian_campaign
+		icon = GFX_focus_tur_deport_minorities
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_moving_inside_anatolia}
+		available = {
+		owns_state = 339
+		controls_state = 339
+		TIM = {NOT = {has_country_flag = great_war_winner}}
+		has_global_flag = great_war_ends
+		}
+		cancel = {
+		AND = {
+		TIM = {NOT = {has_country_flag = great_war_winner}}
+		has_global_flag = great_war_ends
+		}
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 5000
+    producer = GRE
+}
+		}
+		relative_position_id = GRE_moving_inside_anatolia
+		x = 1
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_purge_opposition_officers
+		icon = GFX_purge2
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_moving_inside_anatolia}
+		available = {
+		owns_state = 339
+		controls_state = 339
+		TIM = {NOT = {has_country_flag = great_war_winner}}
+		has_global_flag = great_war_ends
+		}
+		cancel = {
+		AND = {
+		TIM = {NOT = {has_country_flag = great_war_winner}}
+		has_global_flag = great_war_ends
+		}
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+		add_ideas = GRE_purge
+		}
+		relative_position_id = GRE_moving_inside_anatolia
+		x = -1
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_invade_bursa
+		icon = GFX_purge2
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_purge_opposition_officers}
+		prerequisite = {focus = GRE_prepare_for_anatolian_campaign}
+		available = {
+		owns_state = 339
+		controls_state = 339
+		NOT = {owns_state = 340}
+		TIM = {NOT = {has_country_flag = great_war_winner}}
+		has_global_flag = great_war_ends
+		}
+		cancel = {
+		AND = {
+		TIM = {NOT = {has_country_flag = great_war_winner}}
+		has_global_flag = great_war_ends
+		}
+		}
+		bypass = {controls_state = 340}
+		cancel_if_invalid = yes
+		completion_reward = {
+		}
+		relative_position_id = GRE_moving_inside_anatolia
+		x = 0
+		y = 2
+	}
+	
+	focus = {
+		id = GRE_finish_turkish_independence_movement
+		icon = GFX_purge2
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = GRE_victory_in_greco_turkish_war}
+		prerequisite = {focus = GRE_invade_bursa}
+		available = {
+		owns_state = 339
+		controls_state = 339
+		owns_state = 340
+		controls_state = 340
+		TIM = {NOT = {has_country_flag = great_war_winner}}
+		has_global_flag = great_war_ends
+		TIM = {exists = yes}
+		}
+		cancel = {
+		AND = {
+		TIM = {NOT = {has_country_flag = great_war_winner}}
+		has_global_flag = great_war_ends
+		}
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+		}
+		relative_position_id = GRE_moving_inside_anatolia
+		x = -1
+		y = 3
+	}
+	
+	focus = {
+		id = GRE_victory_in_greco_turkish_war
+		icon = GFX_purge2
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = GRE_finish_turkish_independence_movement}
+		prerequisite = {focus = GRE_invade_bursa}
+		available = {
+		owns_state = 339
+		controls_state = 339
+		owns_state = 340
+		controls_state = 340
+		TIM = {exists = no}
+		has_global_flag = great_war_ends
+		
+		}
+		cancel = {
+		AND = {
+		TIM = {NOT = {has_country_flag = great_war_winner}}
+		has_global_flag = great_war_ends
+		}
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+		}
+		relative_position_id = GRE_moving_inside_anatolia
+		x = 1
+		y = 3
+	}
+	
+}

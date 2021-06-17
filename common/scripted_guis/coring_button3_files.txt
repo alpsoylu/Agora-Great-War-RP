@@ -10,6 +10,12 @@ scripted_gui = {
 				is_fully_controlled_by = ROOT
 				NOT = { is_core_of = FROM }
 				state_population > 100000
+				NOT = {
+				AND = {
+				state = 339
+				is_fully_controlled_by = GRE
+				}
+				}
 				NOT = { state_population > 250000 }
 			}
 		}

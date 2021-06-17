@@ -34,6 +34,7 @@ country_event = { #TR WIN IZMIR #event RP_TIM_izmir.1 TUR
 	}
 	option = {
 		name = RP_TIM_izmir.1.a
+		339 = {set_state_name = "Izmir"}
 		transfer_state = 339
 		add_war_support = 0.05
 		ai_chance = {
