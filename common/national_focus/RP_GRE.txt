@@ -695,6 +695,7 @@ create_country_leader = {
 		completion_reward = {
 		
 		}
+		will_lead_to_war_with = TUR
 		relative_position_id = GRE_megali_idea
 		x = -2
 		y = 1
@@ -766,7 +767,7 @@ create_country_leader = {
 	
 	focus = {
 		id = GRE_invade_bursa
-		icon = GFX_purge2
+		icon = GFX_focus_GRE_a_land_of_mountains
 		completion_reward = {
 		}
 		ai_will_do = { factor = 20 }
@@ -787,6 +788,7 @@ create_country_leader = {
 		has_global_flag = great_war_ends
 		}
 		}
+		will_lead_to_war_with = TUR
 		bypass = {controls_state = 340}
 		cancel_if_invalid = yes
 		completion_reward = {
@@ -798,7 +800,7 @@ create_country_leader = {
 	
 	focus = {
 		id = GRE_finish_turkish_independence_movement
-		icon = GFX_purge2
+		icon = GFX_focus_generic_attack_turkey
 		completion_reward = {
 		}
 		ai_will_do = { factor = 20 }
@@ -814,6 +816,7 @@ create_country_leader = {
 		has_global_flag = great_war_ends
 		TIM = {exists = yes}
 		}
+		will_lead_to_war_with = TUR
 		cancel = {
 		AND = {
 		TIM = {NOT = {has_country_flag = great_war_winner}}
@@ -830,7 +833,7 @@ create_country_leader = {
 	
 	focus = {
 		id = GRE_victory_in_greco_turkish_war
-		icon = GFX_purge2
+		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
 		completion_reward = {
 		}
 		ai_will_do = { factor = 20 }
