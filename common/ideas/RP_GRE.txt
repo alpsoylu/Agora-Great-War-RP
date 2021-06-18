@@ -133,7 +133,7 @@ ideas = {
 		GRE_anti_liberalism_idea = {
 
 
-			picture = hun_hungarian_monarchy_democratic
+			picture = HUN_hungarian_monarchy_democratic
 
 			allowed = {
 			}

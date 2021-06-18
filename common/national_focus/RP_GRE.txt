@@ -367,6 +367,7 @@ create_country_leader = {
 		mutually_exclusive = {focus = }
 		prerequisite = {focus = GRE_fire_coup}
 		available = {
+		NOT = {has_civil_war = yes}
 		}
 		completion_reward = {
 		add_ideas = RP_dragoumis
@@ -834,7 +835,7 @@ create_country_leader = {
 		}
 		cancel = {
 		AND = {
-		TIM = {NOT = {has_country_flag = great_war_winner}}
+		TIM = {has_country_flag = great_war_winner}
 		has_global_flag = great_war_ends
 		}
 		}
@@ -868,7 +869,7 @@ create_country_leader = {
 		}
 		cancel = {
 		AND = {
-		TIM = {NOT = {has_country_flag = great_war_winner}}
+		TIM = {has_country_flag = great_war_winner}
 		has_global_flag = great_war_ends
 		}
 		}
@@ -902,7 +903,7 @@ create_country_leader = {
 		}
 		cancel = {
 		AND = {
-		TIM = {NOT = {has_country_flag = great_war_winner}}
+		TIM = {has_country_flag = great_war_winner}
 		has_global_flag = great_war_ends
 		}
 		}
@@ -935,7 +936,7 @@ create_country_leader = {
 		allow_branch = {always = no}
 		cancel = {
 		AND = {
-		TIM = {NOT = {has_country_flag = great_war_winner}}
+		TIM = {has_country_flag = great_war_winner}
 		has_global_flag = great_war_ends
 		}
 		}
@@ -971,7 +972,7 @@ create_country_leader = {
 		will_lead_to_war_with = TUR
 		cancel = {
 		AND = {
-		TIM = {NOT = {has_country_flag = great_war_winner}}
+		TIM = {has_country_flag = great_war_winner}
 		has_global_flag = great_war_ends
 		}
 		}
@@ -1008,7 +1009,7 @@ create_country_leader = {
 		}
 		cancel = {
 		AND = {
-		TIM = {NOT = {has_country_flag = great_war_winner}}
+		TIM = {has_country_flag = great_war_winner}
 		has_global_flag = great_war_ends
 		}
 		}
