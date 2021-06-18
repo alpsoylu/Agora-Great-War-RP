@@ -1238,6 +1238,34 @@ SpriteType = {
 	name = "GFX_constantine"
 	texturefile = "gfx/interface/goals/newicons/constantine.dds"
 	}
+SpriteType = {
+	name = "GFX_gre_navy"
+	texturefile = "gfx/interface/goals/newicons/gre_navy.dds"
+	}
+SpriteType = {
+	name = "GFX_gre_army"
+	texturefile = "gfx/interface/goals/newicons/gre_army.dds"
+	}
+SpriteType = {
+	name = "GFX_gre_air"
+	texturefile = "gfx/interface/goals/newicons/gre_air.dds"
+	}
+SpriteType = {
+	name = "GFX_idea_cavalry"
+	texturefile = "gfx/interface/goals/newicons/cavalry.dds"
+	}
+SpriteType = {
+	name = "GFX_idea_greek_cons"
+	texturefile = "gfx/interface/goals/newicons/greek_cons.dds"
+	}
+SpriteType = {
+	name = "GFX_gre_industry"
+	texturefile = "gfx/interface/goals/newicons/gre_industry.dds"
+	}
+SpriteType = {
+	name = "GFX_focus_CAN_war_fueled_economy"
+	texturefile = "gfx/interface/goals/newicons/focus_CAN_war_fueled_economy.dds"
+	}
 
 
 	

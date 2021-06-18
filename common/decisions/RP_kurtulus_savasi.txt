@@ -1454,6 +1454,127 @@ start_border_war = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+
+
+
+
+
+
+	GRE_kill_turks = {
+		icon = GFX_decision_eng_support_imperialist_coup
+		allowed = { 
+		
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		tag = GRE
+		has_completed_focus = GRE_mass_killings_of_turks
+		OR = {
+		has_state_flag = GRE_kill0
+		has_state_flag = GRE_kill1
+		has_state_flag = GRE_kill2
+		has_state_flag = GRE_kill3
+		has_state_flag = GRE_kill4
+		has_state_flag = GRE_kill5
+		}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 339
+		}
+		on_map_mode = map_only
+		cost =  50
+		days_re_enable = 7
+		complete_effect = {
+		if = {
+		limit = {has_state_flag = GRE_kill0}
+		set_state_flag = GRE_kill1
+		}
+		if = {
+		limit = {has_state_flag = GRE_kill1}
+		set_state_flag = GRE_kill2
+		}
+		if = {
+		limit = {has_state_flag = GRE_kill2}
+		set_state_flag = GRE_kill3
+		}
+		if = {
+		limit = {has_state_flag = GRE_kill3}
+		set_state_flag = GRE_kill4
+		}
+		if = {
+		limit = {has_state_flag = GRE_kill4}
+		set_state_flag = GRE_kill5
+		}
+		339 = {add_manpower = -75000}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+
+
+
+
+	GRE_send_greeks = {
+		icon = GFX_decision_eng_support_imperialist_coup
+		allowed = { 
+		
+		}
+		
+		
+		visible = {NOT = {has_country_flag = FLAG_peace_with_turkey} TIM = {NOT = {has_country_flag = great_war_winner}}  TUR = {NOT = {has_country_flag = great_war_winner}}  has_global_flag = great_war_ends
+		tag = GRE
+		has_completed_focus = GRE_sending_greeks_to_izmir
+		OR = {
+		has_state_flag = GRE_send0
+		has_state_flag = GRE_send1
+		has_state_flag = GRE_send2
+		has_state_flag = GRE_send3
+		has_state_flag = GRE_send4
+		has_state_flag = GRE_send5
+		}
+        }
+		
+		
+		highlight_state_targets = {
+			state = 339
+		}
+		on_map_mode = map_only
+		cost =  50
+		days_re_enable = 7
+		complete_effect = {
+		if = {
+		limit = {has_state_flag = GRE_send0}
+		set_state_flag = GRE_send1
+		}
+		if = {
+		limit = {has_state_flag = GRE_send1}
+		set_state_flag = GRE_send2
+		}
+		if = {
+		limit = {has_state_flag = GRE_send2}
+		set_state_flag = GRE_send3
+		}
+		if = {
+		limit = {has_state_flag = GRE_send3}
+		set_state_flag = GRE_send4
+		}
+		if = {
+		limit = {has_state_flag = GRE_send4}
+		set_state_flag = GRE_send5
+		}
+		339 = {add_manpower = 75000}
+		random_owned_controlled_state = {
+				limit = {
+				is_core_of = GRE
+				}
+				add_manpower = -75000
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
 	
 	
 	

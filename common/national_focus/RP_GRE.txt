@@ -33,6 +33,78 @@ focus_tree = {
 		y = 0
 	}
 	
+	focus = {
+		id = GRE_balkan_wars
+		icon = GFX_focus_tur_son_kalan
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_dragoumis_resignition}
+		available = {
+		has_war_with = TUR
+		}
+		bypass = {has_war_with = TUR}
+		completion_reward = {
+		}
+		relative_position_id = GRE_dragoumis_resignition
+		x = 3
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_victory_in_balkan_war
+		icon = GFX_focus_GRE_resurrecting_the_megali_idea
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_balkan_wars}
+		available = {
+		owns_state = 345
+		owns_state = 731
+		owns_state = 826
+		owns_state = 758
+		owns_state = 790
+		}
+		bypass = {}
+		completion_reward = {
+		add_stability = 0.1
+		add_war_support = 0.1
+		}
+		relative_position_id = GRE_balkan_wars
+		x = 1
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_lost_in_the_balkan_war
+		icon = GFX_focus_CZE_german_puppet
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_balkan_wars}
+		available = {
+		owns_state = 345
+		owns_state = 731
+		owns_state = 826
+		owns_state = 758
+		owns_state = 790
+		}
+		bypass = {}
+		completion_reward = {
+		add_stability = -0.1
+		add_war_support = -0.1
+		}
+		relative_position_id = GRE_balkan_wars
+		x = -1
+		y = 1
+	}
+	
 	
 	focus = {
 		id = GRE_dragoumis_resignition
@@ -83,6 +155,7 @@ ideology = democratic
     long_name = GRE_lp
 }
 		}
+		
 		relative_position_id = GRE_dragoumis_resignition
 		x = -4
 		y = 1
@@ -95,7 +168,7 @@ ideology = democratic
 		completion_reward = {
 		}
 		ai_will_do = { factor = 20 }
-		cost = 5
+		cost = 10
 		mutually_exclusive = {focus = }
 		prerequisite = {focus = GRE_deal_with_the_king}
 		available = {
@@ -127,7 +200,7 @@ create_country_leader = {
 		completion_reward = {
 		}
 		ai_will_do = { factor = 20 }
-		cost = 5
+		cost = 10
 		mutually_exclusive = {focus = }
 		prerequisite = {focus = GRE_new_elections}
 		available = {
@@ -147,12 +220,13 @@ create_country_leader = {
 		completion_reward = {
 		}
 		ai_will_do = { factor = 20 }
-		cost = 14.3
+		cost = 10
 		mutually_exclusive = {focus = }
 		prerequisite = {focus = GRE_new_elections}
 		available = {
 		}
 		completion_reward = {
+		add_ideas = GRE_greek_cons
 		}
 		relative_position_id = GRE_new_elections
 		x = 1
@@ -215,6 +289,7 @@ create_country_leader = {
 		has_country_flag = GRE_king_reject
 		NOT = {has_completed_focus = GRE_deal_with_the_king}
 		}
+		
 		completion_reward = {
 		add_popularity = {
     ideology = democratic
@@ -343,6 +418,7 @@ create_country_leader = {
 		available = {
 		}
 		completion_reward = {
+		add_ideas = GRE_anti_liberalism_idea
 		}
 		relative_position_id = GRE_victory
 		x = 2
@@ -399,7 +475,7 @@ create_country_leader = {
 		ai_will_do = { factor = 0 }
 		cost = 10
 		mutually_exclusive = {focus = }
-		#prerequisite = {focus = GRE_dragoumis_resignition}
+		available = {OR = {has_completed_focus = GRE_deal_with_the_king has_completed_focus = GRE_victory}}
 		available = {
 		}
 		completion_reward = {
@@ -421,12 +497,67 @@ create_country_leader = {
 		prerequisite = {focus = GRE_diplomatic_direction }
 		available = {
 		NOT = {OR = {has_completed_focus = GRE_closer_ties_to_entente has_completed_focus = GRE_closer_ties_to_central}}
+		is_in_faction = no
 		}
 		completion_reward = {
+		set_rule = {can_join_factions = no}
+		add_stability = 0.2
 		}
 		relative_position_id = GRE_diplomatic_direction
 		x = 0
 		y = 1
+	}
+	
+	focus = {
+		id = GRE_join_faction
+		icon = GFX_focus_tur_balkan_war
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_closer_ties_to_central focus = GRE_closer_ties_to_entente }
+		available = {
+		OR = {has_completed_focus = GRE_german_mission has_completed_focus = GRE_french_mission}
+		}
+		completion_reward = {
+		custom_effect_tooltip = GRE_join_faction_tt
+		hidden_effect = {
+		if = {
+		limit = {has_completed_focus = GRE_closer_ties_to_central}
+		every_country = {
+		limit = {
+		AND = {
+		is_faction_leader = yes
+		OR = {
+		tag = GER
+		is_in_faction_with = GER
+		}
+		}
+		}
+		country_event = { id = generic.2 } 
+		}
+		}
+		if = {
+		limit = {has_completed_focus = GRE_closer_ties_to_entente}
+		every_country = {
+		limit = {
+		AND = {
+		is_faction_leader = yes
+		OR = {
+		tag = FRA
+		is_in_faction_with = FRA
+		}
+		}
+		}
+		country_event = { id = generic.2 } 
+		}
+		}
+		}
+		}
+		relative_position_id = GRE_diplomatic_direction
+		x = 0
+		y = 2
 	}
 	
 	focus = {
@@ -442,6 +573,10 @@ create_country_leader = {
 		NOT = {OR = {has_completed_focus = GRE_neutrality_focus has_completed_focus = GRE_closer_ties_to_central}}
 		}
 		completion_reward = {
+		add_opinion_modifier = { target = FRA modifier = huge_increase }
+		FRA = {
+		add_opinion_modifier = { target = GRE modifier = huge_increase }
+		}
 		}
 		relative_position_id = GRE_diplomatic_direction
 		x = 2
@@ -460,6 +595,7 @@ create_country_leader = {
 		available = {
 		}
 		completion_reward = {
+		add_ideas = GRE_french_mission_idea
 		}
 		relative_position_id = GRE_closer_ties_to_entente
 		x = 0
@@ -478,6 +614,7 @@ create_country_leader = {
 		available = {
 		}
 		completion_reward = {
+		add_ideas = GRE_german_mission_idea
 		}
 		relative_position_id = GRE_closer_ties_to_central
 		x = 0
@@ -497,6 +634,10 @@ create_country_leader = {
 		NOT = {OR = {has_completed_focus = GRE_neutrality_focus has_completed_focus = GRE_closer_ties_to_entente}}
 		}
 		completion_reward = {
+		add_opinion_modifier = { target = GER modifier = huge_increase }
+		GER = {
+		add_opinion_modifier = { target = GRE modifier = huge_increase }
+		}
 		}
 		relative_position_id = GRE_diplomatic_direction
 		x = -2
@@ -520,6 +661,7 @@ create_country_leader = {
 		owns_state = 731
 		owns_state = 345
 		owns_state = 790
+		OR = {has_completed_focus = GRE_lost_in_the_balkan_war has_completed_focus = GRE_victory_in_balkan_war}
 		}
 		completion_reward = {
 		add_ideas = RP_megali_idea
@@ -544,7 +686,7 @@ create_country_leader = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-		
+		339 = {add_resistance = -5}
 		}
 		relative_position_id = GRE_megali_idea
 		x = 2
@@ -616,7 +758,7 @@ create_country_leader = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-		
+		unlock_decision_tooltip = GRE_send_greeks
 		}
 		relative_position_id = GRE_assign_governer_general_izmir
 		x = 1
@@ -639,7 +781,8 @@ create_country_leader = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-		
+		339 = {set_state_flag = GRE_kill0}
+		unlock_decision_tooltip = GRE_kill_turks
 		}
 		relative_position_id = GRE_assign_governer_general_izmir
 		x = -1
@@ -659,6 +802,10 @@ create_country_leader = {
 		available = {
 		owns_state = 339
 		controls_state = 339
+		OR = {
+		has_state_flag = GRE_kill5
+		has_state_flag = GRE_send5
+		}
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
@@ -693,7 +840,10 @@ create_country_leader = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-		
+		add_opinion_modifier = { target = TUR modifier = medium_decrease }
+		TUR = {
+		add_opinion_modifier = { target = GRE modifier = medium_decrease }
+		}
 		}
 		will_lead_to_war_with = TUR
 		relative_position_id = GRE_megali_idea
@@ -726,7 +876,7 @@ create_country_leader = {
 		completion_reward = {
 		add_equipment_to_stockpile = {
     type = infantry_equipment
-    amount = 5000
+    amount = 10000
     producer = GRE
 }
 		}
@@ -758,7 +908,7 @@ create_country_leader = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
-		add_ideas = GRE_purge
+		add_timed_idea = {idea = GRE_purge days = 150}
 		}
 		relative_position_id = GRE_moving_inside_anatolia
 		x = -1
@@ -782,6 +932,7 @@ create_country_leader = {
 		TIM = {NOT = {has_country_flag = great_war_winner}}
 		has_global_flag = great_war_ends
 		}
+		allow_branch = {always = no}
 		cancel = {
 		AND = {
 		TIM = {NOT = {has_country_flag = great_war_winner}}
@@ -803,10 +954,11 @@ create_country_leader = {
 		icon = GFX_focus_generic_attack_turkey
 		completion_reward = {
 		}
-		ai_will_do = { factor = 20 }
+		ai_will_do = { factor = 0 }
 		cost = 10
 		mutually_exclusive = {focus = GRE_victory_in_greco_turkish_war}
-		prerequisite = {focus = GRE_invade_bursa}
+		prerequisite = {focus = GRE_prepare_for_anatolian_campaign}
+		prerequisite = {focus = GRE_purge_opposition_officers}
 		available = {
 		owns_state = 339
 		controls_state = 339
@@ -825,10 +977,14 @@ create_country_leader = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
+		declare_war_on = {
+    target = TIM
+    type = annex_everything
+}
 		}
 		relative_position_id = GRE_moving_inside_anatolia
 		x = -1
-		y = 3
+		y = 2
 	}
 	
 	focus = {
@@ -839,7 +995,8 @@ create_country_leader = {
 		ai_will_do = { factor = 20 }
 		cost = 10
 		mutually_exclusive = {focus = GRE_finish_turkish_independence_movement}
-		prerequisite = {focus = GRE_invade_bursa}
+		prerequisite = {focus = GRE_prepare_for_anatolian_campaign}
+		prerequisite = {focus = GRE_purge_opposition_officers}
 		available = {
 		owns_state = 339
 		controls_state = 339
@@ -857,10 +1014,727 @@ create_country_leader = {
 		}
 		cancel_if_invalid = yes
 		completion_reward = {
+		add_stability = 0.1
 		}
 		relative_position_id = GRE_moving_inside_anatolia
 		x = 1
+		y = 2
+	}
+	
+	
+	
+	
+	focus = {
+		id = GRE_greek_industry
+		icon = GFX_gre_industry
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = }
+		available = {
+		}
+		completion_reward = {
+		add_political_power = 100
+		}
+		#relative_position_id = 
+		x = 24
+		y = 4
+	}
+	
+	
+	focus = {
+		id = GRE_agricultural_economy
+		icon = GFX_focus_agrarian_profit
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = GRE_start_industrialization}
+		prerequisite = {focus = GRE_greek_industry}
+		available = {
+		}
+		completion_reward = {
+		add_stability = 0.05
+			random_owned_controlled_state = {
+				limit = {
+				is_core_of = GRE
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}	
+		}
+		relative_position_id = GRE_greek_industry
+		x = -1
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_support_farmers
+		icon = GFX_focus_agrarian_profit
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_agricultural_economy}
+		available = {
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+				is_core_of = GRE
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		random_owned_controlled_state = {
+				limit = {
+				is_core_of = GRE
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+		relative_position_id = GRE_agricultural_economy
+		x = 0
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_start_industrialization
+		icon = GFX_focus_CAN_war_fueled_economy
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = GRE_agricultural_economy}
+		prerequisite = {focus = GRE_greek_industry}
+		available = {
+		}
+		completion_reward = {
+		add_stability = -0.05
+		random_owned_controlled_state = {
+				limit = {
+				is_core_of = GRE
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+				is_core_of = GRE
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		relative_position_id = GRE_greek_industry
+		x = 1
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_focus_on_military_building
+		icon = GFX_focus_control_economy
+		completion_reward = {
+		}
+		ai_will_do = { factor = 0 }
+		cost = 10
+		mutually_exclusive = {focus = GRE_focus_on_industrial_devolopment}
+		prerequisite = {focus = GRE_start_industrialization}
+		available = {
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+				is_core_of = GRE
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+				is_core_of = GRE
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		relative_position_id = GRE_start_industrialization
+		x = 0
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_focus_on_industrial_devolopment
+		icon = GFX_focus_civil
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = GRE_focus_on_military_building}
+		prerequisite = {focus = GRE_start_industrialization}
+		available = {
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+				is_core_of = GRE
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+				is_core_of = GRE
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		relative_position_id = GRE_start_industrialization
+		x = 2
+		y = 1
+	}
+	
+	
+	focus = {
+		id = GRE_railroads
+		icon = GFX_focus_train_railroads
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		prerequisite = {focus = GRE_support_farmers focus = GRE_focus_on_industrial_devolopment focus = GRE_focus_on_military_building}
+		available = {
+		}
+		completion_reward = {
+		47 = {
+			add_building_construction = {
+    type = infrastructure
+    level = 4
+    instant_build = yes
+}
+			}
+		}
+		relative_position_id = GRE_greek_industry
+		x = 0
 		y = 3
 	}
+	
+	
+	focus = {
+		id = GRE_larissa_airport
+		icon = GFX_goal_generic_air_bomber
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		prerequisite = {focus = GRE_support_farmers focus = GRE_focus_on_industrial_devolopment focus = GRE_focus_on_military_building}
+		prerequisite = {focus = GRE_bomber_production}
+		available = {
+		}
+		completion_reward = {
+		47 = {
+			add_building_construction = {
+			type = air_base
+			level = 2
+			instant_build = yes
+			}
+			}
+		}
+		relative_position_id = GRE_greek_industry
+		x = 2
+		y = 3
+	}
+	
+	focus = {
+		id = GRE_greek_army
+		icon = GFX_gre_army
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = }
+		available = {
+		}
+		completion_reward = {
+		army_experience = 15
+		}
+		#relative_position_id = 
+		x = 24
+		y = 0
+	}
+	
+	focus = {
+		id = GRE_learning_from_the_war_of_1897
+		icon = GFX_focus_GRE_resurrecting_the_megali_idea
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_greek_army }
+		available = {
+		}
+		completion_reward = {
+		add_stability = -0.05
+		}
+		relative_position_id = GRE_greek_army
+		x = 0
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_learning_from_the_war_of_1897 }
+		available = {
+		}
+		completion_reward = {
+		army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+		relative_position_id = GRE_learning_from_the_war_of_1897
+		x = 2
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_learning_from_the_war_of_1897 }
+		available = {
+		}
+		completion_reward = {
+		army_experience = 10
+		add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+		relative_position_id = GRE_learning_from_the_war_of_1897
+		x = 0
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_artillery_effort
+		icon = GFX_goal_generic_army_artillery2
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_learning_from_the_war_of_1897 }
+		available = {
+		}
+		completion_reward = {
+		army_experience = 10
+		add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
+		}
+		relative_position_id = GRE_learning_from_the_war_of_1897
+		x = -2
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_cavalry_effort
+		icon = GFX_goal_generic_cavalry
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_artillery_effort }
+		prerequisite = {focus = GRE_equipment_effort }
+		prerequisite = {focus = GRE_doctrine_effort }
+		available = {
+		}
+		completion_reward = {
+		add_ideas = GRE_cavalry_tactics
+		}
+		relative_position_id = GRE_learning_from_the_war_of_1897
+		x = -1
+		y = 2
+	}
+	
+	focus = {
+		id = GRE_land_of_mountains
+		icon = GFX_focus_GRE_a_land_of_mountains
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_artillery_effort }
+		prerequisite = {focus = GRE_equipment_effort }
+		prerequisite = {focus = GRE_doctrine_effort }
+		available = {
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = special_bonus
+				bonus = 1.0
+				uses = 2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+		relative_position_id = GRE_learning_from_the_war_of_1897
+		x = 1
+		y = 2
+	}
+	
+	focus = {
+		id = GRE_greek_navy
+		icon = GFX_gre_navy
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = }
+		available = {
+		}
+		completion_reward = {
+		navy_experience = 15
+		}
+		#relative_position_id = 
+		x = 28
+		y = 0
+	}
+	
+	focus = {
+		id = GRE_dockyard_expansion
+		icon = GFX_focus_otto_naval_train
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_greek_navy }
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}	
+		}
+		relative_position_id = GRE_greek_navy
+		x = 0
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_dockyard_expansion_2
+		icon = GFX_focus_otto_naval_train
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_dockyard_expansion }
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}	
+		}
+		relative_position_id = GRE_dockyard_expansion
+		x = 0
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_dockyard_expansion_3
+		icon = GFX_focus_otto_naval_train
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_dockyard_expansion_2 }
+		available = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}	
+		}
+		relative_position_id = GRE_dockyard_expansion_2
+		x = 0
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_crafting_naval_guns
+		icon = GFX_hoi4tgw_navalcanons
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_greek_navy }
+		available = {
+		}
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = ww1_newnavalcanons_1_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+		relative_position_id = GRE_greek_navy
+		x = 2
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_crafting_naval_guns }
+		available = {
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
+		}
+		relative_position_id = GRE_crafting_naval_guns
+		x = 0
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_sub_effort
+		icon = GFX_goal_generic_navy_submarine
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_destroyer_effort }
+		available = {
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.75
+				uses = 1
+				category = ss_tech
+			}
+		add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				uses = 1
+				category = ss_tech
+			}
+		}
+		relative_position_id = GRE_destroyer_effort
+		x = 0
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_form_hellenic_airforce
+		icon = GFX_gre_air
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = }
+		available = {
+		}
+		completion_reward = {
+		air_experience = 15
+		}
+		#relative_position_id = 
+		x = 29
+		y = 4
+	}
+	
+	focus = {
+		id = GRE_fighter_production
+		icon = GFX_goal_generic_air_fighter
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_form_hellenic_airforce }
+		available = {
+		}
+		completion_reward = {
+		air_experience = 5
+		add_tech_bonus = { 
+				name = fighter_bonus 
+				bonus = 0.5 
+				uses = 1 
+				category = light_fighter 
+			}
+		}
+		relative_position_id =  GRE_form_hellenic_airforce
+		x = 0
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_bomber_production
+		icon = GFX_goal_generic_air_bomber
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_fighter_production }
+		available = {
+		}
+		completion_reward = {
+		air_experience = 5
+		add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+		relative_position_id =  GRE_fighter_production
+		x = 0
+		y = 1
+	}
+	
+	focus = {
+		id = GRE_airship_production
+		icon = GFX_hoi4tgw_zeppelin
+		completion_reward = {
+		}
+		ai_will_do = { factor = 20 }
+		cost = 10
+		mutually_exclusive = {focus = }
+		prerequisite = {focus = GRE_bomber_production }
+		available = {
+		}
+		completion_reward = {
+		air_experience = 5
+		add_tech_bonus = { 
+				name = ww1_airship_focus
+				bonus = 0.5 
+				uses = 1 
+				technology = airship_bomber
+				technology = airship_bomber2
+			}
+		}
+		relative_position_id =  GRE_bomber_production
+		x = 0
+		y = 1
+	}
+	
+	
+	
+	
 	
 }

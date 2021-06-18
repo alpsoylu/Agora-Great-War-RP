@@ -112,5 +112,95 @@ ideas = {
 			}
 		}
 
+		GRE_cavalry_tactics = {
+
+
+			picture = cavalry
+
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			cavalry_attack_factor = 0.1
+			army_speed_factor = 0.1
+			}
+		}
+
+		GRE_anti_liberalism_idea = {
+
+
+			picture = hun_hungarian_monarchy_democratic
+
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			democratic_drift = -0.1
+			neutrality_drift = 0.05
+			}
+		}
+
+		GRE_german_mission_idea = {
+
+
+			picture = ottoman_german_advisor
+
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			army_attack_factor = 0.15
+			army_speed_factor = 0.15
+			}
+		}
+
+		GRE_french_mission_idea = {
+
+
+			picture = ottoman_fra_advisor
+
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			army_attack_factor = 0.1
+			army_speed_factor = 0.1
+			}
+		}
+
+		GRE_greek_cons = {
+
+
+			picture = greek_cons
+
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			stability_factor = 0.1
+			consumer_goods_factor = -0.05
+			}
+		}
+
 	}
 }
